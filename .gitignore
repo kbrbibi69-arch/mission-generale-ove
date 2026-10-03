@@ -1,3 +1,5 @@
 .media/
 snapshots/
 renders/*.log
+renders/.*
+renders/work-*
