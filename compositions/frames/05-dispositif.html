@@ -9,21 +9,34 @@
     }
     .f5-cascade { display: flex; flex-direction: column; gap: 2cqw; text-align: left; width: 60%; }
     .f5-item { background: rgba(255,255,255,0.1); padding: 2cqw; border-left: 4px solid var(--brand-accent, #D4AF37); font-size: 3cqw; }
+  .f5-item { position: relative; overflow: hidden; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); margin-bottom: 2cqw; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    .f5-wipe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--brand-accent, #D4AF37); z-index: 10; transform-origin: left; }
+    .f5-text { position: relative; z-index: 1; }
+    .f5-icon { display: inline-block; margin-right: 1cqw; color: var(--brand-accent, #D4AF37); font-weight: bold; }
   </style>
   <div id="root" data-composition-id="05-dispositif" data-width="1920" data-height="1080" class="clip" data-duration="50">
     <div class="f5-cascade">
-      <div class="f5-item">1. Engagement de la Direction</div>
-      <div class="f5-item">2. Code de conduite intégré</div>
-      <div class="f5-item">3. Dispositif d'alerte interne</div>
-      <div class="f5-item">4. Formations ciblées</div>
+      <div class="f5-item"><div class="f5-wipe"></div><div class="f5-text"><span class="f5-icon">▶</span> Engagement de la Direction</div></div>
+      <div class="f5-item"><div class="f5-wipe"></div><div class="f5-text"><span class="f5-icon">▶</span> Code de conduite intégré</div></div>
+      <div class="f5-item"><div class="f5-wipe"></div><div class="f5-text"><span class="f5-icon">▶</span> Dispositif d'alerte interne</div></div>
+      <div class="f5-item"><div class="f5-wipe"></div><div class="f5-text"><span class="f5-icon">▶</span> Formations ciblées</div></div>
     </div>
   </div>
   <script>
   window.__timelines = window.__timelines || {};
   const tl_05dispositif = window.gsap ? gsap.timeline({ paused: true }) : { fromTo: ()=>{}, to: ()=>{} };
   const root_05dispositif = document.getElementById("root") || document.body;
-  const items = root_05dispositif.querySelectorAll('.f5-item');
-  tl_05dispositif.fromTo(items, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.8, stagger: 0.5 }, 0.5);
-  window.__timelines["05-dispositif"] = tl_05dispositif;
+const items = root_05dispositif.querySelectorAll('.f5-item');
+    const wipes = root_05dispositif.querySelectorAll('.f5-wipe');
+    const texts = root_05dispositif.querySelectorAll('.f5-text');
+    // Hide texts initially
+    tl_05dispositif.set(texts, { opacity: 0, x: -20 });
+    // Item slide in
+    tl_05dispositif.fromTo(items, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, stagger: 0.4, ease: 'power2.out' }, 0.5);
+    // Wipe effect reveal
+    tl_05dispositif.fromTo(wipes, { scaleX: 0 }, { scaleX: 1, duration: 0.4, stagger: 0.4, ease: 'power2.inOut' }, 0.7);
+    tl_05dispositif.to(texts, { opacity: 1, x: 0, duration: 0.1, stagger: 0.4 }, 0.9);
+    tl_05dispositif.to(wipes, { scaleX: 0, transformOrigin: 'right', duration: 0.4, stagger: 0.4, ease: 'power2.inOut' }, 1.1);
+    window.__timelines["05-dispositif"] = tl_05dispositif;
 </script>
 </template>

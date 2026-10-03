@@ -10,8 +10,18 @@
     .f4-shield { width: 15cqw; height: 15cqw; background: var(--brand-accent, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2cqw; color: var(--brand-navy); font-weight: bold;}
     .f4-nodes { display: flex; justify-content: space-between; margin-top: 5cqw; font-size: 2.5cqw; width: 60%; gap: 2cqw; }
     .f4-node { background: rgba(255,255,255,0.1); padding: 1cqw 2cqw; border-radius: 4px; text-align: center; }
+  .f4-svg { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; }
+    .f4-line { stroke: var(--brand-accent, #D4AF37); stroke-width: 4px; stroke-dasharray: 1000; stroke-dashoffset: 1000; fill: none; }
+    .f4-ripple { position: absolute; border-radius: 50%; border: 2px solid var(--brand-accent, #D4AF37); opacity: 0; }
+    .f4-shield { z-index: 2; box-shadow: 0 0 30px rgba(212,175,55,0.5); }
+    .f4-node { z-index: 2; transform-origin: center; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
   </style>
   <div id="root" data-composition-id="04-risks" data-width="1920" data-height="1080" class="clip" data-duration="50">
+    <svg class="f4-svg">
+      <path class="f4-line" d="M 960 300 Q 600 500 400 800" />
+      <path class="f4-line" d="M 960 300 Q 960 500 960 800" />
+      <path class="f4-line" d="M 960 300 Q 1320 500 1520 800" />
+    </svg>
     <div class="f4-shield">BOUCLIER</div>
     <div class="f4-nodes">
       <div class="f4-node">FOURNISSEURS</div>
@@ -23,10 +33,17 @@
   window.__timelines = window.__timelines || {};
   const tl_04risks = window.gsap ? gsap.timeline({ paused: true }) : { fromTo: ()=>{}, to: ()=>{} };
   const root_04risks = document.getElementById("root") || document.body;
-  tl_04risks.fromTo(root_04risks.querySelector('.f4-shield'), { scale: 0 }, { scale: 1, duration: 1, ease: 'back.out(1.7)' }, 0.5);
-  tl_04risks.to(root_04risks.querySelector('.f4-shield'), { scale: 1.05, duration: 2, repeat: 10, yoyo: true, ease: 'sine.inOut' }, 1.5);
-  const nodes = root_04risks.querySelectorAll('.f4-node');
-  tl_04risks.fromTo(nodes, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.3 }, 1);
-  window.__timelines["04-risks"] = tl_04risks;
+// Shield entrance
+    tl_04risks.fromTo(root_04risks.querySelector('.f4-shield'), { scale: 0, rotationY: 180 }, { scale: 1, rotationY: 0, duration: 1.5, ease: 'elastic.out(1, 0.5)' }, 0.5);
+    // Shield pulse
+    tl_04risks.to(root_04risks.querySelector('.f4-shield'), { scale: 1.05, boxShadow: '0 0 50px rgba(212,175,55,0.8)', duration: 2, repeat: 10, yoyo: true, ease: 'sine.inOut' }, 2);
+    // Draw SVG lines (simulated)
+    const lines = root_04risks.querySelectorAll('.f4-line');
+    tl_04risks.to(lines, { strokeDashoffset: 0, duration: 1.5, stagger: 0.2, ease: 'power2.inOut' }, 1.5);
+    // Nodes pop
+    const nodes = root_04risks.querySelectorAll('.f4-node');
+    tl_04risks.fromTo(nodes, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'back.out(1.5)' }, 2);
+    tl_04risks.to(nodes, { y: -10, duration: 1.5, stagger: 0.1, repeat: 10, yoyo: true, ease: 'sine.inOut' }, 3);
+    window.__timelines["04-risks"] = tl_04risks;
 </script>
 </template>
