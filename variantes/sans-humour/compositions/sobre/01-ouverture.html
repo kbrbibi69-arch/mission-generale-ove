@@ -1,0 +1,87 @@
+<template>
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VF.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-VF.ttf") format("truetype"); font-weight: 200 900; }
+#root { position: absolute; inset: 0; overflow: hidden; font-family: "Source Sans 3", sans-serif; color: #25282B; }
+#root .bg { position: absolute; inset: 0; background: #F6F6F2; }
+#root .bg.dark { background: #1F2326; }
+#root .abs { position: absolute; }
+#root .h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 72px; line-height: 1.1; letter-spacing: -0.01em; }
+#root .h2 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 52px; line-height: 1.15; letter-spacing: -0.01em; }
+#root .h3 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; line-height: 1.2; }
+#root .body { font-size: 30px; line-height: 1.35; color: #55595D; }
+#root .label { font-size: 22px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5C6600; }
+#root .card { position: absolute; background: #FFFFFF; border-radius: 18px; box-shadow: 0 10px 30px rgba(37,40,43,0.08); }
+#root .card.top { border-top: 6px solid #B4C908; }
+#root .chip { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #FFFFFF; border: 2px solid #D5D7D2; font-size: 26px; font-weight: 600; color: #25282B; white-space: nowrap; }
+#root .chip .ic { width: 30px; height: 30px; color: #5C6600; }
+#root .badge { width: 84px; height: 84px; border-radius: 50%; background: #EEF3C4; color: #5C6600; display: flex; align-items: center; justify-content: center; }
+#root .ic { display: block; }
+#root .row { display: flex; gap: 20px; align-items: center; }
+#root .marker { position: absolute; left: 192px; top: 108px; display: flex; align-items: center; gap: 18px; }
+#root .marker .mb { display: flex; flex-direction: column; gap: 5px; }
+#root .marker .mb i { display: block; height: 7px; border-radius: 4px; background: #B4C908; }
+#root .marker .mb i:nth-child(2) { background: #DCE58A; }
+#root .marker .mb i:nth-child(3) { background: #878787; }
+#root .marker .ml { font-size: 22px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6B6F72; }
+#root .marker.light .ml { color: #C9CCCF; }
+#root .bands { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+#root .bands i { position: absolute; left: 0; width: 100%; height: 33.6%; display: block; }
+#root .bands i:nth-child(1) { top: 0; background: #B4C908; }
+#root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
+#root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
+#root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+</style>
+<div id="root" data-composition-id="01-ouverture" data-width="1920" data-height="1080" data-duration="18.54">
+  <div id="s01-scene" class="clip" data-start="0" data-duration="18.54" data-track-index="0" style="position:absolute;inset:0">
+  <div class="bg"></div>
+  <div class="s01-content" style="position:absolute;inset:0">
+  
+  <div class="abs s01-plate" style="left:780px;top:170px;width:360px;height:330px;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(37,40,43,0.10);display:flex;align-items:center;justify-content:center">
+    <img src="assets/img/logo-fondation-ove.jpg" alt="Fondation OVE" style="width:276px;height:254px;display:block" />
+  </div>
+  <div class="abs h1 s01-title" style="left:192px;width:1536px;top:560px;text-align:center">
+    <span class="s01-w" style="display:inline-block">Prévenir</span> <span class="s01-w" style="display:inline-block">les</span> <span class="s01-w" style="display:inline-block">atteintes</span> <span class="s01-w" style="display:inline-block">à</span> <span class="s01-w" style="display:inline-block">la</span> <span class="s01-w" style="display:inline-block">probité</span>
+  </div>
+  <div class="abs s01-line" style="left:810px;top:665px;width:300px;height:6px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
+  <div class="abs s01-sub" style="left:192px;width:1536px;top:695px;text-align:center;font-size:38px;font-weight:600;color:#5C6600">Une question de confiance</div>
+  <div class="abs s01-chips" style="left:192px;width:1536px;top:775px;display:flex;justify-content:center;gap:20px">
+    <span class="chip s01-chip"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8v32M14 40h20M10 14h28"/><path d="M10 14l-5 11h10zM38 14l-5 11h10z"/></svg>Inspirée de la loi Sapin 2</span>
+    <span class="chip s01-chip"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="23" width="30" height="5" rx="2"/><path d="M13 28v10M35 28v10"/><circle cx="16" cy="14" r="3.5"/><circle cx="24" cy="12" r="3.5"/><circle cx="32" cy="14" r="3.5"/></svg>Note au Bureau · Direction juridique</span>
+    <span class="chip s01-chip"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 42V6"/><path d="M12 8h22l-4 7 4 7H12"/></svg>Un intérêt stratégique</span>
+  </div>
+  </div>
+  <div class="bands s01-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
+  </div>
+</div>
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  const q = (s) => document.querySelectorAll(s);
+  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
+  const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
+    tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
+
+  
+  pop(".s01-plate", 1.25, { s: 0.92, d: 0.9 });
+  tl.fromTo(".s01-plate img", { scale: 1 }, { scale: 1.03, duration: 17.24, ease: "none" }, 1.3);
+  rise(".s01-w", 2.6, { st: 0.09, y: 34 });
+  tl.fromTo(".s01-line", { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power2.out" }, 4.968);
+  rise(".s01-sub", 7.766);
+  rise(".s01-chips .chip:nth-child(1)", 14.199);
+  rise(".s01-chips .chip:nth-child(2)", 9.15);
+  rise(".s01-chips .chip:nth-child(3)", 16.494);
+
+  tl.fromTo(".s01-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut", stagger: 0.08 }, 0.1);
+  tl.fromTo(".s01-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.65, ease: "power3.inOut", stagger: 0.08, immediateRender: false }, 1.05);
+  tl.fromTo(".s01-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 17.74);
+  tl.set(".s01-content", { opacity: 0 }, 18.40);
+  window.__timelines["01-ouverture"] = tl;
+})();
+</script>
+</template>

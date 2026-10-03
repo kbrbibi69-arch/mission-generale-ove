@@ -1,0 +1,85 @@
+<template>
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VF.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-VF.ttf") format("truetype"); font-weight: 200 900; }
+#root { position: absolute; inset: 0; overflow: hidden; font-family: "Source Sans 3", sans-serif; color: #25282B; }
+#root .bg { position: absolute; inset: 0; background: #F6F6F2; }
+#root .bg.dark { background: #1F2326; }
+#root .abs { position: absolute; }
+#root .h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 72px; line-height: 1.1; letter-spacing: -0.01em; }
+#root .h2 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 52px; line-height: 1.15; letter-spacing: -0.01em; }
+#root .h3 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; line-height: 1.2; }
+#root .body { font-size: 30px; line-height: 1.35; color: #55595D; }
+#root .label { font-size: 22px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5C6600; }
+#root .card { position: absolute; background: #FFFFFF; border-radius: 18px; box-shadow: 0 10px 30px rgba(37,40,43,0.08); }
+#root .card.top { border-top: 6px solid #B4C908; }
+#root .chip { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #FFFFFF; border: 2px solid #D5D7D2; font-size: 26px; font-weight: 600; color: #25282B; white-space: nowrap; }
+#root .chip .ic { width: 30px; height: 30px; color: #5C6600; }
+#root .badge { width: 84px; height: 84px; border-radius: 50%; background: #EEF3C4; color: #5C6600; display: flex; align-items: center; justify-content: center; }
+#root .ic { display: block; }
+#root .row { display: flex; gap: 20px; align-items: center; }
+#root .marker { position: absolute; left: 192px; top: 108px; display: flex; align-items: center; gap: 18px; }
+#root .marker .mb { display: flex; flex-direction: column; gap: 5px; }
+#root .marker .mb i { display: block; height: 7px; border-radius: 4px; background: #B4C908; }
+#root .marker .mb i:nth-child(2) { background: #DCE58A; }
+#root .marker .mb i:nth-child(3) { background: #878787; }
+#root .marker .ml { font-size: 22px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6B6F72; }
+#root .marker.light .ml { color: #C9CCCF; }
+#root .bands { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+#root .bands i { position: absolute; left: 0; width: 100%; height: 33.6%; display: block; }
+#root .bands i:nth-child(1) { top: 0; background: #B4C908; }
+#root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
+#root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
+#root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+</style>
+<div id="root" data-composition-id="04-cadre" data-width="1920" data-height="1080" data-duration="37.1">
+  <div id="s04-scene" class="clip" data-start="0" data-duration="37.1" data-track-index="0" style="position:absolute;inset:0">
+  <div class="bg"></div>
+  <div class="s04-content" style="position:absolute;inset:0">
+  <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">03 — Le cadre juridique</div></div>
+  <div class="card s04-l" style="left:192px;top:180px;width:740px;height:400px;padding:40px 44px;box-sizing:border-box">
+    <div class="row"><div class="badge" style="background:#ECEDEA;color:#55595D"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40V14l14-6 14 6v26"/><path d="M6 40h36"/><path d="M18 20h4M26 20h4M18 28h4M26 28h4M21 40v-6h6v6"/></svg></div><div class="label" style="color:#6B6F72">Loi Sapin 2 · article 17</div></div>
+    <div class="h3" style="margin-top:28px">Programme anticorruption obligatoire</div>
+    <div class="body" style="margin-top:14px">Pour certaines sociétés, au-delà de seuils précis.</div>
+    <div class="s04-stamp" style="margin-top:30px;display:inline-flex;align-items:center;gap:14px;padding:12px 22px;border-radius:12px;border:2px dashed #878787;font-size:26px;font-weight:600;color:#55595D"><svg class="ic " width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l8 8v28H14z"/><path d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg>Application à la Fondation : à confirmer</div></div>
+  <div class="card top s04-r" style="left:988px;top:180px;width:740px;height:400px;padding:40px 44px;box-sizing:border-box">
+    <div class="row"><div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle cx="24" cy="24" r="5"/></svg></div><div class="label">Loi Sapin 2 · article 3</div></div>
+    <div class="h3" style="margin-top:28px">L’AFA peut contrôler les fondations reconnues d’utilité publique</div>
+    <div class="body" style="margin-top:14px">De sa propre initiative : qualité et efficacité des procédures.</div>
+    <div class="s04-afa" style="position:absolute;right:40px;top:36px;width:96px;height:96px;border-radius:50%;background:#25282B;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:700;font-size:28px">AFA</div></div>
+  <div class="abs label s04-bt" style="left:192px;top:640px;color:#6B6F72">Atteintes à la probité visées</div>
+  <div class="abs s04-row" style="left:192px;top:690px;width:1536px;display:flex;flex-wrap:wrap;gap:16px"><span class="chip s04-i0">Corruption</span><span class="chip s04-i1">Trafic d’influence</span><span class="chip s04-i2">Prise illégale d’intérêts</span><span class="chip s04-i3">Détournement de fonds publics</span><span class="chip s04-i4">Favoritisme</span></div>
+  </div>
+  <div class="bands s04-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
+  </div>
+</div>
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  const q = (s) => document.querySelectorAll(s);
+  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
+  const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
+    tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
+
+  rise(".s04-l", 0.80, { y: 40 });
+  pop(".s04-stamp", 13.80, { s: 0.9 });
+  rise(".s04-r", 16.63, { y: 40 });
+  pop(".s04-afa", 21.07, { s: 0.6 });
+  rise(".s04-bt", 27.16);
+  rise(".s04-i0", 29.48, { y: 16 });
+  rise(".s04-i1", 30.35, { y: 16 });
+  rise(".s04-i2", 31.68, { y: 16 });
+  rise(".s04-i3", 33.42, { y: 16 });
+  rise(".s04-i4", 35.50, { y: 16 });
+  tl.fromTo(".s04-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
+  tl.fromTo(".s04-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 36.30);
+  tl.set(".s04-content", { opacity: 0 }, 36.96);
+  window.__timelines["04-cadre"] = tl;
+})();
+</script>
+</template>

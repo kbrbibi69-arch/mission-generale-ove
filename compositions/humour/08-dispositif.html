@@ -1,0 +1,105 @@
+<template>
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VF.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-VF.ttf") format("truetype"); font-weight: 200 900; }
+#root { position: absolute; inset: 0; overflow: hidden; font-family: "Source Sans 3", sans-serif; color: #25282B; }
+#root .bg { position: absolute; inset: 0; background: #F6F6F2; }
+#root .bg.dark { background: #1F2326; }
+#root .abs { position: absolute; }
+#root .h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 72px; line-height: 1.1; letter-spacing: -0.01em; }
+#root .h2 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 52px; line-height: 1.15; letter-spacing: -0.01em; }
+#root .h3 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; line-height: 1.2; }
+#root .body { font-size: 30px; line-height: 1.35; color: #55595D; }
+#root .label { font-size: 22px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5C6600; }
+#root .card { position: absolute; background: #FFFFFF; border-radius: 18px; box-shadow: 0 10px 30px rgba(37,40,43,0.08); }
+#root .card.top { border-top: 6px solid #B4C908; }
+#root .chip { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #FFFFFF; border: 2px solid #D5D7D2; font-size: 26px; font-weight: 600; color: #25282B; white-space: nowrap; }
+#root .chip .ic { width: 30px; height: 30px; color: #5C6600; }
+#root .badge { width: 84px; height: 84px; border-radius: 50%; background: #EEF3C4; color: #5C6600; display: flex; align-items: center; justify-content: center; }
+#root .ic { display: block; }
+#root .row { display: flex; gap: 20px; align-items: center; }
+#root .marker { position: absolute; left: 192px; top: 108px; display: flex; align-items: center; gap: 18px; }
+#root .marker .mb { display: flex; flex-direction: column; gap: 5px; }
+#root .marker .mb i { display: block; height: 7px; border-radius: 4px; background: #B4C908; }
+#root .marker .mb i:nth-child(2) { background: #DCE58A; }
+#root .marker .mb i:nth-child(3) { background: #878787; }
+#root .marker .ml { font-size: 22px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6B6F72; }
+#root .marker.light .ml { color: #C9CCCF; }
+#root .bands { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+#root .bands i { position: absolute; left: 0; width: 100%; height: 33.6%; display: block; }
+#root .bands i:nth-child(1) { top: 0; background: #B4C908; }
+#root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
+#root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
+#root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+</style>
+<div id="root" data-composition-id="08-dispositif" data-width="1920" data-height="1080" data-duration="34.42">
+  <div id="s08-scene" class="clip" data-start="0" data-duration="34.42" data-track-index="0" style="position:absolute;inset:0">
+  <div class="bg"></div>
+  <div class="s08-content" style="position:absolute;inset:0">
+  <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">07 — Le dispositif proposé</div></div>
+  <div class="card top s08-p0" style="left:192px;top:170px;width:496px;height:150px;padding:0 30px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">1</div><div class="h3" style="font-size:29px">Engagement de la gouvernance</div></div>
+  <div class="card top s08-p1" style="left:712px;top:170px;width:496px;height:150px;padding:0 30px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">2</div><div class="h3" style="font-size:29px">Cartographie des risques</div></div>
+  <div class="card top s08-p2" style="left:1232px;top:170px;width:496px;height:150px;padding:0 30px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">3</div><div class="h3" style="font-size:29px">Mesures adaptées et proportionnées</div></div>
+  <div class="abs label s08-pl" style="left:192px;top:128px;opacity:0">Trois piliers</div>
+  <div class="card s08-t0" style="left:192px;top:360px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l8 8v28H14z"/><path d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Code de conduite</span></div>
+  <div class="card s08-t1" style="left:712px;top:360px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="24" r="10"/><circle cx="30" cy="24" r="10"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Conflits d’intérêts et mandats croisés</span></div>
+  <div class="card s08-t2" style="left:1232px;top:360px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h32v20H22l-8 8v-8H8z"/><path d="M19 20l4 4 7-7"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Alerte interne sécurisée</span></div>
+  <div class="card s08-t3" style="left:192px;top:500px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="17" r="6"/><path d="M9 38c0-7 5-11 11-11 3 0 5 1 7 2"/><circle cx="34" cy="32" r="5"/><path d="M38 36l4 4"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Évaluation proportionnée des tiers</span></div>
+  <div class="card s08-t4" style="left:712px;top:500px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="3"/><path d="M15 32v-6M22 32V18M29 32V22M35 32v-9"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Contrôles comptables ciblés</span></div>
+  <div class="card s08-t5" style="left:1232px;top:500px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l20-9 20 9-20 9z"/><path d="M12 22v9c0 3 6 6 12 6s12-3 12-6v-9"/><path d="M44 18v10"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Plan de formation</span></div>
+  <div class="abs label s08-sl" style="left:192px;top:668px;color:#6B6F72">Exigences graduées · montant · urgence · risque</div>
+  <div class="abs s08-track" style="left:192px;top:722px;width:1536px;height:22px;border-radius:11px;background:#E6E8E2"></div>
+  <div class="abs s08-fill" style="left:192px;top:722px;width:1536px;height:22px;border-radius:11px;background:linear-gradient(90deg,#DCE58A,#B4C908);transform-origin:left center"></div>
+  <div class="abs s08-lo" style="left:192px;top:758px;font-size:24px;font-weight:600;color:#55595D">Contrôles simplifiés</div>
+  <div class="abs s08-hi" style="left:1428px;top:758px;width:300px;text-align:right;font-size:24px;font-weight:600;color:#55595D">Vérifications renforcées</div>
+  <div class="abs s08-h" style="left:420px;top:792px;display:flex;align-items:center;gap:12px;padding:10px 20px;border-radius:14px;background:#25282B;color:#fff;font-size:24px;font-weight:600">
+    <span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M30 13v19a6 6 0 0 1-12 0V12a4 4 0 0 1 8 0v18a2 2 0 0 1-4 0V16"/></svg></span>Boîte de trombones : pas d’appel d’offres</div>
+  <div class="abs s08-hp" style="left:450px;top:744px;width:3px;height:48px;background:#25282B"></div>
+  </div>
+  <div class="bands s08-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
+  </div>
+</div>
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  const q = (s) => document.querySelectorAll(s);
+  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
+  const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
+    tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
+
+  rise(".s08-p0", 5.00, { y: 30 });
+  rise(".s08-p1", 6.86, { y: 30 });
+  rise(".s08-p2", 8.72, { y: 30 });
+  pop(".s08-t0", 11.44, { s: 0.92 });
+  pop(".s08-t1", 14.05, { s: 0.92 });
+  pop(".s08-t2", 17.39, { s: 0.92 });
+  pop(".s08-t3", 19.20, { s: 0.92 });
+  pop(".s08-t4", 21.38, { s: 0.92 });
+  pop(".s08-t5", 23.29, { s: 0.92 });
+  rise(".s08-sl", 24.93);
+  fade(".s08-track", 24.93);
+  tl.fromTo(".s08-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 26.08);
+  rise(".s08-lo", 26.08, { y: 10 }); rise(".s08-hi", 28.77, { y: 10 });
+  pop(".s08-h", 30.08, { s: 0.9 });
+  tl.fromTo(".s08-hp", { scaleY: 0, transformOrigin: "top center" }, { scaleY: 1, duration: 0.4 }, 30.28);
+  tl.fromTo(".s08-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
+  tl.fromTo(".s08-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 33.62);
+  tl.set(".s08-content", { opacity: 0 }, 34.28);
+  window.__timelines["08-dispositif"] = tl;
+})();
+</script>
+</template>

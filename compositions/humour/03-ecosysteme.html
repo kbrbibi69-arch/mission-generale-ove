@@ -1,0 +1,129 @@
+<template>
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VF.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-VF.ttf") format("truetype"); font-weight: 200 900; }
+#root { position: absolute; inset: 0; overflow: hidden; font-family: "Source Sans 3", sans-serif; color: #25282B; }
+#root .bg { position: absolute; inset: 0; background: #F6F6F2; }
+#root .bg.dark { background: #1F2326; }
+#root .abs { position: absolute; }
+#root .h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 72px; line-height: 1.1; letter-spacing: -0.01em; }
+#root .h2 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 52px; line-height: 1.15; letter-spacing: -0.01em; }
+#root .h3 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; line-height: 1.2; }
+#root .body { font-size: 30px; line-height: 1.35; color: #55595D; }
+#root .label { font-size: 22px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5C6600; }
+#root .card { position: absolute; background: #FFFFFF; border-radius: 18px; box-shadow: 0 10px 30px rgba(37,40,43,0.08); }
+#root .card.top { border-top: 6px solid #B4C908; }
+#root .chip { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #FFFFFF; border: 2px solid #D5D7D2; font-size: 26px; font-weight: 600; color: #25282B; white-space: nowrap; }
+#root .chip .ic { width: 30px; height: 30px; color: #5C6600; }
+#root .badge { width: 84px; height: 84px; border-radius: 50%; background: #EEF3C4; color: #5C6600; display: flex; align-items: center; justify-content: center; }
+#root .ic { display: block; }
+#root .row { display: flex; gap: 20px; align-items: center; }
+#root .marker { position: absolute; left: 192px; top: 108px; display: flex; align-items: center; gap: 18px; }
+#root .marker .mb { display: flex; flex-direction: column; gap: 5px; }
+#root .marker .mb i { display: block; height: 7px; border-radius: 4px; background: #B4C908; }
+#root .marker .mb i:nth-child(2) { background: #DCE58A; }
+#root .marker .mb i:nth-child(3) { background: #878787; }
+#root .marker .ml { font-size: 22px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6B6F72; }
+#root .marker.light .ml { color: #C9CCCF; }
+#root .bands { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+#root .bands i { position: absolute; left: 0; width: 100%; height: 33.6%; display: block; }
+#root .bands i:nth-child(1) { top: 0; background: #B4C908; }
+#root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
+#root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
+#root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+</style>
+<div id="root" data-composition-id="03-ecosysteme" data-width="1920" data-height="1080" data-duration="42.59">
+  <div id="s03-scene" class="clip" data-start="0" data-duration="42.59" data-track-index="0" style="position:absolute;inset:0">
+  <div class="bg"></div>
+  <div class="s03-content" style="position:absolute;inset:0">
+  <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">02 — Un écosystème structuré</div></div>
+  <svg class="abs" style="left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080"><line class="s03-ln" x1="660" y1="470" x2="330" y2="300" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/><line class="s03-ln" x1="660" y1="470" x2="330" y2="660" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/><line class="s03-ln" x1="660" y1="470" x2="660" y2="205" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/><line class="s03-ln" x1="660" y1="470" x2="1000" y2="300" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/><line class="s03-ln" x1="660" y1="470" x2="1000" y2="660" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/><line class="s03-ln" x1="660" y1="470" x2="660" y2="745" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/><path class="s03-cx" d="M330 300 Q665.0 230.0 1000 300" fill="none" stroke="#878787" stroke-width="2.5" stroke-dasharray="10 10" opacity="0"/><path class="s03-cx" d="M660 205 Q495.0 432.5 330 660" fill="none" stroke="#878787" stroke-width="2.5" stroke-dasharray="10 10" opacity="0"/><path class="s03-cx" d="M1000 660 Q830.0 742.5 660 745" fill="none" stroke="#878787" stroke-width="2.5" stroke-dasharray="10 10" opacity="0"/><path class="s03-cx" d="M330 660 Q665.0 750.0 1000 660" fill="none" stroke="#878787" stroke-width="2.5" stroke-dasharray="10 10" opacity="0"/></svg>
+  <div class="abs s03-halo" style="left:520px;top:330px;width:280px;height:280px;border-radius:50%;border:3px solid #B4C908;opacity:0"></div>
+  <div class="abs s03-core" style="left:560px;top:370px;width:200px;height:200px;border-radius:50%;background:#B4C908;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 14px 40px rgba(180,201,8,0.35)">
+    <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:28px;line-height:1.1;color:#25282B">Fondation</div><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;line-height:1.05;color:#25282B">OVE</div></div>
+  <div class="abs s03-node s03-imove" style="left:268px;top:238px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="14" rx="12" ry="5"/><path d="M12 14v8c0 3 5 5 12 5s12-2 12-5v-8M12 22v8c0 3 5 5 12 5s12-2 12-5v-8"/></svg></div>
+  <div class="abs s03-lab s03-limove" style="left:190px;top:370px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">IMOVE</div><div style="font-size:21px;color:#6B6F72">fonds de dotation</div></div>
+  <div class="abs s03-node s03-sci" style="left:268px;top:598px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)"><div style="display:grid;grid-template-columns:repeat(7,13px);gap:5px"><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#B4C908"></i><i style="display:block;width:13px;height:13px;border-radius:3px;background:#878787"></i></div></div>
+  <div class="abs s03-lab s03-lsci" style="left:190px;top:730px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">35+ SCI</div><div style="font-size:21px;color:#6B6F72">patrimoine immobilier</div></div>
+  <div class="abs s03-node s03-ami" style="left:598px;top:143px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l8-6 8 3 6-3 8 2 10 6"/><path d="M12 14v14l10 9c2 2 5 0 4-2l4 3c2 1 4-1 3-3l2 1c2 1 4-2 2-4l-9-9"/></svg></div>
+  <div class="abs s03-lab s03-lami" style="left:520px;top:275px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">AMICIAL</div><div style="font-size:21px;color:#6B6F72">association</div></div>
+  <div class="abs s03-node s03-ple" style="left:938px;top:238px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="5"/><path d="M8 37c0-6 4-10 9-10s9 4 9 10"/><circle cx="32" cy="18" r="4"/><path d="M29 27c6-1 11 3 11 10"/></svg></div>
+  <div class="abs s03-lab s03-lple" style="left:860px;top:370px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">OVE Plenior</div><div style="font-size:21px;color:#6B6F72">association</div></div>
+  <div class="abs s03-node s03-car" style="left:938px;top:598px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39S8 29 8 18a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 11-16 21-16 21z"/></svg></div>
+  <div class="abs s03-lab s03-lcar" style="left:860px;top:730px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">OVE Caraïbes</div><div style="font-size:21px;color:#6B6F72">association</div></div>
+  <div class="abs s03-node s03-res" style="left:598px;top:683px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="3"/><path d="M15 32v-6M22 32V18M29 32V22M35 32v-9"/></svg></div>
+  <div class="abs s03-lab s03-lres" style="left:520px;top:815px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">Ressourcial</div><div style="font-size:21px;color:#6B6F72">association</div></div>
+  <div class="abs label s03-p1t" style="left:1240px;top:190px">Des objectifs légitimes</div>
+  <div class="abs row s03-o0" style="left:1240px;top:240px;width:490px;font-size:28px;font-weight:600"><span style="color:#5C6600"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Coopérer</div>
+  <div class="abs row s03-o1" style="left:1240px;top:298px;width:490px;font-size:28px;font-weight:600"><span style="color:#5C6600"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Mutualiser</div>
+  <div class="abs row s03-o2" style="left:1240px;top:356px;width:490px;font-size:28px;font-weight:600"><span style="color:#5C6600"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Se spécialiser</div>
+  <div class="abs row s03-o3" style="left:1240px;top:414px;width:490px;font-size:28px;font-weight:600"><span style="color:#5C6600"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Distinguer médico-social et patrimoine</div>
+  <div class="abs label s03-p2t" style="left:1240px;top:500px;color:#6B6F72">Ce qui se multiplie</div>
+  <div class="abs s03-p2" style="left:1240px;top:548px;width:500px;display:flex;flex-wrap:nowrap;gap:10px"><span class="chip s03-c0" style="font-size:23px;padding:10px 16px">conventions</span><span class="chip s03-c1" style="font-size:23px;padding:10px 16px">flux</span><span class="chip s03-c2" style="font-size:23px;padding:10px 16px">mandats croisés</span></div>
+  <div class="card s03-leg" style="left:1240px;top:660px;width:490px;height:190px;padding:22px 28px;box-sizing:border-box">
+    <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:24px">Légende (bien méritée)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:14px;font-size:22px;color:#55595D">
+      <div class="row" style="gap:10px"><i style="display:block;width:20px;height:20px;border-radius:50%;background:#B4C908"></i>Fondation</div>
+      <div class="row" style="gap:10px"><i style="display:block;width:20px;height:20px;border-radius:50%;border:3px solid #B4C908;box-sizing:border-box"></i>Entités du réseau</div>
+      <div class="row" style="gap:10px"><i style="display:block;width:16px;height:16px;border-radius:3px;background:#878787"></i>SCI</div>
+      <div class="row" style="gap:10px"><i style="display:block;width:30px;border-top:3px dashed #878787"></i>Mandats croisés</div>
+    </div></div>
+  <div class="card top s03-ok" style="left:1210px;top:200px;width:540px;height:270px;padding:34px 36px;box-sizing:border-box;z-index:5">
+    <div class="row"><div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24l5 5 9-10"/></svg></div><div class="h3" style="font-size:32px">Aucune irrégularité en soi</div></div>
+    <div class="body" style="margin-top:22px">Un cadre commun à construire, à la mesure du réseau.</div></div>
+  </div>
+  <div class="bands s03-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
+  </div>
+</div>
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  const q = (s) => document.querySelectorAll(s);
+  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
+  const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
+    tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
+
+  pop(".s03-core", 0.55, { s: 0.8, d: 0.8 });
+  draw(".s03-ln:nth-of-type(1)", 5.34, 0.6);
+  pop(".s03-imove", 5.84);
+  rise(".s03-limove", 5.94, { y: 12 });
+  draw(".s03-ln:nth-of-type(2)", 5.80, 0.6);
+  pop(".s03-sci", 6.30);
+  rise(".s03-lsci", 6.40, { y: 12 });
+  draw(".s03-ln:nth-of-type(3)", 11.04, 0.6);
+  pop(".s03-ami", 11.54);
+  rise(".s03-lami", 11.64, { y: 12 });
+  draw(".s03-ln:nth-of-type(4)", 11.65, 0.6);
+  pop(".s03-ple", 12.15);
+  rise(".s03-lple", 12.25, { y: 12 });
+  draw(".s03-ln:nth-of-type(5)", 12.53, 0.6);
+  pop(".s03-car", 13.03);
+  rise(".s03-lcar", 13.13, { y: 12 });
+  draw(".s03-ln:nth-of-type(6)", 13.61, 0.6);
+  pop(".s03-res", 14.11);
+  rise(".s03-lres", 14.21, { y: 12 });
+  rise(".s03-p1t", 15.424);
+  slide(".s03-o0", 18.70, { x: -24 });
+  slide(".s03-o1", 19.31, { x: -24 });
+  slide(".s03-o2", 20.04, { x: -24 });
+  slide(".s03-o3", 21.01, { x: -24 });
+  rise(".s03-p2t", 24.729);
+  rise(".s03-c0", 26.17, { y: 14 }); rise(".s03-c1", 27.15, { y: 14 }); rise(".s03-c2", 27.84, { y: 14 });
+  tl.fromTo(".s03-cx", { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.25 }, 27.84);
+  pop(".s03-leg", 31.74, { s: 0.94 });
+  tl.fromTo(".s03-leg", { rotation: 0 }, { rotation: -1.5, duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: 3 }, 34.38);
+  tl.to(".s03-o0, .s03-o1, .s03-o2, .s03-o3, .s03-p1t", { opacity: 0, duration: 0.4 }, 35.63);
+  pop(".s03-ok", 35.73, { s: 0.95 });
+  tl.fromTo(".s03-halo", { opacity: 0, scale: 0.75 }, { opacity: 0.8, scale: 1, duration: 1.2, ease: "power2.out" }, 40.94);
+  tl.fromTo(".s03-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
+  tl.fromTo(".s03-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 41.79);
+  tl.set(".s03-content", { opacity: 0 }, 42.45);
+  window.__timelines["03-ecosysteme"] = tl;
+})();
+</script>
+</template>

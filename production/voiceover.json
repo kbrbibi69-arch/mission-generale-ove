@@ -1,0 +1,302 @@
+{
+ "voice": "ff_siwis",
+ "speed": 1.0,
+ "scenes": [
+  {
+   "id": "01-ouverture",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Prévenir les atteintes à la probité.",
+     "say": "Prévenir les atteintes à la probité."
+    },
+    {
+     "id": "b",
+     "text": "Pour la Fondation OVE, c’est d’abord une question de confiance.",
+     "say": "Pour la Fondation O.V.E., c'est d'abord une question de confiance."
+    },
+    {
+     "id": "c",
+     "text": "Cette présentation de la Direction juridique explique pourquoi une démarche structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique.",
+     "say": "Cette présentation de la Direction juridique explique pourquoi une démarche structurée, inspirée de la loi Sapin deux, présente un intérêt stratégique."
+    }
+   ]
+  },
+  {
+   "id": "02-fondation",
+   "lines": [
+    {
+     "id": "a",
+     "text": "La Fondation OVE est une fondation reconnue d’utilité publique.",
+     "say": "La Fondation O.V.E. est une fondation reconnue d'utilité publique."
+    },
+    {
+     "id": "b",
+     "text": "Elle mobilise un budget d’environ 180 millions d’euros et près de 2 500 salariés.",
+     "say": "Elle mobilise un budget d'environ cent quatre-vingts millions d'euros, et près de deux mille cinq cents salariés."
+    },
+    {
+     "id": "c",
+     "text": "Elle accompagne chaque année plus de 15 000 personnes, sur l’ensemble du territoire.",
+     "say": "Elle accompagne chaque année plus de quinze mille personnes, sur l'ensemble du territoire."
+    },
+    {
+     "id": "d",
+     "text": "Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau et une direction générale.",
+     "say": "Sa gouvernance repose sur un conseil d'administration de quinze membres, un Bureau, et une direction générale."
+    }
+   ]
+  },
+  {
+   "id": "03-ecosysteme",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, plus de 35 sociétés civiles immobilières,",
+     "say": "Autour d'elle s'est constitué un écosystème structuré : le fonds de dotation Imove, plus de trente-cinq sociétés civiles immobilières,"
+    },
+    {
+     "id": "b",
+     "text": "et des associations partenaires : AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial.",
+     "say": "et des associations partenaires : Amicial, O.V.E. Plénior, O.V.E. Caraïbes, et Ressourcial."
+    },
+    {
+     "id": "c",
+     "text": "Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.",
+     "say": "Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier."
+    },
+    {
+     "id": "d",
+     "text": "Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.",
+     "say": "Elle multiplie aussi les conventions, les flux, et les mandats croisés, exercés par un nombre limité de décideurs."
+    },
+    {
+     "id": "h1",
+     "variant": "humour",
+     "text": "Un schéma si riche qu’il mériterait presque sa propre légende.",
+     "say": "Un schéma si riche, qu'il mériterait presque sa propre légende."
+    },
+    {
+     "id": "h1",
+     "variant": "sobre",
+     "text": "Cette richesse est une force, à condition de rester lisible.",
+     "say": "Cette richesse est une force, à condition de rester lisible."
+    },
+    {
+     "id": "e",
+     "text": "Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.",
+     "say": "Cette configuration ne révèle, en elle-même, aucune irrégularité. Elle appelle simplement un cadre commun."
+    }
+   ]
+  },
+  {
+   "id": "04-cadre",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.",
+     "say": "Sur le plan juridique, l'article dix-sept de la loi Sapin deux impose un programme anticorruption à certaines entreprises dépassant des seuils précis."
+    },
+    {
+     "id": "b",
+     "text": "Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.",
+     "say": "Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale."
+    },
+    {
+     "id": "c",
+     "text": "En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.",
+     "say": "En revanche, l'article trois habilite l'Agence française anticorruption, l'A.F.A., à contrôler, de sa propre initiative, les fondations reconnues d'utilité publique."
+    },
+    {
+     "id": "d",
+     "text": "Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.",
+     "say": "Elle examine leurs procédures contre la corruption, le trafic d'influence, la prise illégale d'intérêts, le détournement de fonds publics, ou le favoritisme."
+    }
+   ]
+  },
+  {
+   "id": "05-maintenant",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.",
+     "say": "Pourquoi agir maintenant ? Parce que l'environnement devient plus exigeant."
+    },
+    {
+     "id": "b",
+     "text": "Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance.",
+     "say": "Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance."
+    },
+    {
+     "id": "c",
+     "text": "S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements et la réputation de la Fondation.",
+     "say": "S'en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements, et la réputation de la Fondation."
+    }
+   ]
+  },
+  {
+   "id": "06-message",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.",
+     "say": "Pour la Fondation O.V.E., appliquer les principes de la loi Sapin deux, ne consiste pas seulement à répondre à un environnement juridique."
+    },
+    {
+     "id": "b",
+     "text": "Il s’agit de protéger sa mission d’intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources et la confiance de ses partenaires.",
+     "say": "Il s'agit de protéger sa mission d'intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources, et la confiance de ses partenaires."
+    }
+   ]
+  },
+  {
+   "id": "07-decideurs",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Ce cadre protège aussi celles et ceux qui décident.",
+     "say": "Ce cadre protège aussi celles et ceux qui décident."
+    },
+    {
+     "id": "b",
+     "text": "Lorsqu’une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles.",
+     "say": "Lorsqu'une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles."
+    },
+    {
+     "id": "q1",
+     "text": "Pour le compte de quelle personne morale la décision est-elle prise ?",
+     "say": "Pour le compte de quelle personne morale la décision est-elle prise ?"
+    },
+    {
+     "id": "q2",
+     "text": "Quelle instance doit l’autoriser ?",
+     "say": "Quelle instance doit l'autoriser ?"
+    },
+    {
+     "id": "q3",
+     "text": "Quelle délégation permet de signer ?",
+     "say": "Quelle délégation permet de signer ?"
+    },
+    {
+     "id": "q4",
+     "text": "Quelles informations remonter à chaque gouvernance ?",
+     "say": "Quelles informations remonter à chaque gouvernance ?"
+    },
+    {
+     "id": "h2",
+     "variant": "humour",
+     "text": "Quand on porte plusieurs casquettes, mieux vaut savoir laquelle on porte au moment de signer.",
+     "say": "Quand on porte plusieurs casquettes, mieux vaut savoir laquelle on porte au moment de signer."
+    },
+    {
+     "id": "h2",
+     "variant": "sobre",
+     "text": "Des réponses écrites et partagées valent mieux que des usages implicites.",
+     "say": "Des réponses écrites et partagées valent mieux que des usages implicites."
+    },
+    {
+     "id": "c",
+     "text": "En cas de contrôle, pouvoir le démontrer est une protection.",
+     "say": "En cas de contrôle, pouvoir le démontrer est une protection."
+    }
+   ]
+  },
+  {
+   "id": "08-dispositif",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.",
+     "say": "Le dispositif proposé repose sur les trois piliers recommandés par l'A.F.A. : l'engagement de la gouvernance, la cartographie des risques, et des mesures adaptées."
+    },
+    {
+     "id": "b",
+     "text": "Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,",
+     "say": "Concrètement : un code de conduite, une politique de gestion des conflits d'intérêts et des mandats croisés, un dispositif d'alerte interne sécurisé,"
+    },
+    {
+     "id": "c",
+     "text": "une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.",
+     "say": "une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation."
+    },
+    {
+     "id": "d",
+     "text": "Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.",
+     "say": "Proportionné signifie graduer les exigences selon les montants, l'urgence, et les risques."
+    },
+    {
+     "id": "h3",
+     "variant": "humour",
+     "text": "Personne ne propose d’appel d’offres pour une boîte de trombones.",
+     "say": "Personne ne propose d'appel d'offres pour une boîte de trombones."
+    },
+    {
+     "id": "h3",
+     "variant": "sobre",
+     "text": "L’objectif est de sécuriser, sans alourdir.",
+     "say": "L'objectif est de sécuriser, sans alourdir."
+    }
+   ]
+  },
+  {
+   "id": "09-feuille-de-route",
+   "lines": [
+    {
+     "id": "a",
+     "text": "La démarche se déploierait progressivement, sur deux ans.",
+     "say": "La démarche se déploierait progressivement, sur deux ans."
+    },
+    {
+     "id": "b",
+     "text": "Année 1 : comprendre, cartographier, concevoir. Cadrage, diagnostic, cartographie des risques, dispositif cible.",
+     "say": "Année un : comprendre, cartographier, concevoir. Cadrage, diagnostic, cartographie des risques, dispositif cible."
+    },
+    {
+     "id": "c",
+     "text": "Année 2 : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan.",
+     "say": "Année deux : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan."
+    },
+    {
+     "id": "d",
+     "text": "Des indicateurs en mesureront l’effectivité.",
+     "say": "Des indicateurs en mesureront l'effectivité."
+    },
+    {
+     "id": "e",
+     "text": "Soyons lucides : aucun dispositif ne supprime totalement le risque. Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.",
+     "say": "Soyons lucides : aucun dispositif ne supprime totalement le risque. Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation."
+    }
+   ]
+  },
+  {
+   "id": "10-decisions",
+   "lines": [
+    {
+     "id": "a",
+     "text": "Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,",
+     "say": "Il est donc proposé au Bureau de reconnaître l'intérêt stratégique de la démarche,"
+    },
+    {
+     "id": "b",
+     "text": "d’autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,",
+     "say": "d'autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,"
+    },
+    {
+     "id": "c",
+     "text": "avec un comité de pilotage transversal et un reporting régulier au Bureau.",
+     "say": "avec un comité de pilotage transversal, et un reporting régulier au Bureau."
+    },
+    {
+     "id": "d",
+     "text": "Le dispositif définitif restera soumis aux instances compétentes.",
+     "say": "Le dispositif définitif restera soumis aux instances compétentes."
+    },
+    {
+     "id": "e",
+     "text": "Protéger la mission, les personnes, les décideurs et la confiance : c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.",
+     "say": "Protéger la mission, les personnes, les décideurs, et la confiance : c'est la trajectoire, prudente mais résolue, que nous vous proposons de valider."
+    }
+   ]
+  }
+ ]
+}

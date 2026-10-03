@@ -1,7 +1,0 @@
-{
-  "scene": "06-methode",
-  "duration_s": 45.0,
-  "rules": ["timeline-reveal", "pan"],
-  "exit": { "vector": "left", "still_moving": true },
-  "entry": { "vector": "left", "from_rest": false }
-}

@@ -1,0 +1,88 @@
+<template>
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VF.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-VF.ttf") format("truetype"); font-weight: 200 900; }
+#root { position: absolute; inset: 0; overflow: hidden; font-family: "Source Sans 3", sans-serif; color: #25282B; }
+#root .bg { position: absolute; inset: 0; background: #F6F6F2; }
+#root .bg.dark { background: #1F2326; }
+#root .abs { position: absolute; }
+#root .h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 72px; line-height: 1.1; letter-spacing: -0.01em; }
+#root .h2 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 52px; line-height: 1.15; letter-spacing: -0.01em; }
+#root .h3 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; line-height: 1.2; }
+#root .body { font-size: 30px; line-height: 1.35; color: #55595D; }
+#root .label { font-size: 22px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5C6600; }
+#root .card { position: absolute; background: #FFFFFF; border-radius: 18px; box-shadow: 0 10px 30px rgba(37,40,43,0.08); }
+#root .card.top { border-top: 6px solid #B4C908; }
+#root .chip { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #FFFFFF; border: 2px solid #D5D7D2; font-size: 26px; font-weight: 600; color: #25282B; white-space: nowrap; }
+#root .chip .ic { width: 30px; height: 30px; color: #5C6600; }
+#root .badge { width: 84px; height: 84px; border-radius: 50%; background: #EEF3C4; color: #5C6600; display: flex; align-items: center; justify-content: center; }
+#root .ic { display: block; }
+#root .row { display: flex; gap: 20px; align-items: center; }
+#root .marker { position: absolute; left: 192px; top: 108px; display: flex; align-items: center; gap: 18px; }
+#root .marker .mb { display: flex; flex-direction: column; gap: 5px; }
+#root .marker .mb i { display: block; height: 7px; border-radius: 4px; background: #B4C908; }
+#root .marker .mb i:nth-child(2) { background: #DCE58A; }
+#root .marker .mb i:nth-child(3) { background: #878787; }
+#root .marker .ml { font-size: 22px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6B6F72; }
+#root .marker.light .ml { color: #C9CCCF; }
+#root .bands { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+#root .bands i { position: absolute; left: 0; width: 100%; height: 33.6%; display: block; }
+#root .bands i:nth-child(1) { top: 0; background: #B4C908; }
+#root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
+#root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
+#root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+</style>
+<div id="root" data-composition-id="05-maintenant" data-width="1920" data-height="1080" data-duration="21.63">
+  <div id="s05-scene" class="clip" data-start="0" data-duration="21.63" data-track-index="0" style="position:absolute;inset:0">
+  <div class="bg"></div>
+  <div class="s05-content" style="position:absolute;inset:0">
+  <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">04 — Pourquoi maintenant</div></div>
+  <div class="abs h2 s05-t" style="left:192px;top:180px;width:1536px">Un environnement plus exigeant</div>
+  <div class="card top s05-c0" style="left:192px;top:290px;width:490px;height:230px;padding:34px 34px;box-sizing:border-box">
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle cx="24" cy="24" r="5"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Un contrôle possible de l’AFA</div></div>
+  <div class="card top s05-c1" style="left:715px;top:290px;width:490px;height:230px;padding:34px 34px;box-sizing:border-box">
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 36l10-10 8 6 16-16"/><path d="M32 16h8v8"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Des financeurs qui attendent des garanties</div></div>
+  <div class="card top s05-c2" style="left:1238px;top:290px;width:490px;height:230px;padding:34px 34px;box-sizing:border-box">
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="28" rx="3"/><path d="M12 18h12M12 24h24M12 30h24"/><rect x="29" y="15" width="7" height="5"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Une vigilance accrue dans le secteur</div></div>
+  <div class="abs s05-lt" style="left:192px;top:585px;width:1536px;font-size:30px;font-weight:600;color:#55595D">Sans cadre commun, ce qui serait peu à peu exposé :</div>
+  <div class="abs s05-e0" style="left:192px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39S8 29 8 18a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 11-16 21-16 21z"/></svg></span>La mission</div>
+  <div class="abs s05-e1" style="left:582px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="7"/><path d="M10 42c0-9 6-15 14-15s14 6 14 15"/></svg></span>Les décideurs</div>
+  <div class="abs s05-e2" style="left:972px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="14" rx="12" ry="5"/><path d="M12 14v8c0 3 5 5 12 5s12-2 12-5v-8M12 22v8c0 3 5 5 12 5s12-2 12-5v-8"/></svg></span>Les financements</div>
+  <div class="abs s05-e3" style="left:1362px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7l5 11 12 1-9 8 3 12-11-7-11 7 3-12-9-8 12-1z"/></svg></span>La réputation</div>
+  </div>
+  <div class="bands s05-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
+  </div>
+</div>
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  const q = (s) => document.querySelectorAll(s);
+  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
+  const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
+    tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
+
+  rise(".s05-t", 1.90);
+  rise(".s05-c0", 3.97, { y: 36 });
+  rise(".s05-c1", 7.00, { y: 36 });
+  rise(".s05-c2", 11.57, { y: 36 });
+  rise(".s05-lt", 12.64);
+  rise(".s05-e0", 16.18, { y: 20 });
+  rise(".s05-e1", 16.89, { y: 20 });
+  rise(".s05-e2", 17.78, { y: 20 });
+  rise(".s05-e3", 18.96, { y: 20 });
+  tl.fromTo(".s05-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
+  tl.fromTo(".s05-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 20.83);
+  tl.set(".s05-content", { opacity: 0 }, 21.49);
+  window.__timelines["05-maintenant"] = tl;
+})();
+</script>
+</template>

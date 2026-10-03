@@ -1,0 +1,100 @@
+<template>
+<style>
+@font-face { font-family: "Montserrat"; src: url("assets/fonts/Montserrat-VF.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-VF.ttf") format("truetype"); font-weight: 200 900; }
+#root { position: absolute; inset: 0; overflow: hidden; font-family: "Source Sans 3", sans-serif; color: #25282B; }
+#root .bg { position: absolute; inset: 0; background: #F6F6F2; }
+#root .bg.dark { background: #1F2326; }
+#root .abs { position: absolute; }
+#root .h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 72px; line-height: 1.1; letter-spacing: -0.01em; }
+#root .h2 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 52px; line-height: 1.15; letter-spacing: -0.01em; }
+#root .h3 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px; line-height: 1.2; }
+#root .body { font-size: 30px; line-height: 1.35; color: #55595D; }
+#root .label { font-size: 22px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #5C6600; }
+#root .card { position: absolute; background: #FFFFFF; border-radius: 18px; box-shadow: 0 10px 30px rgba(37,40,43,0.08); }
+#root .card.top { border-top: 6px solid #B4C908; }
+#root .chip { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #FFFFFF; border: 2px solid #D5D7D2; font-size: 26px; font-weight: 600; color: #25282B; white-space: nowrap; }
+#root .chip .ic { width: 30px; height: 30px; color: #5C6600; }
+#root .badge { width: 84px; height: 84px; border-radius: 50%; background: #EEF3C4; color: #5C6600; display: flex; align-items: center; justify-content: center; }
+#root .ic { display: block; }
+#root .row { display: flex; gap: 20px; align-items: center; }
+#root .marker { position: absolute; left: 192px; top: 108px; display: flex; align-items: center; gap: 18px; }
+#root .marker .mb { display: flex; flex-direction: column; gap: 5px; }
+#root .marker .mb i { display: block; height: 7px; border-radius: 4px; background: #B4C908; }
+#root .marker .mb i:nth-child(2) { background: #DCE58A; }
+#root .marker .mb i:nth-child(3) { background: #878787; }
+#root .marker .ml { font-size: 22px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #6B6F72; }
+#root .marker.light .ml { color: #C9CCCF; }
+#root .bands { position: absolute; inset: 0; pointer-events: none; z-index: 50; }
+#root .bands i { position: absolute; left: 0; width: 100%; height: 33.6%; display: block; }
+#root .bands i:nth-child(1) { top: 0; background: #B4C908; }
+#root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
+#root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
+#root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+</style>
+<div id="root" data-composition-id="10-decisions" data-width="1920" data-height="1080" data-duration="44.89">
+  <div id="s10-scene" class="clip" data-start="0" data-duration="44.89" data-track-index="0" style="position:absolute;inset:0">
+  <div class="bg"></div>
+  <div class="s10-content" style="position:absolute;inset:0">
+  <div class="abs s10-list" style="left:0;top:0;width:1920px;height:1080px">
+  <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">09 — Décisions proposées au Bureau</div></div>
+  <div class="abs h2 s10-t" style="left:192px;top:170px;width:1536px">Ce qui est proposé au Bureau</div>
+  <div class="card s10-d0" style="left:192px;top:290px;width:748px;height:118px;padding:0 28px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">1</div><div style="font-size:29px;font-weight:600;line-height:1.2">Reconnaître l’intérêt stratégique de la démarche</div></div>
+  <div class="card s10-d1" style="left:192px;top:430px;width:748px;height:118px;padding:0 28px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">2</div><div style="font-size:29px;font-weight:600;line-height:1.2">Autoriser le diagnostic et la cartographie des risques</div></div>
+  <div class="card s10-d2" style="left:192px;top:570px;width:748px;height:118px;padding:0 28px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">3</div><div style="font-size:29px;font-weight:600;line-height:1.2">Désigner la Direction générale comme sponsor</div></div>
+  <div class="card s10-d3" style="left:980px;top:290px;width:748px;height:118px;padding:0 28px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">4</div><div style="font-size:29px;font-weight:600;line-height:1.2">Confier le pilotage à la Direction juridique</div></div>
+  <div class="card s10-d4" style="left:980px;top:430px;width:748px;height:118px;padding:0 28px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">5</div><div style="font-size:29px;font-weight:600;line-height:1.2">Constituer un comité de pilotage transversal</div></div>
+  <div class="card s10-d5" style="left:980px;top:570px;width:748px;height:118px;padding:0 28px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
+    <div class="num">6</div><div style="font-size:29px;font-weight:600;line-height:1.2">Prévoir un reporting régulier au Bureau</div></div>
+  <div class="abs s10-n row" style="left:192px;top:742px;gap:14px;font-size:27px;font-weight:600;color:#55595D"><svg class="ic " width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l8 8v28H14z"/><path d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg>Le dispositif définitif restera soumis aux instances compétentes.</div>
+  </div>
+  <div class="abs s10-end" style="left:0;top:0;width:1920px;height:1080px;background:#FFFFFF">
+    <div class="abs s10-plate" style="left:822px;top:150px;width:276px;height:254px"><img src="assets/img/logo-fondation-ove.jpg" alt="Fondation OVE" style="width:276px;height:254px;display:block" /></div>
+    <div class="abs h2 s10-m" style="left:260px;top:470px;width:1400px;text-align:center">Protéger la mission, les personnes, les décideurs et la confiance</div>
+    <div class="abs s10-s" style="left:192px;top:620px;width:1536px;text-align:center;font-family:Montserrat,sans-serif;font-weight:600;font-size:36px;color:#5C6600">Une trajectoire prudente mais résolue</div>
+    <div class="abs s10-b" style="left:810px;top:700px;width:300px;display:flex;flex-direction:column;gap:8px;align-items:center"><i style="display:block;width:300px;height:10px;border-radius:5px;background:#B4C908"></i><i style="display:block;width:220px;height:10px;border-radius:5px;background:#DCE58A"></i><i style="display:block;width:140px;height:10px;border-radius:5px;background:#878787"></i></div>
+    <div class="abs s10-f" style="left:192px;top:790px;width:1536px;text-align:center;font-size:24px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:#6B6F72">Direction juridique · Fondation OVE · Document de travail</div>
+  </div>
+  </div>
+  <div class="bands s10-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
+  </div>
+</div>
+<script>
+(() => {
+  const tl = gsap.timeline({ paused: true });
+
+  const q = (s) => document.querySelectorAll(s);
+  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
+  const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
+    tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
+
+  rise(".s10-t", 0.80);
+  slide(".s10-d0", 2.54, { x: -28 });
+  slide(".s10-d1", 5.51, { x: -28 });
+  slide(".s10-d2", 8.96, { x: -28 });
+  slide(".s10-d3", 12.06, { x: -28 });
+  slide(".s10-d4", 15.69, { x: -28 });
+  slide(".s10-d5", 18.12, { x: -28 });
+  rise(".s10-n", 20.62, { y: 14 });
+  tl.fromTo(".s10-end", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "power1.inOut" }, 24.96);
+  tl.to(".s10-list", { opacity: 0, duration: 0.6 }, 25.26);
+  pop(".s10-plate", 25.36, { s: 0.94, d: 0.9 });
+  rise(".s10-m", 25.26, { y: 20, d: 0.9 });
+  rise(".s10-s", 30.00, { y: 16 });
+  tl.fromTo(".s10-b i", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out", stagger: 0.12 }, 32.95);
+  fade(".s10-f", 33.69, { d: 1 });
+  tl.fromTo(".s10-plate img", { scale: 1 }, { scale: 1.025, duration: 18.93, ease: "none", immediateRender: false }, 25.96);
+  tl.fromTo(".s10-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
+  window.__timelines["10-decisions"] = tl;
+})();
+</script>
+</template>

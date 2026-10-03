@@ -6,28 +6,27 @@ message: "Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne co
 destination: presentation
 aspect: 1920x1080
 language: fr
-length: 5m
+length: 4m50-5m10
 audience: membres du Bureau de la Fondation OVE
 ---
 
 ## Intent
 
-Film institutionnel en motion design, moderne, élégant, professionnel et humain, destiné au Bureau et CA de la Fondation OVE. L'objectif est de convaincre sans dramatiser de l'intérêt d'un dispositif de prévention/détection des atteintes à la probité (loi Sapin 2/AFA). Le but décisionnel est de faire adhérer le Bureau pour lancer une démarche structurée, progressive et documentée (cartographie, diagnostic, désignation de la Direction juridique pour piloter, constitution d'un copil), sans demander l'adoption immédiate d'un dispositif figé.
+Film institutionnel en motion design (Direction juridique → Bureau) : convaincre, sans dramatiser, de l'intérêt stratégique d'une démarche de prévention des atteintes à la probité inspirée de la loi Sapin 2, et obtenir l'autorisation de lancer diagnostic, cartographie, sponsor DG, pilotage Direction juridique, comité de pilotage, reporting. Source : note au Bureau (PDF joint à la session).
 
 ## Assets
 
-(Aucun fourni pour l'instant)
+- Logo fourni : `assets/img/logo-fondation-ove.jpg` (non modifié).
+- Voix off : Kokoro-82M local, voix `ff_siwis` (aucun compte HeyGen/ElevenLabs disponible).
+- Musique : composition instrumentale déterministe (`production/scripts/music.py`).
 
 ## Customizations
 
-- **Voix off :** Française, adulte, naturelle, posée et chaleureuse. Représente un profil "Directeur juridique expérimenté". Environ 650 à 700 mots, débit 130-140 mots/min, non accélérée artificiellement. Sans dramatisation ni effet publicitaire.
-- **Écosystème à mentionner et prononciation :** Fondation OVE, loi Sapin 2, Agence française anticorruption, AFA, IMOVE, AMICIAL, OVE Plenior, OVE Caraïbes, Ressourcial, fondation reconnue d’utilité publique.
-- **Data-viz / Infographies :** Animer visuellement les données clés (180M€ budget, 2500 salariés, 15000+ personnes accompagnées, 15 membres CA, 35+ SCI).
+- Deux versions : avec humour (3 touches max) → `index.html` ; sans humour → `variantes/sans-humour/`.
+- Charte : couleurs du logo, Montserrat + Source Sans 3, signature « trois bandes » (traits du E du logo).
+- Script source unique : `production/voiceover.json` ; tout le reste est généré (voir `production/DOSSIER-DE-PRODUCTION.md`, § Plan de montage).
 
 ## Notes
 
-- Ne doit pas ressembler à un cours juridique, ni à un PPT animé, ni à une vidéo commerciale générique.
-- Le message central (indiqué dans le paramètre message) doit être prononcé intégralement au cœur de la vidéo et repris de manière synthétique en conclusion.
-- Tous les textes, titres, infographies doivent être strictement en français de France.
-- Musique instrumentale en fond. Sous-titres français intégrés.
-- Export exploitable pour projection en réunion.
+- Mandats croisés présentés avec neutralité ; aucune promesse de risque zéro ; article 17 : assujettissement à confirmer.
+- Écran final maintenu ≥ 10 s.
