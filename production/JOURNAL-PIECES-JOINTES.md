@@ -176,8 +176,8 @@ Film : *Fondation OVE — Prévenir les atteintes à la probité* · version san
 
 ## 8. Livrables
 
-- **Haute qualité, projection** : `renders/OVE-probite-sapin2-sans-humour-v3-projection.mp4` — à produire
-- **Diffusion numérique (allégée)** : `renders/OVE-probite-sapin2-sans-humour-v3-leger.mp4` — à produire
+- **Haute qualité, projection** : `renders/OVE-probite-sapin2-sans-humour-v3-projection.mp4` — H264 1920×1080 · 30 i/s · audio AAC 48 kHz 2 canaux · 307.0 s · 2.2 Mb/s · 82.6 Mo
+- **Diffusion numérique (allégée)** : `renders/OVE-probite-sapin2-sans-humour-v3-leger.mp4` — H264 1920×1080 · 30 i/s · audio AAC 48 kHz 2 canaux · 307.0 s · 0.7 Mb/s · 28.2 Mo
 - Versions précédentes conservées : v1 (`renders/OVE-probite-sapin2-sans-humour.mp4`, `…-leger.mp4`) et v2 (`renders/OVE-probite-sapin2-sans-humour-v2-projection.mp4`, `…-v2-leger.mp4`).
 
 Reconstruction : `python3 production/scripts/logos.py && python3 production/scripts/photos.py && python3 production/scripts/build.py sobre && python3 production/scripts/journal.py`.
