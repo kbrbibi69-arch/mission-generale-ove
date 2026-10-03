@@ -163,7 +163,7 @@ def bands_js(p, D, first=False, last=False):
 LOGO_DIR = os.path.join(ROOT, "production", "logos")
 LOGO_FILES = {"fondation-ove": "PJ01-logo-fondation-ove.jpg", "imove": "PJ04-logo-imove-fonds-de-dotation.webp",
               "ove-caraibes": "PJ05-logo-ove-caraibes.webp", "plenior": "PJ06-logo-plenior.webp",
-              "amicial": "PJ07-logo-amicial", "ressourcial": "PJ08-logo-ressourcial"}
+              "amicial": "PJ09-logo-amicial.webp", "ressourcial": "PJ08-logo-ressourcial.webp"}
 INS = []  # journal des insertions (variante sobre), écrit dans production/insertions-sobre.json
 def has_logo(lid): return os.path.exists(os.path.join(LOGO_DIR, lid + ".json"))
 def logo_data(lid): return json.load(open(os.path.join(LOGO_DIR, lid + ".json")))
@@ -173,10 +173,11 @@ def logo_svg(lid, cls, w=None, h=None):
     groups = {}
     for c in d["components"]:
         groups.setdefault(c["group"], []).append(f'<path fill="{c["color"]}" fill-rule="evenodd" d="{c["d"]}"/>')
-    if w and not h: h = round(w * d["height"] / d["width"], 1)
-    if h and not w: w = round(h * d["width"] / d["height"], 1)
+    vb = d.get("viewBox", [0, 0, d["width"], d["height"]])
+    if w and not h: h = round(w * vb[3] / vb[2], 1)
+    if h and not w: w = round(h * vb[2] / vb[3], 1)
     body = "".join(f'<g class="g-{g}">{"".join(ps)}</g>' for g, ps in groups.items())
-    return (f'<svg class="logo {cls}" width="{w}" height="{h}" viewBox="0 0 {d["width"]} {d["height"]}" '
+    return (f'<svg class="logo {cls}" width="{w}" height="{h}" viewBox="{" ".join(map(str, vb))}" '
             f'role="img" aria-label="{lid}" style="display:block;overflow:visible">{body}</svg>')
 def gbox(lid, g):
     bs = [c["bbox"] for c in logo_data(lid)["components"] if c["group"] == g]
@@ -224,6 +225,22 @@ def logo_js(lid, s, t, style="build"):
         j.append(f'tl.fromTo({G("point")}, {{ scale: 0, transformOrigin: "50% 50%" }}, {{ scale: 1, duration: 0.4, ease: "back.out(3)" }}, {t + 0.4:.2f});')
         x0, y0, x1, y1 = gbox(lid, "feuille")
         j.append(f'tl.fromTo({G("feuille")}, {{ scale: 0, rotation: -35, svgOrigin: "{x0 + 4:.1f} {y1:.1f}" }}, {{ scale: 1, rotation: 0, duration: 0.9, ease: "elastic.out(1, 0.55)" }}, {t + 0.55:.2f});')
+        return j, t + 1.5
+    if lid == "amicial":       # le repère-maison se pose, le cœur bat deux fois, le mot s'écrit, la promesse suit
+        j.append(f'tl.fromTo("{s} .g-fond, {s} .g-maison", {{ y: -46, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.75, ease: "bounce.out" }}, {t:.2f});')
+        j.append(f'tl.fromTo({G("coeur")}, {{ scale: 0, transformOrigin: "50% 60%" }}, {{ scale: 1, duration: 0.45, ease: "back.out(3)" }}, {t + 0.55:.2f});')
+        j.append(f'tl.fromTo({G("coeur")}, {{ scale: 1 }}, {{ scale: 1.22, duration: 0.16, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }}, {t + 1.05:.2f});')
+        j.append(f'tl.fromTo("{", ".join(f"{s} .g-{g}" for g in ["a1", "m", "i1", "c", "i2", "a2", "l"])}", {{ y: 22, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.06 }}, {t + 0.3:.2f});')
+        j.append(f'tl.fromTo({P("texte")}, {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25, stagger: 0.012 }}, {t + 0.85:.2f});')
+        return j, t + 1.8
+    if lid == "ressourcial":   # les lettres convergent vers le centre, le « O » tourne, la pièce orange s'emboîte au-dessus
+        letters = ["r1", "e1", "s1", "s2", "u", "r2", "c", "i", "a", "l"]
+        vx = logo_data(lid)["viewBox"]; mid = vx[0] + vx[2] / 2
+        for k, g in enumerate(letters):
+            x0, y0, x1, y1 = gbox(lid, g)
+            j.append(f'tl.fromTo({G(g)}, {{ x: {((x0 + x1) / 2 - mid) * 0.5:.1f}, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }}, {t + abs((x0 + x1) / 2 - mid) / 400:.2f});')
+        j.append(f'tl.fromTo({G("o")}, {{ scale: 0, rotation: 200, transformOrigin: "50% 50%" }}, {{ scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.6)" }}, {t + 0.2:.2f});')
+        j.append(f'tl.fromTo({G("piece")}, {{ y: -40, rotation: -90, opacity: 0, transformOrigin: "50% 50%" }}, {{ y: 0, rotation: 0, opacity: 1, duration: 0.8, ease: "bounce.out" }}, {t + 0.6:.2f});')
         return j, t + 1.5
     # logo sans chorégraphie dédiée : apparition simple
     j.append(f'tl.fromTo("{s}", {{ opacity: 0, scale: 0.9 }}, {{ opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }}, {t:.2f});')
@@ -317,48 +334,74 @@ def s02(c, v, D):
     return "\n  ".join(html), "\n  ".join(js)
 
 def s02_hero(c, D, html, js):
-    """Ouverture de scène sur la photographie fournie : panneau multicouche (ciel de charte / photo / façade détourée)."""
+    """Scène 2 : (1) le siège portant le logo OVE en façade, panneau multicouche ; (2) une réunion de gouvernance."""
     p = "s02"
-    tA, tB = c.at("a"), c.at("b")
+    tA, tB, tD = c.at("a"), c.at("b"), c.at("d")
     tOut = tB - 0.55
-    bands = ('<div class="abs {p}-sk" style="left:-120px;top:-40px;width:1100px;height:420px;transform:rotate(-14deg)">'
-             '<i style="position:absolute;left:0;top:0;width:1100px;height:120px;border-radius:60px;background:#B4C908"></i>'
-             '<i style="position:absolute;left:90px;top:140px;width:900px;height:120px;border-radius:60px;background:#DCE58A"></i>'
-             '<i style="position:absolute;left:180px;top:280px;width:700px;height:120px;border-radius:60px;background:#C9C9C9"></i></div>').format(p=p)
+    # photo PJ07 : 738×342, affichée à 500 px de haut (×1,462) dans un cadre 868×500, recadrée sur les côtés
+    k = 500 / 342; iw = round(738 * k); ox = -150
+    lx, ly = (490.5 * k + ox, 128 * k)  # centre du logo peint en façade (mesuré : x 471–510, y 118–147 px source, soleil compris au-dessus)
+    bands = ('<div class="abs {p}-sk" style="left:-120px;top:-60px;width:1100px;height:420px;transform:rotate(-12deg)">'
+             '<i style="position:absolute;left:0;top:0;width:1100px;height:110px;border-radius:55px;background:#B4C908"></i>'
+             '<i style="position:absolute;left:90px;top:130px;width:900px;height:110px;border-radius:55px;background:#DCE58A"></i>'
+             '<i style="position:absolute;left:180px;top:260px;width:700px;height:110px;border-radius:55px;background:#C9C9C9"></i></div>').format(p=p)
     hero = f"""<div class="abs {p}-hero" style="left:0;top:0;width:1920px;height:1080px">
     <div class="abs h1 {p}-ht" style="left:192px;top:270px;width:620px">Une fondation reconnue d’utilité publique</div>
     <div class="abs {p}-hl" style="left:192px;top:628px;width:240px;height:6px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
-    <div class="abs {p}-ph" style="left:860px;top:170px;width:868px;height:624px;border-radius:24px;overflow:hidden;background:#F6F6F2;box-shadow:0 24px 60px rgba(37,40,43,0.16);clip-path:inset(0% 100% 0% 0% round 24px)">
+    <div class="abs {p}-ph" style="left:860px;top:200px;width:868px;height:500px;border-radius:24px;overflow:hidden;background:#F6F6F2;box-shadow:0 24px 60px rgba(37,40,43,0.16);clip-path:inset(0% 100% 0% 0% round 24px)">
       {bands}
-      <img class="abs {p}-full" src="{IMG}/photos/batiment.jpg" alt="" style="left:0;top:0;width:868px;height:624px" />
-      <img class="abs {p}-fac" src="{IMG}/photos/batiment-detoure.png" alt="" style="left:0;top:0;width:868px;height:624px" />
+      <div class="abs {p}-cam" style="left:0;top:0;width:868px;height:500px">
+        <img class="abs {p}-full" src="{IMG}/photos/batiment-ove.jpg" alt="" style="left:{ox}px;top:0;width:{iw}px;height:500px" />
+        <img class="abs {p}-fac" src="{IMG}/photos/batiment-ove-detoure.png" alt="Siège portant le logo de la Fondation OVE" style="left:{ox}px;top:0;width:{iw}px;height:500px" />
+        <div class="ring {p}-lr" style="left:{lx - 52:.0f}px;top:{ly - 52:.0f}px;width:104px;height:104px;box-sizing:border-box"></div>
+        <div class="ring {p}-lr2" style="left:{lx - 52:.0f}px;top:{ly - 52:.0f}px;width:104px;height:104px;box-sizing:border-box"></div>
+      </div>
     </div></div>"""
-    html = html + [hero]
-    # le titre courant n'apparaît qu'à la sortie du panneau
+    # réunion PJ10 (800×500) : panneau 944×590, reconstitué par trois bandes horizontales (signature de la charte)
+    pw, ph, px_, py_ = 944, 590, 330, 150  # à gauche : la carte « 15 membres » (annoncée par la voix) reste visible à droite
+    meet = (f'<div class="abs {p}-mt" style="left:{px_}px;top:{py_}px;width:{pw}px;height:{ph}px;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(37,40,43,0.16)">'
+            f'<img class="abs {p}-ri" src="{IMG}/photos/reunion.jpg" alt="Réunion d’une instance" style="left:0;top:0;width:{pw}px;height:{ph}px" /></div>')
+    html = html + [hero, meet]
     js = [x.replace(f'rise(".{p}-title", {c.at("a")});', f'rise(".{p}-title", {tB - 0.2:.2f});') for x in js]
     js += [f'title(".{p}-ht", {tA:.2f});',
            f'tl.fromTo(".{p}-hl", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.9, ease: "power2.out" }}, {tA + 0.5:.2f});',
-           # entrée : volet de gauche à droite, l'image contre-glisse (effet de profondeur)
            f'tl.fromTo(".{p}-ph", {{ clipPath: "inset(0% 100% 0% 0% round 24px)" }}, {{ clipPath: "inset(0% 0% 0% 0% round 24px)", duration: 1.0, ease: "power3.inOut" }}, {tA - 0.3:.2f});',
-           f'tl.fromTo(".{p}-full, .{p}-fac", {{ x: 70, scale: 1.08 }}, {{ x: 0, scale: 1.08, duration: 1.0, ease: "power3.out" }}, {tA - 0.3:.2f});',
-           # le ciel réel s'efface : les trois bandes de la charte prennent sa place derrière la façade
-           f'tl.fromTo(".{p}-full", {{ opacity: 1 }}, {{ opacity: 0, duration: 0.8, ease: "power1.inOut" }}, {tA + 1.3:.2f});',
-           f'tl.fromTo(".{p}-sk i", {{ xPercent: -110 }}, {{ xPercent: 0, duration: 0.9, ease: "power3.out", stagger: 0.12 }}, {tA + 1.3:.2f});',
-           # parallaxe : façade (plan proche) et bandes (plan lointain) se déplacent à des vitesses opposées
-           f'tl.fromTo(".{p}-fac", {{ x: 0, scale: 1.08 }}, {{ x: -36, scale: 1.12, duration: {tOut - tA - 0.7:.2f}, ease: "sine.inOut", immediateRender: false }}, {tA + 0.7:.2f});',
-           f'tl.fromTo(".{p}-sk", {{ x: 0 }}, {{ x: 30, duration: {tOut - tA - 1.3:.2f}, ease: "sine.inOut" }}, {tA + 1.3:.2f});',
-           # sortie : le panneau se replie vers la droite, la façade file plus vite ; le titre remonte
+           # caméra : contre-glissement d'entrée puis poussée lente vers le logo en façade
+           f'tl.fromTo(".{p}-cam", {{ x: 70, scale: 1.04, transformOrigin: "{lx:.0f}px {ly:.0f}px" }}, {{ x: 0, scale: 1.04, duration: 1.0, ease: "power3.out" }}, {tA - 0.3:.2f});',
+           f'tl.fromTo(".{p}-cam", {{ scale: 1.04 }}, {{ scale: 1.2, duration: {tOut - tA - 0.7:.2f}, ease: "sine.inOut", immediateRender: false }}, {tA + 0.7:.2f});',
+           # le logo réel est désigné au moment où la voix dit « La Fondation OVE »
+           f'ring(".{p}-lr", {tA + 0.45:.2f}); ring(".{p}-lr2", {tA + 0.85:.2f});',
+           # le ciel réel s'efface : les trois bandes de la charte passent derrière la façade (branches conservées au premier plan)
+           f'tl.fromTo(".{p}-full", {{ opacity: 1 }}, {{ opacity: 0, duration: 0.8, ease: "power1.inOut" }}, {tA + 1.4:.2f});',
+           f'tl.fromTo(".{p}-sk i", {{ xPercent: -110 }}, {{ xPercent: 0, duration: 0.9, ease: "power3.out", stagger: 0.12 }}, {tA + 1.4:.2f});',
+           f'tl.fromTo(".{p}-sk", {{ x: 0 }}, {{ x: 40, duration: {tOut - tA - 1.4:.2f}, ease: "sine.inOut" }}, {tA + 1.4:.2f});',
            f'tl.to(".{p}-ph", {{ clipPath: "inset(0% 0% 0% 100% round 24px)", duration: 0.7, ease: "power3.inOut" }}, {tOut:.2f});',
-           f'tl.to(".{p}-fac", {{ x: -150, duration: 0.7, ease: "power3.in" }}, {tOut:.2f});',
+           f'tl.to(".{p}-cam", {{ x: -150, duration: 0.7, ease: "power3.in" }}, {tOut:.2f});',
            f'tl.to(".{p}-ht .wi", {{ yPercent: -115, opacity: 0, duration: 0.5, ease: "power3.in", stagger: 0.03 }}, {tOut:.2f});',
            f'tl.to(".{p}-hl", {{ scaleX: 0, transformOrigin: "right center", duration: 0.4, ease: "power2.in" }}, {tOut:.2f});',
-           f'tl.set(".{p}-hero", {{ opacity: 0 }}, {tOut + 0.75:.2f});']
-    log_ins("02-fondation", tA - 0.3, tOut + 0.7, "PJ02-photo-batiment-non-identifie.webp", "Non identifiée (aucune attribution)",
-            "Donner un lieu réel, à hauteur humaine, à la phrase « La Fondation OVE est une fondation reconnue d’utilité publique ».",
-            "Agrandissement Lanczos ×2 ; détourage du ciel (zone claire désaturée reliée au bord supérieur, contour adouci) ; aucune correction colorimétrique.",
-            "Panneau multicouche : le ciel réel s’efface, les trois bandes de la charte glissent derrière la façade ; parallaxe façade/bandes en sens opposés.",
-            "Volet gauche → droite (clip-path) avec contre-glissement de l’image.", "Repli vers la droite, la façade file plus vite que le cadre.",
-            "Lieu non identifié par la pièce jointe : aucune légende, aucune mention d’adresse ni d’établissement. Aucun visage visible.")
+           f'tl.set(".{p}-hero", {{ opacity: 0 }}, {tOut + 0.75:.2f});',
+           # gouvernance : les chiffres s'effacent, la réunion se reconstitue en trois bandes, lent travelling latéral
+           f'tl.to(".{p}-title, .{p}-card0, .{p}-card1, .{p}-card2, .{p}-u0, .{p}-u1, .{p}-u2", {{ opacity: 0, y: -24, duration: 0.5, ease: "power2.in", stagger: 0.04 }}, {tD - 0.45:.2f});',
+           # trois bandes : un seul tracé en escalier dont chaque marche avance avec son propre décalage
+           f'const mtEl = document.querySelector(".{p}-mt"); const mt = {{ a: 0, b: 0, c: 0 }};',
+           'const mtClip = () => { mtEl.style.clipPath = `polygon(-2% -2%, ${mt.a}% -2%, ${mt.a}% 33.4%, ${mt.b}% 33.4%, ${mt.b}% 66.7%, ${mt.c}% 66.7%, ${mt.c}% 102%, -2% 102%)`; };',
+           'mtClip();',
+           f'tl.fromTo(mt, {{ a: 0 }}, {{ a: 102, duration: 0.85, ease: "power3.out", onUpdate: mtClip }}, {tD - 0.05:.2f});',
+           f'tl.fromTo(mt, {{ b: 0 }}, {{ b: 102, duration: 0.85, ease: "power3.out", onUpdate: mtClip, immediateRender: false }}, {tD + 0.07:.2f});',
+           f'tl.fromTo(mt, {{ c: 0 }}, {{ c: 102, duration: 0.85, ease: "power3.out", onUpdate: mtClip, immediateRender: false }}, {tD + 0.19:.2f});',
+           f'tl.fromTo(".{p}-ri", {{ x: 0, scale: 1.05, transformOrigin: "50% 50%" }}, {{ x: -22, scale: 1.05, duration: {D - tD:.2f}, ease: "none" }}, {tD - 0.05:.2f});']
+    log_ins("02-fondation", tA - 0.3, tOut + 0.7, "PJ07-photo-batiment-ove-fondation.webp", "Fondation OVE (logo « OVE Fondation » visible en façade)",
+            "Ancrer « La Fondation OVE est une fondation reconnue d’utilité publique » dans un lieu réel de la Fondation, reconnaissable à son logo en façade.",
+            "Agrandissement Lanczos ×2 ; détourage du ciel (zone bleutée reliée au bord supérieur, branches conservées au premier plan) ; recadrage latéral léger ; aucune correction colorimétrique.",
+            "Panneau multicouche : poussée lente vers le logo en façade, double onde verte sur le logo quand la voix dit « La Fondation OVE », le ciel réel cède la place aux trois bandes de la charte qui glissent derrière le bâtiment (parallaxe inverse).",
+            "Volet gauche → droite (clip-path) avec contre-glissement de l’image.", "Repli vers la droite, l’image file plus vite que le cadre.",
+            "Aucune adresse ni nom d’établissement affiché : seul le logo présent sur la photographie identifie la Fondation. Aucun visage ; véhicules et plaques non lisibles à l’écran.")
+    log_ins("02-fondation", tD - 0.05, D, "PJ10-photo-reunion.webp", "Instance de gouvernance (réunion, non légendée)",
+            "Donner un visage humain à « Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau et une direction générale ».",
+            "Agrandissement Lanczos ×2 ; aucune retouche, aucun recadrage des visages (image entière visible) ; aucune correction colorimétrique.",
+            "Révélation par trois bandes horizontales décalées (motif des trois bandes de la charte), puis lent travelling latéral ; les chiffres clés s’effacent avant l’entrée.",
+            "Trois bandes se déployant de gauche à droite, en cascade.", "Volet des trois bandes de la charte (sortie de scène).",
+            "Aucun texte ni pictogramme posé sur la photographie ; aucune personne nommée ; la réunion n’est pas légendée comme une instance précise. Le droit à l’image des personnes représentées doit être confirmé avant toute diffusion hors du Bureau.")
     return html, js
 
 def s03(c, v, D):
@@ -404,7 +447,7 @@ def s03(c, v, D):
     ENT = {"imove": "Fonds de dotation IMOVE", "ple": "OVE Plenior", "car": "OVE Caraïbes", "ami": "AMICIAL", "res": "Ressourcial"}
     for i, (k, x, y, name, sub, t) in enumerate(nodes):
         if use_logo(k):
-            d = logo_data(LG[k]); ar = d["width"] / d["height"]
+            d = logo_data(LG[k]); vb = d.get("viewBox", [0, 0, d["width"], d["height"]]); ar = vb[2] / vb[3]
             lw = min(184, 92 * ar)
             html.append(f"""<div class="abs {p}-node {p}-{k}" style="left:{x-108}px;top:{y-60}px;width:216px;height:120px;border-radius:22px;background:#fff;border:2px solid #E2E4DF;box-sizing:border-box;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,40,43,0.10)">{logo_svg(LG[k], f"{p}-lg{k}", round(lw, 1))}</div>
   <div class="abs {p}-lab {p}-l{k}" style="left:{x-150}px;top:{y+68}px;width:300px;text-align:center;background:rgba(246,246,242,0.94);border-radius:10px"><div class="spell" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">{e(name)}</div><div style="font-size:20px;line-height:1.25;color:#6B6F72">{e(sub)}</div></div>
@@ -419,7 +462,9 @@ def s03(c, v, D):
                     "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche.",
                     {"imove": "Lettres I-M-O-V posées une à une, barres du E, soleil et rayons, signature « Fonds de dotation ».",
                      "plenior": "Mot écrit lettre à lettre, point du i, puis la feuille de chêne pousse sur le « o » (élastique).",
-                     "ove-caraibes": "Disque au colibri entrant en vol (rotation), V déposé, E glissé depuis la droite, CARAÏBES puis « Différents ensemble »."}.get(LG[k], "Apparition du logo."),
+                     "ove-caraibes": "Disque au colibri entrant en vol (rotation), V déposé, E glissé depuis la droite, CARAÏBES puis « Différents ensemble ».",
+                     "amicial": "Le repère-maison se pose avec un rebond, le cœur apparaît puis bat deux fois, « amicial » s’écrit lettre à lettre, puis « Votre partenaire autonomie à domicile ».",
+                     "ressourcial": "Les lettres convergent vers le centre, le « O » orange tourne sur lui-même, la pièce orange s’emboîte au-dessus avec un rebond."}.get(LG[k], "Apparition du logo."),
                     "Lien tracé depuis le centre, puis plaque qui se pose ; onde verte autour de la plaque.", "Volet des trois bandes.")
             continue
         if k == "sci":

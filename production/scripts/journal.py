@@ -22,29 +22,29 @@ def probe(f):
 SCENES = {"01-ouverture": "1 · Ouverture", "02-fondation": "2 · La Fondation", "03-ecosysteme": "3 · Écosystème", "10-decisions": "10 · Écran final"}
 PJ = [
     ("PJ01-logo-fondation-ove.jpg", "Logo Fondation OVE", "150×138", "Utilisé", "Source de la vectorisation (identique octet pour octet au logo déjà présent dans le projet)."),
-    ("PJ02-photo-batiment-non-identifie.webp", "Photographie d’un bâtiment (façade, rue)", "527×379", "Utilisé", "Lieu non identifié : utilisée sans légende ni attribution."),
+    ("PJ02-photo-batiment-non-identifie.webp", "Photographie d’un bâtiment (façade de briques, rue)", "527×379", "Écarté", "Lieu non identifiable. Remplacée par PJ07, qui montre un bâtiment portant le logo de la Fondation : l’utiliser aurait laissé croire à une attribution non vérifiée."),
     ("PJ03-logo-fondation-ove.webp", "Logo Fondation OVE (second envoi)", "150×138", "Écarté", "Doublon de PJ01, recompressé (écart moyen 2/255) : PJ01, plus fidèle, est retenu."),
     ("PJ04-logo-imove-fonds-de-dotation.webp", "Logo IMOVE · fonds de dotation", "308×163", "Utilisé", "Entité nommée par la voix à 0:46."),
     ("PJ05-logo-ove-caraibes.webp", "Logo OVE Caraïbes · « Différents ensemble »", "399×250", "Utilisé", "Entité nommée par la voix à 1:02."),
-    ("PJ06-logo-plenior.webp", "Logo Plenior", "300×123", "Utilisé", "Entité OVE Plenior, nommée par la voix à 0:59 ; reçu deux fois (second envoi identique à l’œil)."),
-    ("(non reçu en fichier)", "Logo AMICIAL · « Votre partenaire autonomie à domicile »", "—", "Non intégré", "Image visible dans la conversation mais jamais transmise comme fichier : pictogramme conservé, rien d’inventé."),
-    ("(non reçu en fichier)", "Logo Ressourcial", "—", "Non intégré", "Même situation : pictogramme conservé."),
-    ("(non reçu en fichier)", "Photographie d’une réunion (instance de gouvernance, visages identifiables)", "—", "Non intégré", "Même situation. À intégrer sur la phrase « Sa gouvernance repose… » (0:34) sans nommer personne ni masquer de visage."),
-    ("(non reçu en fichier)", "Photographie d’un bâtiment portant le logo « OVE Fondation »", "—", "Non intégré", "Même situation. Seule photographie attribuable à la Fondation (logo en façade) ; à intégrer en scène 2."),
+    ("PJ06-logo-plenior.webp", "Logo Plenior", "300×123", "Utilisé", "Entité OVE Plenior, nommée par la voix à 0:59. Un second envoi visuellement identique n’a jamais été transmis comme fichier ; sans objet."),
+    ("PJ07-photo-batiment-ove-fondation.webp", "Photographie d’un bâtiment portant le logo « OVE Fondation » en façade", "738×342", "Utilisé", "Seule photographie attribuable à la Fondation (logo visible en façade)."),
+    ("PJ08-logo-ressourcial.webp", "Logo Ressourcial", "200×200 (logo 190×48)", "Utilisé", "Entité nommée par la voix à 1:04. Fichier très petit : tracé vérifié lettre à lettre."),
+    ("PJ09-logo-amicial.webp", "Logo AMICIAL · « Votre partenaire autonomie à domicile »", "225×224", "Utilisé", "Entité nommée par la voix à 0:56."),
+    ("PJ10-photo-reunion.webp", "Photographie d’une réunion autour d’une table en U (personnes identifiables, supports OVE visibles)", "800×500", "Utilisé", "Illustre la phrase sur la gouvernance, sans légende ni nom."),
 ]
 
 out = ["# Version sans humour enrichie — journal des pièces jointes", "",
        f"Film : *Fondation OVE — Prévenir les atteintes à la probité* · version sans humour · durée {tc(TLS['total'])}.", "",
-       "## 1. Journal des modifications (v2 par rapport à la version précédente)", "",
+       "## 1. Journal des modifications (v3 par rapport aux versions précédentes)", "",
        "- **Voix off et musique** : inchangées (mêmes fichiers, même mixage : voix −16 LUFS, musique −31 LUFS). Aucune réplique déplacée ; toutes les insertions sont calées sur les répliques existantes.",
-       "- **Logos** : les logos de la Fondation OVE, d’IMOVE, d’OVE Caraïbes et de Plenior sont vectorisés par couche de couleur (`production/scripts/logos.py`). Chaque pixel est rattaché à la couleur du logo la plus proche, en tenant compte de l’anticrénelage ; les couleurs finales sont les médianes mesurées sur le fichier fourni. Aucune recoloration, aucune déformation (rapport largeur/hauteur du fichier source conservé), fond blanc retiré, chaque logo posé sur plaque blanche (règle de la charte). Chaque logo est découpé en éléments (lettres, symbole, signature) pour une animation multicouche.",
-       "- **Animations de logos personnalisées** : une chorégraphie propre à chaque marque, déduite de sa géométrie (voir tableau). Le logo OVE s’anime différemment à l’ouverture (construction) et à la fin (les trois bandes de la charte deviennent les trois barres du E).",
-       "- **Scène 1** : le logo matriciel est remplacé par le logo vectoriel animé.",
-       "- **Scène 2** : nouvelle ouverture sur la photographie fournie, en panneau multicouche — le ciel réel s’efface, les trois bandes de la charte glissent derrière la façade détourée, parallaxe façade/bandes en sens opposés, entrée et sortie par volets. Le titre est révélé mot à mot à gauche, puis cède la place aux chiffres clés.",
-       "- **Scène 3** : la Fondation OVE est représentée par son logo au centre de la cartographie ; IMOVE, OVE Plenior et OVE Caraïbes apparaissent sur plaques avec leur logo réel, à l’instant où la voix les nomme. AMICIAL et Ressourcial conservent leur pictogramme (fichiers non reçus). Les étiquettes reçoivent un fond pour rester lisibles au passage des liens.",
+       "- **Logos** : les six logos fournis (Fondation OVE, IMOVE, AMICIAL, OVE Plenior, OVE Caraïbes, Ressourcial) sont vectorisés par couche de couleur (`production/scripts/logos.py`). Chaque pixel est rattaché à la couleur du logo la plus proche, en tenant compte de l’anticrénelage ; les couleurs finales sont mesurées sur le fichier fourni. Aucune recoloration, aucune déformation (rapport largeur/hauteur du fichier source conservé), fond blanc retiré, chaque logo posé sur plaque blanche (règle de la charte). Chaque logo est découpé en éléments (lettres, symbole, signature) pour une animation multicouche. Contrôle visuel côte à côte avec chaque original.",
+       "- **Animations de logos personnalisées** : une chorégraphie propre à chaque marque, déduite de sa géométrie (voir le détail des insertions). Le logo OVE s’anime différemment à l’ouverture (construction) et à la fin (les trois bandes de la charte deviennent les trois barres du E).",
+       "- **Scène 1** : logo vectoriel animé à la place du logo matriciel.",
+       "- **Scène 2** : (1) ouverture sur le bâtiment portant le logo OVE (PJ07) — panneau multicouche, poussée lente vers le logo en façade, double onde verte sur ce logo quand la voix dit « La Fondation OVE », le ciel réel cède la place aux trois bandes de la charte derrière le bâtiment, branches d’arbre conservées au premier plan ; (2) sur la phrase consacrée à la gouvernance, la photographie de réunion (PJ10) se révèle en trois bandes, à côté du chiffre « 15 membres du conseil d’administration », au-dessus de la chaîne Conseil d’administration — Bureau — Direction générale.",
+       "- **Scène 3** : la cartographie de l’écosystème montre les vrais logos : Fondation OVE au centre, IMOVE, AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial sur plaques, chacun animé à l’instant où la voix le nomme. Les étiquettes reçoivent un fond pour rester lisibles au passage des liens.",
        "- **Scène 10** : logo vectoriel animé sur l’écran final.",
        "- **Contrôle** : `hyperframes check` sans erreur ni avertissement ; 93/93 textes conformes WCAG AA.",
-       "- **Fichiers d’origine conservés** : les rendus précédents restent dans `renders/` sous leur nom d’origine ; les pièces jointes originales sont archivées sans modification dans `production/pieces-jointes/`.", "",
+       "- **Fichiers d’origine conservés** : les rendus précédents restent dans `renders/` sous leur nom d’origine (v1 et v2) ; les pièces jointes originales sont archivées sans modification dans `production/pieces-jointes/`.", "",
        "## 2. Tableau des insertions", "",
        "| Entrée | Sortie | Scène | Fichier | Entité | Raison éditoriale |", "|---|---|---|---|---|---|"]
 for x in INS:
@@ -55,15 +55,17 @@ for n, x in enumerate(INS, 1):
             f"- Traitement : {x['traitement']}", f"- Animation : {x['animation']}",
             f"- Transition d’entrée : {x['entree']}", f"- Transition de sortie : {x['sortie']}",
             f"- Réserves : {x['reserves'] or 'aucune'}",
-            f"- Personnes représentées : {'aucun visage visible ; aucune personne identifiable' if 'photo' in x['fichier'] else 'sans objet (logo)'}", ""]
+            f"- Personnes représentées : {('personnes identifiables : image entière visible, aucun visage recadré ni masqué, aucun texte sur la photographie, aucun nom' if 'reunion' in x['fichier'] else 'aucun visage visible') if 'photo' in x['fichier'] else 'sans objet (logo)'}", ""]
 out += ["## 3. Pièces jointes analysées", "", "| Fichier archivé | Contenu | Taille | Statut | Remarque |", "|---|---|---|---|---|"]
 out += [f"| `{a}` | {b} | {c} | {d} | {e} |" for a, b, c, d, e in PJ]
 out += ["", "## 4. Photographies utilisées", "",
-        "- `PJ02-photo-batiment-non-identifie.webp` → `assets/img/photos/batiment.jpg` (agrandissement Lanczos ×2) et `batiment-detoure.png` (ciel détouré). Scène 2, sans légende.", "",
+        "- `PJ07-photo-batiment-ove-fondation.webp` → `assets/img/photos/batiment-ove.jpg` (agrandissement Lanczos ×2) et `batiment-ove-detoure.png` (ciel détouré, branches conservées). Scène 2, ouverture.",
+        "- `PJ10-photo-reunion.webp` → `assets/img/photos/reunion.jpg` (agrandissement Lanczos ×2, aucune retouche). Scène 2, gouvernance.", "",
         "## 5. Logos utilisés", "",
         "| Entité | Fichier source | Version vectorielle | Couleurs mesurées |", "|---|---|---|---|"]
 for lid, ent, src in (("fondation-ove", "Fondation OVE", "PJ01-logo-fondation-ove.jpg"), ("imove", "Fonds de dotation IMOVE", "PJ04-logo-imove-fonds-de-dotation.webp"),
-                      ("ove-caraibes", "OVE Caraïbes", "PJ05-logo-ove-caraibes.webp"), ("plenior", "OVE Plenior", "PJ06-logo-plenior.webp")):
+                      ("amicial", "AMICIAL", "PJ09-logo-amicial.webp"), ("plenior", "OVE Plenior", "PJ06-logo-plenior.webp"),
+                      ("ove-caraibes", "OVE Caraïbes", "PJ05-logo-ove-caraibes.webp"), ("ressourcial", "Ressourcial", "PJ08-logo-ressourcial.webp")):
     d = json.load(open(os.path.join(ROOT, "production", "logos", lid + ".json")))
     cols = sorted({c["color"] for c in d["components"]})
     out.append(f"| {ent} | `{src}` | `assets/img/logos/{lid}.svg` | {' '.join(f'`{c}`' for c in cols)} |")
@@ -72,20 +74,22 @@ out += [f"- **{b}** (`{a}`) — {e}" for a, b, c, d, e in PJ if d != "Utilisé"]
 out += ["", "## 7. Contrôle qualité", "",
         "| Point | Statut |", "|---|---|",
         "| Chaque logo correspond à la bonne entité | Conforme — attribution par le nom écrit dans chaque logo |",
-        "| Aucune attribution fondée sur une supposition | Conforme — bâtiment de PJ02 non légendé |",
+        "| Aucune attribution fondée sur une supposition | Conforme — seul le bâtiment portant le logo OVE est utilisé ; la réunion n’est pas légendée ; PJ02 écartée |",
         "| Orthographe des noms | Conforme — Fondation OVE, IMOVE, AMICIAL, OVE Plenior, OVE Caraïbes, Ressourcial |",
         "| Voix off intacte, musique équilibrée | Conforme — fichiers et niveaux inchangés |",
         "| Animations synchronisées avec la voix | Conforme — chaque logo démarre sur le mot qui nomme l’entité |",
         "| Logos jamais déformés, couleurs officielles | Conforme — proportions source, couleurs mesurées, vérification visuelle côte à côte |",
         "| Détourages propres | Conforme — contrôlé sur fond vert de test |",
-        "| Visages visibles, aucun texte sur un visage | Sans objet — aucune photographie de personnes intégrée |",
+        "| Visages visibles, aucun texte sur un visage | Conforme — photographie de réunion affichée entière, aucun élément posé dessus |",
+        "| Droit à l’image (PJ10) | **À confirmer** par la Fondation avant toute diffusion hors du Bureau |",
         "| Lisibilité sur grand écran | Conforme — 93/93 textes AA, taille minimale 20 px en 1080p |",
-        "| Logos AMICIAL et Ressourcial | **Non intégrés** — fichiers non reçus |", "",
+        "| Toutes les entités nommées ont leur logo | Conforme — six logos sur six |",
+        "| La vidéo ne ressemble pas à un diaporama | Photographies en panneaux multicouches (détourage, parallaxe, révélation en bandes), jamais en plein écran avec simple zoom |", "",
         "## 8. Livrables", ""]
-for f, lab in (("OVE-probite-sapin2-sans-humour-v2-projection.mp4", "Haute qualité, projection"), ("OVE-probite-sapin2-sans-humour-v2-leger.mp4", "Diffusion numérique (allégée)")):
+for f, lab in (("OVE-probite-sapin2-sans-humour-v3-projection.mp4", "Haute qualité, projection"), ("OVE-probite-sapin2-sans-humour-v3-leger.mp4", "Diffusion numérique (allégée)")):
     pr = probe(f)
     out.append(f"- **{lab}** : `renders/{f}`" + (f" — {pr}" if pr else " — à produire"))
-out += ["- Version précédente conservée : `renders/OVE-probite-sapin2-sans-humour.mp4` et `renders/OVE-probite-sapin2-sans-humour-leger.mp4`.", "",
+out += ["- Versions précédentes conservées : v1 (`renders/OVE-probite-sapin2-sans-humour.mp4`, `…-leger.mp4`) et v2 (`renders/OVE-probite-sapin2-sans-humour-v2-projection.mp4`, `…-v2-leger.mp4`).", "",
         "Reconstruction : `python3 production/scripts/logos.py && python3 production/scripts/photos.py && python3 production/scripts/build.py sobre && python3 production/scripts/journal.py`."]
 open(os.path.join(ROOT, "production", "JOURNAL-PIECES-JOINTES.md"), "w").write("\n".join(out) + "\n")
 print("ok")

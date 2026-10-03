@@ -82,11 +82,16 @@
   <div class="abs s02-hero" style="left:0;top:0;width:1920px;height:1080px">
     <div class="abs h1 s02-ht" style="left:192px;top:270px;width:620px">Une fondation reconnue d’utilité publique</div>
     <div class="abs s02-hl" style="left:192px;top:628px;width:240px;height:6px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
-    <div class="abs s02-ph" style="left:860px;top:170px;width:868px;height:624px;border-radius:24px;overflow:hidden;background:#F6F6F2;box-shadow:0 24px 60px rgba(37,40,43,0.16);clip-path:inset(0% 100% 0% 0% round 24px)">
-      <div class="abs s02-sk" style="left:-120px;top:-40px;width:1100px;height:420px;transform:rotate(-14deg)"><i style="position:absolute;left:0;top:0;width:1100px;height:120px;border-radius:60px;background:#B4C908"></i><i style="position:absolute;left:90px;top:140px;width:900px;height:120px;border-radius:60px;background:#DCE58A"></i><i style="position:absolute;left:180px;top:280px;width:700px;height:120px;border-radius:60px;background:#C9C9C9"></i></div>
-      <img class="abs s02-full" src="assets/img/photos/batiment.jpg" alt="" style="left:0;top:0;width:868px;height:624px" />
-      <img class="abs s02-fac" src="assets/img/photos/batiment-detoure.png" alt="" style="left:0;top:0;width:868px;height:624px" />
+    <div class="abs s02-ph" style="left:860px;top:200px;width:868px;height:500px;border-radius:24px;overflow:hidden;background:#F6F6F2;box-shadow:0 24px 60px rgba(37,40,43,0.16);clip-path:inset(0% 100% 0% 0% round 24px)">
+      <div class="abs s02-sk" style="left:-120px;top:-60px;width:1100px;height:420px;transform:rotate(-12deg)"><i style="position:absolute;left:0;top:0;width:1100px;height:110px;border-radius:55px;background:#B4C908"></i><i style="position:absolute;left:90px;top:130px;width:900px;height:110px;border-radius:55px;background:#DCE58A"></i><i style="position:absolute;left:180px;top:260px;width:700px;height:110px;border-radius:55px;background:#C9C9C9"></i></div>
+      <div class="abs s02-cam" style="left:0;top:0;width:868px;height:500px">
+        <img class="abs s02-full" src="assets/img/photos/batiment-ove.jpg" alt="" style="left:-150px;top:0;width:1079px;height:500px" />
+        <img class="abs s02-fac" src="assets/img/photos/batiment-ove-detoure.png" alt="Siège portant le logo de la Fondation OVE" style="left:-150px;top:0;width:1079px;height:500px" />
+        <div class="ring s02-lr" style="left:515px;top:135px;width:104px;height:104px;box-sizing:border-box"></div>
+        <div class="ring s02-lr2" style="left:515px;top:135px;width:104px;height:104px;box-sizing:border-box"></div>
+      </div>
     </div></div>
+  <div class="abs s02-mt" style="left:330px;top:150px;width:944px;height:590px;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(37,40,43,0.16)"><img class="abs s02-ri" src="assets/img/photos/reunion.jpg" alt="Réunion d’une instance" style="left:0;top:0;width:944px;height:590px" /></div>
   </div>
   <div class="prog"><i class="s02-pg"></i></div>
   <div class="bands s02-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
@@ -143,16 +148,25 @@
   title(".s02-ht", 0.70);
   tl.fromTo(".s02-hl", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.out" }, 1.20);
   tl.fromTo(".s02-ph", { clipPath: "inset(0% 100% 0% 0% round 24px)" }, { clipPath: "inset(0% 0% 0% 0% round 24px)", duration: 1.0, ease: "power3.inOut" }, 0.40);
-  tl.fromTo(".s02-full, .s02-fac", { x: 70, scale: 1.08 }, { x: 0, scale: 1.08, duration: 1.0, ease: "power3.out" }, 0.40);
-  tl.fromTo(".s02-full", { opacity: 1 }, { opacity: 0, duration: 0.8, ease: "power1.inOut" }, 2.00);
-  tl.fromTo(".s02-sk i", { xPercent: -110 }, { xPercent: 0, duration: 0.9, ease: "power3.out", stagger: 0.12 }, 2.00);
-  tl.fromTo(".s02-fac", { x: 0, scale: 1.08 }, { x: -36, scale: 1.12, duration: 3.09, ease: "sine.inOut", immediateRender: false }, 1.40);
-  tl.fromTo(".s02-sk", { x: 0 }, { x: 30, duration: 2.49, ease: "sine.inOut" }, 2.00);
+  tl.fromTo(".s02-cam", { x: 70, scale: 1.04, transformOrigin: "567px 187px" }, { x: 0, scale: 1.04, duration: 1.0, ease: "power3.out" }, 0.40);
+  tl.fromTo(".s02-cam", { scale: 1.04 }, { scale: 1.2, duration: 3.09, ease: "sine.inOut", immediateRender: false }, 1.40);
+  ring(".s02-lr", 1.15); ring(".s02-lr2", 1.55);
+  tl.fromTo(".s02-full", { opacity: 1 }, { opacity: 0, duration: 0.8, ease: "power1.inOut" }, 2.10);
+  tl.fromTo(".s02-sk i", { xPercent: -110 }, { xPercent: 0, duration: 0.9, ease: "power3.out", stagger: 0.12 }, 2.10);
+  tl.fromTo(".s02-sk", { x: 0 }, { x: 40, duration: 2.39, ease: "sine.inOut" }, 2.10);
   tl.to(".s02-ph", { clipPath: "inset(0% 0% 0% 100% round 24px)", duration: 0.7, ease: "power3.inOut" }, 4.49);
-  tl.to(".s02-fac", { x: -150, duration: 0.7, ease: "power3.in" }, 4.49);
+  tl.to(".s02-cam", { x: -150, duration: 0.7, ease: "power3.in" }, 4.49);
   tl.to(".s02-ht .wi", { yPercent: -115, opacity: 0, duration: 0.5, ease: "power3.in", stagger: 0.03 }, 4.49);
   tl.to(".s02-hl", { scaleX: 0, transformOrigin: "right center", duration: 0.4, ease: "power2.in" }, 4.49);
   tl.set(".s02-hero", { opacity: 0 }, 5.24);
+  tl.to(".s02-title, .s02-card0, .s02-card1, .s02-card2, .s02-u0, .s02-u1, .s02-u2", { opacity: 0, y: -24, duration: 0.5, ease: "power2.in", stagger: 0.04 }, 15.60);
+  const mtEl = document.querySelector(".s02-mt"); const mt = { a: 0, b: 0, c: 0 };
+  const mtClip = () => { mtEl.style.clipPath = `polygon(-2% -2%, ${mt.a}% -2%, ${mt.a}% 33.4%, ${mt.b}% 33.4%, ${mt.b}% 66.7%, ${mt.c}% 66.7%, ${mt.c}% 102%, -2% 102%)`; };
+  mtClip();
+  tl.fromTo(mt, { a: 0 }, { a: 102, duration: 0.85, ease: "power3.out", onUpdate: mtClip }, 16.00);
+  tl.fromTo(mt, { b: 0 }, { b: 102, duration: 0.85, ease: "power3.out", onUpdate: mtClip, immediateRender: false }, 16.12);
+  tl.fromTo(mt, { c: 0 }, { c: 102, duration: 0.85, ease: "power3.out", onUpdate: mtClip, immediateRender: false }, 16.24);
+  tl.fromTo(".s02-ri", { x: 0, scale: 1.05, transformOrigin: "50% 50%" }, { x: -22, scale: 1.05, duration: 7.22, ease: "none" }, 16.00);
   tl.fromTo(".s02-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
   tl.fromTo(".s02-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 22.47);
   tl.set(".s02-content", { opacity: 0 }, 23.13);

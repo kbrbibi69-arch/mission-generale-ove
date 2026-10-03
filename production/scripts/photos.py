@@ -10,10 +10,14 @@ PJ = os.path.join(ROOT, "production", "pieces-jointes")
 OUT = os.path.join(ROOT, "assets", "img", "photos")
 os.makedirs(OUT, exist_ok=True)
 
-def sky_cutout(src, name, xmax):
+def sky_cutout(src, name, xmax, bluish=False):
     im = Image.open(os.path.join(PJ, src)).convert("RGB")
     a = np.asarray(im).astype(int)
-    cand = Image.fromarray((((a.mean(2) > 170) & ((a.max(2) - a.min(2)) < 28)) * 255).astype(np.uint8)).copy()
+    if bluish:  # façade crème aussi claire que le ciel : seul le ciel est bleuté (b > r)
+        crit = (a[..., 2] > a[..., 0] + 6) & (a.mean(2) > 120)
+    else:
+        crit = (a.mean(2) > 170) & ((a.max(2) - a.min(2)) < 28)
+    cand = Image.fromarray((crit * 255).astype(np.uint8)).copy()
     for x in range(0, min(xmax, im.width), 4):
         if cand.getpixel((x, 0)) == 255:
             ImageDraw.floodfill(cand, (x, 0), 128)
@@ -28,3 +32,7 @@ def sky_cutout(src, name, xmax):
     print(name, big.size, f"ciel {sky.mean():.0%}")
 
 sky_cutout("PJ02-photo-batiment-non-identifie.webp", "batiment", 300)
+sky_cutout("PJ07-photo-batiment-ove-fondation.webp", "batiment-ove", 9999, bluish=True)
+im = Image.open(os.path.join(PJ, "PJ10-photo-reunion.webp")).convert("RGB")
+im.resize((im.width * 2, im.height * 2), Image.LANCZOS).save(os.path.join(OUT, "reunion.jpg"), quality=93)
+print("reunion", im.width * 2, im.height * 2)
