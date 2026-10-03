@@ -13,7 +13,7 @@
     {
      "id": "b",
      "text": "Pour la Fondation OVE, c’est d’abord une question de confiance.",
-     "say": "Pour la Fondation O.V.E., c'est d'abord une question de confiance."
+     "say": "Pour la Fondation OVE, c'est d'abord une question de confiance."
     },
     {
      "id": "c",
@@ -28,7 +28,7 @@
     {
      "id": "a",
      "text": "La Fondation OVE est une fondation reconnue d’utilité publique.",
-     "say": "La Fondation O.V.E. est une fondation reconnue d'utilité publique."
+     "say": "La Fondation OVE est une fondation reconnue d'utilité publique."
     },
     {
      "id": "b",
@@ -53,12 +53,26 @@
     {
      "id": "a",
      "text": "Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, plus de 35 sociétés civiles immobilières,",
-     "say": "Autour d'elle s'est constitué un écosystème structuré : le fonds de dotation Imove, plus de trente-cinq sociétés civiles immobilières,"
+     "say": "Autour d'elle s'est constitué un écosystème structuré : le fonds de dotation I M O V E, plus de trente-cinq sociétés civiles immobilières,",
+     "variant": "humour"
     },
     {
      "id": "b",
      "text": "et des associations partenaires : AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial.",
-     "say": "et des associations partenaires : Amicial, O.V.E. Plénior, O.V.E. Caraïbes, et Ressourcial."
+     "say": "et des associations partenaires : Amicial, OVE Plénior, OVE Caraïbes, et Ressourcial.",
+     "variant": "humour"
+    },
+    {
+     "id": "a",
+     "variant": "sobre",
+     "text": "Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine.",
+     "say": "Autour d'elle s'est constitué un écosystème structuré : le fonds de dotation I M O V E, véhicule immobilier et financier, et plus de trente-cinq sociétés civiles immobilières, qui portent le patrimoine."
+    },
+    {
+     "id": "b",
+     "variant": "sobre",
+     "text": "S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.",
+     "say": "S'y ajoutent quatre associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; OVE Plénior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau."
     },
     {
      "id": "c",
@@ -75,12 +89,6 @@
      "variant": "humour",
      "text": "Un schéma si riche qu’il mériterait presque sa propre légende.",
      "say": "Un schéma si riche, qu'il mériterait presque sa propre légende."
-    },
-    {
-     "id": "h1",
-     "variant": "sobre",
-     "text": "Cette richesse est une force, à condition de rester lisible.",
-     "say": "Cette richesse est une force, à condition de rester lisible."
     },
     {
      "id": "e",
@@ -105,7 +113,7 @@
     {
      "id": "c",
      "text": "En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.",
-     "say": "En revanche, l'article trois habilite l'Agence française anticorruption, l'A.F.A., à contrôler, de sa propre initiative, les fondations reconnues d'utilité publique."
+     "say": "En revanche, l'article trois habilite l'Agence française anticorruption, l'A F A, à contrôler, de sa propre initiative, les fondations reconnues d'utilité publique."
     },
     {
      "id": "d",
@@ -140,7 +148,7 @@
     {
      "id": "a",
      "text": "Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.",
-     "say": "Pour la Fondation O.V.E., appliquer les principes de la loi Sapin deux, ne consiste pas seulement à répondre à un environnement juridique."
+     "say": "Pour la Fondation OVE, appliquer les principes de la loi Sapin deux, ne consiste pas seulement à répondre à un environnement juridique."
     },
     {
      "id": "b",
@@ -207,7 +215,7 @@
     {
      "id": "a",
      "text": "Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.",
-     "say": "Le dispositif proposé repose sur les trois piliers recommandés par l'A.F.A. : l'engagement de la gouvernance, la cartographie des risques, et des mesures adaptées."
+     "say": "Le dispositif proposé repose sur les trois piliers recommandés par l'A F A : l'engagement de la gouvernance, la cartographie des risques, et des mesures adaptées."
     },
     {
      "id": "b",

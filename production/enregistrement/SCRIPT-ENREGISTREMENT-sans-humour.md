@@ -1,13 +1,15 @@
 # Script d’enregistrement — version sans humour
 
-Un fichier par scène (10 fichiers). Dans chaque fichier, lisez les phrases dans l’ordre en marquant **une pause franche d’environ 2 secondes entre chaque phrase numérotée** : c’est ce qui me permet de découper et de recaler l’image sur votre voix.
+Un fichier par scène (10 fichiers). Dans chaque fichier, lisez les phrases dans l’ordre en marquant **une pause franche d’environ 2 secondes entre chaque phrase numérotée** : c’est ce qui me permet de découper votre voix et de recaler l’image dessus.
 
-Durées indicatives (voix de synthèse actuelle) : inutile de les respecter à la seconde, l’image s’adaptera à votre rythme. Restez autour de 130-150 mots par minute pour garder un film de 4 min 50 à 5 min 10.
+Prononciation : « OVE » se dit lettre par lettre, d’un trait (o-vé-e) ; « IMOVE » également (i-èm-o-vé-e) ; « AFA » se dit a-èf-a.
+
+Les durées sont indicatives (voix de synthèse actuelle) : inutile de les respecter à la seconde, l’image s’adaptera à votre rythme. Restez autour de 130-150 mots par minute pour que le film dure entre 4 min 50 et 5 min 10.
 
 ## Fichier `scene-01.wav` — Ouverture
 
 1. Prévenir les atteintes à la probité.  *(≈ 2 s)*
-2. Pour la Fondation OVE, c’est d’abord une question de confiance.  *(≈ 4 s)*
+2. Pour la Fondation OVE, c’est d’abord une question de confiance.  *(≈ 3 s)*
 3. Cette présentation de la Direction juridique explique pourquoi une démarche structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique.  *(≈ 8 s)*
 
 ## Fichier `scene-02.wav` — Fondation
@@ -19,12 +21,11 @@ Durées indicatives (voix de synthèse actuelle) : inutile de les respecter à l
 
 ## Fichier `scene-03.wav` — Ecosysteme
 
-1. Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, plus de 35 sociétés civiles immobilières,  *(≈ 8 s)*
-2. et des associations partenaires : AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial.  *(≈ 6 s)*
+1. Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine.  *(≈ 12 s)*
+2. S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.  *(≈ 14 s)*
 3. Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.  *(≈ 9 s)*
 4. Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.  *(≈ 7 s)*
-5. Cette richesse est une force, à condition de rester lisible.  *(≈ 3 s)*
-6. Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.  *(≈ 6 s)*
+5. Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.  *(≈ 6 s)*
 
 ## Fichier `scene-04.wav` — Cadre
 

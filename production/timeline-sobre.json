@@ -1,0 +1,856 @@
+{
+ "scenes": [
+  {
+   "id": "01-ouverture",
+   "start": 0.0,
+   "duration": 18.11
+  },
+  {
+   "id": "02-fondation",
+   "start": 18.11,
+   "duration": 23.27
+  },
+  {
+   "id": "03-ecosysteme",
+   "start": 41.38,
+   "duration": 50.33
+  },
+  {
+   "id": "04-cadre",
+   "start": 91.71,
+   "duration": 36.7
+  },
+  {
+   "id": "05-maintenant",
+   "start": 128.41,
+   "duration": 21.38
+  },
+  {
+   "id": "06-message",
+   "start": 149.79,
+   "duration": 19.09
+  },
+  {
+   "id": "07-decideurs",
+   "start": 168.88,
+   "duration": 30.94
+  },
+  {
+   "id": "08-dispositif",
+   "start": 199.82,
+   "duration": 32.97
+  },
+  {
+   "id": "09-feuille-de-route",
+   "start": 232.79,
+   "duration": 30.61
+  },
+  {
+   "id": "10-decisions",
+   "start": 263.4,
+   "duration": 43.63
+  }
+ ],
+ "variants": {
+  "sobre": {
+   "cues": {
+    "01-ouverture": {
+     "a": 2.6,
+     "b": 4.918,
+     "c": 8.773,
+     "end": 17.264
+    },
+    "02-fondation": {
+     "a": 0.7,
+     "b": 5.039,
+     "c": 11.076,
+     "d": 16.052,
+     "end": 22.417
+    },
+    "03-ecosysteme": {
+     "a": 0.7,
+     "b": 12.891,
+     "c": 27.309,
+     "d": 36.564,
+     "e": 43.524,
+     "end": 49.485
+    },
+    "04-cadre": {
+     "a": 0.7,
+     "b": 9.554,
+     "c": 16.434,
+     "d": 26.812,
+     "end": 35.846
+    },
+    "05-maintenant": {
+     "a": 0.7,
+     "b": 4.754,
+     "c": 12.437,
+     "end": 20.533
+    },
+    "06-message": {
+     "a": 0.7,
+     "b": 8.668,
+     "end": 18.242
+    },
+    "07-decideurs": {
+     "a": 0.7,
+     "b": 3.735,
+     "q1": 10.745,
+     "q2": 14.749,
+     "q3": 16.777,
+     "q4": 19.125,
+     "h2": 22.285,
+     "c": 26.708,
+     "end": 30.09
+    },
+    "08-dispositif": {
+     "a": 0.7,
+     "b": 10.316,
+     "c": 18.829,
+     "d": 24.576,
+     "h3": 29.685,
+     "end": 32.115
+    },
+    "09-feuille-de-route": {
+     "a": 0.7,
+     "b": 4.22,
+     "c": 11.49,
+     "d": 17.649,
+     "e": 20.653,
+     "end": 29.76
+    },
+    "10-decisions": {
+     "a": 0.7,
+     "b": 5.482,
+     "c": 15.109,
+     "d": 20.406,
+     "e": 25.001,
+     "end": 33.127
+    }
+   },
+   "lines": [
+    {
+     "scene": "01-ouverture",
+     "id": "a",
+     "text": "Prévenir les atteintes à la probité.",
+     "start": 2.6,
+     "end": 4.468,
+     "wav": ".media/voice/01-ouverture-a-ea03dbbf10.wav"
+    },
+    {
+     "scene": "01-ouverture",
+     "id": "b",
+     "text": "Pour la Fondation OVE, c’est d’abord une question de confiance.",
+     "start": 4.918,
+     "end": 8.323,
+     "wav": ".media/voice/01-ouverture-b-7471003a69.wav"
+    },
+    {
+     "scene": "01-ouverture",
+     "id": "c",
+     "text": "Cette présentation de la Direction juridique explique pourquoi une démarche structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique.",
+     "start": 8.773,
+     "end": 17.264,
+     "wav": ".media/voice/01-ouverture-c-83d890aade.wav"
+    },
+    {
+     "scene": "02-fondation",
+     "id": "a",
+     "text": "La Fondation OVE est une fondation reconnue d’utilité publique.",
+     "start": 18.81,
+     "end": 22.699,
+     "wav": ".media/voice/02-fondation-a-870de870f7.wav"
+    },
+    {
+     "scene": "02-fondation",
+     "id": "b",
+     "text": "Elle mobilise un budget d’environ 180 millions d’euros et près de 2 500 salariés.",
+     "start": 23.149,
+     "end": 28.736,
+     "wav": ".media/voice/02-fondation-b-6230f6dffc.wav"
+    },
+    {
+     "scene": "02-fondation",
+     "id": "c",
+     "text": "Elle accompagne chaque année plus de 15 000 personnes, sur l’ensemble du territoire.",
+     "start": 29.186,
+     "end": 33.712,
+     "wav": ".media/voice/02-fondation-c-98673f7629.wav"
+    },
+    {
+     "scene": "02-fondation",
+     "id": "d",
+     "text": "Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau et une direction générale.",
+     "start": 34.162,
+     "end": 40.527,
+     "wav": ".media/voice/02-fondation-d-5e6da2b3c8.wav"
+    },
+    {
+     "scene": "03-ecosysteme",
+     "id": "a",
+     "text": "Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine.",
+     "start": 42.08,
+     "end": 53.821,
+     "wav": ".media/voice/03-ecosysteme-a-sobre-5b9466d3a1.wav"
+    },
+    {
+     "scene": "03-ecosysteme",
+     "id": "b",
+     "text": "S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.",
+     "start": 54.271,
+     "end": 68.239,
+     "wav": ".media/voice/03-ecosysteme-b-sobre-68f9c9027c.wav"
+    },
+    {
+     "scene": "03-ecosysteme",
+     "id": "c",
+     "text": "Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.",
+     "start": 68.689,
+     "end": 77.494,
+     "wav": ".media/voice/03-ecosysteme-c-10afee1b51.wav"
+    },
+    {
+     "scene": "03-ecosysteme",
+     "id": "d",
+     "text": "Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.",
+     "start": 77.944,
+     "end": 84.454,
+     "wav": ".media/voice/03-ecosysteme-d-bd907d33a9.wav"
+    },
+    {
+     "scene": "03-ecosysteme",
+     "id": "e",
+     "text": "Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.",
+     "start": 84.904,
+     "end": 90.865,
+     "wav": ".media/voice/03-ecosysteme-e-20524e1792.wav"
+    },
+    {
+     "scene": "04-cadre",
+     "id": "a",
+     "text": "Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.",
+     "start": 92.41,
+     "end": 100.814,
+     "wav": ".media/voice/04-cadre-a-982ed4570e.wav"
+    },
+    {
+     "scene": "04-cadre",
+     "id": "b",
+     "text": "Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.",
+     "start": 101.264,
+     "end": 107.694,
+     "wav": ".media/voice/04-cadre-b-f007235875.wav"
+    },
+    {
+     "scene": "04-cadre",
+     "id": "c",
+     "text": "En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.",
+     "start": 108.144,
+     "end": 118.072,
+     "wav": ".media/voice/04-cadre-c-0d3ef3f2d2.wav"
+    },
+    {
+     "scene": "04-cadre",
+     "id": "d",
+     "text": "Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.",
+     "start": 118.522,
+     "end": 127.556,
+     "wav": ".media/voice/04-cadre-d-d927366282.wav"
+    },
+    {
+     "scene": "05-maintenant",
+     "id": "a",
+     "text": "Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.",
+     "start": 129.11,
+     "end": 132.714,
+     "wav": ".media/voice/05-maintenant-a-8d48db388f.wav"
+    },
+    {
+     "scene": "05-maintenant",
+     "id": "b",
+     "text": "Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance.",
+     "start": 133.164,
+     "end": 140.397,
+     "wav": ".media/voice/05-maintenant-b-496a4a4e53.wav"
+    },
+    {
+     "scene": "05-maintenant",
+     "id": "c",
+     "text": "S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements et la réputation de la Fondation.",
+     "start": 140.847,
+     "end": 148.943,
+     "wav": ".media/voice/05-maintenant-c-1fd5c9b8d3.wav"
+    },
+    {
+     "scene": "06-message",
+     "id": "a",
+     "text": "Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.",
+     "start": 150.49,
+     "end": 158.008,
+     "wav": ".media/voice/06-message-a-de99a3ade5.wav"
+    },
+    {
+     "scene": "06-message",
+     "id": "b",
+     "text": "Il s’agit de protéger sa mission d’intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources et la confiance de ses partenaires.",
+     "start": 158.458,
+     "end": 168.032,
+     "wav": ".media/voice/06-message-b-fcaa0b5a89.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "a",
+     "text": "Ce cadre protège aussi celles et ceux qui décident.",
+     "start": 169.58,
+     "end": 172.165,
+     "wav": ".media/voice/07-decideurs-a-6f92faf499.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "b",
+     "text": "Lorsqu’une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles.",
+     "start": 172.615,
+     "end": 179.175,
+     "wav": ".media/voice/07-decideurs-b-80abacb464.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "q1",
+     "text": "Pour le compte de quelle personne morale la décision est-elle prise ?",
+     "start": 179.625,
+     "end": 183.179,
+     "wav": ".media/voice/07-decideurs-q1-d0f101019a.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "q2",
+     "text": "Quelle instance doit l’autoriser ?",
+     "start": 183.629,
+     "end": 185.207,
+     "wav": ".media/voice/07-decideurs-q2-4b7ffc79d2.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "q3",
+     "text": "Quelle délégation permet de signer ?",
+     "start": 185.657,
+     "end": 187.555,
+     "wav": ".media/voice/07-decideurs-q3-4adba054a6.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "q4",
+     "text": "Quelles informations remonter à chaque gouvernance ?",
+     "start": 188.005,
+     "end": 190.715,
+     "wav": ".media/voice/07-decideurs-q4-ff9e4ab276.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "h2",
+     "text": "Des réponses écrites et partagées valent mieux que des usages implicites.",
+     "start": 191.165,
+     "end": 195.138,
+     "wav": ".media/voice/07-decideurs-h2-sobre-ceca853121.wav"
+    },
+    {
+     "scene": "07-decideurs",
+     "id": "c",
+     "text": "En cas de contrôle, pouvoir le démontrer est une protection.",
+     "start": 195.588,
+     "end": 198.97,
+     "wav": ".media/voice/07-decideurs-c-a401964428.wav"
+    },
+    {
+     "scene": "08-dispositif",
+     "id": "a",
+     "text": "Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.",
+     "start": 200.52,
+     "end": 209.686,
+     "wav": ".media/voice/08-dispositif-a-3f90ef4c91.wav"
+    },
+    {
+     "scene": "08-dispositif",
+     "id": "b",
+     "text": "Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,",
+     "start": 210.136,
+     "end": 218.429,
+     "wav": ".media/voice/08-dispositif-b-a33f80c79e.wav"
+    },
+    {
+     "scene": "08-dispositif",
+     "id": "c",
+     "text": "une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.",
+     "start": 218.649,
+     "end": 223.946,
+     "wav": ".media/voice/08-dispositif-c-d3e09f06d1.wav"
+    },
+    {
+     "scene": "08-dispositif",
+     "id": "d",
+     "text": "Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.",
+     "start": 224.396,
+     "end": 229.055,
+     "wav": ".media/voice/08-dispositif-d-48b0fd12f1.wav"
+    },
+    {
+     "scene": "08-dispositif",
+     "id": "h3",
+     "text": "L’objectif est de sécuriser, sans alourdir.",
+     "start": 229.505,
+     "end": 231.935,
+     "wav": ".media/voice/08-dispositif-h3-sobre-64af209b41.wav"
+    },
+    {
+     "scene": "09-feuille-de-route",
+     "id": "a",
+     "text": "La démarche se déploierait progressivement, sur deux ans.",
+     "start": 233.49,
+     "end": 236.56,
+     "wav": ".media/voice/09-feuille-de-route-a-71e40cb2bb.wav"
+    },
+    {
+     "scene": "09-feuille-de-route",
+     "id": "b",
+     "text": "Année 1 : comprendre, cartographier, concevoir. Cadrage, diagnostic, cartographie des risques, dispositif cible.",
+     "start": 237.01,
+     "end": 243.83,
+     "wav": ".media/voice/09-feuille-de-route-b-74a2785942.wav"
+    },
+    {
+     "scene": "09-feuille-de-route",
+     "id": "c",
+     "text": "Année 2 : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan.",
+     "start": 244.28,
+     "end": 249.989,
+     "wav": ".media/voice/09-feuille-de-route-c-6f481953c3.wav"
+    },
+    {
+     "scene": "09-feuille-de-route",
+     "id": "d",
+     "text": "Des indicateurs en mesureront l’effectivité.",
+     "start": 250.439,
+     "end": 252.993,
+     "wav": ".media/voice/09-feuille-de-route-d-eac129602d.wav"
+    },
+    {
+     "scene": "09-feuille-de-route",
+     "id": "e",
+     "text": "Soyons lucides : aucun dispositif ne supprime totalement le risque. Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.",
+     "start": 253.443,
+     "end": 262.55,
+     "wav": ".media/voice/09-feuille-de-route-e-56fd8bb9db.wav"
+    },
+    {
+     "scene": "10-decisions",
+     "id": "a",
+     "text": "Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,",
+     "start": 264.1,
+     "end": 268.662,
+     "wav": ".media/voice/10-decisions-a-800354e81e.wav"
+    },
+    {
+     "scene": "10-decisions",
+     "id": "b",
+     "text": "d’autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,",
+     "start": 268.882,
+     "end": 278.289,
+     "wav": ".media/voice/10-decisions-b-fe8989c167.wav"
+    },
+    {
+     "scene": "10-decisions",
+     "id": "c",
+     "text": "avec un comité de pilotage transversal et un reporting régulier au Bureau.",
+     "start": 278.509,
+     "end": 283.356,
+     "wav": ".media/voice/10-decisions-c-3ca817921b.wav"
+    },
+    {
+     "scene": "10-decisions",
+     "id": "d",
+     "text": "Le dispositif définitif restera soumis aux instances compétentes.",
+     "start": 283.806,
+     "end": 287.951,
+     "wav": ".media/voice/10-decisions-d-25d592a00e.wav"
+    },
+    {
+     "scene": "10-decisions",
+     "id": "e",
+     "text": "Protéger la mission, les personnes, les décideurs et la confiance : c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.",
+     "start": 288.401,
+     "end": 296.527,
+     "wav": ".media/voice/10-decisions-e-ae3ec4ba04.wav"
+    }
+   ],
+   "captions": [
+    {
+     "start": 2.6,
+     "end": 4.878,
+     "text": "Prévenir les atteintes à la probité."
+    },
+    {
+     "start": 4.918,
+     "end": 8.733,
+     "text": "Pour la Fondation OVE, c’est d’abord une question de confiance."
+    },
+    {
+     "start": 8.773,
+     "end": 13.065,
+     "text": "Cette présentation de la Direction juridique explique pourquoi une démarche"
+    },
+    {
+     "start": 13.105,
+     "end": 17.764,
+     "text": "structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique."
+    },
+    {
+     "start": 18.81,
+     "end": 23.109,
+     "text": "La Fondation OVE est une fondation reconnue d’utilité publique."
+    },
+    {
+     "start": 23.149,
+     "end": 29.146,
+     "text": "Elle mobilise un budget d’environ 180 millions d’euros et près de 2 500 salariés."
+    },
+    {
+     "start": 29.186,
+     "end": 34.122,
+     "text": "Elle accompagne chaque année plus de 15 000 personnes, sur l’ensemble du territoire."
+    },
+    {
+     "start": 34.162,
+     "end": 38.896,
+     "text": "Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau"
+    },
+    {
+     "start": 38.936,
+     "end": 41.027,
+     "text": "et une direction générale."
+    },
+    {
+     "start": 42.08,
+     "end": 45.493,
+     "text": "Autour d’elle s’est constitué un écosystème structuré :"
+    },
+    {
+     "start": 45.533,
+     "end": 50.202,
+     "text": "le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35"
+    },
+    {
+     "start": 50.242,
+     "end": 54.231,
+     "text": "sociétés civiles immobilières, qui portent le patrimoine."
+    },
+    {
+     "start": 54.271,
+     "end": 56.822,
+     "text": "S’y ajoutent quatre associations partenaires :"
+    },
+    {
+     "start": 56.862,
+     "end": 59.638,
+     "text": "AMICIAL, gouvernée avec la Croix-Rouge française ;"
+    },
+    {
+     "start": 59.678,
+     "end": 63.468,
+     "text": "OVE Plenior, qui mutualise ses fonctions support avec la Fondation ;"
+    },
+    {
+     "start": 63.508,
+     "end": 68.649,
+     "text": "OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau."
+    },
+    {
+     "start": 68.689,
+     "end": 71.912,
+     "text": "Cette organisation répond à des objectifs légitimes :"
+    },
+    {
+     "start": 71.952,
+     "end": 76.099,
+     "text": "coopérer, mutualiser, se spécialiser, distinguer le médico-social du"
+    },
+    {
+     "start": 76.139,
+     "end": 77.904,
+     "text": "patrimoine immobilier."
+    },
+    {
+     "start": 77.944,
+     "end": 82.438,
+     "text": "Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés"
+    },
+    {
+     "start": 82.478,
+     "end": 84.864,
+     "text": "par un nombre limité de décideurs."
+    },
+    {
+     "start": 84.904,
+     "end": 88.51,
+     "text": "Cette configuration ne révèle en elle-même aucune irrégularité."
+    },
+    {
+     "start": 88.55,
+     "end": 91.365,
+     "text": "Elle appelle simplement un cadre commun."
+    },
+    {
+     "start": 92.41,
+     "end": 96.752,
+     "text": "Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme"
+    },
+    {
+     "start": 96.792,
+     "end": 101.224,
+     "text": "anticorruption à certaines entreprises dépassant des seuils précis."
+    },
+    {
+     "start": 101.264,
+     "end": 105.3,
+     "text": "Sans analyse complémentaire, on ne peut affirmer que la Fondation y est"
+    },
+    {
+     "start": 105.34,
+     "end": 108.104,
+     "text": "assujettie comme une société commerciale."
+    },
+    {
+     "start": 108.144,
+     "end": 113.036,
+     "text": "En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à"
+    },
+    {
+     "start": 113.076,
+     "end": 118.482,
+     "text": "contrôler de sa propre initiative les fondations reconnues d’utilité publique."
+    },
+    {
+     "start": 118.522,
+     "end": 122.97,
+     "text": "Elle examine leurs procédures contre la corruption, le trafic d’influence, la"
+    },
+    {
+     "start": 123.01,
+     "end": 128.056,
+     "text": "prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme."
+    },
+    {
+     "start": 129.11,
+     "end": 133.124,
+     "text": "Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant."
+    },
+    {
+     "start": 133.164,
+     "end": 137.395,
+     "text": "Les financeurs publics attendent des garanties de bonne gouvernance, et les"
+    },
+    {
+     "start": 137.435,
+     "end": 140.807,
+     "text": "affaires récentes du secteur ont accru la vigilance."
+    },
+    {
+     "start": 140.847,
+     "end": 145.272,
+     "text": "S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les"
+    },
+    {
+     "start": 145.312,
+     "end": 149.443,
+     "text": "décideurs, les financements et la réputation de la Fondation."
+    },
+    {
+     "start": 150.49,
+     "end": 154.845,
+     "text": "Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste"
+    },
+    {
+     "start": 154.885,
+     "end": 158.418,
+     "text": "pas seulement à répondre à un environnement juridique."
+    },
+    {
+     "start": 158.458,
+     "end": 162.236,
+     "text": "Il s’agit de protéger sa mission d’intérêt général, les personnes"
+    },
+    {
+     "start": 162.276,
+     "end": 166.289,
+     "text": "accompagnées, ses décideurs, ses collaborateurs, ses ressources et la"
+    },
+    {
+     "start": 166.329,
+     "end": 168.532,
+     "text": "confiance de ses partenaires."
+    },
+    {
+     "start": 169.58,
+     "end": 172.575,
+     "text": "Ce cadre protège aussi celles et ceux qui décident."
+    },
+    {
+     "start": 172.615,
+     "end": 176.584,
+     "text": "Lorsqu’une même personne siège dans plusieurs instances, selon une logique de"
+    },
+    {
+     "start": 176.624,
+     "end": 179.585,
+     "text": "réseau, quatre questions deviennent essentielles."
+    },
+    {
+     "start": 179.625,
+     "end": 183.589,
+     "text": "Pour le compte de quelle personne morale la décision est-elle prise ?"
+    },
+    {
+     "start": 183.629,
+     "end": 185.617,
+     "text": "Quelle instance doit l’autoriser ?"
+    },
+    {
+     "start": 185.657,
+     "end": 187.965,
+     "text": "Quelle délégation permet de signer ?"
+    },
+    {
+     "start": 188.005,
+     "end": 191.125,
+     "text": "Quelles informations remonter à chaque gouvernance ?"
+    },
+    {
+     "start": 191.165,
+     "end": 195.548,
+     "text": "Des réponses écrites et partagées valent mieux que des usages implicites."
+    },
+    {
+     "start": 195.588,
+     "end": 199.47,
+     "text": "En cas de contrôle, pouvoir le démontrer est une protection."
+    },
+    {
+     "start": 200.52,
+     "end": 204.746,
+     "text": "Le dispositif proposé repose sur les trois piliers recommandés par l’AFA :"
+    },
+    {
+     "start": 204.786,
+     "end": 210.096,
+     "text": "l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées."
+    },
+    {
+     "start": 210.136,
+     "end": 214.186,
+     "text": "Concrètement : un code de conduite, une politique de gestion des conflits"
+    },
+    {
+     "start": 214.226,
+     "end": 218.609,
+     "text": "d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,"
+    },
+    {
+     "start": 218.649,
+     "end": 222.913,
+     "text": "une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un"
+    },
+    {
+     "start": 222.953,
+     "end": 224.356,
+     "text": "plan de formation."
+    },
+    {
+     "start": 224.396,
+     "end": 229.465,
+     "text": "Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques."
+    },
+    {
+     "start": 229.505,
+     "end": 232.435,
+     "text": "L’objectif est de sécuriser, sans alourdir."
+    },
+    {
+     "start": 233.49,
+     "end": 236.97,
+     "text": "La démarche se déploierait progressivement, sur deux ans."
+    },
+    {
+     "start": 237.01,
+     "end": 239.858,
+     "text": "Année 1 : comprendre, cartographier, concevoir."
+    },
+    {
+     "start": 239.898,
+     "end": 244.24,
+     "text": "Cadrage, diagnostic, cartographie des risques, dispositif cible."
+    },
+    {
+     "start": 244.28,
+     "end": 246.561,
+     "text": "Année 2 : valider, déployer, ajuster."
+    },
+    {
+     "start": 246.601,
+     "end": 250.399,
+     "text": "Validation, formations, pilote, généralisation, bilan."
+    },
+    {
+     "start": 250.439,
+     "end": 253.403,
+     "text": "Des indicateurs en mesureront l’effectivité."
+    },
+    {
+     "start": 253.443,
+     "end": 257.365,
+     "text": "Soyons lucides : aucun dispositif ne supprime totalement le risque."
+    },
+    {
+     "start": 257.405,
+     "end": 263.05,
+     "text": "Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation."
+    },
+    {
+     "start": 264.1,
+     "end": 268.842,
+     "text": "Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,"
+    },
+    {
+     "start": 268.882,
+     "end": 273.156,
+     "text": "d’autoriser le diagnostic et la cartographie des risques, de désigner la"
+    },
+    {
+     "start": 273.196,
+     "end": 278.469,
+     "text": "Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,"
+    },
+    {
+     "start": 278.509,
+     "end": 283.766,
+     "text": "avec un comité de pilotage transversal et un reporting régulier au Bureau."
+    },
+    {
+     "start": 283.806,
+     "end": 288.361,
+     "text": "Le dispositif définitif restera soumis aux instances compétentes."
+    },
+    {
+     "start": 288.401,
+     "end": 292.065,
+     "text": "Protéger la mission, les personnes, les décideurs et la confiance :"
+    },
+    {
+     "start": 292.105,
+     "end": 297.027,
+     "text": "c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider."
+    }
+   ]
+  }
+ },
+ "total": 307.03
+}

@@ -31,25 +31,43 @@
 #root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
 #root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
 #root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+
+#root .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+#root .wi, #root .ch { display: inline-block; }
+#root .amb { position: absolute; right: -260px; top: 90px; width: 1100px; height: 620px; transform: rotate(-12deg); pointer-events: none; }
+#root .amb i { position: absolute; left: 0; height: 130px; border-radius: 65px; display: block; }
+#root .amb i:nth-child(1) { top: 0; width: 1100px; background: rgba(180,201,8,0.09); }
+#root .amb i:nth-child(2) { top: 175px; left: 160px; width: 900px; background: rgba(220,229,138,0.20); }
+#root .amb i:nth-child(3) { top: 350px; left: 320px; width: 700px; background: rgba(135,135,135,0.07); }
+#root .amb.dk i:nth-child(1) { background: rgba(180,201,8,0.10); }
+#root .amb.dk i:nth-child(2) { background: rgba(220,229,138,0.06); }
+#root .amb.dk i:nth-child(3) { background: rgba(255,255,255,0.04); }
+#root .dots { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; background-image: radial-gradient(rgba(37,40,43,0.07) 1.6px, transparent 1.8px); background-size: 28px 28px; pointer-events: none; }
+#root .dots.dk { background-image: radial-gradient(rgba(255,255,255,0.06) 1.6px, transparent 1.8px); }
+#root .prog { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: rgba(135,135,135,0.16); z-index: 40; }
+#root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
+#root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="04-cadre" data-width="1920" data-height="1080" data-duration="37.1">
-  <div id="s04-scene" class="clip" data-start="0" data-duration="37.1" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="04-cadre" data-width="1920" data-height="1080" data-duration="36.7">
+  <div id="s04-scene" class="clip" data-start="0" data-duration="36.7" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
+  <div class="dots s04-dots"></div><div class="amb"><i class="s04-a1"></i><i class="s04-a2"></i><i class="s04-a3"></i></div>
   <div class="s04-content" style="position:absolute;inset:0">
   <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">03 — Le cadre juridique</div></div>
   <div class="card s04-l" style="left:192px;top:180px;width:740px;height:400px;padding:40px 44px;box-sizing:border-box">
-    <div class="row"><div class="badge" style="background:#ECEDEA;color:#55595D"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40V14l14-6 14 6v26"/><path d="M6 40h36"/><path d="M18 20h4M26 20h4M18 28h4M26 28h4M21 40v-6h6v6"/></svg></div><div class="label" style="color:#6B6F72">Loi Sapin 2 · article 17</div></div>
+    <div class="row"><div class="badge" style="background:#ECEDEA;color:#55595D"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M10 40V14l14-6 14 6v26"/><path pathLength="1" d="M6 40h36"/><path pathLength="1" d="M18 20h4M26 20h4M18 28h4M26 28h4M21 40v-6h6v6"/></svg></div><div class="label" style="color:#6B6F72">Loi Sapin 2 · article 17</div></div>
     <div class="h3" style="margin-top:28px">Programme anticorruption obligatoire</div>
     <div class="body" style="margin-top:14px">Pour certaines sociétés, au-delà de seuils précis.</div>
-    <div class="s04-stamp" style="margin-top:30px;display:inline-flex;align-items:center;gap:14px;padding:12px 22px;border-radius:12px;border:2px dashed #878787;font-size:26px;font-weight:600;color:#55595D"><svg class="ic " width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l8 8v28H14z"/><path d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg>Application à la Fondation : à confirmer</div></div>
+    <div class="s04-stamp" style="margin-top:30px;display:inline-flex;align-items:center;gap:14px;padding:12px 22px;border-radius:12px;border:2px dashed #878787;font-size:26px;font-weight:600;color:#55595D"><svg class="ic " width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M14 6h14l8 8v28H14z"/><path pathLength="1" d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg>Application à la Fondation : à confirmer</div></div>
   <div class="card top s04-r" style="left:988px;top:180px;width:740px;height:400px;padding:40px 44px;box-sizing:border-box">
-    <div class="row"><div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle cx="24" cy="24" r="5"/></svg></div><div class="label">Loi Sapin 2 · article 3</div></div>
+    <div class="row"><div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle pathLength="1" cx="24" cy="24" r="5"/></svg></div><div class="label">Loi Sapin 2 · article 3</div></div>
     <div class="h3" style="margin-top:28px">L’AFA peut contrôler les fondations reconnues d’utilité publique</div>
     <div class="body" style="margin-top:14px">De sa propre initiative : qualité et efficacité des procédures.</div>
     <div class="s04-afa" style="position:absolute;right:40px;top:36px;width:96px;height:96px;border-radius:50%;background:#25282B;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:700;font-size:28px">AFA</div></div>
   <div class="abs label s04-bt" style="left:192px;top:640px;color:#6B6F72">Atteintes à la probité visées</div>
   <div class="abs s04-row" style="left:192px;top:690px;width:1536px;display:flex;flex-wrap:wrap;gap:16px"><span class="chip s04-i0">Corruption</span><span class="chip s04-i1">Trafic d’influence</span><span class="chip s04-i2">Prise illégale d’intérêts</span><span class="chip s04-i3">Détournement de fonds publics</span><span class="chip s04-i4">Favoritisme</span></div>
   </div>
+  <div class="prog"><i class="s04-pg"></i></div>
   <div class="bands s04-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
   </div>
 </div>
@@ -58,27 +76,48 @@
   const tl = gsap.timeline({ paused: true });
 
   const q = (s) => document.querySelectorAll(s);
-  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
-  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
-  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const rise0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
   const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
   const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
   const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
     tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
 
-  rise(".s04-l", 0.80, { y: 40 });
-  pop(".s04-stamp", 13.80, { s: 0.9 });
-  rise(".s04-r", 16.63, { y: 40 });
-  pop(".s04-afa", 21.07, { s: 0.6 });
-  rise(".s04-bt", 27.16);
-  rise(".s04-i0", 29.48, { y: 16 });
-  rise(".s04-i1", 30.35, { y: 16 });
-  rise(".s04-i2", 31.68, { y: 16 });
-  rise(".s04-i3", 33.42, { y: 16 });
-  rise(".s04-i4", 35.50, { y: 16 });
+  const ink = (s, t) => { const sel = s.split(",").map((x) => x.trim() + " .ic > *").join(", "); const els = document.querySelectorAll(sel);
+    if (els.length) tl.fromTo(els, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut", stagger: 0.03 }, t + 0.12); };
+  const rise = (s, t, o = {}) => { rise0(s, t, { ...o, d: o.d ?? 0.75 }); ink(s, t); };
+  const pop = (s, t, o = {}) => { pop0(s, t, o); ink(s, t); };
+  const slide = (s, t, o = {}) => { slide0(s, t, o); ink(s, t); };
+  const title = (s, t) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => '<span class="w"><span class="wi">' + w + "</span></span>").join(" "); } });
+    tl.fromTo(s + " .wi", { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, ease: "power4.out", stagger: 0.07 }, t); };
+  const spell = (s, t, st = 0.04) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = [...el.textContent].map((ch) => '<span class="ch">' + (ch === " " ? "&nbsp;" : ch) + "</span>").join(""); } });
+    tl.fromTo(s + " .ch", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: st }, t); };
+  const ring = (s, t) => { tl.set(s, { opacity: 0.75, scale: 1 }, t); tl.to(s, { opacity: 0, scale: 1.7, duration: 1.3, ease: "power2.out" }, t); };
+  const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
+    if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
+
+  tl.fromTo(".s04-dots", { y: 0 }, { y: -56, duration: 36.7, ease: "none" }, 0);
+  tl.fromTo(".s04-a1", { x: 60 }, { x: -150, duration: 36.7, ease: "none" }, 0);
+  tl.fromTo(".s04-a2", { x: 30 }, { x: -100, duration: 36.7, ease: "none" }, 0);
+  tl.fromTo(".s04-a3", { x: 0 }, { x: -60, duration: 36.7, ease: "none" }, 0);
+  tl.fromTo(".s04-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 36.7, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s04-pg", { scaleX: 0.2987 }, { scaleX: 0.4182, duration: 36.7, ease: "none" }, 0);
+  rise(".s04-l", 0.70, { y: 40 });
+  pop(".s04-stamp", 13.65, { s: 0.9 });
+  rise(".s04-r", 16.43, { y: 40 });
+  pop(".s04-afa", 20.82, { s: 0.6 });
+  rise(".s04-bt", 26.81);
+  rise(".s04-i0", 29.13, { y: 16 });
+  rise(".s04-i1", 30.00, { y: 16 });
+  rise(".s04-i2", 31.33, { y: 16 });
+  rise(".s04-i3", 33.07, { y: 16 });
+  rise(".s04-i4", 35.15, { y: 16 });
   tl.fromTo(".s04-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s04-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 36.30);
-  tl.set(".s04-content", { opacity: 0 }, 36.96);
+  tl.fromTo(".s04-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 35.90);
+  tl.set(".s04-content", { opacity: 0 }, 36.56);
   window.__timelines["04-cadre"] = tl;
 })();
 </script>

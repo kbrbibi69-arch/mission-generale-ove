@@ -31,10 +31,27 @@
 #root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
 #root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
 #root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+
+#root .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+#root .wi, #root .ch { display: inline-block; }
+#root .amb { position: absolute; right: -260px; top: 90px; width: 1100px; height: 620px; transform: rotate(-12deg); pointer-events: none; }
+#root .amb i { position: absolute; left: 0; height: 130px; border-radius: 65px; display: block; }
+#root .amb i:nth-child(1) { top: 0; width: 1100px; background: rgba(180,201,8,0.09); }
+#root .amb i:nth-child(2) { top: 175px; left: 160px; width: 900px; background: rgba(220,229,138,0.20); }
+#root .amb i:nth-child(3) { top: 350px; left: 320px; width: 700px; background: rgba(135,135,135,0.07); }
+#root .amb.dk i:nth-child(1) { background: rgba(180,201,8,0.10); }
+#root .amb.dk i:nth-child(2) { background: rgba(220,229,138,0.06); }
+#root .amb.dk i:nth-child(3) { background: rgba(255,255,255,0.04); }
+#root .dots { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; background-image: radial-gradient(rgba(37,40,43,0.07) 1.6px, transparent 1.8px); background-size: 28px 28px; pointer-events: none; }
+#root .dots.dk { background-image: radial-gradient(rgba(255,255,255,0.06) 1.6px, transparent 1.8px); }
+#root .prog { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: rgba(135,135,135,0.16); z-index: 40; }
+#root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
+#root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="08-dispositif" data-width="1920" data-height="1080" data-duration="34.42">
-  <div id="s08-scene" class="clip" data-start="0" data-duration="34.42" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="08-dispositif" data-width="1920" data-height="1080" data-duration="32.97">
+  <div id="s08-scene" class="clip" data-start="0" data-duration="32.97" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
+  <div class="dots s08-dots"></div><div class="amb"><i class="s08-a1"></i><i class="s08-a2"></i><i class="s08-a3"></i></div>
   <div class="s08-content" style="position:absolute;inset:0">
   <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">07 — Le dispositif proposé</div></div>
   <div class="card top s08-p0" style="left:192px;top:170px;width:496px;height:150px;padding:0 30px;box-sizing:border-box;display:flex;align-items:center;gap:22px">
@@ -45,26 +62,27 @@
     <div class="num">3</div><div class="h3" style="font-size:29px">Mesures adaptées et proportionnées</div></div>
   <div class="abs label s08-pl" style="left:192px;top:128px;opacity:0">Trois piliers</div>
   <div class="card s08-t0" style="left:192px;top:360px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
-    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l8 8v28H14z"/><path d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Code de conduite</span></div>
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M14 6h14l8 8v28H14z"/><path pathLength="1" d="M28 6v8h8M19 22h12M19 28h12M19 34h8"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Code de conduite</span></div>
   <div class="card s08-t1" style="left:712px;top:360px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
-    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="24" r="10"/><circle cx="30" cy="24" r="10"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Conflits d’intérêts et mandats croisés</span></div>
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="18" cy="24" r="10"/><circle pathLength="1" cx="30" cy="24" r="10"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Conflits d’intérêts et mandats croisés</span></div>
   <div class="card s08-t2" style="left:1232px;top:360px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
-    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h32v20H22l-8 8v-8H8z"/><path d="M19 20l4 4 7-7"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Alerte interne sécurisée</span></div>
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M8 10h32v20H22l-8 8v-8H8z"/><path pathLength="1" d="M19 20l4 4 7-7"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Alerte interne sécurisée</span></div>
   <div class="card s08-t3" style="left:192px;top:500px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
-    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="17" r="6"/><path d="M9 38c0-7 5-11 11-11 3 0 5 1 7 2"/><circle cx="34" cy="32" r="5"/><path d="M38 36l4 4"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Évaluation proportionnée des tiers</span></div>
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="20" cy="17" r="6"/><path pathLength="1" d="M9 38c0-7 5-11 11-11 3 0 5 1 7 2"/><circle pathLength="1" cx="34" cy="32" r="5"/><path pathLength="1" d="M38 36l4 4"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Évaluation proportionnée des tiers</span></div>
   <div class="card s08-t4" style="left:712px;top:500px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
-    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="3"/><path d="M15 32v-6M22 32V18M29 32V22M35 32v-9"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Contrôles comptables ciblés</span></div>
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect pathLength="1" x="8" y="8" width="32" height="32" rx="3"/><path pathLength="1" d="M15 32v-6M22 32V18M29 32V22M35 32v-9"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Contrôles comptables ciblés</span></div>
   <div class="card s08-t5" style="left:1232px;top:500px;width:496px;height:120px;padding:0 26px;box-sizing:border-box;display:flex;align-items:center;gap:20px">
-    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l20-9 20 9-20 9z"/><path d="M12 22v9c0 3 6 6 12 6s12-3 12-6v-9"/><path d="M44 18v10"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Plan de formation</span></div>
+    <span style="color:#5C6600"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 18l20-9 20 9-20 9z"/><path pathLength="1" d="M12 22v9c0 3 6 6 12 6s12-3 12-6v-9"/><path pathLength="1" d="M44 18v10"/></svg></span><span style="font-size:28px;font-weight:600;line-height:1.2">Plan de formation</span></div>
   <div class="abs label s08-sl" style="left:192px;top:668px;color:#6B6F72">Exigences graduées · montant · urgence · risque</div>
   <div class="abs s08-track" style="left:192px;top:722px;width:1536px;height:22px;border-radius:11px;background:#E6E8E2"></div>
   <div class="abs s08-fill" style="left:192px;top:722px;width:1536px;height:22px;border-radius:11px;background:linear-gradient(90deg,#DCE58A,#B4C908);transform-origin:left center"></div>
   <div class="abs s08-lo" style="left:192px;top:758px;font-size:24px;font-weight:600;color:#55595D">Contrôles simplifiés</div>
   <div class="abs s08-hi" style="left:1428px;top:758px;width:300px;text-align:right;font-size:24px;font-weight:600;color:#55595D">Vérifications renforcées</div>
   <div class="abs s08-h" style="left:700px;top:792px;display:flex;align-items:center;gap:12px;padding:10px 20px;border-radius:14px;background:#25282B;color:#fff;font-size:24px;font-weight:600">
-    <span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Sécuriser, sans alourdir</div>
+    <span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 25l8 8 16-17"/></svg></span>Sécuriser, sans alourdir</div>
   <div class="abs s08-hp" style="left:730px;top:744px;width:3px;height:48px;background:#25282B"></div>
   </div>
+  <div class="prog"><i class="s08-pg"></i></div>
   <div class="bands s08-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
   </div>
 </div>
@@ -73,32 +91,53 @@
   const tl = gsap.timeline({ paused: true });
 
   const q = (s) => document.querySelectorAll(s);
-  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
-  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
-  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const rise0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
   const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
   const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
   const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
     tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
 
-  rise(".s08-p0", 5.00, { y: 30 });
-  rise(".s08-p1", 6.86, { y: 30 });
-  rise(".s08-p2", 8.72, { y: 30 });
-  pop(".s08-t0", 11.44, { s: 0.92 });
-  pop(".s08-t1", 14.05, { s: 0.92 });
-  pop(".s08-t2", 17.39, { s: 0.92 });
-  pop(".s08-t3", 19.20, { s: 0.92 });
-  pop(".s08-t4", 21.38, { s: 0.92 });
-  pop(".s08-t5", 23.29, { s: 0.92 });
-  rise(".s08-sl", 24.93);
-  fade(".s08-track", 24.93);
-  tl.fromTo(".s08-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 26.08);
-  rise(".s08-lo", 26.08, { y: 10 }); rise(".s08-hi", 28.77, { y: 10 });
-  pop(".s08-h", 30.08, { s: 0.9 });
-  tl.fromTo(".s08-hp", { scaleY: 0, transformOrigin: "top center" }, { scaleY: 1, duration: 0.4 }, 30.28);
+  const ink = (s, t) => { const sel = s.split(",").map((x) => x.trim() + " .ic > *").join(", "); const els = document.querySelectorAll(sel);
+    if (els.length) tl.fromTo(els, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut", stagger: 0.03 }, t + 0.12); };
+  const rise = (s, t, o = {}) => { rise0(s, t, { ...o, d: o.d ?? 0.75 }); ink(s, t); };
+  const pop = (s, t, o = {}) => { pop0(s, t, o); ink(s, t); };
+  const slide = (s, t, o = {}) => { slide0(s, t, o); ink(s, t); };
+  const title = (s, t) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => '<span class="w"><span class="wi">' + w + "</span></span>").join(" "); } });
+    tl.fromTo(s + " .wi", { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, ease: "power4.out", stagger: 0.07 }, t); };
+  const spell = (s, t, st = 0.04) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = [...el.textContent].map((ch) => '<span class="ch">' + (ch === " " ? "&nbsp;" : ch) + "</span>").join(""); } });
+    tl.fromTo(s + " .ch", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: st }, t); };
+  const ring = (s, t) => { tl.set(s, { opacity: 0.75, scale: 1 }, t); tl.to(s, { opacity: 0, scale: 1.7, duration: 1.3, ease: "power2.out" }, t); };
+  const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
+    if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
+
+  tl.fromTo(".s08-dots", { y: 0 }, { y: -56, duration: 32.97, ease: "none" }, 0);
+  tl.fromTo(".s08-a1", { x: 60 }, { x: -150, duration: 32.97, ease: "none" }, 0);
+  tl.fromTo(".s08-a2", { x: 30 }, { x: -100, duration: 32.97, ease: "none" }, 0);
+  tl.fromTo(".s08-a3", { x: 0 }, { x: -60, duration: 32.97, ease: "none" }, 0);
+  tl.fromTo(".s08-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 32.97, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s08-pg", { scaleX: 0.6508 }, { scaleX: 0.7582, duration: 32.97, ease: "none" }, 0);
+  rise(".s08-p0", 4.85, { y: 30 });
+  rise(".s08-p1", 6.68, { y: 30 });
+  rise(".s08-p2", 8.51, { y: 30 });
+  pop(".s08-t0", 11.17, { s: 0.92 });
+  pop(".s08-t1", 13.78, { s: 0.92 });
+  pop(".s08-t2", 17.12, { s: 0.92 });
+  pop(".s08-t3", 18.90, { s: 0.92 });
+  pop(".s08-t4", 21.08, { s: 0.92 });
+  pop(".s08-t5", 22.99, { s: 0.92 });
+  rise(".s08-sl", 24.58);
+  fade(".s08-track", 24.58);
+  tl.fromTo(".s08-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 25.73);
+  rise(".s08-lo", 25.73, { y: 10 }); rise(".s08-hi", 28.42, { y: 10 });
+  pop(".s08-h", 29.68, { s: 0.9 });
+  tl.fromTo(".s08-hp", { scaleY: 0, transformOrigin: "top center" }, { scaleY: 1, duration: 0.4 }, 29.88);
   tl.fromTo(".s08-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s08-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 33.62);
-  tl.set(".s08-content", { opacity: 0 }, 34.28);
+  tl.fromTo(".s08-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 32.17);
+  tl.set(".s08-content", { opacity: 0 }, 32.83);
   window.__timelines["08-dispositif"] = tl;
 })();
 </script>

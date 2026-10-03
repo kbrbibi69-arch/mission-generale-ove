@@ -31,29 +31,47 @@
 #root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
 #root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
 #root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+
+#root .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+#root .wi, #root .ch { display: inline-block; }
+#root .amb { position: absolute; right: -260px; top: 90px; width: 1100px; height: 620px; transform: rotate(-12deg); pointer-events: none; }
+#root .amb i { position: absolute; left: 0; height: 130px; border-radius: 65px; display: block; }
+#root .amb i:nth-child(1) { top: 0; width: 1100px; background: rgba(180,201,8,0.09); }
+#root .amb i:nth-child(2) { top: 175px; left: 160px; width: 900px; background: rgba(220,229,138,0.20); }
+#root .amb i:nth-child(3) { top: 350px; left: 320px; width: 700px; background: rgba(135,135,135,0.07); }
+#root .amb.dk i:nth-child(1) { background: rgba(180,201,8,0.10); }
+#root .amb.dk i:nth-child(2) { background: rgba(220,229,138,0.06); }
+#root .amb.dk i:nth-child(3) { background: rgba(255,255,255,0.04); }
+#root .dots { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; background-image: radial-gradient(rgba(37,40,43,0.07) 1.6px, transparent 1.8px); background-size: 28px 28px; pointer-events: none; }
+#root .dots.dk { background-image: radial-gradient(rgba(255,255,255,0.06) 1.6px, transparent 1.8px); }
+#root .prog { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: rgba(135,135,135,0.16); z-index: 40; }
+#root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
+#root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="05-maintenant" data-width="1920" data-height="1080" data-duration="21.63">
-  <div id="s05-scene" class="clip" data-start="0" data-duration="21.63" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="05-maintenant" data-width="1920" data-height="1080" data-duration="21.38">
+  <div id="s05-scene" class="clip" data-start="0" data-duration="21.38" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
+  <div class="dots s05-dots"></div><div class="amb"><i class="s05-a1"></i><i class="s05-a2"></i><i class="s05-a3"></i></div>
   <div class="s05-content" style="position:absolute;inset:0">
   <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">04 — Pourquoi maintenant</div></div>
   <div class="abs h2 s05-t" style="left:192px;top:180px;width:1536px">Un environnement plus exigeant</div>
   <div class="card top s05-c0" style="left:192px;top:290px;width:490px;height:230px;padding:34px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle cx="24" cy="24" r="5"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Un contrôle possible de l’AFA</div></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24z"/><circle pathLength="1" cx="24" cy="24" r="5"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Un contrôle possible de l’AFA</div></div>
   <div class="card top s05-c1" style="left:715px;top:290px;width:490px;height:230px;padding:34px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 36l10-10 8 6 16-16"/><path d="M32 16h8v8"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Des financeurs qui attendent des garanties</div></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M6 36l10-10 8 6 16-16"/><path pathLength="1" d="M32 16h8v8"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Des financeurs qui attendent des garanties</div></div>
   <div class="card top s05-c2" style="left:1238px;top:290px;width:490px;height:230px;padding:34px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="28" rx="3"/><path d="M12 18h12M12 24h24M12 30h24"/><rect x="29" y="15" width="7" height="5"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Une vigilance accrue dans le secteur</div></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect pathLength="1" x="6" y="10" width="36" height="28" rx="3"/><path pathLength="1" d="M12 18h12M12 24h24M12 30h24"/><rect pathLength="1" x="29" y="15" width="7" height="5"/></svg></div><div class="h3" style="margin-top:22px;font-size:30px">Une vigilance accrue dans le secteur</div></div>
   <div class="abs s05-lt" style="left:192px;top:585px;width:1536px;font-size:30px;font-weight:600;color:#55595D">Sans cadre commun, ce qui serait peu à peu exposé :</div>
   <div class="abs s05-e0" style="left:192px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
-    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 39S8 29 8 18a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 11-16 21-16 21z"/></svg></span>La mission</div>
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M24 39S8 29 8 18a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 11-16 21-16 21z"/></svg></span>La mission</div>
   <div class="abs s05-e1" style="left:582px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
-    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="7"/><path d="M10 42c0-9 6-15 14-15s14 6 14 15"/></svg></span>Les décideurs</div>
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="24" cy="15" r="7"/><path pathLength="1" d="M10 42c0-9 6-15 14-15s14 6 14 15"/></svg></span>Les décideurs</div>
   <div class="abs s05-e2" style="left:972px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
-    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="14" rx="12" ry="5"/><path d="M12 14v8c0 3 5 5 12 5s12-2 12-5v-8M12 22v8c0 3 5 5 12 5s12-2 12-5v-8"/></svg></span>Les financements</div>
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse pathLength="1" cx="24" cy="14" rx="12" ry="5"/><path pathLength="1" d="M12 14v8c0 3 5 5 12 5s12-2 12-5v-8M12 22v8c0 3 5 5 12 5s12-2 12-5v-8"/></svg></span>Les financements</div>
   <div class="abs s05-e3" style="left:1362px;top:650px;width:366px;height:120px;border-radius:18px;border:2px dashed #A9ACA6;background:rgba(255,255,255,0.6);display:flex;align-items:center;gap:20px;padding:0 26px;box-sizing:border-box;font-size:30px;font-weight:600">
-    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7l5 11 12 1-9 8 3 12-11-7-11 7 3-12-9-8 12-1z"/></svg></span>La réputation</div>
+    <span style="color:#55595D"><svg class="ic " width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M24 7l5 11 12 1-9 8 3 12-11-7-11 7 3-12-9-8 12-1z"/></svg></span>La réputation</div>
   </div>
+  <div class="prog"><i class="s05-pg"></i></div>
   <div class="bands s05-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
   </div>
 </div>
@@ -62,26 +80,47 @@
   const tl = gsap.timeline({ paused: true });
 
   const q = (s) => document.querySelectorAll(s);
-  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
-  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
-  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const rise0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
   const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
   const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
   const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
     tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
 
-  rise(".s05-t", 1.90);
-  rise(".s05-c0", 3.97, { y: 36 });
-  rise(".s05-c1", 7.00, { y: 36 });
-  rise(".s05-c2", 11.57, { y: 36 });
-  rise(".s05-lt", 12.64);
-  rise(".s05-e0", 16.18, { y: 20 });
-  rise(".s05-e1", 16.89, { y: 20 });
-  rise(".s05-e2", 17.78, { y: 20 });
-  rise(".s05-e3", 18.96, { y: 20 });
+  const ink = (s, t) => { const sel = s.split(",").map((x) => x.trim() + " .ic > *").join(", "); const els = document.querySelectorAll(sel);
+    if (els.length) tl.fromTo(els, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut", stagger: 0.03 }, t + 0.12); };
+  const rise = (s, t, o = {}) => { rise0(s, t, { ...o, d: o.d ?? 0.75 }); ink(s, t); };
+  const pop = (s, t, o = {}) => { pop0(s, t, o); ink(s, t); };
+  const slide = (s, t, o = {}) => { slide0(s, t, o); ink(s, t); };
+  const title = (s, t) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => '<span class="w"><span class="wi">' + w + "</span></span>").join(" "); } });
+    tl.fromTo(s + " .wi", { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, ease: "power4.out", stagger: 0.07 }, t); };
+  const spell = (s, t, st = 0.04) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = [...el.textContent].map((ch) => '<span class="ch">' + (ch === " " ? "&nbsp;" : ch) + "</span>").join(""); } });
+    tl.fromTo(s + " .ch", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: st }, t); };
+  const ring = (s, t) => { tl.set(s, { opacity: 0.75, scale: 1 }, t); tl.to(s, { opacity: 0, scale: 1.7, duration: 1.3, ease: "power2.out" }, t); };
+  const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
+    if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
+
+  tl.fromTo(".s05-dots", { y: 0 }, { y: -56, duration: 21.38, ease: "none" }, 0);
+  tl.fromTo(".s05-a1", { x: 60 }, { x: -150, duration: 21.38, ease: "none" }, 0);
+  tl.fromTo(".s05-a2", { x: 30 }, { x: -100, duration: 21.38, ease: "none" }, 0);
+  tl.fromTo(".s05-a3", { x: 0 }, { x: -60, duration: 21.38, ease: "none" }, 0);
+  tl.fromTo(".s05-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 21.38, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s05-pg", { scaleX: 0.4182 }, { scaleX: 0.4879, duration: 21.38, ease: "none" }, 0);
+  title(".s05-t", 1.80);
+  rise(".s05-c0", 3.87, { y: 36 });
+  rise(".s05-c1", 6.84, { y: 36 });
+  rise(".s05-c2", 11.42, { y: 36 });
+  rise(".s05-lt", 12.44);
+  rise(".s05-e0", 15.98, { y: 20 });
+  rise(".s05-e1", 16.69, { y: 20 });
+  rise(".s05-e2", 17.58, { y: 20 });
+  rise(".s05-e3", 18.76, { y: 20 });
   tl.fromTo(".s05-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s05-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 20.83);
-  tl.set(".s05-content", { opacity: 0 }, 21.49);
+  tl.fromTo(".s05-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 20.58);
+  tl.set(".s05-content", { opacity: 0 }, 21.24);
   window.__timelines["05-maintenant"] = tl;
 })();
 </script>

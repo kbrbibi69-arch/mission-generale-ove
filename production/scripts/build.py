@@ -3,12 +3,20 @@ de production/voiceover.json et production/timeline.json :
   compositions/<variante>/<scène>.html, compositions/<variante>/sous-titres.html,
   index.html (avec humour) et index-sans-humour.html.
 Chaque apparition à l'écran est calée sur le début de la réplique (ou du mot) qui l'annonce."""
-import json, os, re, html as H
+import json, os, re, sys, html as H
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 VO = json.load(open(os.path.join(ROOT, "production", "voiceover.json")))
 TL = json.load(open(os.path.join(ROOT, "production", "timeline.json")))
 VARIANTS = {"humour": ROOT, "sobre": os.path.join(ROOT, "variantes", "sans-humour")}  # un projet par variante (une seule racine par projet)
+# usage : build.py [variante]. La variante sobre utilise sa propre ligne de temps (timeline-sobre.json),
+# sa propre musique et l'animation enrichie (DYN) ; la variante humour reste figée sur timeline.json.
+ONLY = sys.argv[1:] or list(VARIANTS)
+def timeline_for(v):
+    f = os.path.join(ROOT, "production", f"timeline-{v}.json")
+    return json.load(open(f)) if os.path.exists(f) else json.load(open(os.path.join(ROOT, "production", "timeline.json")))
+MUSIC = {"humour": "assets/audio/musique-ove.mp3", "sobre": "assets/audio/musique-sobre.mp3"}
+DYN = False  # animation enrichie, activée pour la variante sobre
 FONT = "assets/fonts"  # chemins relatifs à la racine du projet
 IMG = "assets/img"
 
@@ -43,8 +51,11 @@ ICONS = {
  "coins": '<ellipse cx="24" cy="14" rx="12" ry="5"/><path d="M12 14v8c0 3 5 5 12 5s12-2 12-5v-8M12 22v8c0 3 5 5 12 5s12-2 12-5v-8"/>',
 }
 def icon(name, size=48, cls=""):
+    body = ICONS[name]
+    if DYN:  # longueur normalisée : le tracé se dessine à l'apparition
+        body = re.sub(r"<(path|circle|rect|ellipse|line)\b", r'<\1 pathLength="1"', body)
     return (f'<svg class="ic {cls}" width="{size}" height="{size}" viewBox="0 0 48 48" fill="none" '
-            f'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</svg>')
+            f'stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">{body}</svg>')
 def e(s): return H.escape(s, quote=False)
 
 # ---------------------------------------------------------------- styles communs
@@ -81,6 +92,41 @@ COMMON_CSS = """
 #root .bands i:nth-child(3) { top: 66.4%%; background: #878787; }
 #root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
 """ % {"F": FONT}
+
+DYN_CSS = """
+#root .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+#root .wi, #root .ch { display: inline-block; }
+#root .amb { position: absolute; right: -260px; top: 90px; width: 1100px; height: 620px; transform: rotate(-12deg); pointer-events: none; }
+#root .amb i { position: absolute; left: 0; height: 130px; border-radius: 65px; display: block; }
+#root .amb i:nth-child(1) { top: 0; width: 1100px; background: rgba(180,201,8,0.09); }
+#root .amb i:nth-child(2) { top: 175px; left: 160px; width: 900px; background: rgba(220,229,138,0.20); }
+#root .amb i:nth-child(3) { top: 350px; left: 320px; width: 700px; background: rgba(135,135,135,0.07); }
+#root .amb.dk i:nth-child(1) { background: rgba(180,201,8,0.10); }
+#root .amb.dk i:nth-child(2) { background: rgba(220,229,138,0.06); }
+#root .amb.dk i:nth-child(3) { background: rgba(255,255,255,0.04); }
+#root .dots { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; background-image: radial-gradient(rgba(37,40,43,0.07) 1.6px, transparent 1.8px); background-size: 28px 28px; pointer-events: none; }
+#root .dots.dk { background-image: radial-gradient(rgba(255,255,255,0.06) 1.6px, transparent 1.8px); }
+#root .prog { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: rgba(135,135,135,0.16); z-index: 40; }
+#root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
+#root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
+"""
+
+JS_DYN = """
+  const ink = (s, t) => { const sel = s.split(",").map((x) => x.trim() + " .ic > *").join(", "); const els = document.querySelectorAll(sel);
+    if (els.length) tl.fromTo(els, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut", stagger: 0.03 }, t + 0.12); };
+  const rise = (s, t, o = {}) => { rise0(s, t, { ...o, d: o.d ?? 0.75 }); ink(s, t); };
+  const pop = (s, t, o = {}) => { pop0(s, t, o); ink(s, t); };
+  const slide = (s, t, o = {}) => { slide0(s, t, o); ink(s, t); };
+  const title = (s, t) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = el.textContent.trim().split(/\\s+/).map((w) => '<span class="w"><span class="wi">' + w + "</span></span>").join(" "); } });
+    tl.fromTo(s + " .wi", { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, ease: "power4.out", stagger: 0.07 }, t); };
+  const spell = (s, t, st = 0.04) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = [...el.textContent].map((ch) => '<span class="ch">' + (ch === " " ? "&nbsp;" : ch) + "</span>").join(""); } });
+    tl.fromTo(s + " .ch", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: st }, t); };
+  const ring = (s, t) => { tl.set(s, { opacity: 0.75, scale: 1 }, t); tl.to(s, { opacity: 0, scale: 1.7, duration: 1.3, ease: "power2.out" }, t); };
+  const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
+    if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
+"""
 
 JS_HELPERS = """
   const q = (s) => document.querySelectorAll(s);
@@ -176,6 +222,9 @@ def s02(c, v, D):
     <div class="body" style="margin-top:18px;font-size:28px">{e(lab)}</div></div>""")
         js.append(f'rise(".{p}-card{i}", {t:.2f}, {{ y: 40 }});')
         js.append(f'count(".{p}-n{i}", {val}, {t + 0.15:.2f});')
+        if DYN:
+            html.append(f'<div class="abs {p}-u{i}" style="left:{x + 34}px;top:556px;width:120px;height:5px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>')
+            js.append(f'tl.fromTo(".{p}-u{i}", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 1.4, ease: "power2.out" }}, {t + 0.3:.2f});')
     html.append(f"""<div class="abs {p}-gov" style="left:192px;top:760px;width:1536px;display:flex;justify-content:center;gap:18px;align-items:center">
     <span class="chip {p}-g">{icon("gov")}Conseil d’administration</span><span class="{p}-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
     <span class="chip {p}-g">{icon("people")}Bureau</span><span class="{p}-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
@@ -185,15 +234,19 @@ def s02(c, v, D):
 
 def s03(c, v, D):
     p = "s03"
-    cx, cy = 660, 470
-    nodes = [("imove", 330, 300, "IMOVE", "fonds de dotation", c.at("a", "IMOVE")),
-             ("sci", 330, 660, "35+ SCI", "patrimoine immobilier", c.at("a", "plus de 35")),
-             ("ami", 660, 205, "AMICIAL", "association", c.at("b", "AMICIAL")),
-             ("ple", 1000, 300, "OVE Plenior", "association", c.at("b", "OVE Plenior")),
-             ("car", 1000, 660, "OVE Caraïbes", "association", c.at("b", "OVE Caraïbes")),
-             ("res", 660, 745, "Ressourcial", "association", c.at("b", "Ressourcial"))]
+    dy = -20 if v == "sobre" else 0
+    cx, cy = 660, 470 + dy
+    subs = (["fonds de dotation · immobilier et financier", "sociétés civiles immobilières", "avec la Croix-Rouge française",
+             "fonctions support mutualisées", "association en outre-mer", "prestations au sein du réseau"] if v == "sobre"
+            else ["fonds de dotation", "patrimoine immobilier", "association", "association", "association", "association"])
+    nodes = [("imove", 330, 300 + dy, "IMOVE", subs[0], c.at("a", "IMOVE")),
+             ("sci", 330, 660 + dy, "35+ SCI", subs[1], c.at("a", "plus de 35")),
+             ("ami", 660, 205 + dy // 2, "AMICIAL", subs[2], c.at("b", "AMICIAL")),
+             ("ple", 1000, 300 + dy, "OVE Plenior", subs[3], c.at("b", "OVE Plenior")),
+             ("car", 1000, 660 + dy, "OVE Caraïbes", subs[4], c.at("b", "OVE Caraïbes")),
+             ("res", 660, 745 + dy, "Ressourcial", subs[5], c.at("b", "Ressourcial"))]
     svg = [f'<line class="{p}-ln" x1="{cx}" y1="{cy}" x2="{x}" y2="{y}" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/>' for (_, x, y, *_r) in nodes]
-    cross = [((330, 300), (1000, 300), -70), ((660, 205), (330, 660), 0), ((1000, 660), (660, 745), 40), ((330, 660), (1000, 660), 90)]
+    cross = [((330, 300 + dy), (1000, 300 + dy), -70), ((660, 205 + dy // 2), (330, 660 + dy), 0), ((1000, 660 + dy), (660, 745 + dy), 40), ((330, 660 + dy), (1000, 660 + dy), 90)]
     for i, ((x1, y1), (x2, y2), bend) in enumerate(cross):
         mx, my = (x1 + x2) / 2, (y1 + y2) / 2 + bend
         svg.append(f'<path class="{p}-cx" d="M{x1} {y1} Q{mx} {my} {x2} {y2}" fill="none" stroke="#878787" stroke-width="2.5" stroke-dasharray="10 10" opacity="0"/>')
@@ -201,8 +254,11 @@ def s03(c, v, D):
             f'<svg class="abs" style="left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">{"".join(svg)}</svg>',
             f'<div class="abs {p}-halo" style="left:{cx-140}px;top:{cy-140}px;width:280px;height:280px;border-radius:50%;border:3px solid #B4C908;opacity:0"></div>',
             f"""<div class="abs {p}-core" style="left:{cx-100}px;top:{cy-100}px;width:200px;height:200px;border-radius:50%;background:#B4C908;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 14px 40px rgba(180,201,8,0.35)">
-    <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:28px;line-height:1.1;color:#25282B">Fondation</div><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;line-height:1.05;color:#25282B">OVE</div></div>"""]
+    <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:28px;line-height:1.1;color:#25282B">Fondation</div><div class="{p}-ove" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;line-height:1.05;color:#25282B">OVE</div></div>"""]
     js = [f'pop(".{p}-core", 0.55, {{ s: 0.8, d: 0.8 }});']
+    if DYN:
+        js += [f'spell(".{p}-ove", 0.8, 0.12);',
+               f'tl.fromTo(".{p}-core", {{ scale: 1 }}, {{ scale: 1.04, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: {max(1, int((D - 3) / 2.2) - 1)}, immediateRender: false }}, 1.6);']
     for i, (k, x, y, name, sub, t) in enumerate(nodes):
         if k == "sci":
             sq = "".join(f'<i style="display:block;width:13px;height:13px;border-radius:3px;background:{"#878787" if j % 3 else "#B4C908"}"></i>' for j in range(35))
@@ -210,10 +266,13 @@ def s03(c, v, D):
         else:
             inner = icon({"imove": "coins", "ami": "handshake", "ple": "people", "car": "heart", "res": "compta"}[k], 46)
         html.append(f"""<div class="abs {p}-node {p}-{k}" style="left:{x-62}px;top:{y-62}px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)">{inner}</div>
-  <div class="abs {p}-lab {p}-l{k}" style="left:{x-140}px;top:{y+70}px;width:280px;text-align:center"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">{e(name)}</div><div style="font-size:21px;color:#6B6F72">{e(sub)}</div></div>""")
+  <div class="abs {p}-lab {p}-l{k}" style="left:{x-150}px;top:{y+70}px;width:300px;text-align:center"><div class="spell" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">{e(name)}</div><div style="font-size:{20 if DYN else 21}px;line-height:1.25;color:#6B6F72">{e(sub)}</div></div>""")
         js.append(f'draw(".{p}-ln:nth-of-type({i+1})", {t - 0.5:.2f}, 0.6);')
         js.append(f'pop(".{p}-{k}", {t:.2f});')
         js.append(f'rise(".{p}-l{k}", {t + 0.1:.2f}, {{ y: 12 }});')
+        if DYN:  # le nom s'épelle à l'écran pendant qu'il est prononcé, l'entité « s'allume »
+            html.append(f'<div class="ring {p}-r{k}" style="left:{x-62}px;top:{y-62}px;width:124px;height:124px;box-sizing:border-box"></div>')
+            js.append(f'spell(".{p}-l{k} .spell", {t + 0.05:.2f}, 0.05); ring(".{p}-r{k}", {t + 0.1:.2f});')
     # panneau de droite
     objs = [("Coopérer", "coopérer"), ("Mutualiser", "mutualiser"), ("Se spécialiser", "se spécialiser"), ("Distinguer médico-social et patrimoine", "distinguer")]
     html.append(f'<div class="abs label {p}-p1t" style="left:1240px;top:190px">Des objectifs légitimes</div>')
@@ -226,6 +285,8 @@ def s03(c, v, D):
     js.append(f'rise(".{p}-p2t", {c.at("d")});')
     js.append(f'rise(".{p}-c0", {c.at("d", "conventions"):.2f}, {{ y: 14 }}); rise(".{p}-c1", {c.at("d", "flux"):.2f}, {{ y: 14 }}); rise(".{p}-c2", {c.at("d", "mandats"):.2f}, {{ y: 14 }});')
     js.append(f'tl.fromTo(".{p}-cx", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.8, stagger: 0.25 }}, {c.at("d", "mandats"):.2f});')
+    if DYN:  # les liens croisés « circulent » doucement
+        js.append(f'tl.fromTo(".{p}-cx", {{ strokeDashoffset: 0 }}, {{ strokeDashoffset: -240, duration: {D - c.at("d", "mandats"):.2f}, ease: "none", immediateRender: false }}, {c.at("d", "mandats"):.2f});')
     title = "Légende (bien méritée)" if v == "humour" else "Légende"
     html.append(f"""<div class="card {p}-leg" style="left:1240px;top:660px;width:490px;height:190px;padding:22px 28px;box-sizing:border-box">
     <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:24px">{e(title)}</div>
@@ -235,7 +296,7 @@ def s03(c, v, D):
       <div class="row" style="gap:10px"><i style="display:block;width:16px;height:16px;border-radius:3px;background:#878787"></i>SCI</div>
       <div class="row" style="gap:10px"><i style="display:block;width:30px;border-top:3px dashed #878787"></i>Mandats croisés</div>
     </div></div>""")
-    js.append(f'pop(".{p}-leg", {c.at("h1"):.2f}, {{ s: 0.94 }});')
+    js.append(f'pop(".{p}-leg", {(c.at("h1") if "h1" in c.lines else c.at("d", "mandats") + 1.6):.2f}, {{ s: 0.94 }});')
     if v == "humour":
         js.append(f'tl.fromTo(".{p}-leg", {{ rotation: 0 }}, {{ rotation: -1.5, duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: 3 }}, {c.at("h1", "propre") :.2f});')
     # message de neutralité
@@ -304,6 +365,11 @@ def s06(c, v, D):
     js = [f'rise(".{p}-a", {c.at("a", "ne consiste", -0.4):.2f}, {{ y: 24, d: 0.9 }});',
           f'tl.fromTo(".{p}-p", {{ opacity: 0, scale: 0.92 }}, {{ opacity: 1, scale: 1, duration: 1.0, ease: "power3.out" }}, {c.at("b", "protéger", -0.25):.2f});',
           f'tl.to(".{p}-a", {{ opacity: 0.55, duration: 0.6 }}, {c.at("b", "protéger"):.2f});']
+    if DYN:
+        html.insert(1, f'<div class="abs {p}-glow" style="left:560px;top:120px;width:800px;height:500px;border-radius:50%;background:radial-gradient(closest-side, rgba(180,201,8,0.22), rgba(180,201,8,0))"></div>')
+        js[1] = f'spell(".{p}-p", {c.at("b", "protéger", -0.25):.2f}, 0.06);'
+        js.append(f'tl.fromTo(".{p}-glow", {{ opacity: 0, scale: 0.8 }}, {{ opacity: 1, scale: 1, duration: 1.6, ease: "power2.out" }}, {c.at("b", "protéger", -0.4):.2f});')
+        js.append(f'tl.fromTo(".{p}-glow", {{ scale: 1 }}, {{ scale: 1.08, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }}, {c.at("b", "protéger") + 1.3:.2f});')
     for i, (ic, lab, ph) in enumerate(items):
         x = 192 + (i % 3) * 523; y = 490 + (i // 3) * 150
         html.append(f"""<div class="abs {p}-i{i}" style="left:{x}px;top:{y}px;width:490px;height:124px;border-radius:18px;background:#2B3034;display:flex;align-items:center;gap:22px;padding:0 28px;box-sizing:border-box;font-size:31px;font-weight:600;color:#FFFFFF;border-left:6px solid #B4C908">
@@ -403,6 +469,11 @@ def s09(c, v, D):
           f'rise(".{p}-y1l", {c.at("b"):.2f}, {{ y: 16 }});',
           f'tl.fromTo(".{p}-y2", {{ scaleX: 0 }}, {{ scaleX: 1, duration: {c.end("c") - c.at("c"):.2f}, ease: "none" }}, {c.at("c"):.2f});',
           f'rise(".{p}-y2l", {c.at("c"):.2f}, {{ y: 16 }});']
+    if DYN:  # tête de lecture qui parcourt la frise au rythme de la voix
+        html.append(f'<div class="abs {p}-head" style="left:180px;top:{y0-9}px;width:24px;height:24px;border-radius:50%;background:#25282B;box-shadow:0 0 0 7px rgba(180,201,8,0.35);z-index:3"></div>')
+        js += [f'tl.fromTo(".{p}-head", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {c.at("b") - 0.3:.2f});',
+               f'tl.fromTo(".{p}-head", {{ x: 0 }}, {{ x: 758, duration: {c.end("b") - c.at("b"):.2f}, ease: "none", immediateRender: false }}, {c.at("b"):.2f});',
+               f'tl.fromTo(".{p}-head", {{ x: 778 }}, {{ x: 1536, duration: {c.end("c") - c.at("c"):.2f}, ease: "none", immediateRender: false }}, {c.at("c"):.2f});']
     for i, (tq, lab, lid, ph) in enumerate(steps):
         x = 192 + (i // 4) * 778 + (i % 4) * 190 + 10
         col = "#B4C908" if i < 4 else "#878787"
@@ -460,24 +531,48 @@ def s10(c, v, D):
 BUILDERS = {"01-ouverture": s01, "02-fondation": s02, "03-ecosysteme": s03, "04-cadre": s04, "05-maintenant": s05,
             "06-message": s06, "07-decideurs": s07, "08-dispositif": s08, "09-feuille-de-route": s09, "10-decisions": s10}
 
-def scene_file(sid, D, html, js, first, last):
+def scene_file(sid, D, html, js, first, last, s0=0.0, total=1.0):
     p = "s" + sid[:2]
-    bg = "" if 'class="bg dark"' in html else '<div class="bg"></div>'
+    dark = 'class="bg dark"' in html
+    bg = "" if dark else '<div class="bg"></div>'
+    helpers, css, extra_js, under, over = JS_HELPERS, COMMON_CSS, "", "", ""
+    if DYN:
+        helpers = (JS_HELPERS.replace("const rise =", "const rise0 =").replace("const pop =", "const pop0 =")
+                   .replace("const slide =", "const slide0 =") + JS_DYN)
+        css = COMMON_CSS + DYN_CSS
+        dk = " dk" if dark else ""
+        # fond vivant : trame de points et trois bandes translucides qui dérivent lentement
+        under = f'<div class="dots{dk} {p}-dots"></div><div class="amb{dk}"><i class="{p}-a1"></i><i class="{p}-a2"></i><i class="{p}-a3"></i></div>'
+        over = f'<div class="prog"><i class="{p}-pg"></i></div>'
+        extra_js = "\n  ".join([
+            f'tl.fromTo(".{p}-dots", {{ y: 0 }}, {{ y: -56, duration: {D}, ease: "none" }}, 0);',
+            f'tl.fromTo(".{p}-a1", {{ x: 60 }}, {{ x: -150, duration: {D}, ease: "none" }}, 0);',
+            f'tl.fromTo(".{p}-a2", {{ x: 30 }}, {{ x: -100, duration: {D}, ease: "none" }}, 0);',
+            f'tl.fromTo(".{p}-a3", {{ x: 0 }}, {{ x: -60, duration: {D}, ease: "none" }}, 0);',
+            # caméra : lente poussée avant sur toute la scène
+            f'tl.fromTo(".{p}-content", {{ scale: 1 }}, {{ scale: 1.02, transformOrigin: "50% 45%", duration: {D}, ease: "sine.inOut" }}, 0);',
+            # barre de progression du film
+            f'tl.fromTo(".{p}-pg", {{ scaleX: {s0 / total:.4f} }}, {{ scaleX: {(s0 + D) / total:.4f}, duration: {D}, ease: "none" }}, 0);'])
+        # titres : révélation mot à mot
+        js = re.sub(r'rise\("(\.s\d\d-(?:t|title))", ([0-9.]+)(?:, \{[^}]*\})?\);', r'title("\1", \2);', js)
     return f"""<template>
-<style>{COMMON_CSS}</style>
+<style>{css}</style>
 <div id="root" data-composition-id="{sid}" data-width="1920" data-height="1080" data-duration="{D}">
   <div id="{p}-scene" class="clip" data-start="0" data-duration="{D}" data-track-index="0" style="position:absolute;inset:0">
   {bg}
+  {under}
   <div class="{p}-content" style="position:absolute;inset:0">
   {html}
   </div>
+  {over}
   {bands_html(p)}
   </div>
 </div>
 <script>
 (() => {{
   const tl = gsap.timeline({{ paused: true }});
-{JS_HELPERS}
+{helpers}
+  {extra_js}
   {js}
   {bands_js(p, D, first, last)}
   window.__timelines["{sid}"] = tl;
@@ -535,7 +630,7 @@ def index_file(v):
 {chr(10).join(hosts)}
     <div id="sous-titres" data-composition-id="sous-titres-{v}" data-composition-src="compositions/{v}/sous-titres.html" data-start="0" data-duration="{total}" data-track-index="2" data-track-kind="captions" data-width="1920" data-height="1080"></div>
     <audio id="voix-off" src="assets/audio/voix-off-{v}.wav" data-start="0" data-duration="{total}" data-track-index="3" data-volume="1"></audio>
-    <audio id="musique" src="assets/audio/musique-ove.mp3" data-start="0" data-duration="{total}" data-track-index="4" data-volume="1"></audio>
+    <audio id="musique" src="{MUSIC[v]}" data-start="0" data-duration="{total}" data-track-index="4" data-volume="1"></audio>
   </div>
   <script>
     window.__timelines["main"] = gsap.timeline({{ paused: true }});
@@ -545,6 +640,10 @@ def index_file(v):
 """
 
 for v, proj in VARIANTS.items():
+    if v not in ONLY:
+        continue
+    TL = timeline_for(v)
+    DYN = v == "sobre"
     os.makedirs(os.path.join(proj, "compositions", v), exist_ok=True)
     if proj != ROOT:
         link = os.path.join(proj, "assets")
@@ -556,7 +655,7 @@ for v, proj in VARIANTS.items():
         c = Cue(s["id"], v)
         html, js = BUILDERS[s["id"]](c, v, s["duration"])
         open(os.path.join(proj, "compositions", v, s["id"] + ".html"), "w").write(
-            scene_file(s["id"], s["duration"], html, js, i == 0, i == len(TL["scenes"]) - 1))
+            scene_file(s["id"], s["duration"], html, js, i == 0, i == len(TL["scenes"]) - 1, s["start"], TL["total"]))
     open(os.path.join(proj, "compositions", v, "sous-titres.html"), "w").write(captions_file(v))
     open(os.path.join(proj, "index.html"), "w").write(index_file(v))
 print("ok", TL["total"])

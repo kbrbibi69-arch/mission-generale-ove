@@ -1,17 +1,20 @@
 """Place chaque réplique sur la ligne de temps, assemble la piste voix off de chaque
 variante et écrit les sous-titres (SRT + VTT) et production/timeline.json."""
-import json, os, re
+import json, os, re, sys
 import numpy as np, soundfile as sf
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 script = json.load(open(os.path.join(ROOT, "production", "voiceover.json")))
 man = json.load(open(os.path.join(ROOT, ".media", "voice", "manifest.json")))
-VARIANTS = ["humour", "sobre"]
-LEAD_FIRST, LEAD, TAIL, HOLD = 2.6, 0.8, 0.9, 11.5
+# usage : layout.py [variante]  — sans argument, les deux variantes (timeline.json) ;
+# avec une variante, durées propres à celle-ci (timeline-<variante>.json), l’autre reste intacte.
+VARIANTS = sys.argv[1:] or ["humour", "sobre"]
+OUT = "timeline.json" if len(VARIANTS) == 2 else f"timeline-{VARIANTS[0]}.json"
+LEAD_FIRST, LEAD, TAIL, HOLD = 2.6, 0.7, 0.85, 10.5
 SR = 24000
 
 def gap(text):
-    return 0.25 if text.rstrip().endswith(",") else 0.5
+    return 0.22 if text.rstrip().endswith(",") else 0.45
 
 def key(scene, line):
     return f'{scene["id"]}-{line["id"]}' + (f'-{line["variant"]}' if "variant" in line else "")
@@ -86,7 +89,7 @@ for v in VARIANTS:
         f.write("WEBVTT\n\n")
         for c in caps:
             f.write(f"{ts(c['start'], '.')} --> {ts(c['end'], '.')}\n{c['text']}\n\n")
-json.dump(timeline, open(os.path.join(ROOT, "production", "timeline.json"), "w"), ensure_ascii=False, indent=1)
+json.dump(timeline, open(os.path.join(ROOT, "production", OUT), "w"), ensure_ascii=False, indent=1)
 print("total", timeline["total"])
 for s in timeline["scenes"]: print(s)
 for v in VARIANTS: print(v, "captions", len(timeline["variants"][v]["captions"]), "max", max(len(c["text"]) for c in timeline["variants"][v]["captions"]))

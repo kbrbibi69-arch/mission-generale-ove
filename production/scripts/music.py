@@ -1,10 +1,11 @@
 """Nappe musicale instrumentale déterministe (aucun aléa) : pads chaleureux,
 arpège discret type piano feutré, basse douce. Tempo 72, ré majeur."""
-import json, os
+import json, os, sys
 import numpy as np, soundfile as sf
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-tl = json.load(open(os.path.join(ROOT, "production", "timeline.json")))
+VAR = sys.argv[1] if len(sys.argv) > 1 else None  # variante à durée propre (timeline-<v>.json)
+tl = json.load(open(os.path.join(ROOT, "production", f"timeline-{VAR}.json" if VAR else "timeline.json")))
 SR = 44100; T = tl["total"]; N = int(T * SR)
 t = np.arange(N) / SR
 BEAT = 60 / 72; BAR = 4 * BEAT; CH = 2 * BAR
@@ -57,11 +58,11 @@ st = np.stack([L, R], 1)
 # enveloppe : fondu d'entrée, présence plus forte sur l'écran final
 g = np.ones(N)
 fi = int(3 * SR); g[:fi] = np.linspace(0, 1, fi) ** 2
-last = tl["scenes"][-1]; endvo = last["start"] + tl["variants"]["humour"]["cues"][last["id"]]["end"]
+last = tl["scenes"][-1]; endvo = last["start"] + tl["variants"][VAR or "humour"]["cues"][last["id"]]["end"]
 a = int((endvo + 0.3) * SR); b = int((endvo + 2.3) * SR)
 g[a:b] *= np.linspace(1, 1.9, b - a); g[b:] *= 1.9
 fo = int(5 * SR); g[-fo:] *= np.linspace(1, 0, fo) ** 1.5
 st *= g[:, None]
 st /= np.max(np.abs(st)) / 0.9
-raw = os.path.join(ROOT, ".media", "music-raw.wav"); sf.write(raw, st, SR)
+raw = os.path.join(ROOT, ".media", f"music-raw{'-' + VAR if VAR else ''}.wav"); sf.write(raw, st, SR)
 print("ok", T)

@@ -52,13 +52,15 @@ Textes courts uniquement (la voix est restituée par les sous-titres) :
 | 2 | Décideurs | « Quand on porte plusieurs casquettes, mieux vaut savoir laquelle on porte au moment de signer. » | Trois casquettes au-dessus d’un pictogramme anonyme ; la bonne descend. | Situation générique (mandats croisés), aucun rôle ni dirigeant identifiable ; renvoie à une question pratique. |
 | 3 | Dispositif | « Personne ne propose d’appel d’offres pour une boîte de trombones. » | Bulle avec trombone, au bas de la jauge d’exigence. | Illustre la proportionnalité ; ne minimise aucune infraction. |
 
-## 7. Variante sans humour
+## 7. Variante sans humour (version retravaillée)
 
-Même image, même durée ({{TOTAL}}), même structure ; les trois répliques sont remplacées :
+Durée {{TOTAL_SOBRE}}. Par rapport à la version avec humour :
 
-1. « Cette richesse est une force, à condition de rester lisible. » — encadré « Légende », sans oscillation.
-2. « Des réponses écrites et partagées valent mieux que des usages implicites. » — badge « Réponses écrites et partagées ».
-3. « L’objectif est de sécuriser, sans alourdir. » — bulle « Sécuriser, sans alourdir ».
+- **Répliques humoristiques** remplacées ou retirées : « Des réponses écrites et partagées valent mieux que des usages implicites. » ; « L’objectif est de sécuriser, sans alourdir. » ; la réplique sur la légende est supprimée (l’encadré « Légende » reste).
+- **Entités précisées** (formulations issues de la note) : le fonds de dotation IMOVE, *véhicule immobilier et financier* ; plus de 35 SCI, *qui portent le patrimoine* ; AMICIAL, *gouvernée avec la Croix-Rouge française* ; OVE Plenior, *qui mutualise ses fonctions support avec la Fondation* ; OVE Caraïbes, *en outre-mer* ; Ressourcial, *pour des prestations au sein du réseau*.
+- **Prononciation fluide**, vérifiée sur les phonèmes générés : « OVE » épelé d’un trait (o-vé-e), « IMOVE » épelé I-M-O-V-E, « AFA » épelé A-F-A. Les points des sigles (« O.V.E. ») sont supprimés, car ils créaient des micro-pauses.
+- **Animation enrichie** : fond vivant (trame de points et trois bandes translucides qui dérivent), lente poussée de caméra sur chaque scène, barre de progression du film, pictogrammes qui se tracent à l’apparition, titres révélés mot à mot, noms des entités épelés lettre par lettre au moment où ils sont prononcés avec une pulsation du nœud, liens croisés animés, filets sous les chiffres clés, halo sur « Protéger » (épelé), tête de lecture sur la frise de la feuille de route.
+- **Rythme resserré** : respirations de 0,45 s entre phrases (0,22 s après une virgule), entrée 0,7 s et sortie 0,85 s par scène, écran final maintenu 10,5 s.
 
 Script complet de la variante :
 
@@ -69,9 +71,9 @@ Script complet de la variante :
 | Asset | Fichier | Détail |
 |---|---|---|
 | Vidéo — avec humour | `renders/OVE-probite-sapin2-avec-humour.mp4` | 1920×1080, 30 i/s, H.264 + AAC, {{TOTAL}} |
-| Vidéo — sans humour | `renders/OVE-probite-sapin2-sans-humour.mp4` | idem |
+| Vidéo — sans humour | `renders/OVE-probite-sapin2-sans-humour.mp4` | 1920×1080, 30 i/s, {{TOTAL_SOBRE}}, animation enrichie |
 | Voix off (2 variantes) | `assets/audio/voix-off-humour.wav`, `assets/audio/voix-off-sobre.wav` | Synthèse locale Kokoro-82M, voix française `ff_siwis`, vitesse 1,0 (non accélérée), −16 LUFS |
-| Musique | `assets/audio/musique-ove.mp3` | Composition instrumentale originale générée de façon déterministe (ré majeur, 72 bpm, nappes + arpège feutré + basse), −31 LUFS, montée sur l’écran final |
+| Musique | `assets/audio/musique-ove.mp3` (avec humour), `assets/audio/musique-sobre.mp3` (sans humour) | Composition instrumentale originale générée de façon déterministe (ré majeur, 72 bpm, nappes + arpège feutré + basse), −31 LUFS, montée sur l’écran final |
 | Sous-titres | `production/sous-titres/sous-titres-{humour,sobre}.{srt,vtt}` | Français, synchronisés |
 | Logo | `assets/img/logo-fondation-ove.jpg` | Fichier fourni, non modifié |
 | Polices | `assets/fonts/Montserrat-VF.ttf`, `assets/fonts/SourceSans3-VF.ttf` | Licence SIL OFL |
@@ -95,6 +97,8 @@ Fichiers : `production/sous-titres/sous-titres-humour.srt` / `.vtt` et `sous-tit
 - **Écran final** : apparaît sur la phrase de synthèse, maintenu jusqu’à {{TOTAL}} (≈ 11 s sans voix).
 
 Régénérer : `python3 production/scripts/tts.py && python3 production/scripts/layout.py && python3 production/scripts/music.py && production/scripts/normalize.sh && python3 production/scripts/build.py`, puis `npm run check` et `npx hyperframes render`.
+
+Version sans humour seule (sans toucher à l’autre) : `python3 production/scripts/tts.py && python3 production/scripts/layout.py sobre && python3 production/scripts/music.py sobre && production/scripts/normalize-sobre.sh && python3 production/scripts/build.py sobre`, puis `npx hyperframes check variantes/sans-humour` et `npx hyperframes render variantes/sans-humour`.
 
 ## 11. Contrôle qualité (effectué, défauts corrigés)
 
@@ -121,5 +125,5 @@ Régénérer : `python3 production/scripts/tts.py && python3 production/scripts/
 
 **Limites signalées**
 - La voix est une synthèse locale (aucun compte de voix premium disponible dans cet environnement) : naturelle mais moins expressive qu’une voix humaine ; pour la version diffusée, un enregistrement par une voix professionnelle peut remplacer `voix-off-*.wav` sans retoucher l’image si les phrases sont lues au même rythme (ou en relançant `layout.py`).
-- La prononciation des sigles et noms propres (OVE, AFA, IMOVE, Plenior, Ressourcial) n’a pas pu être vérifiée par transcription automatique (modèle non téléchargeable ici) : écoute de contrôle recommandée.
+- Version sans humour : la prononciation des sigles a été vérifiée sur les phonèmes produits (OVE, I-M-O-V-E, A-F-A), mais pas à l’oreille (pas de transcription automatique disponible ici) : écoute de contrôle recommandée. La version avec humour garde l’ancienne diction, avec des micro-pauses dans « O.V.E. ».
 - La charte « trois bandes » a été interprétée à partir du logo (les trois traits du « E ») faute de charte graphique jointe.

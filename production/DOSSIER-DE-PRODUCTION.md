@@ -99,8 +99,8 @@ Le film ne montre pas une menace : il montre un **réseau qui grandit** et le **
 
 **Un écosystème structuré** — 0:42.4
 
-- `0:43.2` Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, plus de 35 sociétés civiles immobilières,
-- `0:51.6` et des associations partenaires : AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial.
+- `0:43.2` Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, plus de 35 sociétés civiles immobilières, *(touche d’humour)*
+- `0:51.6` et des associations partenaires : AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial. *(touche d’humour)*
 - `0:57.8` Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.
 - `1:07.1` Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.
 - `1:14.1` Un schéma si riche qu’il mériterait presque sa propre légende. *(touche d’humour)*
@@ -159,7 +159,7 @@ Le film ne montre pas une menace : il montre un **réseau qui grandit** et le **
 - `4:41.3` Le dispositif définitif restera soumis aux instances compétentes.
 - `4:45.9` Protéger la mission, les personnes, les décideurs et la confiance : c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.
 
-*662 mots · 260 s de parole · débit moyen 153 mots/min (pauses comprises : 130 mots/min).*
+*662 mots · 260 s de parole · débit moyen 153 mots/min (pauses comprises : 130 mots/min) · durée 5:05.6.*
 
 ## 5. Textes à l’écran
 
@@ -186,101 +186,102 @@ Textes courts uniquement (la voix est restituée par les sous-titres) :
 | 2 | Décideurs | « Quand on porte plusieurs casquettes, mieux vaut savoir laquelle on porte au moment de signer. » | Trois casquettes au-dessus d’un pictogramme anonyme ; la bonne descend. | Situation générique (mandats croisés), aucun rôle ni dirigeant identifiable ; renvoie à une question pratique. |
 | 3 | Dispositif | « Personne ne propose d’appel d’offres pour une boîte de trombones. » | Bulle avec trombone, au bas de la jauge d’exigence. | Illustre la proportionnalité ; ne minimise aucune infraction. |
 
-## 7. Variante sans humour
+## 7. Variante sans humour (version retravaillée)
 
-Même image, même durée (5:05.6), même structure ; les trois répliques sont remplacées :
+Durée 5:07.0. Par rapport à la version avec humour :
 
-1. « Cette richesse est une force, à condition de rester lisible. » — encadré « Légende », sans oscillation.
-2. « Des réponses écrites et partagées valent mieux que des usages implicites. » — badge « Réponses écrites et partagées ».
-3. « L’objectif est de sécuriser, sans alourdir. » — bulle « Sécuriser, sans alourdir ».
+- **Répliques humoristiques** remplacées ou retirées : « Des réponses écrites et partagées valent mieux que des usages implicites. » ; « L’objectif est de sécuriser, sans alourdir. » ; la réplique sur la légende est supprimée (l’encadré « Légende » reste).
+- **Entités précisées** (formulations issues de la note) : le fonds de dotation IMOVE, *véhicule immobilier et financier* ; plus de 35 SCI, *qui portent le patrimoine* ; AMICIAL, *gouvernée avec la Croix-Rouge française* ; OVE Plenior, *qui mutualise ses fonctions support avec la Fondation* ; OVE Caraïbes, *en outre-mer* ; Ressourcial, *pour des prestations au sein du réseau*.
+- **Prononciation fluide**, vérifiée sur les phonèmes générés : « OVE » épelé d’un trait (o-vé-e), « IMOVE » épelé I-M-O-V-E, « AFA » épelé A-F-A. Les points des sigles (« O.V.E. ») sont supprimés, car ils créaient des micro-pauses.
+- **Animation enrichie** : fond vivant (trame de points et trois bandes translucides qui dérivent), lente poussée de caméra sur chaque scène, barre de progression du film, pictogrammes qui se tracent à l’apparition, titres révélés mot à mot, noms des entités épelés lettre par lettre au moment où ils sont prononcés avec une pulsation du nœud, liens croisés animés, filets sous les chiffres clés, halo sur « Protéger » (épelé), tête de lecture sur la frise de la feuille de route.
+- **Rythme resserré** : respirations de 0,45 s entre phrases (0,22 s après une virgule), entrée 0,7 s et sortie 0,85 s par scène, écran final maintenu 10,5 s.
 
 Script complet de la variante :
 
 **Ouverture** — 0:00.0
 
 - `0:02.6` Prévenir les atteintes à la probité.
-- `0:05.0` Pour la Fondation OVE, c’est d’abord une question de confiance.
-- `0:09.2` Cette présentation de la Direction juridique explique pourquoi une démarche structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique.
+- `0:04.9` Pour la Fondation OVE, c’est d’abord une question de confiance.
+- `0:08.8` Cette présentation de la Direction juridique explique pourquoi une démarche structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique.
 
-**La Fondation** — 0:18.5
+**La Fondation** — 0:18.1
 
-- `0:19.3` La Fondation OVE est une fondation reconnue d’utilité publique.
-- `0:24.0` Elle mobilise un budget d’environ 180 millions d’euros et près de 2 500 salariés.
-- `0:30.1` Elle accompagne chaque année plus de 15 000 personnes, sur l’ensemble du territoire.
-- `0:35.1` Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau et une direction générale.
+- `0:18.8` La Fondation OVE est une fondation reconnue d’utilité publique.
+- `0:23.1` Elle mobilise un budget d’environ 180 millions d’euros et près de 2 500 salariés.
+- `0:29.2` Elle accompagne chaque année plus de 15 000 personnes, sur l’ensemble du territoire.
+- `0:34.2` Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau et une direction générale.
 
-**Un écosystème structuré** — 0:42.4
+**Un écosystème structuré** — 0:41.4
 
-- `0:43.2` Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, plus de 35 sociétés civiles immobilières,
-- `0:51.6` et des associations partenaires : AMICIAL, OVE Plenior, OVE Caraïbes et Ressourcial.
-- `0:57.8` Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.
-- `1:07.1` Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.
-- `1:14.1` Cette richesse est une force, à condition de rester lisible. *(remplacement sobre)*
-- `1:18.0` Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.
+- `0:42.1` Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine. *(remplacement sobre)*
+- `0:54.3` S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau. *(remplacement sobre)*
+- `1:08.7` Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.
+- `1:17.9` Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.
+- `1:24.9` Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.
 
-**Le cadre juridique** — 1:25.0
+**Le cadre juridique** — 1:31.7
 
-- `1:25.8` Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.
-- `1:34.7` Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.
-- `1:41.6` En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.
-- `1:52.1` Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
+- `1:32.4` Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.
+- `1:41.3` Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.
+- `1:48.1` En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.
+- `1:58.5` Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
 
-**Pourquoi maintenant** — 2:02.1
+**Pourquoi maintenant** — 2:08.4
 
-- `2:02.9` Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.
-- `2:07.0` Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance.
-- `2:14.7` S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements et la réputation de la Fondation.
+- `2:09.1` Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.
+- `2:13.2` Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance.
+- `2:20.8` S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements et la réputation de la Fondation.
 
-**Le cœur du sujet (message central)** — 2:23.7
+**Le cœur du sujet (message central)** — 2:29.8
 
-- `2:24.5` Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.
-- `2:32.6` Il s’agit de protéger sa mission d’intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources et la confiance de ses partenaires.
+- `2:30.5` Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.
+- `2:38.5` Il s’agit de protéger sa mission d’intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources et la confiance de ses partenaires.
 
-**Protéger les décideurs** — 2:43.1
+**Protéger les décideurs** — 2:48.9
 
-- `2:43.9` Ce cadre protège aussi celles et ceux qui décident.
-- `2:47.0` Lorsqu’une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles.
-- `2:54.1` Pour le compte de quelle personne morale la décision est-elle prise ?
-- `2:58.1` Quelle instance doit l’autoriser ?
-- `3:00.2` Quelle délégation permet de signer ?
-- `3:02.6` Quelles informations remonter à chaque gouvernance ?
-- `3:05.8` Des réponses écrites et partagées valent mieux que des usages implicites. *(remplacement sobre)*
-- `3:10.3` En cas de contrôle, pouvoir le démontrer est une protection.
+- `2:49.6` Ce cadre protège aussi celles et ceux qui décident.
+- `2:52.6` Lorsqu’une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles.
+- `2:59.6` Pour le compte de quelle personne morale la décision est-elle prise ?
+- `3:03.6` Quelle instance doit l’autoriser ?
+- `3:05.7` Quelle délégation permet de signer ?
+- `3:08.0` Quelles informations remonter à chaque gouvernance ?
+- `3:11.2` Des réponses écrites et partagées valent mieux que des usages implicites. *(remplacement sobre)*
+- `3:15.6` En cas de contrôle, pouvoir le démontrer est une protection.
 
-**Le dispositif proposé** — 3:15.3
+**Le dispositif proposé** — 3:19.8
 
-- `3:16.1` Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.
-- `3:25.9` Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,
-- `3:34.4` une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.
-- `3:40.2` Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.
-- `3:45.4` L’objectif est de sécuriser, sans alourdir. *(remplacement sobre)*
+- `3:20.5` Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.
+- `3:30.1` Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,
+- `3:38.6` une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.
+- `3:44.4` Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.
+- `3:49.5` L’objectif est de sécuriser, sans alourdir. *(remplacement sobre)*
 
-**Feuille de route** — 3:49.7
+**Feuille de route** — 3:52.8
 
-- `3:50.5` La démarche se déploierait progressivement, sur deux ans.
-- `3:54.1` Année 1 : comprendre, cartographier, concevoir. Cadrage, diagnostic, cartographie des risques, dispositif cible.
-- `4:01.4` Année 2 : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan.
-- `4:07.6` Des indicateurs en mesureront l’effectivité.
-- `4:10.7` Soyons lucides : aucun dispositif ne supprime totalement le risque. Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.
+- `3:53.5` La démarche se déploierait progressivement, sur deux ans.
+- `3:57.0` Année 1 : comprendre, cartographier, concevoir. Cadrage, diagnostic, cartographie des risques, dispositif cible.
+- `4:04.3` Année 2 : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan.
+- `4:10.4` Des indicateurs en mesureront l’effectivité.
+- `4:13.4` Soyons lucides : aucun dispositif ne supprime totalement le risque. Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.
 
-**Décisions proposées au Bureau et écran final** — 4:20.7
+**Décisions proposées au Bureau et écran final** — 4:23.4
 
-- `4:21.5` Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,
-- `4:26.3` d’autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,
-- `4:35.9` avec un comité de pilotage transversal et un reporting régulier au Bureau.
-- `4:41.3` Le dispositif définitif restera soumis aux instances compétentes.
-- `4:45.9` Protéger la mission, les personnes, les décideurs et la confiance : c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.
+- `4:24.1` Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,
+- `4:28.9` d’autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,
+- `4:38.5` avec un comité de pilotage transversal et un reporting régulier au Bureau.
+- `4:43.8` Le dispositif définitif restera soumis aux instances compétentes.
+- `4:48.4` Protéger la mission, les personnes, les décideurs et la confiance : c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.
 
-*654 mots · 258 s de parole · débit moyen 152 mots/min (pauses comprises : 128 mots/min).*
+*679 mots · 265 s de parole · débit moyen 154 mots/min (pauses comprises : 133 mots/min) · durée 5:07.0.*
 
 ## 8. Assets produits
 
 | Asset | Fichier | Détail |
 |---|---|---|
 | Vidéo — avec humour | `renders/OVE-probite-sapin2-avec-humour.mp4` | 1920×1080, 30 i/s, H.264 + AAC, 5:05.6 |
-| Vidéo — sans humour | `renders/OVE-probite-sapin2-sans-humour.mp4` | idem |
+| Vidéo — sans humour | `renders/OVE-probite-sapin2-sans-humour.mp4` | 1920×1080, 30 i/s, 5:07.0, animation enrichie |
 | Voix off (2 variantes) | `assets/audio/voix-off-humour.wav`, `assets/audio/voix-off-sobre.wav` | Synthèse locale Kokoro-82M, voix française `ff_siwis`, vitesse 1,0 (non accélérée), −16 LUFS |
-| Musique | `assets/audio/musique-ove.mp3` | Composition instrumentale originale générée de façon déterministe (ré majeur, 72 bpm, nappes + arpège feutré + basse), −31 LUFS, montée sur l’écran final |
+| Musique | `assets/audio/musique-ove.mp3` (avec humour), `assets/audio/musique-sobre.mp3` (sans humour) | Composition instrumentale originale générée de façon déterministe (ré majeur, 72 bpm, nappes + arpège feutré + basse), −31 LUFS, montée sur l’écran final |
 | Sous-titres | `production/sous-titres/sous-titres-{humour,sobre}.{srt,vtt}` | Français, synchronisés |
 | Logo | `assets/img/logo-fondation-ove.jpg` | Fichier fourni, non modifié |
 | Polices | `assets/fonts/Montserrat-VF.ttf`, `assets/fonts/SourceSans3-VF.ttf` | Licence SIL OFL |
@@ -324,6 +325,8 @@ Fichiers : `production/sous-titres/sous-titres-humour.srt` / `.vtt` et `sous-tit
 
 Régénérer : `python3 production/scripts/tts.py && python3 production/scripts/layout.py && python3 production/scripts/music.py && production/scripts/normalize.sh && python3 production/scripts/build.py`, puis `npm run check` et `npx hyperframes render`.
 
+Version sans humour seule (sans toucher à l’autre) : `python3 production/scripts/tts.py && python3 production/scripts/layout.py sobre && python3 production/scripts/music.py sobre && production/scripts/normalize-sobre.sh && python3 production/scripts/build.py sobre`, puis `npx hyperframes check variantes/sans-humour` et `npx hyperframes render variantes/sans-humour`.
+
 ## 11. Contrôle qualité (effectué, défauts corrigés)
 
 **Fond**
@@ -349,5 +352,5 @@ Régénérer : `python3 production/scripts/tts.py && python3 production/scripts/
 
 **Limites signalées**
 - La voix est une synthèse locale (aucun compte de voix premium disponible dans cet environnement) : naturelle mais moins expressive qu’une voix humaine ; pour la version diffusée, un enregistrement par une voix professionnelle peut remplacer `voix-off-*.wav` sans retoucher l’image si les phrases sont lues au même rythme (ou en relançant `layout.py`).
-- La prononciation des sigles et noms propres (OVE, AFA, IMOVE, Plenior, Ressourcial) n’a pas pu être vérifiée par transcription automatique (modèle non téléchargeable ici) : écoute de contrôle recommandée.
+- Version sans humour : la prononciation des sigles a été vérifiée sur les phonèmes produits (OVE, I-M-O-V-E, A-F-A), mais pas à l’oreille (pas de transcription automatique disponible ici) : écoute de contrôle recommandée. La version avec humour garde l’ancienne diction, avec des micro-pauses dans « O.V.E. ».
 - La charte « trois bandes » a été interprétée à partir du logo (les trois traits du « E ») faute de charte graphique jointe.

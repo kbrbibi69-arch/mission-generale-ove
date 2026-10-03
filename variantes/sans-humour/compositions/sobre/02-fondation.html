@@ -31,34 +31,56 @@
 #root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
 #root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
 #root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+
+#root .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+#root .wi, #root .ch { display: inline-block; }
+#root .amb { position: absolute; right: -260px; top: 90px; width: 1100px; height: 620px; transform: rotate(-12deg); pointer-events: none; }
+#root .amb i { position: absolute; left: 0; height: 130px; border-radius: 65px; display: block; }
+#root .amb i:nth-child(1) { top: 0; width: 1100px; background: rgba(180,201,8,0.09); }
+#root .amb i:nth-child(2) { top: 175px; left: 160px; width: 900px; background: rgba(220,229,138,0.20); }
+#root .amb i:nth-child(3) { top: 350px; left: 320px; width: 700px; background: rgba(135,135,135,0.07); }
+#root .amb.dk i:nth-child(1) { background: rgba(180,201,8,0.10); }
+#root .amb.dk i:nth-child(2) { background: rgba(220,229,138,0.06); }
+#root .amb.dk i:nth-child(3) { background: rgba(255,255,255,0.04); }
+#root .dots { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; background-image: radial-gradient(rgba(37,40,43,0.07) 1.6px, transparent 1.8px); background-size: 28px 28px; pointer-events: none; }
+#root .dots.dk { background-image: radial-gradient(rgba(255,255,255,0.06) 1.6px, transparent 1.8px); }
+#root .prog { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: rgba(135,135,135,0.16); z-index: 40; }
+#root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
+#root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="02-fondation" data-width="1920" data-height="1080" data-duration="23.84">
-  <div id="s02-scene" class="clip" data-start="0" data-duration="23.84" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="02-fondation" data-width="1920" data-height="1080" data-duration="23.27">
+  <div id="s02-scene" class="clip" data-start="0" data-duration="23.27" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
+  <div class="dots s02-dots"></div><div class="amb"><i class="s02-a1"></i><i class="s02-a2"></i><i class="s02-a3"></i></div>
   <div class="s02-content" style="position:absolute;inset:0">
   <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">01 — La Fondation</div></div>
   <div class="abs h2 s02-title" style="left:192px;top:190px;width:1536px">Une fondation reconnue d’utilité publique</div>
   <div class="card top s02-card0" style="left:192px;top:320px;width:357px;height:380px;padding:40px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M33 14a12 12 0 1 0 0 20"/><path d="M10 21h17M10 27h15"/></svg></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M33 14a12 12 0 1 0 0 20"/><path pathLength="1" d="M10 21h17M10 27h15"/></svg></div>
     <div style="margin-top:34px;font-family:Montserrat,sans-serif;font-weight:700;font-size:80px;line-height:1;white-space:nowrap"><span class="s02-n0">0</span> M€</div>
     <div class="body" style="margin-top:18px;font-size:28px">budget annuel (environ)</div></div>
+  <div class="abs s02-u0" style="left:226px;top:556px;width:120px;height:5px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
   <div class="card top s02-card1" style="left:585px;top:320px;width:357px;height:380px;padding:40px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="5"/><path d="M8 37c0-6 4-10 9-10s9 4 9 10"/><circle cx="32" cy="18" r="4"/><path d="M29 27c6-1 11 3 11 10"/></svg></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="17" cy="17" r="5"/><path pathLength="1" d="M8 37c0-6 4-10 9-10s9 4 9 10"/><circle pathLength="1" cx="32" cy="18" r="4"/><path pathLength="1" d="M29 27c6-1 11 3 11 10"/></svg></div>
     <div style="margin-top:34px;font-family:Montserrat,sans-serif;font-weight:700;font-size:80px;line-height:1;white-space:nowrap"><span class="s02-n1">0</span></div>
     <div class="body" style="margin-top:18px;font-size:28px">salariés</div></div>
+  <div class="abs s02-u1" style="left:619px;top:556px;width:120px;height:5px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
   <div class="card top s02-card2" style="left:978px;top:320px;width:357px;height:380px;padding:40px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 22c-2-4-9-4-9 1 0 4 9 9 9 9s9-5 9-9c0-5-7-5-9-1z"/><path d="M6 36h8l8 4h10l10-6"/></svg></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M24 22c-2-4-9-4-9 1 0 4 9 9 9 9s9-5 9-9c0-5-7-5-9-1z"/><path pathLength="1" d="M6 36h8l8 4h10l10-6"/></svg></div>
     <div style="margin-top:34px;font-family:Montserrat,sans-serif;font-weight:700;font-size:80px;line-height:1;white-space:nowrap"><span class="s02-n2">0</span>+</div>
     <div class="body" style="margin-top:18px;font-size:28px">personnes accompagnées chaque année</div></div>
+  <div class="abs s02-u2" style="left:1012px;top:556px;width:120px;height:5px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
   <div class="card top s02-card3" style="left:1371px;top:320px;width:357px;height:380px;padding:40px 34px;box-sizing:border-box">
-    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="23" width="30" height="5" rx="2"/><path d="M13 28v10M35 28v10"/><circle cx="16" cy="14" r="3.5"/><circle cx="24" cy="12" r="3.5"/><circle cx="32" cy="14" r="3.5"/></svg></div>
+    <div class="badge"><svg class="ic " width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect pathLength="1" x="9" y="23" width="30" height="5" rx="2"/><path pathLength="1" d="M13 28v10M35 28v10"/><circle pathLength="1" cx="16" cy="14" r="3.5"/><circle pathLength="1" cx="24" cy="12" r="3.5"/><circle pathLength="1" cx="32" cy="14" r="3.5"/></svg></div>
     <div style="margin-top:34px;font-family:Montserrat,sans-serif;font-weight:700;font-size:80px;line-height:1;white-space:nowrap"><span class="s02-n3">0</span></div>
     <div class="body" style="margin-top:18px;font-size:28px">membres du conseil d’administration</div></div>
+  <div class="abs s02-u3" style="left:1405px;top:556px;width:120px;height:5px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
   <div class="abs s02-gov" style="left:192px;top:760px;width:1536px;display:flex;justify-content:center;gap:18px;align-items:center">
-    <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="23" width="30" height="5" rx="2"/><path d="M13 28v10M35 28v10"/><circle cx="16" cy="14" r="3.5"/><circle cx="24" cy="12" r="3.5"/><circle cx="32" cy="14" r="3.5"/></svg>Conseil d’administration</span><span class="s02-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
-    <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="5"/><path d="M8 37c0-6 4-10 9-10s9 4 9 10"/><circle cx="32" cy="18" r="4"/><path d="M29 27c6-1 11 3 11 10"/></svg>Bureau</span><span class="s02-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
-    <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="7"/><path d="M10 42c0-9 6-15 14-15s14 6 14 15"/></svg>Direction générale</span></div>
+    <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect pathLength="1" x="9" y="23" width="30" height="5" rx="2"/><path pathLength="1" d="M13 28v10M35 28v10"/><circle pathLength="1" cx="16" cy="14" r="3.5"/><circle pathLength="1" cx="24" cy="12" r="3.5"/><circle pathLength="1" cx="32" cy="14" r="3.5"/></svg>Conseil d’administration</span><span class="s02-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
+    <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="17" cy="17" r="5"/><path pathLength="1" d="M8 37c0-6 4-10 9-10s9 4 9 10"/><circle pathLength="1" cx="32" cy="18" r="4"/><path pathLength="1" d="M29 27c6-1 11 3 11 10"/></svg>Bureau</span><span class="s02-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
+    <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="24" cy="15" r="7"/><path pathLength="1" d="M10 42c0-9 6-15 14-15s14 6 14 15"/></svg>Direction générale</span></div>
   </div>
+  <div class="prog"><i class="s02-pg"></i></div>
   <div class="bands s02-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
   </div>
 </div>
@@ -67,27 +89,52 @@
   const tl = gsap.timeline({ paused: true });
 
   const q = (s) => document.querySelectorAll(s);
-  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
-  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
-  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const rise0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
   const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
   const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
   const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
     tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
 
-  rise(".s02-title", 0.8);
-  rise(".s02-card0", 6.63, { y: 40 });
-  count(".s02-n0", 180, 6.78);
-  rise(".s02-card1", 10.01, { y: 40 });
-  count(".s02-n1", 2500, 10.16);
-  rise(".s02-card2", 13.54, { y: 40 });
-  count(".s02-n2", 15000, 13.69);
-  rise(".s02-card3", 20.03, { y: 40 });
-  count(".s02-n3", 15, 20.18);
-  rise(".s02-g", 18.332, { st: 0.35, y: 18 });
+  const ink = (s, t) => { const sel = s.split(",").map((x) => x.trim() + " .ic > *").join(", "); const els = document.querySelectorAll(sel);
+    if (els.length) tl.fromTo(els, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut", stagger: 0.03 }, t + 0.12); };
+  const rise = (s, t, o = {}) => { rise0(s, t, { ...o, d: o.d ?? 0.75 }); ink(s, t); };
+  const pop = (s, t, o = {}) => { pop0(s, t, o); ink(s, t); };
+  const slide = (s, t, o = {}) => { slide0(s, t, o); ink(s, t); };
+  const title = (s, t) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => '<span class="w"><span class="wi">' + w + "</span></span>").join(" "); } });
+    tl.fromTo(s + " .wi", { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, ease: "power4.out", stagger: 0.07 }, t); };
+  const spell = (s, t, st = 0.04) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = [...el.textContent].map((ch) => '<span class="ch">' + (ch === " " ? "&nbsp;" : ch) + "</span>").join(""); } });
+    tl.fromTo(s + " .ch", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: st }, t); };
+  const ring = (s, t) => { tl.set(s, { opacity: 0.75, scale: 1 }, t); tl.to(s, { opacity: 0, scale: 1.7, duration: 1.3, ease: "power2.out" }, t); };
+  const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
+    if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
+
+  tl.fromTo(".s02-dots", { y: 0 }, { y: -56, duration: 23.27, ease: "none" }, 0);
+  tl.fromTo(".s02-a1", { x: 60 }, { x: -150, duration: 23.27, ease: "none" }, 0);
+  tl.fromTo(".s02-a2", { x: 30 }, { x: -100, duration: 23.27, ease: "none" }, 0);
+  tl.fromTo(".s02-a3", { x: 0 }, { x: -60, duration: 23.27, ease: "none" }, 0);
+  tl.fromTo(".s02-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 23.27, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s02-pg", { scaleX: 0.0590 }, { scaleX: 0.1348, duration: 23.27, ease: "none" }, 0);
+  title(".s02-title", 0.7);
+  rise(".s02-card0", 6.21, { y: 40 });
+  count(".s02-n0", 180, 6.36);
+  tl.fromTo(".s02-u0", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.out" }, 6.51);
+  rise(".s02-card1", 9.59, { y: 40 });
+  count(".s02-n1", 2500, 9.74);
+  tl.fromTo(".s02-u1", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.out" }, 9.89);
+  rise(".s02-card2", 13.07, { y: 40 });
+  count(".s02-n2", 15000, 13.22);
+  tl.fromTo(".s02-u2", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.out" }, 13.37);
+  rise(".s02-card3", 19.51, { y: 40 });
+  count(".s02-n3", 15, 19.66);
+  tl.fromTo(".s02-u3", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.out" }, 19.81);
+  rise(".s02-g", 17.81, { st: 0.35, y: 18 });
   tl.fromTo(".s02-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s02-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 23.04);
-  tl.set(".s02-content", { opacity: 0 }, 23.70);
+  tl.fromTo(".s02-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 22.47);
+  tl.set(".s02-content", { opacity: 0 }, 23.13);
   window.__timelines["02-fondation"] = tl;
 })();
 </script>

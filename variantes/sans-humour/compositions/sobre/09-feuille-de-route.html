@@ -31,10 +31,27 @@
 #root .bands i:nth-child(2) { top: 33.2%; background: #DCE58A; }
 #root .bands i:nth-child(3) { top: 66.4%; background: #878787; }
 #root .num { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #B4C908; color: #25282B; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 26px; flex: none; }
+
+#root .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+#root .wi, #root .ch { display: inline-block; }
+#root .amb { position: absolute; right: -260px; top: 90px; width: 1100px; height: 620px; transform: rotate(-12deg); pointer-events: none; }
+#root .amb i { position: absolute; left: 0; height: 130px; border-radius: 65px; display: block; }
+#root .amb i:nth-child(1) { top: 0; width: 1100px; background: rgba(180,201,8,0.09); }
+#root .amb i:nth-child(2) { top: 175px; left: 160px; width: 900px; background: rgba(220,229,138,0.20); }
+#root .amb i:nth-child(3) { top: 350px; left: 320px; width: 700px; background: rgba(135,135,135,0.07); }
+#root .amb.dk i:nth-child(1) { background: rgba(180,201,8,0.10); }
+#root .amb.dk i:nth-child(2) { background: rgba(220,229,138,0.06); }
+#root .amb.dk i:nth-child(3) { background: rgba(255,255,255,0.04); }
+#root .dots { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; background-image: radial-gradient(rgba(37,40,43,0.07) 1.6px, transparent 1.8px); background-size: 28px 28px; pointer-events: none; }
+#root .dots.dk { background-image: radial-gradient(rgba(255,255,255,0.06) 1.6px, transparent 1.8px); }
+#root .prog { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: rgba(135,135,135,0.16); z-index: 40; }
+#root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
+#root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="09-feuille-de-route" data-width="1920" data-height="1080" data-duration="30.96">
-  <div id="s09-scene" class="clip" data-start="0" data-duration="30.96" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="09-feuille-de-route" data-width="1920" data-height="1080" data-duration="30.61">
+  <div id="s09-scene" class="clip" data-start="0" data-duration="30.61" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
+  <div class="dots s09-dots"></div><div class="amb"><i class="s09-a1"></i><i class="s09-a2"></i><i class="s09-a3"></i></div>
   <div class="s09-content" style="position:absolute;inset:0">
   <div class="marker"><div class="mb"><i style="width:46px"></i><i style="width:34px"></i><i style="width:22px"></i></div><div class="ml">08 — Feuille de route</div></div>
   <div class="abs h2 s09-t" style="left:192px;top:170px;width:1536px">Deux ans, pas à pas</div>
@@ -43,6 +60,7 @@
   <div class="abs s09-y2" style="left:970px;top:420px;width:758px;height:6px;border-radius:3px;background:#878787;transform-origin:left center"></div>
   <div class="abs s09-y1l" style="left:192px;top:340px;width:758px"><span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:30px">Année 1</span><span style="font-size:26px;color:#55595D"> · comprendre, cartographier, concevoir</span></div>
   <div class="abs s09-y2l" style="left:970px;top:340px;width:758px"><span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:30px">Année 2</span><span style="font-size:26px;color:#55595D"> · valider, déployer, ajuster</span></div>
+  <div class="abs s09-head" style="left:180px;top:411px;width:24px;height:24px;border-radius:50%;background:#25282B;box-shadow:0 0 0 7px rgba(180,201,8,0.35);z-index:3"></div>
   <div class="abs s09-d0" style="left:202px;top:409px;width:28px;height:28px;border-radius:50%;background:#fff;border:5px solid #B4C908;box-sizing:border-box"></div>
   <div class="abs s09-s0" style="left:202px;top:454px;width:176px"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:22px;color:#5C6600">T1</div><div style="font-size:24px;font-weight:600;line-height:1.2;margin-top:4px">Cadrage</div></div>
   <div class="abs s09-d1" style="left:392px;top:409px;width:28px;height:28px;border-radius:50%;background:#fff;border:5px solid #B4C908;box-sizing:border-box"></div>
@@ -60,11 +78,12 @@
   <div class="abs s09-d7" style="left:1550px;top:409px;width:28px;height:28px;border-radius:50%;background:#fff;border:5px solid #878787;box-sizing:border-box"></div>
   <div class="abs s09-s7" style="left:1550px;top:454px;width:176px"><div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:22px;color:#55595D">T4</div><div style="font-size:24px;font-weight:600;line-height:1.2;margin-top:4px">Bilan et ajustements</div></div>
   <div class="abs s09-ind" style="left:192px;top:610px;width:1536px;display:flex;align-items:center;gap:16px">
-    <span class="row s09-il" style="gap:12px;font-size:26px;font-weight:700;color:#5C6600"><svg class="ic " width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 1 1 32 0"/><path d="M24 34l8-10"/><path d="M8 38h32"/></svg>Indicateurs d’effectivité</span>
+    <span class="row s09-il" style="gap:12px;font-size:26px;font-weight:700;color:#5C6600"><svg class="ic " width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M8 34a16 16 0 1 1 32 0"/><path pathLength="1" d="M24 34l8-10"/><path pathLength="1" d="M8 38h32"/></svg>Indicateurs d’effectivité</span>
     <span class="chip s09-ic">processus cartographiés</span><span class="chip s09-ic">fonctions exposées formées</span><span class="chip s09-ic">plan d’action réalisé</span></div>
   <div class="card s09-z" style="left:192px;top:712px;width:1536px;height:130px;padding:0 40px;box-sizing:border-box;display:flex;align-items:center;gap:36px;background:#25282B;color:#fff">
-    <span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:34px;white-space:nowrap">Pas de risque zéro</span><span style="width:3px;height:56px;background:#878787;display:block"></span><span class="row s09-w0" style="gap:12px;font-size:32px;font-weight:600"><span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Réduire</span><span class="row s09-w1" style="gap:12px;font-size:32px;font-weight:600"><span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Maîtriser</span><span class="row s09-w2" style="gap:12px;font-size:32px;font-weight:600"><span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 25l8 8 16-17"/></svg></span>Démontrer</span></div>
+    <span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:34px;white-space:nowrap">Pas de risque zéro</span><span style="width:3px;height:56px;background:#878787;display:block"></span><span class="row s09-w0" style="gap:12px;font-size:32px;font-weight:600"><span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 25l8 8 16-17"/></svg></span>Réduire</span><span class="row s09-w1" style="gap:12px;font-size:32px;font-weight:600"><span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 25l8 8 16-17"/></svg></span>Maîtriser</span><span class="row s09-w2" style="gap:12px;font-size:32px;font-weight:600"><span style="color:#B4C908"><svg class="ic " width="34" height="34" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 25l8 8 16-17"/></svg></span>Démontrer</span></div>
   </div>
+  <div class="prog"><i class="s09-pg"></i></div>
   <div class="bands s09-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
   </div>
 </div>
@@ -73,36 +92,60 @@
   const tl = gsap.timeline({ paused: true });
 
   const q = (s) => document.querySelectorAll(s);
-  const rise = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
-  const slide = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
-  const pop = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
+  const rise0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, y: o.y ?? 28 }, { opacity: 1, y: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0, immediateRender: o.ir ?? true }, t);
+  const slide0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, x: o.x ?? -36 }, { opacity: 1, x: 0, duration: o.d ?? 0.7, ease: "power3.out", stagger: o.st ?? 0 }, t);
+  const pop0 = (s, t, o = {}) => tl.fromTo(s, { opacity: 0, scale: o.s ?? 0.88 }, { opacity: 1, scale: 1, duration: o.d ?? 0.65, ease: "back.out(1.6)", stagger: o.st ?? 0 }, t);
   const fade = (s, t, o = {}) => tl.fromTo(s, { opacity: 0 }, { opacity: 1, duration: o.d ?? 0.6, ease: "power1.out", stagger: o.st ?? 0 }, t);
   const draw = (s, t, d = 1) => tl.fromTo(s, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
   const count = (sel, to, t, d = 1.6) => { const el = document.querySelector(sel); const o = { v: 0 };
     tl.fromTo(o, { v: 0 }, { v: to, duration: d, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString("fr-FR").replace(/\s/g, "\u202f"); } }, t); };
 
-  rise(".s09-t", 0.80);
-  tl.fromTo(".s09-axis", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.inOut" }, 2.25);
-  tl.fromTo(".s09-y1", { scaleX: 0 }, { scaleX: 1, duration: 6.82, ease: "none" }, 4.37);
-  rise(".s09-y1l", 4.37, { y: 16 });
-  tl.fromTo(".s09-y2", { scaleX: 0 }, { scaleX: 1, duration: 5.71, ease: "none" }, 11.69);
-  rise(".s09-y2l", 11.69, { y: 16 });
-  pop(".s09-d0", 7.14, { s: 0.4 }); rise(".s09-s0", 7.24, { y: 14 });
-  pop(".s09-d1", 7.69, { s: 0.4 }); rise(".s09-s1", 7.79, { y: 14 });
-  pop(".s09-d2", 5.56, { s: 0.4 }); rise(".s09-s2", 5.66, { y: 14 });
-  pop(".s09-d3", 10.01, { s: 0.4 }); rise(".s09-s3", 10.11, { y: 14 });
-  pop(".s09-d4", 13.90, { s: 0.4 }); rise(".s09-s4", 14.00, { y: 14 });
-  pop(".s09-d5", 15.39, { s: 0.4 }); rise(".s09-s5", 15.49, { y: 14 });
-  pop(".s09-d6", 15.88, { s: 0.4 }); rise(".s09-s6", 15.98, { y: 14 });
-  pop(".s09-d7", 16.88, { s: 0.4 }); rise(".s09-s7", 16.98, { y: 14 });
-  rise(".s09-il", 17.90, { y: 14 }); rise(".s09-ic", 18.30, { y: 14, st: 0.3 });
-  rise(".s09-z", 20.95, { y: 24 });
-  slide(".s09-w0", 25.79, { x: -18 });
-  slide(".s09-w1", 26.67, { x: -18 });
-  slide(".s09-w2", 27.67, { x: -18 });
+  const ink = (s, t) => { const sel = s.split(",").map((x) => x.trim() + " .ic > *").join(", "); const els = document.querySelectorAll(sel);
+    if (els.length) tl.fromTo(els, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut", stagger: 0.03 }, t + 0.12); };
+  const rise = (s, t, o = {}) => { rise0(s, t, { ...o, d: o.d ?? 0.75 }); ink(s, t); };
+  const pop = (s, t, o = {}) => { pop0(s, t, o); ink(s, t); };
+  const slide = (s, t, o = {}) => { slide0(s, t, o); ink(s, t); };
+  const title = (s, t) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => '<span class="w"><span class="wi">' + w + "</span></span>").join(" "); } });
+    tl.fromTo(s + " .wi", { yPercent: 115, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, ease: "power4.out", stagger: 0.07 }, t); };
+  const spell = (s, t, st = 0.04) => { q(s).forEach((el) => { if (!el.dataset.split) { el.dataset.split = "1";
+      el.innerHTML = [...el.textContent].map((ch) => '<span class="ch">' + (ch === " " ? "&nbsp;" : ch) + "</span>").join(""); } });
+    tl.fromTo(s + " .ch", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out", stagger: st }, t); };
+  const ring = (s, t) => { tl.set(s, { opacity: 0.75, scale: 1 }, t); tl.to(s, { opacity: 0, scale: 1.7, duration: 1.3, ease: "power2.out" }, t); };
+  const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
+    if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
+
+  tl.fromTo(".s09-dots", { y: 0 }, { y: -56, duration: 30.61, ease: "none" }, 0);
+  tl.fromTo(".s09-a1", { x: 60 }, { x: -150, duration: 30.61, ease: "none" }, 0);
+  tl.fromTo(".s09-a2", { x: 30 }, { x: -100, duration: 30.61, ease: "none" }, 0);
+  tl.fromTo(".s09-a3", { x: 0 }, { x: -60, duration: 30.61, ease: "none" }, 0);
+  tl.fromTo(".s09-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 30.61, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s09-pg", { scaleX: 0.7582 }, { scaleX: 0.8579, duration: 30.61, ease: "none" }, 0);
+  title(".s09-t", 0.70);
+  tl.fromTo(".s09-axis", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.inOut" }, 2.15);
+  tl.fromTo(".s09-y1", { scaleX: 0 }, { scaleX: 1, duration: 6.82, ease: "none" }, 4.22);
+  rise(".s09-y1l", 4.22, { y: 16 });
+  tl.fromTo(".s09-y2", { scaleX: 0 }, { scaleX: 1, duration: 5.71, ease: "none" }, 11.49);
+  rise(".s09-y2l", 11.49, { y: 16 });
+  tl.fromTo(".s09-head", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 3.92);
+  tl.fromTo(".s09-head", { x: 0 }, { x: 758, duration: 6.82, ease: "none", immediateRender: false }, 4.22);
+  tl.fromTo(".s09-head", { x: 778 }, { x: 1536, duration: 5.71, ease: "none", immediateRender: false }, 11.49);
+  pop(".s09-d0", 6.99, { s: 0.4 }); rise(".s09-s0", 7.09, { y: 14 });
+  pop(".s09-d1", 7.54, { s: 0.4 }); rise(".s09-s1", 7.64, { y: 14 });
+  pop(".s09-d2", 5.41, { s: 0.4 }); rise(".s09-s2", 5.51, { y: 14 });
+  pop(".s09-d3", 9.86, { s: 0.4 }); rise(".s09-s3", 9.96, { y: 14 });
+  pop(".s09-d4", 13.70, { s: 0.4 }); rise(".s09-s4", 13.80, { y: 14 });
+  pop(".s09-d5", 15.19, { s: 0.4 }); rise(".s09-s5", 15.29, { y: 14 });
+  pop(".s09-d6", 15.68, { s: 0.4 }); rise(".s09-s6", 15.78, { y: 14 });
+  pop(".s09-d7", 16.68, { s: 0.4 }); rise(".s09-s7", 16.78, { y: 14 });
+  rise(".s09-il", 17.65, { y: 14 }); rise(".s09-ic", 18.05, { y: 14, st: 0.3 });
+  rise(".s09-z", 20.65, { y: 24 });
+  slide(".s09-w0", 25.49, { x: -18 });
+  slide(".s09-w1", 26.37, { x: -18 });
+  slide(".s09-w2", 27.37, { x: -18 });
   tl.fromTo(".s09-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s09-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 30.16);
-  tl.set(".s09-content", { opacity: 0 }, 30.82);
+  tl.fromTo(".s09-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 29.81);
+  tl.set(".s09-content", { opacity: 0 }, 30.47);
   window.__timelines["09-feuille-de-route"] = tl;
 })();
 </script>
