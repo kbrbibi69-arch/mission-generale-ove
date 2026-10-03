@@ -79,6 +79,14 @@
     <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect pathLength="1" x="9" y="23" width="30" height="5" rx="2"/><path pathLength="1" d="M13 28v10M35 28v10"/><circle pathLength="1" cx="16" cy="14" r="3.5"/><circle pathLength="1" cx="24" cy="12" r="3.5"/><circle pathLength="1" cx="32" cy="14" r="3.5"/></svg>Conseil d’administration</span><span class="s02-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
     <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="17" cy="17" r="5"/><path pathLength="1" d="M8 37c0-6 4-10 9-10s9 4 9 10"/><circle pathLength="1" cx="32" cy="18" r="4"/><path pathLength="1" d="M29 27c6-1 11 3 11 10"/></svg>Bureau</span><span class="s02-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
     <span class="chip s02-g"><svg class="ic " width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="24" cy="15" r="7"/><path pathLength="1" d="M10 42c0-9 6-15 14-15s14 6 14 15"/></svg>Direction générale</span></div>
+  <div class="abs s02-hero" style="left:0;top:0;width:1920px;height:1080px">
+    <div class="abs h1 s02-ht" style="left:192px;top:270px;width:620px">Une fondation reconnue d’utilité publique</div>
+    <div class="abs s02-hl" style="left:192px;top:628px;width:240px;height:6px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
+    <div class="abs s02-ph" style="left:860px;top:170px;width:868px;height:624px;border-radius:24px;overflow:hidden;background:#F6F6F2;box-shadow:0 24px 60px rgba(37,40,43,0.16);clip-path:inset(0% 100% 0% 0% round 24px)">
+      <div class="abs s02-sk" style="left:-120px;top:-40px;width:1100px;height:420px;transform:rotate(-14deg)"><i style="position:absolute;left:0;top:0;width:1100px;height:120px;border-radius:60px;background:#B4C908"></i><i style="position:absolute;left:90px;top:140px;width:900px;height:120px;border-radius:60px;background:#DCE58A"></i><i style="position:absolute;left:180px;top:280px;width:700px;height:120px;border-radius:60px;background:#C9C9C9"></i></div>
+      <img class="abs s02-full" src="assets/img/photos/batiment.jpg" alt="" style="left:0;top:0;width:868px;height:624px" />
+      <img class="abs s02-fac" src="assets/img/photos/batiment-detoure.png" alt="" style="left:0;top:0;width:868px;height:624px" />
+    </div></div>
   </div>
   <div class="prog"><i class="s02-pg"></i></div>
   <div class="bands s02-bands" data-layout-allow-occlusion data-layout-allow-overlap><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i><i data-layout-allow-occlusion data-layout-allow-overlap></i></div>
@@ -118,7 +126,7 @@
   tl.fromTo(".s02-a3", { x: 0 }, { x: -60, duration: 23.27, ease: "none" }, 0);
   tl.fromTo(".s02-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 23.27, ease: "sine.inOut" }, 0);
   tl.fromTo(".s02-pg", { scaleX: 0.0590 }, { scaleX: 0.1348, duration: 23.27, ease: "none" }, 0);
-  title(".s02-title", 0.7);
+  title(".s02-title", 4.84);
   rise(".s02-card0", 6.21, { y: 40 });
   count(".s02-n0", 180, 6.36);
   tl.fromTo(".s02-u0", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.out" }, 6.51);
@@ -132,6 +140,19 @@
   count(".s02-n3", 15, 19.66);
   tl.fromTo(".s02-u3", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.out" }, 19.81);
   rise(".s02-g", 17.81, { st: 0.35, y: 18 });
+  title(".s02-ht", 0.70);
+  tl.fromTo(".s02-hl", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.out" }, 1.20);
+  tl.fromTo(".s02-ph", { clipPath: "inset(0% 100% 0% 0% round 24px)" }, { clipPath: "inset(0% 0% 0% 0% round 24px)", duration: 1.0, ease: "power3.inOut" }, 0.40);
+  tl.fromTo(".s02-full, .s02-fac", { x: 70, scale: 1.08 }, { x: 0, scale: 1.08, duration: 1.0, ease: "power3.out" }, 0.40);
+  tl.fromTo(".s02-full", { opacity: 1 }, { opacity: 0, duration: 0.8, ease: "power1.inOut" }, 2.00);
+  tl.fromTo(".s02-sk i", { xPercent: -110 }, { xPercent: 0, duration: 0.9, ease: "power3.out", stagger: 0.12 }, 2.00);
+  tl.fromTo(".s02-fac", { x: 0, scale: 1.08 }, { x: -36, scale: 1.12, duration: 3.09, ease: "sine.inOut", immediateRender: false }, 1.40);
+  tl.fromTo(".s02-sk", { x: 0 }, { x: 30, duration: 2.49, ease: "sine.inOut" }, 2.00);
+  tl.to(".s02-ph", { clipPath: "inset(0% 0% 0% 100% round 24px)", duration: 0.7, ease: "power3.inOut" }, 4.49);
+  tl.to(".s02-fac", { x: -150, duration: 0.7, ease: "power3.in" }, 4.49);
+  tl.to(".s02-ht .wi", { yPercent: -115, opacity: 0, duration: 0.5, ease: "power3.in", stagger: 0.03 }, 4.49);
+  tl.to(".s02-hl", { scaleX: 0, transformOrigin: "right center", duration: 0.4, ease: "power2.in" }, 4.49);
+  tl.set(".s02-hero", { opacity: 0 }, 5.24);
   tl.fromTo(".s02-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
   tl.fromTo(".s02-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 22.47);
   tl.set(".s02-content", { opacity: 0 }, 23.13);

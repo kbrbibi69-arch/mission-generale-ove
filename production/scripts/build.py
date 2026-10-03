@@ -159,6 +159,80 @@ def bands_js(p, D, first=False, last=False):
         js.append(f'tl.set(".{p}-content", {{ opacity: 0 }}, {D - 0.14:.2f});')
     return "\n  ".join(js)
 
+# ---------------------------------------------------------------- logos vectorisés (pièces jointes) et traçabilité
+LOGO_DIR = os.path.join(ROOT, "production", "logos")
+LOGO_FILES = {"fondation-ove": "PJ01-logo-fondation-ove.jpg", "imove": "PJ04-logo-imove-fonds-de-dotation.webp",
+              "ove-caraibes": "PJ05-logo-ove-caraibes.webp", "plenior": "PJ06-logo-plenior.webp",
+              "amicial": "PJ07-logo-amicial", "ressourcial": "PJ08-logo-ressourcial"}
+INS = []  # journal des insertions (variante sobre), écrit dans production/insertions-sobre.json
+def has_logo(lid): return os.path.exists(os.path.join(LOGO_DIR, lid + ".json"))
+def logo_data(lid): return json.load(open(os.path.join(LOGO_DIR, lid + ".json")))
+def logo_svg(lid, cls, w=None, h=None):
+    """Logo inline, une <g> par élément (lettre, symbole, signature), proportions du fichier source conservées."""
+    d = logo_data(lid)
+    groups = {}
+    for c in d["components"]:
+        groups.setdefault(c["group"], []).append(f'<path fill="{c["color"]}" fill-rule="evenodd" d="{c["d"]}"/>')
+    if w and not h: h = round(w * d["height"] / d["width"], 1)
+    if h and not w: w = round(h * d["width"] / d["height"], 1)
+    body = "".join(f'<g class="g-{g}">{"".join(ps)}</g>' for g, ps in groups.items())
+    return (f'<svg class="logo {cls}" width="{w}" height="{h}" viewBox="0 0 {d["width"]} {d["height"]}" '
+            f'role="img" aria-label="{lid}" style="display:block;overflow:visible">{body}</svg>')
+def gbox(lid, g):
+    bs = [c["bbox"] for c in logo_data(lid)["components"] if c["group"] == g]
+    return min(b[0] for b in bs), min(b[1] for b in bs), max(b[2] for b in bs), max(b[3] for b in bs)
+def gcenter(lid, g):
+    x0, y0, x1, y1 = gbox(lid, g); return f"{(x0 + x1) / 2:.1f} {(y0 + y1) / 2:.1f}"
+def logo_js(lid, s, t, style="build"):
+    """Chorégraphie propre à chaque logo : chaque marque s'anime selon sa propre géométrie."""
+    G = lambda g: f'"{s} .g-{g}"'
+    P = lambda g: f'"{s} .g-{g} path"'
+    j = []
+    if lid in ("fondation-ove", "imove"):
+        letters = ["o", "v"] if lid == "fondation-ove" else ["i", "m", "o", "v"]
+        sun = gcenter(lid, "soleil")
+        if style == "build":   # construction : lettres posées une à une, le E se trace barre par barre
+            for k, g in enumerate(letters):
+                if g == "o":
+                    j.append(f'tl.fromTo({G(g)}, {{ scale: 0, rotation: -120, transformOrigin: "50% 50%" }}, {{ scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.5)" }}, {t + k * 0.12:.2f});')
+                elif g == "v":
+                    j.append(f'tl.fromTo({G(g)}, {{ scaleY: 0, transformOrigin: "50% 0%" }}, {{ scaleY: 1, duration: 0.55, ease: "power3.out" }}, {t + k * 0.12:.2f});')
+                else:
+                    j.append(f'tl.fromTo({G(g)}, {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }}, {t + k * 0.12:.2f});')
+            te = t + len(letters) * 0.12
+        else:                  # résolution : les trois barres du E arrivent comme les trois bandes de la charte
+            j.append(f'tl.fromTo("{s} .g-e1, {s} .g-e2, {s} .g-e3", {{ x: -420, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.9, ease: "expo.out", stagger: 0.09 }}, {t:.2f});')
+            for k, g in enumerate(letters):
+                j.append(f'tl.fromTo({G(g)}, {{ x: -160, rotation: {-200 if g == "o" else 0}, opacity: 0, transformOrigin: "50% 50%" }}, {{ x: 0, rotation: 0, opacity: 1, duration: 0.9, ease: "power3.out" }}, {t + 0.15 + k * 0.08:.2f});')
+            te = t + 0.25
+        if style == "build":
+            j.append(f'tl.fromTo("{s} .g-e1, {s} .g-e2, {s} .g-e3", {{ scaleX: 0, transformOrigin: "0% 50%" }}, {{ scaleX: 1, duration: 0.5, ease: "power3.out", stagger: 0.09 }}, {te:.2f});')
+        j.append(f'tl.fromTo({G("soleil")}, {{ scale: 0, transformOrigin: "50% 50%" }}, {{ scale: 1, duration: 0.6, ease: "back.out(2.2)" }}, {te + 0.3:.2f});')
+        j.append(f'tl.fromTo({P("rayons")}, {{ scale: 0, opacity: 0, svgOrigin: "{sun}" }}, {{ scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)", stagger: 0.08 }}, {te + 0.6:.2f});')
+        j.append(f'tl.fromTo({P("texte")}, {{ opacity: 0, y: 8 }}, {{ opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.035 }}, {te + 0.7:.2f});')
+        return j, te + 1.4
+    if lid == "ove-caraibes":  # le disque au colibri entre en vol, le V se dépose, le E glisse depuis la droite
+        j.append(f'tl.fromTo({G("disque")}, {{ scale: 0.2, rotation: -160, x: -60, opacity: 0, transformOrigin: "50% 50%" }}, {{ scale: 1, rotation: 0, x: 0, opacity: 1, duration: 0.9, ease: "power3.out" }}, {t:.2f});')
+        j.append(f'tl.fromTo({G("v")}, {{ y: -50, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.6, ease: "bounce.out" }}, {t + 0.25:.2f});')
+        j.append(f'tl.fromTo("{s} .g-e1, {s} .g-e2, {s} .g-e3", {{ x: 60, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }}, {t + 0.4:.2f});')
+        j.append(f'tl.fromTo({P("caraibes")}, {{ opacity: 0, y: 10 }}, {{ opacity: 1, y: 0, duration: 0.3, stagger: -0.04 }}, {t + 0.7:.2f});')
+        j.append(f'tl.fromTo("{s} .g-texte1 path, {s} .g-texte2 path", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25, stagger: 0.025 }}, {t + 0.85:.2f});')
+        return j, t + 1.6
+    if lid == "plenior":       # le mot s'écrit lettre à lettre, puis la feuille de chêne pousse sur le « o »
+        letters = ["p", "l", "e", "n", "i", "o", "r"]
+        j.append(f'tl.fromTo("{", ".join(f"{s} .g-{g}" for g in letters)}", {{ y: 26, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.06 }}, {t:.2f});')
+        j.append(f'tl.fromTo({G("point")}, {{ scale: 0, transformOrigin: "50% 50%" }}, {{ scale: 1, duration: 0.4, ease: "back.out(3)" }}, {t + 0.4:.2f});')
+        x0, y0, x1, y1 = gbox(lid, "feuille")
+        j.append(f'tl.fromTo({G("feuille")}, {{ scale: 0, rotation: -35, svgOrigin: "{x0 + 4:.1f} {y1:.1f}" }}, {{ scale: 1, rotation: 0, duration: 0.9, ease: "elastic.out(1, 0.55)" }}, {t + 0.55:.2f});')
+        return j, t + 1.5
+    # logo sans chorégraphie dédiée : apparition simple
+    j.append(f'tl.fromTo("{s}", {{ opacity: 0, scale: 0.9 }}, {{ opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }}, {t:.2f});')
+    return j, t + 0.6
+def log_ins(scene, t_in, t_out, fichier, entite, raison, traitement, animation, entree, sortie, reserves=""):
+    s0 = next(x["start"] for x in TL["scenes"] if x["id"] == scene)
+    INS.append({"scene": scene, "in": round(s0 + t_in, 2), "out": round(s0 + t_out, 2), "fichier": fichier, "entite": entite,
+                "raison": raison, "traitement": traitement, "animation": animation, "entree": entree, "sortie": sortie, "reserves": reserves})
+
 # ---------------------------------------------------------------- outils de calage
 class Cue:
     def __init__(self, scene_id, variant):
@@ -181,7 +255,7 @@ def s01(c, v, D):
     p = "s01"
     html = f"""
   <div class="abs {p}-plate" style="left:780px;top:170px;width:360px;height:330px;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(37,40,43,0.10);display:flex;align-items:center;justify-content:center">
-    <img src="{IMG}/logo-fondation-ove.jpg" alt="Fondation OVE" style="width:276px;height:254px;display:block" />
+    {logo_svg("fondation-ove", p + "-logo", 276) if DYN else f'<img src="{IMG}/logo-fondation-ove.jpg" alt="Fondation OVE" style="width:276px;height:254px;display:block" />'}
   </div>
   <div class="abs h1 {p}-title" style="left:192px;width:1536px;top:560px;text-align:center">
     <span class="{p}-w" style="display:inline-block">Prévenir</span> <span class="{p}-w" style="display:inline-block">les</span> <span class="{p}-w" style="display:inline-block">atteintes</span> <span class="{p}-w" style="display:inline-block">à</span> <span class="{p}-w" style="display:inline-block">la</span> <span class="{p}-w" style="display:inline-block">probité</span>
@@ -195,7 +269,7 @@ def s01(c, v, D):
   </div>"""
     js = f"""
   pop(".{p}-plate", 1.25, {{ s: 0.92, d: 0.9 }});
-  tl.fromTo(".{p}-plate img", {{ scale: 1 }}, {{ scale: 1.03, duration: {D - 1.3:.2f}, ease: "none" }}, 1.3);
+  tl.fromTo(".{p}-plate {"svg" if DYN else "img"}", {{ scale: 1 }}, {{ scale: 1.03, duration: {D - 1.3:.2f}, ease: "none" }}, 1.3);
   rise(".{p}-w", {c.at("a")}, {{ st: 0.09, y: 34 }});
   tl.fromTo(".{p}-line", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.8, ease: "power2.out" }}, {c.at("b")});
   rise(".{p}-sub", {c.at("b", "confiance", -0.3)});
@@ -203,6 +277,14 @@ def s01(c, v, D):
   rise(".{p}-chips .chip:nth-child(2)", {c.at("c")});
   rise(".{p}-chips .chip:nth-child(3)", {c.at("c", "intérêt stratégique")});
 """
+    if DYN:
+        lj, _ = logo_js("fondation-ove", f".{p}-logo", 1.4, "build")
+        js += "\n  " + "\n  ".join(lj)
+        log_ins("01-ouverture", 1.25, D, LOGO_FILES["fondation-ove"], "Fondation OVE",
+                "Signature d’ouverture : la voix nomme la Fondation OVE (« Pour la Fondation OVE… »).",
+                "Vectorisation par couche de couleur (couleurs mesurées sur le fichier), fond blanc retiré, proportions conservées ; posé sur plaque blanche.",
+                "Construction : O en rotation, V tracé de haut en bas, trois barres du E, soleil puis rayons, lettres FONDATION une à une ; légère poussée continue.",
+                "Plaque blanche qui se pose (échelle 0,92 → 1) après le balayage des trois bandes.", "Volet des trois bandes de la charte.")
     return html, js
 
 def s02(c, v, D):
@@ -230,7 +312,54 @@ def s02(c, v, D):
     <span class="chip {p}-g">{icon("people")}Bureau</span><span class="{p}-g" style="width:40px;height:3px;background:#B4C908;display:block"></span>
     <span class="chip {p}-g">{icon("person")}Direction générale</span></div>""")
     js.append(f'rise(".{p}-g", {c.at("d", "conseil")}, {{ st: 0.35, y: 18 }});')
+    if DYN:
+        html, js = s02_hero(c, D, html, js)
     return "\n  ".join(html), "\n  ".join(js)
+
+def s02_hero(c, D, html, js):
+    """Ouverture de scène sur la photographie fournie : panneau multicouche (ciel de charte / photo / façade détourée)."""
+    p = "s02"
+    tA, tB = c.at("a"), c.at("b")
+    tOut = tB - 0.55
+    bands = ('<div class="abs {p}-sk" style="left:-120px;top:-40px;width:1100px;height:420px;transform:rotate(-14deg)">'
+             '<i style="position:absolute;left:0;top:0;width:1100px;height:120px;border-radius:60px;background:#B4C908"></i>'
+             '<i style="position:absolute;left:90px;top:140px;width:900px;height:120px;border-radius:60px;background:#DCE58A"></i>'
+             '<i style="position:absolute;left:180px;top:280px;width:700px;height:120px;border-radius:60px;background:#C9C9C9"></i></div>').format(p=p)
+    hero = f"""<div class="abs {p}-hero" style="left:0;top:0;width:1920px;height:1080px">
+    <div class="abs h1 {p}-ht" style="left:192px;top:270px;width:620px">Une fondation reconnue d’utilité publique</div>
+    <div class="abs {p}-hl" style="left:192px;top:628px;width:240px;height:6px;border-radius:3px;background:#B4C908;transform-origin:left center"></div>
+    <div class="abs {p}-ph" style="left:860px;top:170px;width:868px;height:624px;border-radius:24px;overflow:hidden;background:#F6F6F2;box-shadow:0 24px 60px rgba(37,40,43,0.16);clip-path:inset(0% 100% 0% 0% round 24px)">
+      {bands}
+      <img class="abs {p}-full" src="{IMG}/photos/batiment.jpg" alt="" style="left:0;top:0;width:868px;height:624px" />
+      <img class="abs {p}-fac" src="{IMG}/photos/batiment-detoure.png" alt="" style="left:0;top:0;width:868px;height:624px" />
+    </div></div>"""
+    html = html + [hero]
+    # le titre courant n'apparaît qu'à la sortie du panneau
+    js = [x.replace(f'rise(".{p}-title", {c.at("a")});', f'rise(".{p}-title", {tB - 0.2:.2f});') for x in js]
+    js += [f'title(".{p}-ht", {tA:.2f});',
+           f'tl.fromTo(".{p}-hl", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.9, ease: "power2.out" }}, {tA + 0.5:.2f});',
+           # entrée : volet de gauche à droite, l'image contre-glisse (effet de profondeur)
+           f'tl.fromTo(".{p}-ph", {{ clipPath: "inset(0% 100% 0% 0% round 24px)" }}, {{ clipPath: "inset(0% 0% 0% 0% round 24px)", duration: 1.0, ease: "power3.inOut" }}, {tA - 0.3:.2f});',
+           f'tl.fromTo(".{p}-full, .{p}-fac", {{ x: 70, scale: 1.08 }}, {{ x: 0, scale: 1.08, duration: 1.0, ease: "power3.out" }}, {tA - 0.3:.2f});',
+           # le ciel réel s'efface : les trois bandes de la charte prennent sa place derrière la façade
+           f'tl.fromTo(".{p}-full", {{ opacity: 1 }}, {{ opacity: 0, duration: 0.8, ease: "power1.inOut" }}, {tA + 1.3:.2f});',
+           f'tl.fromTo(".{p}-sk i", {{ xPercent: -110 }}, {{ xPercent: 0, duration: 0.9, ease: "power3.out", stagger: 0.12 }}, {tA + 1.3:.2f});',
+           # parallaxe : façade (plan proche) et bandes (plan lointain) se déplacent à des vitesses opposées
+           f'tl.fromTo(".{p}-fac", {{ x: 0, scale: 1.08 }}, {{ x: -36, scale: 1.12, duration: {tOut - tA - 0.7:.2f}, ease: "sine.inOut", immediateRender: false }}, {tA + 0.7:.2f});',
+           f'tl.fromTo(".{p}-sk", {{ x: 0 }}, {{ x: 30, duration: {tOut - tA - 1.3:.2f}, ease: "sine.inOut" }}, {tA + 1.3:.2f});',
+           # sortie : le panneau se replie vers la droite, la façade file plus vite ; le titre remonte
+           f'tl.to(".{p}-ph", {{ clipPath: "inset(0% 0% 0% 100% round 24px)", duration: 0.7, ease: "power3.inOut" }}, {tOut:.2f});',
+           f'tl.to(".{p}-fac", {{ x: -150, duration: 0.7, ease: "power3.in" }}, {tOut:.2f});',
+           f'tl.to(".{p}-ht .wi", {{ yPercent: -115, opacity: 0, duration: 0.5, ease: "power3.in", stagger: 0.03 }}, {tOut:.2f});',
+           f'tl.to(".{p}-hl", {{ scaleX: 0, transformOrigin: "right center", duration: 0.4, ease: "power2.in" }}, {tOut:.2f});',
+           f'tl.set(".{p}-hero", {{ opacity: 0 }}, {tOut + 0.75:.2f});']
+    log_ins("02-fondation", tA - 0.3, tOut + 0.7, "PJ02-photo-batiment-non-identifie.webp", "Non identifiée (aucune attribution)",
+            "Donner un lieu réel, à hauteur humaine, à la phrase « La Fondation OVE est une fondation reconnue d’utilité publique ».",
+            "Agrandissement Lanczos ×2 ; détourage du ciel (zone claire désaturée reliée au bord supérieur, contour adouci) ; aucune correction colorimétrique.",
+            "Panneau multicouche : le ciel réel s’efface, les trois bandes de la charte glissent derrière la façade ; parallaxe façade/bandes en sens opposés.",
+            "Volet gauche → droite (clip-path) avec contre-glissement de l’image.", "Repli vers la droite, la façade file plus vite que le cadre.",
+            "Lieu non identifié par la pièce jointe : aucune légende, aucune mention d’adresse ni d’établissement. Aucun visage visible.")
+    return html, js
 
 def s03(c, v, D):
     p = "s03"
@@ -256,17 +385,50 @@ def s03(c, v, D):
             f"""<div class="abs {p}-core" style="left:{cx-100}px;top:{cy-100}px;width:200px;height:200px;border-radius:50%;background:#B4C908;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 14px 40px rgba(180,201,8,0.35)">
     <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:28px;line-height:1.1;color:#25282B">Fondation</div><div class="{p}-ove" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;line-height:1.05;color:#25282B">OVE</div></div>"""]
     js = [f'pop(".{p}-core", 0.55, {{ s: 0.8, d: 0.8 }});']
+    LG = {"imove": "imove", "ple": "plenior", "car": "ove-caraibes", "ami": "amicial", "res": "ressourcial"}
+    use_logo = lambda k: DYN and k in LG and has_logo(LG[k])
+    if DYN and has_logo("fondation-ove"):  # cœur du réseau : logo réel sur disque blanc cerclé de vert
+        html[-1] = f"""<div class="abs {p}-core" style="left:{cx-120}px;top:{cy-120}px;width:240px;height:240px;border-radius:50%;background:#fff;border:6px solid #B4C908;box-sizing:border-box;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(180,201,8,0.30)">{logo_svg("fondation-ove", p + "-lgcore", 150)}</div>"""
+        html[-2] = html[-2].replace(f"left:{cx-140}px;top:{cy-140}px;width:280px;height:280px", f"left:{cx-146}px;top:{cy-146}px;width:292px;height:292px")
+        lj, _ = logo_js("fondation-ove", f".{p}-lgcore", 0.8, "build")
+        js += lj
+        log_ins("03-ecosysteme", 0.55, D, LOGO_FILES["fondation-ove"], "Fondation OVE",
+                "Centre de la cartographie : « Autour d’elle s’est constitué un écosystème structuré ».",
+                "Vectorisation par couche de couleur ; disque blanc cerclé de vert (charte).",
+                "Construction lettre à lettre, puis respiration lente du disque pendant toute la scène.",
+                "Disque qui se pose (échelle 0,8 → 1).", "Volet des trois bandes.")
     if DYN:
-        js += [f'spell(".{p}-ove", 0.8, 0.12);',
+        js += [] if has_logo("fondation-ove") else [f'spell(".{p}-ove", 0.8, 0.12);']
+        js += [
                f'tl.fromTo(".{p}-core", {{ scale: 1 }}, {{ scale: 1.04, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: {max(1, int((D - 3) / 2.2) - 1)}, immediateRender: false }}, 1.6);']
+    ENT = {"imove": "Fonds de dotation IMOVE", "ple": "OVE Plenior", "car": "OVE Caraïbes", "ami": "AMICIAL", "res": "Ressourcial"}
     for i, (k, x, y, name, sub, t) in enumerate(nodes):
+        if use_logo(k):
+            d = logo_data(LG[k]); ar = d["width"] / d["height"]
+            lw = min(184, 92 * ar)
+            html.append(f"""<div class="abs {p}-node {p}-{k}" style="left:{x-108}px;top:{y-60}px;width:216px;height:120px;border-radius:22px;background:#fff;border:2px solid #E2E4DF;box-sizing:border-box;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,40,43,0.10)">{logo_svg(LG[k], f"{p}-lg{k}", round(lw, 1))}</div>
+  <div class="abs {p}-lab {p}-l{k}" style="left:{x-150}px;top:{y+68}px;width:300px;text-align:center;background:rgba(246,246,242,0.94);border-radius:10px"><div class="spell" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">{e(name)}</div><div style="font-size:20px;line-height:1.25;color:#6B6F72">{e(sub)}</div></div>
+  <div class="ring {p}-r{k}" style="left:{x-108}px;top:{y-60}px;width:216px;height:120px;border-radius:22px;box-sizing:border-box"></div>""")
+            js.append(f'draw(".{p}-ln:nth-of-type({i+1})", {t - 0.5:.2f}, 0.6);')
+            js.append(f'pop(".{p}-{k}", {t - 0.1:.2f}, {{ s: 0.9 }});')
+            lj, _ = logo_js(LG[k], f".{p}-lg{k}", t + 0.05)
+            js += lj
+            js.append(f'rise(".{p}-l{k}", {t + 0.1:.2f}, {{ y: 12 }}); spell(".{p}-l{k} .spell", {t + 0.05:.2f}, 0.05); ring(".{p}-r{k}", {t + 0.3:.2f});')
+            log_ins("03-ecosysteme", t - 0.1, D, LOGO_FILES[LG[k]], ENT[k],
+                    f"La voix nomme l’entité ({name}) : son logo apparaît à cet instant précis sur la cartographie.",
+                    "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche.",
+                    {"imove": "Lettres I-M-O-V posées une à une, barres du E, soleil et rayons, signature « Fonds de dotation ».",
+                     "plenior": "Mot écrit lettre à lettre, point du i, puis la feuille de chêne pousse sur le « o » (élastique).",
+                     "ove-caraibes": "Disque au colibri entrant en vol (rotation), V déposé, E glissé depuis la droite, CARAÏBES puis « Différents ensemble »."}.get(LG[k], "Apparition du logo."),
+                    "Lien tracé depuis le centre, puis plaque qui se pose ; onde verte autour de la plaque.", "Volet des trois bandes.")
+            continue
         if k == "sci":
             sq = "".join(f'<i style="display:block;width:13px;height:13px;border-radius:3px;background:{"#878787" if j % 3 else "#B4C908"}"></i>' for j in range(35))
             inner = f'<div style="display:grid;grid-template-columns:repeat(7,13px);gap:5px">{sq}</div>'
         else:
             inner = icon({"imove": "coins", "ami": "handshake", "ple": "people", "car": "heart", "res": "compta"}[k], 46)
         html.append(f"""<div class="abs {p}-node {p}-{k}" style="left:{x-62}px;top:{y-62}px;width:124px;height:124px;border-radius:50%;background:#fff;border:3px solid #B4C908;display:flex;align-items:center;justify-content:center;color:#5C6600;box-shadow:0 10px 26px rgba(37,40,43,0.08)">{inner}</div>
-  <div class="abs {p}-lab {p}-l{k}" style="left:{x-150}px;top:{y+70}px;width:300px;text-align:center"><div class="spell" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">{e(name)}</div><div style="font-size:{20 if DYN else 21}px;line-height:1.25;color:#6B6F72">{e(sub)}</div></div>""")
+  <div class="abs {p}-lab {p}-l{k}" style="left:{x-150}px;top:{y+70}px;width:300px;text-align:center{';background:rgba(246,246,242,0.94);border-radius:10px' if DYN else ''}"><div class="spell" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:26px">{e(name)}</div><div style="font-size:{20 if DYN else 21}px;line-height:1.25;color:#6B6F72">{e(sub)}</div></div>""")
         js.append(f'draw(".{p}-ln:nth-of-type({i+1})", {t - 0.5:.2f}, 0.6);')
         js.append(f'pop(".{p}-{k}", {t:.2f});')
         js.append(f'rise(".{p}-l{k}", {t + 0.1:.2f}, {{ y: 12 }});')
@@ -512,7 +674,7 @@ def s10(c, v, D):
     # écran final, maintenu jusqu'à la fin
     tE = c.at("e", None, -0.3)
     html.append(f"""<div class="abs {p}-end" style="left:0;top:0;width:1920px;height:1080px;background:#FFFFFF">
-    <div class="abs {p}-plate" style="left:822px;top:150px;width:276px;height:254px"><img src="{IMG}/logo-fondation-ove.jpg" alt="Fondation OVE" style="width:276px;height:254px;display:block" /></div>
+    <div class="abs {p}-plate" style="left:822px;top:150px;width:276px;height:254px">{logo_svg("fondation-ove", p + "-logo", 276) if DYN else f'<img src="{IMG}/logo-fondation-ove.jpg" alt="Fondation OVE" style="width:276px;height:254px;display:block" />'}</div>
     <div class="abs h2 {p}-m" style="left:260px;top:470px;width:1400px;text-align:center">Protéger la mission, les personnes, les décideurs et la confiance</div>
     <div class="abs {p}-s" style="left:192px;top:620px;width:1536px;text-align:center;font-family:Montserrat,sans-serif;font-weight:600;font-size:36px;color:#5C6600">Une trajectoire prudente mais résolue</div>
     <div class="abs {p}-b" style="left:810px;top:700px;width:300px;display:flex;flex-direction:column;gap:8px;align-items:center"><i style="display:block;width:300px;height:10px;border-radius:5px;background:#B4C908"></i><i style="display:block;width:220px;height:10px;border-radius:5px;background:#DCE58A"></i><i style="display:block;width:140px;height:10px;border-radius:5px;background:#878787"></i></div>
@@ -520,12 +682,20 @@ def s10(c, v, D):
   </div>""")
     js += [f'tl.fromTo(".{p}-end", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.9, ease: "power1.inOut" }}, {tE:.2f});',
            f'tl.to(".{p}-list", {{ opacity: 0, duration: 0.6 }}, {tE + 0.3:.2f});',
-           f'pop(".{p}-plate", {tE + 0.4:.2f}, {{ s: 0.94, d: 0.9 }});',
+           (f'tl.set(".{p}-plate", {{ opacity: 1 }}, {tE + 0.4:.2f});' if DYN else f'pop(".{p}-plate", {tE + 0.4:.2f}, {{ s: 0.94, d: 0.9 }});'),
            f'rise(".{p}-m", {c.at("e", "Protéger"):.2f}, {{ y: 20, d: 0.9 }});',
            f'rise(".{p}-s", {c.at("e", "prudente", -0.2):.2f}, {{ y: 16 }});',
            f'tl.fromTo(".{p}-b i", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.7, ease: "power3.out", stagger: 0.12 }}, {c.at("e", "valider"):.2f});',
            f'fade(".{p}-f", {c.end("e") + 0.3:.2f}, {{ d: 1 }});',
-           f'tl.fromTo(".{p}-plate img", {{ scale: 1 }}, {{ scale: 1.025, duration: {D - tE - 1:.2f}, ease: "none", immediateRender: false }}, {tE + 1:.2f});']
+           f'tl.fromTo(".{p}-plate {"svg" if DYN else "img"}", {{ scale: 1 }}, {{ scale: 1.025, duration: {D - tE - 1:.2f}, ease: "none", immediateRender: false }}, {tE + 1:.2f});']
+    if DYN:
+        lj, _ = logo_js("fondation-ove", f".{p}-logo", tE + 0.5, "resolve")
+        js += lj
+        log_ins("10-decisions", tE + 0.4, D, LOGO_FILES["fondation-ove"], "Fondation OVE",
+                "Écran final : signature de la Direction juridique de la Fondation OVE.",
+                "Même vectorisation que l’ouverture ; aucune recoloration.",
+                "Résolution : les trois barres du E arrivent comme les trois bandes de la charte, O et V glissent, soleil et rayons, puis FONDATION ; respiration lente jusqu’au noir.",
+                "Fondu enchaîné depuis la liste des décisions (0,9 s).", "Fin du film (aucune sortie).")
     return "\n  ".join(html), "\n  ".join(js)
 
 BUILDERS = {"01-ouverture": s01, "02-fondation": s02, "03-ecosysteme": s03, "04-cadre": s04, "05-maintenant": s05,
@@ -658,4 +828,6 @@ for v, proj in VARIANTS.items():
             scene_file(s["id"], s["duration"], html, js, i == 0, i == len(TL["scenes"]) - 1, s["start"], TL["total"]))
     open(os.path.join(proj, "compositions", v, "sous-titres.html"), "w").write(captions_file(v))
     open(os.path.join(proj, "index.html"), "w").write(index_file(v))
+    if v == "sobre":
+        json.dump(sorted(INS, key=lambda x: x["in"]), open(os.path.join(ROOT, "production", "insertions-sobre.json"), "w"), ensure_ascii=False, indent=1)
 print("ok", TL["total"])

@@ -1,0 +1,93 @@
+[
+ {
+  "scene": "01-ouverture",
+  "in": 1.25,
+  "out": 18.11,
+  "fichier": "PJ01-logo-fondation-ove.jpg",
+  "entite": "Fondation OVE",
+  "raison": "Signature d’ouverture : la voix nomme la Fondation OVE (« Pour la Fondation OVE… »).",
+  "traitement": "Vectorisation par couche de couleur (couleurs mesurées sur le fichier), fond blanc retiré, proportions conservées ; posé sur plaque blanche.",
+  "animation": "Construction : O en rotation, V tracé de haut en bas, trois barres du E, soleil puis rayons, lettres FONDATION une à une ; légère poussée continue.",
+  "entree": "Plaque blanche qui se pose (échelle 0,92 → 1) après le balayage des trois bandes.",
+  "sortie": "Volet des trois bandes de la charte.",
+  "reserves": ""
+ },
+ {
+  "scene": "02-fondation",
+  "in": 18.51,
+  "out": 23.3,
+  "fichier": "PJ02-photo-batiment-non-identifie.webp",
+  "entite": "Non identifiée (aucune attribution)",
+  "raison": "Donner un lieu réel, à hauteur humaine, à la phrase « La Fondation OVE est une fondation reconnue d’utilité publique ».",
+  "traitement": "Agrandissement Lanczos ×2 ; détourage du ciel (zone claire désaturée reliée au bord supérieur, contour adouci) ; aucune correction colorimétrique.",
+  "animation": "Panneau multicouche : le ciel réel s’efface, les trois bandes de la charte glissent derrière la façade ; parallaxe façade/bandes en sens opposés.",
+  "entree": "Volet gauche → droite (clip-path) avec contre-glissement de l’image.",
+  "sortie": "Repli vers la droite, la façade file plus vite que le cadre.",
+  "reserves": "Lieu non identifié par la pièce jointe : aucune légende, aucune mention d’adresse ni d’établissement. Aucun visage visible."
+ },
+ {
+  "scene": "03-ecosysteme",
+  "in": 41.93,
+  "out": 91.05,
+  "fichier": "PJ01-logo-fondation-ove.jpg",
+  "entite": "Fondation OVE",
+  "raison": "Centre de la cartographie : « Autour d’elle s’est constitué un écosystème structuré ».",
+  "traitement": "Vectorisation par couche de couleur ; disque blanc cerclé de vert (charte).",
+  "animation": "Construction lettre à lettre, puis respiration lente du disque pendant toute la scène.",
+  "entree": "Disque qui se pose (échelle 0,8 → 1).",
+  "sortie": "Volet des trois bandes.",
+  "reserves": ""
+ },
+ {
+  "scene": "03-ecosysteme",
+  "in": 46.57,
+  "out": 91.05,
+  "fichier": "PJ04-logo-imove-fonds-de-dotation.webp",
+  "entite": "Fonds de dotation IMOVE",
+  "raison": "La voix nomme l’entité (IMOVE) : son logo apparaît à cet instant précis sur la cartographie.",
+  "traitement": "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche.",
+  "animation": "Lettres I-M-O-V posées une à une, barres du E, soleil et rayons, signature « Fonds de dotation ».",
+  "entree": "Lien tracé depuis le centre, puis plaque qui se pose ; onde verte autour de la plaque.",
+  "sortie": "Volet des trois bandes.",
+  "reserves": ""
+ },
+ {
+  "scene": "03-ecosysteme",
+  "in": 59.08,
+  "out": 91.05,
+  "fichier": "PJ06-logo-plenior.webp",
+  "entite": "OVE Plenior",
+  "raison": "La voix nomme l’entité (OVE Plenior) : son logo apparaît à cet instant précis sur la cartographie.",
+  "traitement": "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche.",
+  "animation": "Mot écrit lettre à lettre, point du i, puis la feuille de chêne pousse sur le « o » (élastique).",
+  "entree": "Lien tracé depuis le centre, puis plaque qui se pose ; onde verte autour de la plaque.",
+  "sortie": "Volet des trois bandes.",
+  "reserves": ""
+ },
+ {
+  "scene": "03-ecosysteme",
+  "in": 62.86,
+  "out": 91.05,
+  "fichier": "PJ05-logo-ove-caraibes.webp",
+  "entite": "OVE Caraïbes",
+  "raison": "La voix nomme l’entité (OVE Caraïbes) : son logo apparaît à cet instant précis sur la cartographie.",
+  "traitement": "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche.",
+  "animation": "Disque au colibri entrant en vol (rotation), V déposé, E glissé depuis la droite, CARAÏBES puis « Différents ensemble ».",
+  "entree": "Lien tracé depuis le centre, puis plaque qui se pose ; onde verte autour de la plaque.",
+  "sortie": "Volet des trois bandes.",
+  "reserves": ""
+ },
+ {
+  "scene": "10-decisions",
+  "in": 288.45,
+  "out": 306.98,
+  "fichier": "PJ01-logo-fondation-ove.jpg",
+  "entite": "Fondation OVE",
+  "raison": "Écran final : signature de la Direction juridique de la Fondation OVE.",
+  "traitement": "Même vectorisation que l’ouverture ; aucune recoloration.",
+  "animation": "Résolution : les trois barres du E arrivent comme les trois bandes de la charte, O et V glissent, soleil et rayons, puis FONDATION ; respiration lente jusqu’au noir.",
+  "entree": "Fondu enchaîné depuis la liste des décisions (0,9 s).",
+  "sortie": "Fin du film (aucune sortie).",
+  "reserves": ""
+ }
+]
