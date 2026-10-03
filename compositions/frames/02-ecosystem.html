@@ -1,0 +1,35 @@
+<template data-composition-id="02-ecosystem">
+  <style>
+    #root {
+      width: 100%; height: 100%;
+      background: var(--brand-navy, #27963C);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      container-type: inline-size;
+    }
+    .f2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw; text-align: left; }
+    .f2-num { font-size: 6cqw; font-weight: bold; color: var(--brand-accent, #D4AF37); }
+    .f2-lbl { font-size: 2.5cqw; }
+  </style>
+  <div id="root" data-composition-id="02-ecosystem" data-width="1920" data-height="1080" class="clip" data-duration="45">
+    <div class="f2-grid">
+      <div class="stat"><div class="f2-num" data-val="180">0</div><div class="f2-lbl">BUDGET ANNUEL (M€)</div></div>
+      <div class="stat"><div class="f2-num" data-val="2500">0</div><div class="f2-lbl">SALARIÉS</div></div>
+      <div class="stat"><div class="f2-num" data-val="15000">0</div><div class="f2-lbl">ACCOMPAGNÉS</div></div>
+      <div class="stat"><div class="f2-num" data-val="35">0</div><div class="f2-lbl">SCI & PARTENAIRES</div></div>
+    </div>
+  </div>
+  <script>
+  window.__timelines = window.__timelines || {};
+  const tl_02ecosystem = window.gsap ? gsap.timeline({ paused: true }) : { fromTo: ()=>{}, to: ()=>{} };
+  const root_02ecosystem = document.getElementById("root") || document.body;
+  const stats = root_02ecosystem.querySelectorAll('.stat');
+  tl_02ecosystem.fromTo(stats, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.5 }, 0.5);
+  const nums = root_02ecosystem.querySelectorAll('.f2-num');
+  nums.forEach((num, i) => {
+    const val = parseInt(num.getAttribute('data-val'), 10);
+    tl_02ecosystem.fromTo(num, { innerHTML: 0 }, { innerHTML: val, duration: 2, snap: { innerHTML: 1 }, ease: 'power1.out' }, 1 + i * 0.5);
+  });
+  window.__timelines["02-ecosystem"] = tl_02ecosystem;
+</script>
+</template>

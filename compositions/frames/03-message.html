@@ -1,0 +1,35 @@
+<template data-composition-id="03-message">
+  <style>
+    #root {
+      width: 100%; height: 100%;
+      background: var(--brand-navy, #27963C);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      container-type: inline-size;
+      padding: 10cqw;
+      box-sizing: border-box;
+    }
+    .f3-text { font-size: 4cqw; line-height: 1.3; font-weight: bold; text-align: left; }
+    .f3-highlight { color: var(--brand-accent, #D4AF37); }
+    .f3-word { display: inline-block; opacity: 0; transform: translateY(10px); }
+  </style>
+  <div id="root" data-composition-id="03-message" data-width="1920" data-height="1080" class="clip" data-duration="40">
+    <div class="f3-text">
+      <span class="f3-word">Il</span> <span class="f3-word">s'agit</span> <span class="f3-word">de</span> 
+      <span class="f3-word f3-highlight">protéger</span> <span class="f3-word f3-highlight">sa</span> <span class="f3-word f3-highlight">mission</span> <span class="f3-word f3-highlight">d'intérêt</span> <span class="f3-word f3-highlight">général</span>, 
+      <span class="f3-word">les</span> <span class="f3-word">personnes</span> <span class="f3-word">accompagnées</span>, 
+      <span class="f3-word">ses</span> <span class="f3-word">décideurs</span>, 
+      <span class="f3-word">ses</span> <span class="f3-word">collaborateurs</span>, 
+      <span class="f3-word">ses</span> <span class="f3-word">ressources</span> <span class="f3-word">et</span> 
+      <span class="f3-word">la</span> <span class="f3-word f3-highlight">confiance</span> <span class="f3-word f3-highlight">de</span> <span class="f3-word f3-highlight">ses</span> <span class="f3-word f3-highlight">partenaires</span>.
+    </div>
+  </div>
+  <script>
+  window.__timelines = window.__timelines || {};
+  const tl_03message = window.gsap ? gsap.timeline({ paused: true }) : { fromTo: ()=>{}, to: ()=>{} };
+  const root_03message = document.getElementById("root") || document.body;
+  const words = root_03message.querySelectorAll('.f3-word');
+  tl_03message.to(words, { opacity: 1, y: 0, duration: 0.5, stagger: 0.2 }, 1);
+  window.__timelines["03-message"] = tl_03message;
+</script>
+</template>

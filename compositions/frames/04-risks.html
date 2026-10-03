@@ -1,0 +1,32 @@
+<template data-composition-id="04-risks">
+  <style>
+    #root {
+      width: 100%; height: 100%;
+      background: var(--brand-navy, #27963C);
+      color: white;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      container-type: inline-size;
+    }
+    .f4-shield { width: 15cqw; height: 15cqw; background: var(--brand-accent, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2cqw; color: var(--brand-navy); font-weight: bold;}
+    .f4-nodes { display: flex; justify-content: space-between; margin-top: 5cqw; font-size: 2.5cqw; width: 60%; gap: 2cqw; }
+    .f4-node { background: rgba(255,255,255,0.1); padding: 1cqw 2cqw; border-radius: 4px; text-align: center; }
+  </style>
+  <div id="root" data-composition-id="04-risks" data-width="1920" data-height="1080" class="clip" data-duration="50">
+    <div class="f4-shield">BOUCLIER</div>
+    <div class="f4-nodes">
+      <div class="f4-node">FOURNISSEURS</div>
+      <div class="f4-node">MÉCÉNAT</div>
+      <div class="f4-node">PARTENARIATS</div>
+    </div>
+  </div>
+  <script>
+  window.__timelines = window.__timelines || {};
+  const tl_04risks = window.gsap ? gsap.timeline({ paused: true }) : { fromTo: ()=>{}, to: ()=>{} };
+  const root_04risks = document.getElementById("root") || document.body;
+  tl_04risks.fromTo(root_04risks.querySelector('.f4-shield'), { scale: 0 }, { scale: 1, duration: 1, ease: 'back.out(1.7)' }, 0.5);
+  tl_04risks.to(root_04risks.querySelector('.f4-shield'), { scale: 1.05, duration: 2, repeat: 10, yoyo: true, ease: 'sine.inOut' }, 1.5);
+  const nodes = root_04risks.querySelectorAll('.f4-node');
+  tl_04risks.fromTo(nodes, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.3 }, 1);
+  window.__timelines["04-risks"] = tl_04risks;
+</script>
+</template>

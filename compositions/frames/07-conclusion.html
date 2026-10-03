@@ -1,0 +1,34 @@
+<template data-composition-id="07-conclusion">
+  <style>
+    #root {
+      width: 100%; height: 100%;
+      background: var(--brand-navy, #27963C);
+      color: white;
+      display: flex;
+      container-type: inline-size;
+    }
+    .f7-left { flex: 1; padding: 10cqw; display: flex; align-items: center; font-size: 5cqw; font-weight: bold; border-right: 1px solid rgba(255,255,255,0.2); line-height: 1.2; }
+    .f7-right { flex: 1; padding: 10cqw; display: flex; flex-direction: column; gap: 4cqw; justify-content: center; }
+    .f7-check { font-size: 3.5cqw; display: flex; align-items: center; gap: 2cqw; font-weight: bold;}
+    .f7-box { width: 4cqw; height: 4cqw; background: rgba(255,255,255,0.1); border: 2px solid var(--brand-accent, #D4AF37); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+    .f7-mark { color: var(--brand-accent, #D4AF37); font-size: 3cqw; opacity: 0; transform: scale(0); }
+  </style>
+  <div id="root" class="clip" data-composition-id="07-conclusion" data-width="1920" data-height="1080" data-duration="40">
+    <div class="f7-left">
+      Protéger l'utilité publique.
+    </div>
+    <div class="f7-right">
+      <div class="f7-check"><div class="f7-box"><div class="f7-mark">✓</div></div> Reconnaître l'intérêt</div>
+      <div class="f7-check"><div class="f7-box"><div class="f7-mark">✓</div></div> Autoriser cartographie</div>
+      <div class="f7-check"><div class="f7-box"><div class="f7-mark">✓</div></div> Piloter (Dir. Juridique)</div>
+    </div>
+  </div>
+  <script type="module">
+    export default function(timeline, root) {
+      const gsap = window.gsap;
+      if (!gsap) return;
+      const marks = root.querySelectorAll('.f7-mark');
+      timeline.to(marks, { opacity: 1, scale: 1, duration: 0.5, stagger: 1, ease: 'back.out(2)' }, 1);
+    }
+  </script>
+</template>

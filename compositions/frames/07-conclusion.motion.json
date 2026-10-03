@@ -1,0 +1,7 @@
+{
+  "scene": "07-conclusion",
+  "duration_s": 40.0,
+  "rules": ["staggered-scale-in"],
+  "exit": { "vector": "none", "still_moving": false },
+  "entry": { "vector": "none", "from_rest": true }
+}
