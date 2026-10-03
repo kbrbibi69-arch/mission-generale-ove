@@ -325,7 +325,7 @@ def s04(c, v, D):
     js = [f'rise(".{p}-l", {c.at("a"):.2f}, {{ y: 40 }});',
           f'pop(".{p}-stamp", {c.at("b", "assujettie"):.2f}, {{ s: 0.9 }});',
           f'rise(".{p}-r", {c.at("c"):.2f}, {{ y: 40 }});',
-          f'pop(".{p}-afa", {c.at("c", "l’AFA"):.2f}, {{ s: 0.6 }});',
+          f'pop(".{p}-afa", {c.at("c", "l’AFA" if "l’AFA" in c.lines["c"]["text"] else "anticorruption"):.2f}, {{ s: 0.6 }});',
           f'rise(".{p}-bt", {c.at("d"):.2f});']
     items = [("Corruption", "corruption"), ("Trafic d’influence", "trafic"), ("Prise illégale d’intérêts", "prise illégale"), ("Détournement de fonds publics", "détournement"), ("Favoritisme", "favoritisme")]
     html.append(f'<div class="abs {p}-row" style="left:192px;top:690px;width:1536px;display:flex;flex-wrap:wrap;gap:16px">' +

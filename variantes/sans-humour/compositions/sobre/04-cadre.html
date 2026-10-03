@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="04-cadre" data-width="1920" data-height="1080" data-duration="36.7">
-  <div id="s04-scene" class="clip" data-start="0" data-duration="36.7" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="04-cadre" data-width="1920" data-height="1080" data-duration="35.92">
+  <div id="s04-scene" class="clip" data-start="0" data-duration="35.92" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s04-dots"></div><div class="amb"><i class="s04-a1"></i><i class="s04-a2"></i><i class="s04-a3"></i></div>
   <div class="s04-content" style="position:absolute;inset:0">
@@ -99,25 +99,25 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s04-dots", { y: 0 }, { y: -56, duration: 36.7, ease: "none" }, 0);
-  tl.fromTo(".s04-a1", { x: 60 }, { x: -150, duration: 36.7, ease: "none" }, 0);
-  tl.fromTo(".s04-a2", { x: 30 }, { x: -100, duration: 36.7, ease: "none" }, 0);
-  tl.fromTo(".s04-a3", { x: 0 }, { x: -60, duration: 36.7, ease: "none" }, 0);
-  tl.fromTo(".s04-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 36.7, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s04-pg", { scaleX: 0.2987 }, { scaleX: 0.4182, duration: 36.7, ease: "none" }, 0);
+  tl.fromTo(".s04-dots", { y: 0 }, { y: -56, duration: 35.92, ease: "none" }, 0);
+  tl.fromTo(".s04-a1", { x: 60 }, { x: -150, duration: 35.92, ease: "none" }, 0);
+  tl.fromTo(".s04-a2", { x: 30 }, { x: -100, duration: 35.92, ease: "none" }, 0);
+  tl.fromTo(".s04-a3", { x: 0 }, { x: -60, duration: 35.92, ease: "none" }, 0);
+  tl.fromTo(".s04-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 35.92, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s04-pg", { scaleX: 0.2966 }, { scaleX: 0.4136, duration: 35.92, ease: "none" }, 0);
   rise(".s04-l", 0.70, { y: 40 });
   pop(".s04-stamp", 13.65, { s: 0.9 });
   rise(".s04-r", 16.43, { y: 40 });
-  pop(".s04-afa", 20.82, { s: 0.6 });
-  rise(".s04-bt", 26.81);
-  rise(".s04-i0", 29.13, { y: 16 });
-  rise(".s04-i1", 30.00, { y: 16 });
-  rise(".s04-i2", 31.33, { y: 16 });
-  rise(".s04-i3", 33.07, { y: 16 });
-  rise(".s04-i4", 35.15, { y: 16 });
+  pop(".s04-afa", 19.67, { s: 0.6 });
+  rise(".s04-bt", 26.04);
+  rise(".s04-i0", 28.35, { y: 16 });
+  rise(".s04-i1", 29.22, { y: 16 });
+  rise(".s04-i2", 30.55, { y: 16 });
+  rise(".s04-i3", 32.29, { y: 16 });
+  rise(".s04-i4", 34.38, { y: 16 });
   tl.fromTo(".s04-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s04-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 35.90);
-  tl.set(".s04-content", { opacity: 0 }, 36.56);
+  tl.fromTo(".s04-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 35.12);
+  tl.set(".s04-content", { opacity: 0 }, 35.78);
   window.__timelines["04-cadre"] = tl;
 })();
 </script>

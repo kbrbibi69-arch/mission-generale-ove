@@ -2,7 +2,7 @@
 
 Un fichier par scène (10 fichiers). Dans chaque fichier, lisez les phrases dans l’ordre en marquant **une pause franche d’environ 2 secondes entre chaque phrase numérotée** : c’est ce qui me permet de découper votre voix et de recaler l’image dessus.
 
-Prononciation : « OVE » se dit lettre par lettre, d’un trait (o-vé-e) ; « IMOVE » également (i-èm-o-vé-e) ; « AFA » se dit a-èf-a.
+Prononciation : « Fondation OVE » se dit lettre par lettre, d’un trait (o-vé-e) ; « IMOVE » et « OVE Plenior » se disent en un seul mot ; on dit « l’Agence française anticorruption » en entier.
 
 Les durées sont indicatives (voix de synthèse actuelle) : inutile de les respecter à la seconde, l’image s’adaptera à votre rythme. Restez autour de 130-150 mots par minute pour que le film dure entre 4 min 50 et 5 min 10.
 
@@ -21,7 +21,7 @@ Les durées sont indicatives (voix de synthèse actuelle) : inutile de les respe
 
 ## Fichier `scene-03.wav` — Ecosysteme
 
-1. Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine.  *(≈ 12 s)*
+1. Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine.  *(≈ 11 s)*
 2. S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.  *(≈ 14 s)*
 3. Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.  *(≈ 9 s)*
 4. Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.  *(≈ 7 s)*
@@ -31,7 +31,7 @@ Les durées sont indicatives (voix de synthèse actuelle) : inutile de les respe
 
 1. Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.  *(≈ 8 s)*
 2. Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.  *(≈ 6 s)*
-3. En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.  *(≈ 10 s)*
+3. En revanche, l’article 3 habilite l’Agence française anticorruption à contrôler, de sa propre initiative, les fondations reconnues d’utilité publique.  *(≈ 9 s)*
 4. Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.  *(≈ 9 s)*
 
 ## Fichier `scene-05.wav` — Maintenant
@@ -58,7 +58,7 @@ Les durées sont indicatives (voix de synthèse actuelle) : inutile de les respe
 
 ## Fichier `scene-08.wav` — Dispositif
 
-1. Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.  *(≈ 9 s)*
+1. Le dispositif proposé repose sur les trois piliers recommandés par l’Agence française anticorruption : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.  *(≈ 11 s)*
 2. Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,  *(≈ 8 s)*
 3. une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.  *(≈ 5 s)*
 4. Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.  *(≈ 5 s)*

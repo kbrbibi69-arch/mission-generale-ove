@@ -66,13 +66,13 @@
      "id": "a",
      "variant": "sobre",
      "text": "Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine.",
-     "say": "Autour d'elle s'est constitué un écosystème structuré : le fonds de dotation I M O V E, véhicule immobilier et financier, et plus de trente-cinq sociétés civiles immobilières, qui portent le patrimoine."
+     "say": "Autour d'elle s'est constitué un écosystème structuré : le fonds de dotation Imov, véhicule immobilier et financier, et plus de trente-cinq sociétés civiles immobilières, qui portent le patrimoine."
     },
     {
      "id": "b",
      "variant": "sobre",
      "text": "S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.",
-     "say": "S'y ajoutent quatre associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; OVE Plénior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau."
+     "say": "S'y ajoutent quatre associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; Oveplénior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau."
     },
     {
      "id": "c",
@@ -112,8 +112,15 @@
     },
     {
      "id": "c",
+     "variant": "humour",
      "text": "En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.",
-     "say": "En revanche, l'article trois habilite l'Agence française anticorruption, l'A F A, à contrôler, de sa propre initiative, les fondations reconnues d'utilité publique."
+     "say": "En revanche, l'article trois habilite l'Agence française anticorruption, l'A.F.A., à contrôler, de sa propre initiative, les fondations reconnues d'utilité publique."
+    },
+    {
+     "id": "c",
+     "text": "En revanche, l’article 3 habilite l’Agence française anticorruption à contrôler, de sa propre initiative, les fondations reconnues d’utilité publique.",
+     "say": "En revanche, l'article trois habilite l'Agence française anticorruption à contrôler, de sa propre initiative, les fondations reconnues d'utilité publique.",
+     "variant": "sobre"
     },
     {
      "id": "d",
@@ -214,8 +221,15 @@
    "lines": [
     {
      "id": "a",
+     "variant": "humour",
      "text": "Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.",
-     "say": "Le dispositif proposé repose sur les trois piliers recommandés par l'A F A : l'engagement de la gouvernance, la cartographie des risques, et des mesures adaptées."
+     "say": "Le dispositif proposé repose sur les trois piliers recommandés par l'A.F.A. : l'engagement de la gouvernance, la cartographie des risques, et des mesures adaptées."
+    },
+    {
+     "id": "a",
+     "text": "Le dispositif proposé repose sur les trois piliers recommandés par l’Agence française anticorruption : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.",
+     "say": "Le dispositif proposé repose sur les trois piliers recommandés par l'Agence française anticorruption : l'engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.",
+     "variant": "sobre"
     },
     {
      "id": "b",

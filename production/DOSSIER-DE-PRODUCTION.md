@@ -110,7 +110,7 @@ Le film ne montre pas une menace : il montre un **réseau qui grandit** et le **
 
 - `1:25.8` Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.
 - `1:34.7` Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.
-- `1:41.6` En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.
+- `1:41.6` En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique. *(touche d’humour)*
 - `1:52.1` Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
 
 **Pourquoi maintenant** — 2:02.1
@@ -137,7 +137,7 @@ Le film ne montre pas une menace : il montre un **réseau qui grandit** et le **
 
 **Le dispositif proposé** — 3:15.3
 
-- `3:16.1` Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.
+- `3:16.1` Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées. *(touche d’humour)*
 - `3:25.9` Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,
 - `3:34.4` une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.
 - `3:40.2` Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.
@@ -192,7 +192,7 @@ Durée 5:07.0. Par rapport à la version avec humour :
 
 - **Répliques humoristiques** remplacées ou retirées : « Des réponses écrites et partagées valent mieux que des usages implicites. » ; « L’objectif est de sécuriser, sans alourdir. » ; la réplique sur la légende est supprimée (l’encadré « Légende » reste).
 - **Entités précisées** (formulations issues de la note) : le fonds de dotation IMOVE, *véhicule immobilier et financier* ; plus de 35 SCI, *qui portent le patrimoine* ; AMICIAL, *gouvernée avec la Croix-Rouge française* ; OVE Plenior, *qui mutualise ses fonctions support avec la Fondation* ; OVE Caraïbes, *en outre-mer* ; Ressourcial, *pour des prestations au sein du réseau*.
-- **Prononciation fluide**, vérifiée sur les phonèmes générés : « OVE » épelé d’un trait (o-vé-e), « IMOVE » épelé I-M-O-V-E, « AFA » épelé A-F-A. Les points des sigles (« O.V.E. ») sont supprimés, car ils créaient des micro-pauses.
+- **Prononciation fluide**, vérifiée sur les phonèmes générés : « Fondation OVE » épelé d’un trait (o-vé-e) ; « IMOVE » et « OVE Plenior » dits en un seul mot (« imov », « ovplénior ») ; le sigle AFA n’est plus prononcé : la voix dit « l’Agence française anticorruption » (le sigle reste à l’écran). Les points des sigles (« O.V.E. »), qui créaient des micro-pauses, sont supprimés.
 - **Animation enrichie** : fond vivant (trame de points et trois bandes translucides qui dérivent), lente poussée de caméra sur chaque scène, barre de progression du film, pictogrammes qui se tracent à l’apparition, titres révélés mot à mot, noms des entités épelés lettre par lettre au moment où ils sont prononcés avec une pulsation du nœud, liens croisés animés, filets sous les chiffres clés, halo sur « Protéger » (épelé), tête de lecture sur la frise de la feuille de route.
 - **Rythme resserré** : respirations de 0,45 s entre phrases (0,22 s après une virgule), entrée 0,7 s et sortie 0,85 s par scène, écran final maintenu 10,5 s.
 
@@ -214,65 +214,65 @@ Script complet de la variante :
 **Un écosystème structuré** — 0:41.4
 
 - `0:42.1` Autour d’elle s’est constitué un écosystème structuré : le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35 sociétés civiles immobilières, qui portent le patrimoine. *(remplacement sobre)*
-- `0:54.3` S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau. *(remplacement sobre)*
-- `1:08.7` Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.
-- `1:17.9` Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.
-- `1:24.9` Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.
+- `0:53.8` S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau. *(remplacement sobre)*
+- `1:08.0` Cette organisation répond à des objectifs légitimes : coopérer, mutualiser, se spécialiser, distinguer le médico-social du patrimoine immobilier.
+- `1:17.3` Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés par un nombre limité de décideurs.
+- `1:24.2` Cette configuration ne révèle en elle-même aucune irrégularité. Elle appelle simplement un cadre commun.
 
-**Le cadre juridique** — 1:31.7
+**Le cadre juridique** — 1:31.0
 
-- `1:32.4` Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.
-- `1:41.3` Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.
-- `1:48.1` En revanche, l’article 3 habilite l’Agence française anticorruption, l’AFA, à contrôler de sa propre initiative les fondations reconnues d’utilité publique.
-- `1:58.5` Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
+- `1:31.8` Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme anticorruption à certaines entreprises dépassant des seuils précis.
+- `1:40.6` Sans analyse complémentaire, on ne peut affirmer que la Fondation y est assujettie comme une société commerciale.
+- `1:47.5` En revanche, l’article 3 habilite l’Agence française anticorruption à contrôler, de sa propre initiative, les fondations reconnues d’utilité publique. *(remplacement sobre)*
+- `1:57.1` Elle examine leurs procédures contre la corruption, le trafic d’influence, la prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
 
-**Pourquoi maintenant** — 2:08.4
+**Pourquoi maintenant** — 2:07.0
 
-- `2:09.1` Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.
-- `2:13.2` Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance.
-- `2:20.8` S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements et la réputation de la Fondation.
+- `2:07.7` Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.
+- `2:11.7` Les financeurs publics attendent des garanties de bonne gouvernance, et les affaires récentes du secteur ont accru la vigilance.
+- `2:19.4` S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les décideurs, les financements et la réputation de la Fondation.
 
-**Le cœur du sujet (message central)** — 2:29.8
+**Le cœur du sujet (message central)** — 2:28.3
 
-- `2:30.5` Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.
-- `2:38.5` Il s’agit de protéger sa mission d’intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources et la confiance de ses partenaires.
+- `2:29.1` Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.
+- `2:37.0` Il s’agit de protéger sa mission d’intérêt général, les personnes accompagnées, ses décideurs, ses collaborateurs, ses ressources et la confiance de ses partenaires.
 
-**Protéger les décideurs** — 2:48.9
+**Protéger les décideurs** — 2:47.4
 
-- `2:49.6` Ce cadre protège aussi celles et ceux qui décident.
-- `2:52.6` Lorsqu’une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles.
-- `2:59.6` Pour le compte de quelle personne morale la décision est-elle prise ?
-- `3:03.6` Quelle instance doit l’autoriser ?
-- `3:05.7` Quelle délégation permet de signer ?
-- `3:08.0` Quelles informations remonter à chaque gouvernance ?
-- `3:11.2` Des réponses écrites et partagées valent mieux que des usages implicites. *(remplacement sobre)*
-- `3:15.6` En cas de contrôle, pouvoir le démontrer est une protection.
+- `2:48.1` Ce cadre protège aussi celles et ceux qui décident.
+- `2:51.2` Lorsqu’une même personne siège dans plusieurs instances, selon une logique de réseau, quatre questions deviennent essentielles.
+- `2:58.2` Pour le compte de quelle personne morale la décision est-elle prise ?
+- `3:02.2` Quelle instance doit l’autoriser ?
+- `3:04.2` Quelle délégation permet de signer ?
+- `3:06.6` Quelles informations remonter à chaque gouvernance ?
+- `3:09.7` Des réponses écrites et partagées valent mieux que des usages implicites. *(remplacement sobre)*
+- `3:14.1` En cas de contrôle, pouvoir le démontrer est une protection.
 
-**Le dispositif proposé** — 3:19.8
+**Le dispositif proposé** — 3:18.4
 
-- `3:20.5` Le dispositif proposé repose sur les trois piliers recommandés par l’AFA : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées.
+- `3:19.1` Le dispositif proposé repose sur les trois piliers recommandés par l’Agence française anticorruption : l’engagement de la gouvernance, la cartographie des risques, et des mesures adaptées. *(remplacement sobre)*
 - `3:30.1` Concrètement : un code de conduite, une politique de gestion des conflits d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,
 - `3:38.6` une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un plan de formation.
 - `3:44.4` Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.
 - `3:49.5` L’objectif est de sécuriser, sans alourdir. *(remplacement sobre)*
 
-**Feuille de route** — 3:52.8
+**Feuille de route** — 3:52.7
 
-- `3:53.5` La démarche se déploierait progressivement, sur deux ans.
+- `3:53.4` La démarche se déploierait progressivement, sur deux ans.
 - `3:57.0` Année 1 : comprendre, cartographier, concevoir. Cadrage, diagnostic, cartographie des risques, dispositif cible.
-- `4:04.3` Année 2 : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan.
+- `4:04.2` Année 2 : valider, déployer, ajuster. Validation, formations, pilote, généralisation, bilan.
 - `4:10.4` Des indicateurs en mesureront l’effectivité.
 - `4:13.4` Soyons lucides : aucun dispositif ne supprime totalement le risque. Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.
 
 **Décisions proposées au Bureau et écran final** — 4:23.4
 
 - `4:24.1` Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,
-- `4:28.9` d’autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,
+- `4:28.8` d’autoriser le diagnostic et la cartographie des risques, de désigner la Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,
 - `4:38.5` avec un comité de pilotage transversal et un reporting régulier au Bureau.
 - `4:43.8` Le dispositif définitif restera soumis aux instances compétentes.
 - `4:48.4` Protéger la mission, les personnes, les décideurs et la confiance : c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.
 
-*679 mots · 265 s de parole · débit moyen 154 mots/min (pauses comprises : 133 mots/min) · durée 5:07.0.*
+*680 mots · 265 s de parole · débit moyen 154 mots/min (pauses comprises : 133 mots/min) · durée 5:07.0.*
 
 ## 8. Assets produits
 
@@ -352,5 +352,5 @@ Version sans humour seule (sans toucher à l’autre) : `python3 production/scri
 
 **Limites signalées**
 - La voix est une synthèse locale (aucun compte de voix premium disponible dans cet environnement) : naturelle mais moins expressive qu’une voix humaine ; pour la version diffusée, un enregistrement par une voix professionnelle peut remplacer `voix-off-*.wav` sans retoucher l’image si les phrases sont lues au même rythme (ou en relançant `layout.py`).
-- Version sans humour : la prononciation des sigles a été vérifiée sur les phonèmes produits (OVE, I-M-O-V-E, A-F-A), mais pas à l’oreille (pas de transcription automatique disponible ici) : écoute de contrôle recommandée. La version avec humour garde l’ancienne diction, avec des micro-pauses dans « O.V.E. ».
+- Version sans humour : la prononciation des sigles a été vérifiée sur les phonèmes produits (OVE, « imov », « ovplénior », Agence française anticorruption), mais pas à l’oreille (pas de transcription automatique disponible ici) : écoute de contrôle recommandée. La version avec humour garde l’ancienne diction, avec des micro-pauses dans « O.V.E. ».
 - La charte « trois bandes » a été interprétée à partir du logo (les trois traits du « E ») faute de charte graphique jointe.
