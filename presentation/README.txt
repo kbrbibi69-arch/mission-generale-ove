@@ -1,151 +1,80 @@
-PRÉSENTATION INTERACTIVE DU BUREAU — FONDATION OVE
-« De l'analyse juridique à la décision stratégique »
-=====================================================
+PRÉSENTATION INTERACTIVE — PROJET SAPIN 2 (Fondation OVE)
+===========================================================
 
-Cette présentation HTML est la suite de la vidéo. La vidéo pose le cadre ; la présentation
-organise la compréhension, la conviction et la décision. Elle est pilotée en direct par le
-présentateur (aucun déroulement automatique, hormis le court raccord d'ouverture, 4 secondes,
-qui reprend le dernier plan de la vidéo et que la barre d'espace passe).
-
-FICHIERS
+Fichiers
 --------
-  presentation_bureau_ove_sapin2.html   La présentation. Fichier unique et autonome (537 Ko) :
-                                        HTML, CSS, JavaScript, SVG, polices et logos intégrés.
-                                        Aucune connexion Internet nécessaire.
-  presenter-notes.html                  Notes complètes du présentateur (18 scènes + 8 objections),
-                                        à imprimer ou à lire sur un second écran. Ne pas projeter.
-  README.txt                            Ce document.
-  src/                                  Sources (style.css, scenes.html, app.js, notes.json).
-  build.py                              Reconstruit les deux fichiers HTML : python3 presentation/build.py
-  tests/                                Scripts de contrôle (Playwright), voir « Contrôles effectués ».
+- presentation_ove_sapin2.html : la présentation (fichier unique, hors ligne : HTML, CSS, JS, SVG, polices et logos intégrés ; aucune requête réseau).
+- presenter-notes.html        : notes du présentateur imprimables (à ne pas projeter).
+- presentation/src/           : sources (rubriques.html, style.css, app.js, notes.json) ; presentation/build.py les assemble.
+- presentation/tests/         : scripts de contrôle (Playwright / Chromium).
+- presentation/archives/      : versions précédentes (découpage en scènes), conservées sans modification, non livrées.
 
-LANCER
+Lancer
 ------
-Double-cliquer sur presentation_bureau_ove_sapin2.html : il s'ouvre dans le navigateur
-(Chrome, Edge ou Firefox récents). Appuyer sur F pour le plein écran.
-Un raccord reprend d'abord le dernier plan de la vidéo, puis la scène 1 apparaît.
-Conseil : ouvrir la page à l'avance, la placer en plein écran, la laisser prête.
+1. Double-cliquer sur presentation_ove_sapin2.html (navigateur récent). Aucune installation, aucune connexion.
+2. Appuyer sur F (ou le bouton « plein écran ») : la scène 1920×1080 s'adapte à l'écran en conservant ses proportions. Échap pour quitter.
+3. Pour régénérer le fichier : python3 presentation/build.py (nécessite fontTools et les sources du dépôt).
 
-COMMANDES
----------
-  Avancer ................ flèche droite · barre d'espace · Page suivante
-                           (d'abord les étapes de la scène, puis la scène suivante)
-  Revenir ................ flèche gauche · Retour arrière · Page précédente (réversible)
-  Plein écran ............ F (Échap pour quitter)
-  Sommaire ............... S ou bouton « liste » (flèches pour parcourir, Entrée pour aller)
-  Question centrale ...... Q (scène 2)
-  Proposition de décision  D (scène 17, complète) · bouton D · bouton « Afficher la proposition »
-  Objections et réponses . O (8 objections, réponses courtes)
-  Notes du présentateur .. N (panneau masqué ; attention : visible si l'affichage est dupliqué)
-  Fenêtre présentateur ... P (fenêtre séparée : notes, chrono, boutons Précédent / Suivant)
-  Animations ............. A suspend ou rétablit les animations non essentielles
-  Rejouer le raccord ..... R (scène 1)
-  Aide ................... ? ou H
-  Ouvrir une carte ....... clic, ou chiffres 1 à 9 selon la scène
-  Début / Fin ............ touches Début / Fin
-  Au clavier seul ........ Tab parcourt les éléments interactifs ; Entrée ou espace les active.
-  Après un clic de souris la barre d'espace continue de faire avancer.
+Structure = plan de la note, sans scènes ni actes
+-------------------------------------------------
+Huit rubriques, dans l'ordre exact de la note :
+ 1 Titre général « Projet Sapin 2 » — Fondation OVE – Gouvernance des risques et cohérence de l'écosystème
+ 2 1ʳᵉ partie — Un enjeu de gouvernance propre à l'écosystème OVE (schéma interactif ; question centrale)
+ 3 2ᵉ partie — Orientation stratégique : une démarche volontaire inspirée Sapin 2
+ 4 Chantier 1 — Cartographier les risques là où ils se situent vraiment
+ 5 Chantier 2 — Adopter un Code commun « probité et conflits d'intérêts » pour tout le réseau
+ 6 Chantier 3 — Mettre de l'ordre juridique dans les flux entre entités
+ 7 Chantier 4 — Créer une gouvernance de la probité à l'échelle de l'écosystème
+ 8 Conclusion — justification, 4 chantiers → 3 bénéfices, proposition de décision, plan, phrase finale
+À l'intérieur d'une rubrique, les sous-parties sont des étapes réversibles, des blocs ou des onglets (chantier 4 : référent / registre / chartes).
 
-RÉCIT EN SIX ACTES (18 SCÈNES)
-------------------------------
-  Acte 1 La question ...................... 1 Le relais de la vidéo · 2 La question centrale
-  Acte 2 Notre réalité .................... 3 L'écosystème OVE · 4 Une organisation intégrée
-  Acte 3 La limite du minimum légal ....... 5 Le point de bascule (comparateur)
-  Acte 4 La réponse proposée .............. 6 Le choix proposé
-  Acte 5 Les quatre chantiers ............. 7 Vue d'ensemble · 8 Cartographier · 9 Code commun ·
-                                            10 Sécuriser les flux · 11 Registre des mandats ·
-                                            12 Gouvernance de la probité · 13 Langage commun
-  Acte 6 La décision et la trajectoire .... 14 Bénéfices · 15 Coût de l'inaction · 16 Mise en œuvre
-                                            graduée · 17 Décision attendue · 18 Conclusion
+Navigation
+----------
+- Avancer : flèche droite, Espace, Page ↓, bouton « › ». Reculer : flèche gauche, Retour arrière, Page ↑, bouton « ‹ ». Chaque pression révèle une étape puis passe à la rubrique suivante ; tout est réversible.
+- Sommaire (calqué sur le plan de la note) : touche S ou bouton « liste » de la barre, ou bouton « Ouvrir le sommaire » de la page de titre. Accessible à tout moment ; flèches pour se déplacer, Entrée pour ouvrir, Échap pour fermer.
+- Conclusion : touche C ou bouton « C » (saut direct).
+- Proposition de décision : touche D ou bouton « D » (saut direct à la phrase de décision).
+- Question centrale de la 1ʳᵉ partie : touche Q.
+- Chiffres 1–9 : ouvrir l'entité (1ʳᵉ partie), l'onglet (chantier 4) ou la carte correspondante ; Début / Fin : première / dernière rubrique.
+- Plein écran : F. Aide : ? ou H. Animations non essentielles suspendues : A (automatique si le système demande « réduire les animations »).
+- Notes : touche N (panneau masqué par défaut, Échap pour le fermer) ou touche P (fenêtre présentateur synchronisée avec la projection ; chronomètre, rubrique suivante, boutons Précédent/Suivant/Conclusion/Décision).
+- La position est conservée dans l'adresse (#1 à #8). Utilisation 100 % clavier possible.
 
-PIÈCES JOINTES UTILISÉES
-------------------------
-  Note « Projet Sapin 2 » (.docx) ... source éditoriale, argumentative et stratégique unique,
-                                      lue intégralement (611 mots). Aucun fait extérieur ajouté.
-  Vidéo (v3) ........................ analysée uniquement pour la continuité : dernier plan
-                                      (logo, phrase finale, trois bandes) repris à l'identique en
-                                      ouverture. La vidéo n'est pas modifiée ; aucune vidéo produite.
-  Charte graphique (frame.md) ....... palette (vert OVE #B4C908, vert clair #DCE58A, vert texte
-                                      #5C6600, gris #878787, encre #25282B, nuit #1F2326, fond
-                                      #F6F6F2), signature des trois bandes, pictogrammes à trait.
-  Polices ........................... Montserrat et Source Sans 3 (licence OFL), sous-ensemble latin.
-  Logos (6) ......................... Fondation OVE, IMOVE, AMICIAL, OVE Plenior, OVE Caraïbes,
-                                      Ressourcial : redessinés en vecteur à partir des fichiers
-                                      fournis (couleurs mesurées, proportions conservées, aucune
-                                      recoloration), puis animés. Fichiers originaux conservés dans
-                                      production/pieces-jointes/.
+Notes du présentateur
+---------------------
+Par rubrique et sous-partie : objectif de conviction, message à faire retenir, commentaire oral, déclenchement des animations, transition, objection possible et réponse courte prudente (8 objections), précautions juridiques. Jamais affichées à l'écran sans action explicite (N ou P) ; version imprimable dans presenter-notes.html.
 
-PIÈCES JOINTES NON UTILISÉES (ET POURQUOI)
-------------------------------------------
-  Photographie de la réunion ........ personnes identifiables : droit à l'image à confirmer, et la
-                                      consigne est de ne mettre en cause aucune personne.
-  Photographie du bâtiment (logo OVE)  déjà utilisée dans la vidéo ; n'apporte rien à la démonstration.
-  Photographie du bâtiment non identifié  lieu non attribuable ; aucune attribution sans fondement.
-  Doublon du logo Fondation OVE ..... identique à la version utilisée.
+Distinctions affichées à l'écran
+--------------------------------
+Pastilles : Constat · Zone de vigilance · Orientation proposée · Mesure à construire · Décision attendue · Futur plan · Question centrale. Les schémas sont des représentations de principe : aucun montant, aucun niveau de risque, aucun flux chiffré, aucune personne nommée ; la note ne détaillant pas les flux, le schéma ne les quantifie pas.
 
-CHOIX ÉDITORIAUX
-----------------
-  - Le texte reprend les termes de la note ; aucun chiffre, montant, niveau de risque ni date
-    n'est inventé. Seule indication de calendrier : le plan sera présenté « en fin d'année » au
-    Bureau (note), puis soumis pour validation au Bureau et au Conseil d'administration.
-  - Constat et proposition sont distingués ; tout est formulé à l'optatif (« il est proposé »).
-    Une zone de vigilance n'est jamais présentée comme une irrégularité ; l'applicabilité de
-    l'article 17 n'est pas rediscutée (traitée dans la vidéo).
-  - Les mandats du Directeur général décrits dans la note (gérant des SCI, administrateur du fonds
-    de dotation, président des directoires) n'apparaissent qu'au clic, avec un rappel qu'il s'agit
-    d'une configuration décrite et non d'un constat d'irrégularité. Aucune personne n'est nommée.
-  - Le schéma des flux est une représentation de principe : la note décrit des flux entre la
-    Fondation, IMOVE, les SCI et les associations, sans préciser les liens un à un. Le schéma le dit.
-  - Les associations affichées (AMICIAL, OVE Plenior, OVE Caraïbes, Ressourcial) sont celles citées
-    dans la vidéo. La note parle des « associations du réseau » sans les nommer : à vérifier.
-  - Le registre des mandats (scène 11) est un modèle vide ; l'exemple de lecture est schématique,
-    sans donnée réelle ni personne nommée.
-  - Le référent probité/compliance est présenté comme point de coordination rattaché à la
-    Direction générale, sans se substituer aux organes compétents.
-  - La vidéo présente la Direction générale comme sponsor et la Direction juridique comme pilote ;
-    la note ne parle que du référent rattaché à la Direction générale. À harmoniser oralement.
+Éléments de la commande ABSENTS de la note (signalés à l'écran comme précisions proposées, jamais présentés comme des faits de la note)
+- Parcours en 7 étapes du chantier 2 (identifier → déclarer → analyser → s'abstenir → décision d'un organe non intéressé → documenter → tracer) : « parcours pédagogique » ; la note ne cite que déclaration, gestion, abstention, traçabilité, validation par un organe non intéressé.
+- Durée, remboursement, refacturation dans la convention du chantier 3 : « précisions proposées » ; la note cite objet, conditions financières, responsabilités.
+- Schéma du registre des mandats (grille entités × organes) : illustratif, cellules vides.
+- Associations partenaires nommées : seules les marques fournies en pièces jointes sont affichées ; la note ne les nomme pas.
 
-FONCTIONNALITÉS
----------------
-  Navigation par étapes réversibles · sommaire · barre de progression par acte · retour à la
-  question (Q) · accès direct à la décision (D) · retour automatique après un détour de chantier ·
-  schéma de l'écosystème cliquable (7 entités, 5 filtres de relations, jetons animés par type) ·
-  cartes développables (probité, chantiers, familles de zones, bénéfices) · comparateur avant/après
-  à poignée · parcours animé d'une situation potentielle (7 étapes cliquables) · transformation d'un
-  flux en décision traçable avec convention interactive · registre des mandats · cercle du référent ·
-  diffusion du cadre · balance interactive à 7 critères · feuille de route de 13 étapes cliquables ·
-  logos animés (construction du logo OVE à la fin) · transitions variées (zoom, glissement, volet,
-  trois bandes) · notes (panneau, fenêtre synchronisée, page imprimable) · 8 objections · aide ·
-  mode « animations suspendues » (A) et respect de prefers-reduced-motion.
+Pièces jointes
+--------------
+Utilisées :
+- PJ11 note-projet-sapin2.docx : source unique du contenu et du plan.
+- PJ01 / PJ03 logo Fondation OVE : page de titre, 1ʳᵉ partie, conclusion (logo vectoriel animé).
+- PJ04 IMOVE, PJ09 AMICIAL, PJ06 OVE Plenior, PJ05 OVE Caraïbes, PJ08 Ressourcial : schéma de l'écosystème (1ʳᵉ partie) ; logos vectorisés couche par couche (production/logos), proportions du fichier source, non recolorés, sur plaque blanche.
+Non utilisées (volontairement) :
+- PJ02 photo de bâtiment non identifié : lieu non identifié, non légendé, absent du plan de la note.
+- PJ07 photo du bâtiment OVE Fondation et PJ10 photo de réunion : la note ne les appelle pas ; la réunion montre des personnes non légendées (principe : aucune mise en cause de personnes). Elles restent disponibles pour une variante.
+Charte : couleurs #B4C908, #DCE58A, #5C6600, #878787, #55595D, #25282B, #1F2326, #F6F6F2, #FFFFFF ; Montserrat + Source Sans 3 (sous-ensemble intégré) ; signature trois bandes ; pas de rouge. Nuances dérivées neutres (gris et verts éclaircis) utilisées pour les fonds et filets : #6B6F72 #D5D7D2 #15181A #C9CCCF #2B3034 #E4E6E8 #343A3F #B5B8B1 #ECEDEA #F3F7D6 #E4EDA2 #F9FBE6 #F6F8E2 #43494E #3A4046 #C9CBC6 #DDE0D8.
 
-CONTRÔLES RÉELLEMENT EFFECTUÉS
-------------------------------
-Environnement : Chromium (via Playwright) sous Linux, rendu logiciel sans carte graphique.
-  - 41 vérifications automatiques d'interaction : toutes réussies (tests/controle-interactions.cjs) :
-    raccord et saut, avancer/reculer, cartes, schéma, filtres, comparateur (boutons et glissé),
-    chantiers et retour, parcours, convention, registre, balance, feuille de route, D/Q, boutons
-    de la scène 17, sommaire, notes, objections, aide, mémorisation de la scène dans l'adresse,
-    animations suspendues, fenêtre présentateur synchronisée et pilotage à distance.
-  - Aucune erreur JavaScript, aucune requête réseau (fonctionnement hors ligne confirmé).
-  - Revue visuelle des 18 scènes en 1920 × 1080, puis mise à l'échelle en 1366 × 768,
-    1280 × 720 et 1024 × 768 (bandes noires, rien n'est coupé).
-  - Accessibilité mesurée (tests/controle-accessibilite.cjs) : 0 texte de moins de 22 px ;
-    0 contraste sous le seuil AA (texte des 18 scènes, états finaux) ; tous les boutons ont un nom ;
-    un seul titre de niveau 1 ; scènes inactives non focalisables ; anneau de focus visible sur
-    les 14 éléments parcourus à la tabulation ; mouvement réduit respecté.
-  - Fluidité : en rendu logiciel sans GPU, environ 50 images/s en moyenne sur la scène la plus
-    chargée (95 % des images sous 34 ms). Indicatif ; un ordinateur avec GPU fera mieux.
+Contrôles réellement effectués (Chromium via Playwright, 1920×1080)
+------------------------------------------------------------------
+- tests/controle-interactions.cjs : 8 rubriques ; parcours complet à la flèche droite (59 pressions) ; retour arrière ; sommaire (8 entrées, ouverture d'une rubrique) ; C, D, Début ; notes N/Échap ; aide ; aucune erreur JS/console ; aucune requête réseau.
+- tests/controle-accessibilite.cjs : tout texte visible dans chaque étape ≥ 22 px ; contraste ≥ 4,5:1 (≥ 3:1 au-delà de 24 px) ; focus clavier visible ; lang=fr ; mode calme automatique avec prefers-reduced-motion ; audit des couleurs.
+- Relecture visuelle de captures de chaque rubrique et étape.
 
-LIMITES ET CE QUI N'A PAS PU ÊTRE TESTÉ
+Limites (non vérifiées / non garanties)
 ---------------------------------------
-  - Non testé : Edge, Firefox, Safari (seul Chromium est installé ici). Fonctionnement attendu
-    sur les versions récentes (Chrome et Edge 104+, Firefox 112+, Safari 15.5+), d'après les
-    tables de compatibilité des propriétés employées : non vérifié sur ces navigateurs.
-  - Le plein écran (F) est codé mais n'a pas pu être vérifié en mode sans écran ; à essayer avant
-    la réunion, comme le vidéoprojecteur et les lecteurs d'écran (non testés).
-  - Fenêtre présentateur : synchronisation vérifiée dans Chromium. Selon le navigateur, l'ouverture
-    en file:// peut être limitée, et le navigateur peut bloquer la fenêtre surgissante : dans ce cas,
-    utiliser le panneau N ou presenter-notes.html.
-  - Le contraste de la barre de navigation basse a été réglé à la main (non mesuré).
-  - Le raccord d'ouverture reprend le dernier plan de la vidéo ; il suppose que la vidéo se termine
-    bien sur cet écran (version v3).
+- Testé uniquement dans Chromium. Edge (même moteur) devrait se comporter pareillement ; Firefox et Safari ne sont PAS testés.
+- Plein écran et fenêtre présentateur : fonctionnement à valider sur le poste de projection (le navigateur peut bloquer la fenêtre surgissante ; sur un fichier ouvert en file://, la synchronisation repose sur BroadcastChannel/localStorage selon le navigateur).
+- Fluidité mesurée seulement en environnement de test ; le mode « A » (animations suspendues) existe pour les machines modestes.
+- Aucun lecteur d'écran n'a été utilisé ; l'accessibilité repose sur la structure sémantique, les libellés, le focus, les contrastes et le clavier.
+- Les contenus « Constat » reprennent la note ; les orientations, mesures et décisions sont présentées comme des propositions au Bureau, pas comme des décisions prises. Le plan de mise en œuvre est annoncé comme futur, sans date.

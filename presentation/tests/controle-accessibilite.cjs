@@ -1,55 +1,51 @@
+// Contrôles réels (Chromium) : taille de police ≥ 22 px, contraste AA, palette, focus visible, mouvement réduit, lang/titre.
 const { chromium } = require('playwright');
-const URL = 'file://' + require('path').resolve(__dirname, '..') + '/presentation_bureau_ove_sapin2.html';
+const path = require('path'), fs = require('fs');
+const FILE = path.resolve(__dirname, '..', 'presentation_ove_sapin2.html');
+const F = 'file://' + FILE;
+const lum = c => { const a = c.map(v => { v /= 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * a[0] + .7152 * a[1] + .0722 * a[2]; };
+const ratio = (a, b) => { const A = lum(a), B = lum(b); return (Math.max(A, B) + .05) / (Math.min(A, B) + .05); };
 (async () => {
-  const br = await chromium.launch({ ...(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}) });
-  const ctx = await br.newContext({ viewport: { width: 1920, height: 1080 } });
-  const p = await ctx.newPage(); await p.goto(URL); await p.waitForTimeout(500);
-  await p.keyboard.press(' '); await p.waitForTimeout(1500);
-  const small = [], low = [], noname = [], heads = [];
-  for (let i = 1; i <= 18; i++) {
-    const n = await p.evaluate(i => window.__ove.steps[i - 1], i);
-    await p.evaluate(i => window.__ove.go(i, 0), i); await p.waitForTimeout(1300);
-    await p.evaluate(([i, n]) => window.__ove.go(i, n), [i, n]); await p.waitForTimeout(1800);
-    const r = await p.evaluate(i => {
-      const sc = document.querySelectorAll('.scene')[i - 1], dark = sc.classList.contains('dark');
-      const lum = c => { const a = c.match(/[\d.]+/g).map(Number); const f = v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }; return .2126 * f(a[0]) + .7152 * f(a[1]) + .0722 * f(a[2]); };
-      const cr = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
-      const bgOf = el => { for (let e = el; e && e !== sc.parentElement; e = e.parentElement) { const cs = getComputedStyle(e); if (cs.backgroundImage !== 'none') return null; const m = cs.backgroundColor.match(/[\d.]+/g); if (m && (m.length < 4 || +m[3] >= .95)) return cs.backgroundColor; } return getComputedStyle(sc.querySelector('.bg')).backgroundColor; };
-      const out = { small: [], low: [], noname: [], heads: [...sc.querySelectorAll('h1,h2,h3')].map(h => h.tagName) };
-      const w = document.createTreeWalker(sc, NodeFilter.SHOW_TEXT);
-      const seen = new Set();
-      while (w.nextNode()) {
-        const t = w.currentNode, txt = t.textContent.trim(); if (!txt) continue; const el = t.parentElement; if (seen.has(el) || el.closest('.sr-only,svg,script,style,#hud,.ov,#notes-panel')) continue; seen.add(el);
-        const cs = getComputedStyle(el), rc = el.getBoundingClientRect(); if (!rc.width || !rc.height || cs.visibility === 'hidden') continue;
-        let op = 1; for (let e = el; e && e !== sc; e = e.parentElement) op *= +getComputedStyle(e).opacity; if (op < .5) continue;
-        const fs = parseFloat(cs.fontSize); if (fs < 22) out.small.push(fs + 'px « ' + txt.slice(0, 40) + ' »');
-        const bg = bgOf(el); if (!bg) continue; const ratio = cr(cs.color, bg); const large = fs >= 24 || (fs >= 18.66 && +cs.fontWeight >= 700);
-        if (ratio < (large ? 3 : 4.5)) out.low.push(ratio.toFixed(2) + ' ' + fs + 'px « ' + txt.slice(0, 40) + ' »');
+  const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
+  const ok = (c, m) => { console.log((c ? 'OK   ' : 'ÉCHEC') + ' ' + m); if (!c) process.exitCode = 1; };
+  await p.goto(F); await p.waitForTimeout(1000);
+  const n = await p.evaluate(() => window.__ove.n), steps = await p.evaluate(() => window.__ove.steps);
+  const small = new Map(), low = new Map();
+  for (let r = 1; r <= n; r++) for (let s = 0; s <= steps[r - 1]; s++) {
+    await p.evaluate(([r, s]) => window.__ove.go(r, s), [r, s]); await p.waitForTimeout(r === 1 ? 300 : 1300);
+    const res = await p.evaluate(() => {
+      const out = [], pan = document.querySelector('.scene:not([aria-hidden="true"])');
+      const walker = document.createTreeWalker(pan, NodeFilter.SHOW_TEXT);
+      const bgOf = el => { let e = el; const st = [];  while (e) { if (e.classList.contains('scene') && e.classList.contains('dark')) return [31, 35, 38]; const c = getComputedStyle(e).backgroundColor; const m = c.match(/[\d.]+/g); if (m && (m.length < 4 || +m[3] > .6)) return m.slice(0, 3).map(Number); e = e.parentElement; } return [246, 246, 242]; };
+      while (walker.nextNode()) {
+        const t = walker.currentNode, txt = t.textContent.trim(); if (!txt) continue; const el = t.parentElement;
+        const cs = getComputedStyle(el); if (cs.visibility === 'hidden' || cs.display === 'none') continue;
+        let hid = false, op = 1; for (let e = el; e; e = e.parentElement) { const c = getComputedStyle(e); op *= +c.opacity; if (e.classList?.contains('st') && !e.classList.contains('on')) hid = true; } if (hid || op < .9) continue;
+        const rc = el.getBoundingClientRect(); if (rc.width < 2 || rc.height < 2 || rc.bottom < 0 || rc.top > 1080) continue;
+        const scale = rc.width / el.offsetWidth || 1; const fs = parseFloat(cs.fontSize);
+        const col = cs.color.match(/[\d.]+/g).slice(0, 3).map(Number);
+        out.push({ txt: txt.slice(0, 40), fs, col, bg: bgOf(el), tag: el.className?.toString?.().slice(0, 20) });
       }
-      sc.querySelectorAll('button,[role=button]').forEach(b => { if (!(b.textContent.trim() || b.getAttribute('aria-label'))) out.noname.push(b.className); });
       return out;
-    }, i);
-    r.small.forEach(x => small.push('S' + i + ' ' + x)); r.low.forEach(x => low.push('S' + i + ' ' + x)); r.noname.forEach(x => noname.push('S' + i + ' ' + x)); heads.push('S' + i + ':' + r.heads.join('/'));
+    });
+    for (const x of res) { if (x.fs < 22) small.set(x.txt, `${x.fs}px [${x.tag}] r${r}.s${s}`); const cr = ratio(x.col, x.bg); const lim = x.fs >= 24 ? 3 : 4.5; if (cr < lim) low.set(x.txt, `${cr.toFixed(2)} [${x.tag}] r${r}.s${s}`); }
   }
-  console.log('TEXTES < 22 px :', small.length); console.log(small.join('\n'));
-  console.log('\nCONTRASTES sous AA :', low.length); console.log(low.join('\n'));
-  console.log('\nBOUTONS SANS NOM :', noname.length, noname.join(','));
-  console.log('\nTITRES', heads.join('  '));
-  // tabulation
-  await p.evaluate(() => window.__ove.go(3, 4)); await p.waitForTimeout(1800);
-  await p.evaluate(() => document.activeElement.blur());
-  const seq = []; for (let k = 0; k < 14; k++) { await p.keyboard.press('Tab'); seq.push(await p.evaluate(() => { const a = document.activeElement; return (a.getAttribute('aria-label') || a.id || a.className || a.tagName).slice(0, 34) + ' | ombre:' + (getComputedStyle(a).boxShadow !== 'none' ? 'oui' : 'non'); })); }
-  console.log('\nTABULATION S3 :\n' + seq.join('\n'));
-  const inert = await p.evaluate(() => [...document.querySelectorAll('.scene')].filter(s => !s.classList.contains('active') && !s.classList.contains('leaving')).every(s => s.inert)); console.log('Scènes inactives non focalisables (inert) :', inert);
-  // fluidité indicative
-  await p.evaluate(() => window.__ove.go(3, 4)); await p.waitForTimeout(1500);
-  const perf = await p.evaluate(async () => { const d = []; let t0 = performance.now(); await new Promise(res => { function f(t) { d.push(t - t0); t0 = t; if (d.length < 180) requestAnimationFrame(f); else res(); } requestAnimationFrame(f); }); d.shift(); d.sort((a, b) => a - b); return { moy: (d.reduce((a, b) => a + b) / d.length).toFixed(1), p95: d[Math.floor(d.length * .95)].toFixed(1), max: d[d.length - 1].toFixed(1) }; });
-  console.log('\nFLUIDITÉ (S3, rendu logiciel sans GPU, indicatif) ms/image :', JSON.stringify(perf));
+  ok(small.size === 0, `texte visible ≥ 22 px (${small.size} exception(s))`); [...small].slice(0, 25).forEach(([k, v]) => console.log('   <22px:', k, v));
+  ok(low.size === 0, `contraste AA des textes visibles (${low.size} exception(s))`); [...low].slice(0, 25).forEach(([k, v]) => console.log('   contraste:', k, v));
+  // palette
+  const html = fs.readFileSync(FILE, 'utf8').replace(/data:font[^)"']+/g, '');
+  const pal = new Set(['#B4C908', '#DCE58A', '#5C6600', '#878787', '#55595D', '#25282B', '#1F2326', '#F6F6F2', '#FFFFFF', '#FFF', '#fff']);
+  const hex = new Set((html.replace(/<svg width="0"[\s\S]*?<\/defs><\/svg>/, '').replace(/<svg class="logo [^>]*>[\s\S]*?<\/svg>/g, '').match(/#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/g) || []).map(h => h.toUpperCase()));
+  const off = [...hex].filter(h => !pal.has(h) && !pal.has(h.toLowerCase()) && !/^#[0-9A-F]{3}$/.test(h) || false);
+  console.log('   couleurs hors charte (hors logos) :', off.join(' ') || 'aucune');
+  // focus visible
+  await p.evaluate(() => window.__ove.go(1, 0)); await p.waitForTimeout(500);
+  await p.keyboard.press('Tab'); await p.keyboard.press('Tab');
+  const fo = await p.evaluate(() => { const e = document.activeElement; if (!e) return null; const s = getComputedStyle(e); return { tag: e.tagName, id: e.id, outline: s.outlineStyle + ' ' + s.outlineWidth, shadow: s.boxShadow }; });
+  ok(fo && (fo.outline.startsWith('solid') || fo.shadow !== 'none'), 'focus clavier visible ' + JSON.stringify(fo));
+  ok(await p.evaluate(() => document.documentElement.lang === 'fr' && !!document.title), 'lang=fr et <title>');
   // mouvement réduit
-  const c2 = await br.newContext({ viewport: { width: 1920, height: 1080 }, reducedMotion: 'reduce' }); const q = await c2.newPage(); await q.goto(URL); await q.waitForTimeout(600);
-  console.log('Mouvement réduit : calm =', await q.evaluate(() => document.body.classList.contains('calm')), '| raccord rejoué =', await q.evaluate(() => document.getElementById('s1').classList.contains('intro')));
-  await q.keyboard.press('ArrowRight'); await q.waitForTimeout(300); console.log('Mouvement réduit : navigation OK, étape =', JSON.stringify(await q.evaluate(() => window.__ove.state())));
-  // 1280x720 et 1366x768 : mise à l'échelle
-  for (const [w, h] of [[1280, 720], [1366, 768], [1024, 768]]) { const c3 = await br.newContext({ viewport: { width: w, height: h } }); const z = await c3.newPage(); await z.goto(URL + '#7'); await z.waitForTimeout(1800); const r = await z.evaluate(() => { const b = document.getElementById('stage').getBoundingClientRect(); return [Math.round(b.width), Math.round(b.height), Math.round(b.left), Math.round(b.top)].join('x'); }); console.log('Viewport', w + 'x' + h, '→ scène', r, '(largeur×hauteur×gauche×haut)'); await z.screenshot({ path: require('os').tmpdir() + '/vp-' + w + '.png' }); }
-  await br.close();
+  const p2 = await (await b.newContext({ reducedMotion: 'reduce', viewport: { width: 1920, height: 1080 } })).newPage(); await p2.goto(F); await p2.waitForTimeout(800);
+  ok(await p2.evaluate(() => document.body.classList.contains('calm')), 'prefers-reduced-motion → mode calme automatique');
+  await b.close();
 })();

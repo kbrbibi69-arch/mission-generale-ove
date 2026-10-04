@@ -1,0 +1,390 @@
+{
+ "acts": [
+  {
+   "n": 1,
+   "t": "La question",
+   "scenes": [
+    1,
+    2
+   ]
+  },
+  {
+   "n": 2,
+   "t": "Notre réalité",
+   "scenes": [
+    3,
+    4
+   ]
+  },
+  {
+   "n": 3,
+   "t": "La limite du minimum légal",
+   "scenes": [
+    5
+   ]
+  },
+  {
+   "n": 4,
+   "t": "La réponse proposée",
+   "scenes": [
+    6
+   ]
+  },
+  {
+   "n": 5,
+   "t": "Les quatre chantiers",
+   "scenes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "n": 6,
+   "t": "La décision et la trajectoire",
+   "scenes": [
+    14,
+    15,
+    16,
+    17,
+    18
+   ]
+  }
+ ],
+ "objections": [
+  {
+   "q": "Pourquoi aller au-delà du minimum légal ?",
+   "r": "Parce que la question n'est plus seulement de savoir ce que le droit impose au minimum, mais le niveau d'exigence que la Fondation souhaite se donner. La configuration le justifie : des flux financiers internes nombreux, un réseau très intégré, et des fonctions et mandats exercés dans plusieurs structures."
+  },
+  {
+   "q": "Ne construisons-nous pas un dispositif trop lourd ?",
+   "r": "La démarche est volontaire, adaptée, proportionnée et graduée. Les moyens ne sont pas arrêtés aujourd'hui : ils seront précisés dans le plan opérationnel, présenté en fin d'année au Bureau."
+  },
+  {
+   "q": "Quel sera le coût ?",
+   "r": "Aucun chiffre n'est avancé, car aucun n'est établi à ce stade. Les moyens devront être évalués et soumis avec le plan de mise en œuvre."
+  },
+  {
+   "q": "Pourquoi agir si aucune difficulté n'a été constatée ?",
+   "r": "Parce que l'objet de la prévention est précisément d'organiser les règles avant qu'une situation ne devienne difficile à gérer. Cartographier ne signifie pas suspecter."
+  },
+  {
+   "q": "Les pratiques ne sont-elles pas déjà connues en interne ?",
+   "r": "Connaître une pratique informellement n'est pas disposer d'un cadre commun, documenté et traçable. Le cadre permet de justifier, de façon homogène, ce qui est déjà connu."
+  },
+  {
+   "q": "Cette démarche ne traduit-elle pas un manque de confiance ?",
+   "r": "Au contraire : un cadre partagé protège les personnes, clarifie les attentes et renforce la confiance institutionnelle. Il ne vise aucune personne en particulier."
+  },
+  {
+   "q": "Pourquoi un référent probité/compliance ?",
+   "r": "Comme point de coordination : cohérence, appui, animation du dispositif d'alerte et reporting au Bureau. Il ne se substitue pas aux organes compétents, qui conservent leurs décisions."
+  },
+  {
+   "q": "Pouvons-nous avancer progressivement ?",
+   "r": "Oui : la démarche proposée est expressément graduée. Un plan distinct précisera calendrier, priorités et moyens, avant d'être soumis pour validation."
+  }
+ ],
+ "scenes": [
+  {
+   "id": 1,
+   "title": "Le relais de la vidéo",
+   "obj": "Faire passer le Bureau du temps d'exposition (la vidéo) au temps d'échange et de décision.",
+   "msg": "La vidéo a posé le cadre ; il s'agit maintenant de déterminer le niveau d'exigence adapté à notre écosystème.",
+   "oral": "La vidéo vient de poser le cadre juridique. Je ne le reprends pas. Nous entrons maintenant dans un temps différent : celui de la réflexion et de la décision.",
+   "decl": [
+    "L'écran reprend le dernier plan de la vidéo, puis se transforme seul (environ 4 s ; Espace passe cette séquence).",
+    "Espace : « La vidéo a posé le cadre. »",
+    "Espace : « Le Bureau doit désormais déterminer… »"
+   ],
+   "trans": "Zoom vers la question centrale.",
+   "objection": null,
+   "disc": "0 min : enchaîner.",
+   "prud": "Ne pas rouvrir le débat sur l'applicabilité de l'article 17 : il a été traité dans la vidéo."
+  },
+  {
+   "id": 2,
+   "title": "La question centrale",
+   "obj": "Poser clairement la question à laquelle le Bureau est invité à répondre.",
+   "msg": "Quel niveau d'exigence voulons-nous en matière de probité, de gestion des conflits d'intérêts et de sécurisation des flux internes ?",
+   "oral": "Voici la question. Elle a trois dimensions. Je vous propose de les ouvrir une à une, et vous direz si l'une d'elles appelle un développement.",
+   "decl": [
+    "Espace : les trois dimensions apparaissent dans la question.",
+    "Espace : les trois cartes apparaissent.",
+    "Clic ou touches 1, 2, 3 : ouvrir une carte."
+   ],
+   "trans": "Fondu vers la carte de l'écosystème : « Pour répondre, regardons notre réalité ».",
+   "objection": 3,
+   "disc": "2 à 3 min.",
+   "prud": "Les explications reprennent les termes de la note ; aucune qualification juridique supplémentaire."
+  },
+  {
+   "id": 3,
+   "title": "L'écosystème OVE",
+   "obj": "Faire voir la configuration particulière d'un ensemble très intégré.",
+   "msg": "La Fondation fonctionne au centre d'un ensemble très intégré : fonds de dotation IMOVE, SCI, associations du réseau.",
+   "oral": "Au centre, la Fondation. Autour, IMOVE, les SCI, les associations du réseau. Cliquez sur une entité : n'apparaît que ce que la note établit. Les filtres montrent chaque type de relation.",
+   "decl": [
+    "Espace : entités et liens de base.",
+    "Espace : circuits financiers internes.",
+    "Espace : fonctions support du siège.",
+    "Espace : fonctions et mandats.",
+    "Clic sur une entité ou touches 1 à 7 ; boutons à droite pour filtrer les types de relations."
+   ],
+   "trans": "Glissement : de la carte aux trois couches de l'intégration.",
+   "objection": 4,
+   "disc": "3 à 4 min.",
+   "prud": "Représentation de principe : la note décrit des relations, sans montants ni liens un à un. Les associations affichées sont celles citées dans la vidéo. Une configuration n'est pas un constat d'irrégularité."
+  },
+  {
+   "id": 4,
+   "title": "Une organisation intégrée",
+   "obj": "Montrer que l'intégration est une force opérationnelle qui appelle une prévention elle aussi intégrée.",
+   "msg": "Une organisation intégrée appelle une prévention également intégrée.",
+   "oral": "Trois couches se superposent : des flux internes, des expertises mutualisées, des fonctions et mandats exercés dans plusieurs structures. C'est une force. C'est aussi ce qui justifie des règles communes.",
+   "decl": [
+    "Espace : couche 1, flux internes.",
+    "Espace : couche 2, expertises mutualisées.",
+    "Espace : couche 3, fonctions et mandats.",
+    "Espace : la synthèse."
+   ],
+   "trans": "Rideau des trois bandes : du constat à la limite du « cas par cas ».",
+   "objection": 5,
+   "disc": "1 à 2 min.",
+   "prud": "Présenter l'intégration comme une force. Les mandats sont décrits sans jugement."
+  },
+  {
+   "id": 5,
+   "title": "Le point de bascule",
+   "obj": "Montrer pourquoi une approche exclusivement réactive ne suffit pas, sans caricaturer l'existant.",
+   "msg": "Gérer au cas par cas, ou organiser un cadre commun ?",
+   "oral": "Il ne s'agit pas de dire que les pratiques actuelles sont irrégulières. Il s'agit de comparer deux manières d'organiser la prévention. Faites glisser le curseur.",
+   "decl": [
+    "Espace : « cas par cas ».",
+    "Espace : le curseur passe à mi-course.",
+    "Espace : « cadre commun ».",
+    "Boutons ou glisser la poignée pour comparer librement."
+   ],
+   "trans": "Vague verte : de la comparaison à la démarche proposée.",
+   "objection": 0,
+   "disc": "3 min.",
+   "prud": "La comparaison décrit deux approches, elle ne qualifie pas les pratiques actuelles."
+  },
+  {
+   "id": 6,
+   "title": "Le choix proposé",
+   "obj": "Poser la démarche proposée et ses six qualités.",
+   "msg": "Une démarche volontaire inspirée Sapin 2, adaptée et proportionnée.",
+   "oral": "Ce que nous proposons : une démarche volontaire. Sapin 2 est une source d'inspiration, pas un dispositif transposé mécaniquement. Elle est adaptée à notre statut et à notre organisation.",
+   "decl": [
+    "Espace : la démarche.",
+    "Espace : volontaire, adaptée, proportionnée.",
+    "Espace : structurée, graduée, commune.",
+    "Espace : la précision sur l'inspiration."
+   ],
+   "trans": "Zoom : du principe aux quatre chantiers.",
+   "objection": 1,
+   "disc": "2 min.",
+   "prud": "Ne pas présenter la démarche comme une obligation légale ni comme déjà adoptée."
+  },
+  {
+   "id": 7,
+   "title": "Les quatre chantiers",
+   "obj": "Présenter l'ossature de la démarche.",
+   "msg": "Cartographier, adopter un code commun, mettre de l'ordre dans les flux, créer une gouvernance de la probité.",
+   "oral": "Quatre chantiers, reliés entre eux. Chacun s'ouvre au clic. Je les prends dans l'ordre, mais vous pouvez demander à aller directement à l'un d'eux.",
+   "decl": [
+    "Espace : les quatre piliers montent l'un après l'autre.",
+    "Espace : les liens s'allument.",
+    "Clic ou touches 1 à 4 : ouvrir un pilier ; « Voir le détail » ou Entrée : aller à sa scène."
+   ],
+   "trans": "Selon le chantier ouvert, ou scène suivante : la cartographie.",
+   "objection": 7,
+   "disc": "2 min, puis une scène par chantier.",
+   "prud": "Ce sont des orientations proposées, pas des décisions acquises."
+  },
+  {
+   "id": 8,
+   "title": "Cartographier les risques réels",
+   "obj": "Montrer que la cartographie vise les zones où la prévention doit être la plus claire.",
+   "msg": "Cartographier ne signifie pas suspecter.",
+   "oral": "Quatre familles de zones de vigilance : flux, opérations immobilières, achats et marchés, décisions de gouvernance. Aucun classement, aucun niveau : la note n'en fournit pas.",
+   "decl": [
+    "Espace : famille 1.",
+    "Espace : famille 2.",
+    "Espace : famille 3.",
+    "Espace : famille 4.",
+    "Espace : la phrase de synthèse."
+   ],
+   "trans": "Glissement : de la cartographie au code commun.",
+   "objection": 3,
+   "disc": "2 min.",
+   "prud": "Aucune note de risque. Une zone de vigilance n'est pas une irrégularité."
+  },
+  {
+   "id": 9,
+   "title": "Un code commun",
+   "obj": "Montrer comment une situation potentielle de conflit d'intérêts serait traitée.",
+   "msg": "Identifier, déclarer, analyser, s'abstenir si nécessaire, faire décider un organe non intéressé, documenter.",
+   "oral": "Voici le parcours d'une situation potentielle. Rien de lourd : sept gestes simples, partagés par tout le réseau, pour que chacun sache quoi faire.",
+   "decl": [
+    "Espace ×7 : une étape après l'autre, le jeton avance.",
+    "Clic sur une étape : son explication.",
+    "Espace : les principes communs."
+   ],
+   "trans": "Rideau : du parcours aux flux entre entités.",
+   "objection": 5,
+   "disc": "3 min.",
+   "prud": "Parler de « situation potentielle », jamais de conflit avéré."
+  },
+  {
+   "id": 10,
+   "title": "Sécuriser les flux",
+   "obj": "Montrer la transformation d'un flux identifié en décision traçable.",
+   "msg": "Recensement, convention écrite, validation excluant les personnes directement intéressées, abstentions mentionnées.",
+   "oral": "Un flux est d'abord identifié, recensé, qualifié. Il fait ensuite l'objet d'une convention écrite, validée par un organe non intéressé. Cliquez sur les champs de la convention.",
+   "decl": [
+    "Espace ×7 : les sept étapes.",
+    "À l'étape 4 : la convention apparaît.",
+    "Clic sur un champ : son contenu."
+   ],
+   "trans": "Rideau : des flux aux mandats.",
+   "objection": 2,
+   "disc": "3 min.",
+   "prud": "Ne jamais affirmer que les flux actuels sont irréguliers."
+  },
+  {
+   "id": 11,
+   "title": "Rendre les mandats lisibles",
+   "obj": "Montrer l'intérêt d'un registre des mandats et fonctions.",
+   "msg": "Le sujet n'est pas le cumul en lui-même, mais notre capacité à reconnaître et gérer les situations où les intérêts peuvent se croiser.",
+   "oral": "Le registre objective les responsabilités. Le tableau est vide à dessein : l'exemple de lecture est schématique, sans aucune donnée réelle.",
+   "decl": [
+    "Espace : la grille du registre.",
+    "Espace : ce que le registre permet.",
+    "Bouton « Exemple de lecture » : démonstration schématique.",
+    "Espace : la phrase de synthèse."
+   ],
+   "trans": "Glissement : du registre au référent.",
+   "objection": 5,
+   "disc": "2 à 3 min.",
+   "prud": "Aucune personne n'est nommée. Un cumul n'est pas une faute ; un croisement n'est pas un conflit avéré."
+  },
+  {
+   "id": 12,
+   "title": "Organiser la gouvernance de la probité",
+   "obj": "Présenter le référent probité/compliance comme point de coordination.",
+   "msg": "Un référent rattaché à la Direction générale : cartographie, modèles de conventions, dispositif d'alerte, reporting au Bureau.",
+   "oral": "Le référent coordonne, appuie et rend compte. Il ne remplace aucun organe. Cliquez sur un lien pour voir ce qui circule.",
+   "decl": [
+    "Espace ×6 : les six missions et les liens s'allument un à un.",
+    "Clic sur un satellite : son rôle."
+   ],
+   "trans": "Vague : du référent à la diffusion dans l'écosystème.",
+   "objection": 6,
+   "disc": "2 min.",
+   "prud": "Point de coordination et d'appui. Ne pas le décrire comme une autorité de décision."
+  },
+  {
+   "id": 13,
+   "title": "Un langage commun",
+   "obj": "Montrer la diffusion progressive du cadre dans tout l'écosystème.",
+   "msg": "Un même langage de gouvernance et de probité pour un écosystème fortement intégré.",
+   "oral": "Les chartes et conventions partent de la Fondation vers IMOVE, les SCI, les associations et les organes concernés. Un seul langage.",
+   "decl": [
+    "Espace : la diffusion démarre.",
+    "Espace : les destinataires.",
+    "Espace : la phrase finale."
+   ],
+   "trans": "Zoom : du langage commun aux bénéfices.",
+   "objection": 1,
+   "disc": "1 à 2 min.",
+   "prud": "Le cadre est décliné par chartes et conventions ; il respecte les organes compétents de chaque entité."
+  },
+  {
+   "id": 14,
+   "title": "Ce que la démarche apporte",
+   "obj": "Relier les chantiers à trois bénéfices.",
+   "msg": "Sécuriser, prévenir, renforcer la confiance.",
+   "oral": "Les quatre chantiers convergent vers trois bénéfices. Ouvrez-les : chacun détaille ce qu'il recouvre.",
+   "decl": [
+    "Espace : les chantiers.",
+    "Espace : la convergence.",
+    "Espace : les trois bénéfices ; clic ou 1, 2, 3."
+   ],
+   "trans": "Rideau : des bénéfices à la comparaison finale.",
+   "objection": 5,
+   "disc": "2 min.",
+   "prud": "Parler de bénéfices attendus, non garantis."
+  },
+  {
+   "id": 15,
+   "title": "Le coût de l'inaction",
+   "obj": "Faire ressentir ce que l'absence de cadre commun laisse subsister, sans dramatiser.",
+   "msg": "L'absence de cadre commun laisse subsister des fragilités organisationnelles que nous pouvons prévenir.",
+   "oral": "La balance penche à mesure que les critères s'ajoutent. Il ne s'agit pas d'une irrégularité : d'une organisation à renforcer.",
+   "decl": [
+    "Espace : la balance.",
+    "Espace : anticipation, homogénéité, transparence.",
+    "Espace : traçabilité, lisibilité, justification, confiance.",
+    "Espace : la conclusion.",
+    "Clic sur un critère : le retirer ou le remettre."
+   ],
+   "trans": "Glissement : de la balance à la mise en œuvre.",
+   "objection": 3,
+   "disc": "2 min.",
+   "prud": "Formulation de conclusion stratégique, pas d'affirmation d'irrégularité."
+  },
+  {
+   "id": 16,
+   "title": "Une mise en œuvre graduée",
+   "obj": "Montrer la trajectoire sans inventer ni date ni moyen.",
+   "msg": "Le plan opérationnel précisera responsabilités, moyens et calendrier détaillé.",
+   "oral": "Treize étapes, de la décision d'orientation au suivi. Aucune date n'est arrêtée : c'est l'objet du plan, présenté en fin d'année au Bureau.",
+   "decl": [
+    "Espace ×5 : la feuille de route se déroule.",
+    "Clic sur une étape : son contenu."
+   ],
+   "trans": "Fondu vers la scène sombre de décision.",
+   "objection": 7,
+   "disc": "2 à 3 min.",
+   "prud": "Seule indication de calendrier : le plan sera présenté en fin d'année au Bureau (note). Aucune date, aucun moyen inventé."
+  },
+  {
+   "id": 17,
+   "title": "La décision attendue du Bureau",
+   "obj": "Obtenir une décision d'orientation claire.",
+   "msg": "Acter le principe d'une démarche volontaire, structurée et graduée de prévention des atteintes à la probité.",
+   "oral": "Voici ce que nous proposons au Bureau. Une décision d'orientation, qui permettra de préparer le plan opérationnel. La touche D réaffiche cette scène à tout moment.",
+   "decl": [
+    "Bouton ou Espace : afficher la proposition.",
+    "Espace : les quatre orientations.",
+    "Espace : la précision sur le plan opérationnel.",
+    "Touche D : revenir ici depuis n'importe quelle scène."
+   ],
+   "trans": "Fondu vers la conclusion.",
+   "objection": 7,
+   "disc": "Le temps que le Bureau souhaite.",
+   "prud": "Il s'agit d'une proposition d'orientation. Elle n'est pas adoptée tant que le Bureau ne s'est pas prononcé."
+  },
+  {
+   "id": 18,
+   "title": "Conclusion",
+   "obj": "Refermer l'intervention sur le message d'ensemble.",
+   "msg": "Une démarche de probité et de conformité à la hauteur de nos enjeux et de notre responsabilité.",
+   "oral": "Volontaire, adaptée, proportionnée, graduée. Une démarche à la hauteur de nos enjeux et de notre responsabilité.",
+   "decl": [
+    "Espace ×4 : les quatre qualités.",
+    "Espace : la phrase finale et le logo."
+   ],
+   "trans": "Fin : l'écran reprend la sobriété de la fin de la vidéo.",
+   "objection": null,
+   "disc": "Selon l'échange.",
+   "prud": "Rester sur le ton de la proposition."
+  }
+ ]
+}
