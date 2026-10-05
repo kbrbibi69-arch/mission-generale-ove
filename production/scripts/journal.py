@@ -41,6 +41,9 @@ PJ = [
 out = ["# Version sans humour enrichie — journal des pièces jointes", "",
        f"Film : *Fondation OVE — Prévenir les atteintes à la probité* · version sans humour · durée {tc(TLS['total'])}.", "",
        "## 1. Journal des modifications", "",
+       "### v5 (par rapport à la v4)", "",
+       "- **Prononciation de « OVE »** : dit comme un mot, « O-veu » (le E final s’entend comme dans « le », jamais « é »), partout dans la voix : Fondation OVE, OVE Caraïbes, OVE Transition ; OVE Plenior en un seul mot, « O-veu-plénior ». Écriture phonétique vérifiée sur la transcription du moteur de synthèse ; textes et sous-titres inchangés (« OVE »). IMOVE inchangé (« Imov »). Écoute humaine recommandée.", "",
+       "### v4 (par rapport à la v3)", "",
        "### v4 (par rapport à la v3)", "",
        "- **OVE Transition** : association ajoutée à la liste des associations partenaires. Voix off : « S’y ajoutent cinq associations partenaires : … OVE Caraïbes, en outre-mer ; OVE Transition ; et Ressourcial… » (aucune description ajoutée, faute d’information fournie). Scène 3 : la cartographie passe à sept entités disposées en couronne régulière autour de la Fondation ; le logo OVE Transition (PJ12) apparaît sur le mot qui la nomme, avec la mention « association partenaire ».",
        "- **Logo OVE Transition** : fourni en version inversée (formes blanches sur aplat vert). L’aplat vert, mesuré sur le fichier (`#B5CA0A`, quasi identique au vert de la charte `#B4C908`), est conservé tel quel et tient lieu de plaque ; les formes blanches sont vectorisées (disque fléché, V, trois barres du E, lettres de TRANSITION). Aucune recoloration, proportions du fichier conservées. Animation propre : l’aplat se pose, le disque fléché roule depuis la gauche et finit flèche vers l’avant, le V se dépose, les barres du E glissent, puis « TRANSITION » s’écrit.",
@@ -101,7 +104,7 @@ out += ["", "## 7. Contrôle qualité", "",
         "| Toutes les entités nommées ont leur logo | Conforme — sept logos sur sept |",
         "| La vidéo ne ressemble pas à un diaporama | Photographies en panneaux multicouches (détourage, parallaxe, révélation en bandes), jamais en plein écran avec simple zoom |", "",
         "## 8. Livrables", ""]
-for f, lab in (("OVE-probite-sapin2-sans-humour-v4-projection.mp4", "Haute qualité, projection"), ("OVE-probite-sapin2-sans-humour-v4-leger.mp4", "Diffusion numérique (allégée)")):
+for f, lab in (("OVE-probite-sapin2-sans-humour-v5-projection.mp4", "Haute qualité, projection"), ("OVE-probite-sapin2-sans-humour-v5-leger.mp4", "Diffusion numérique (allégée)")):
     pr = probe(f)
     out.append(f"- **{lab}** : `renders/{f}`" + (f" — {pr}" if pr else " — à produire"))
 out += ["- Versions précédentes conservées : v1 (`renders/OVE-probite-sapin2-sans-humour.mp4`, `…-leger.mp4`) v2 (`renders/OVE-probite-sapin2-sans-humour-v2-projection.mp4`, `…-v2-leger.mp4`) et v3 (`…-v3-projection.mp4`, `…-v3-leger.mp4`).", "",
