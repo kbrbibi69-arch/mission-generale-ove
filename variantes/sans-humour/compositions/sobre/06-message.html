@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="06-message" data-width="1920" data-height="1080" data-duration="18.0">
-  <div id="s06-scene" class="clip" data-start="0" data-duration="18.0" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="06-message" data-width="1920" data-height="1080" data-duration="17.78">
+  <div id="s06-scene" class="clip" data-start="0" data-duration="17.78" data-track-index="0" style="position:absolute;inset:0">
   
   <div class="dots dk s06-dots"></div><div class="amb dk"><i class="s06-a1"></i><i class="s06-a2"></i><i class="s06-a3"></i></div>
   <div class="s06-content" style="position:absolute;inset:0">
@@ -103,26 +103,26 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s06-dots", { y: 0 }, { y: -56, duration: 18.0, ease: "none" }, 0);
-  tl.fromTo(".s06-a1", { x: 60 }, { x: -150, duration: 18.0, ease: "none" }, 0);
-  tl.fromTo(".s06-a2", { x: 30 }, { x: -100, duration: 18.0, ease: "none" }, 0);
-  tl.fromTo(".s06-a3", { x: 0 }, { x: -60, duration: 18.0, ease: "none" }, 0);
-  tl.fromTo(".s06-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 18.0, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s06-pg", { scaleX: 0.4837 }, { scaleX: 0.5457, duration: 18.0, ease: "none" }, 0);
-  rise(".s06-a", 3.84, { y: 24, d: 0.9 });
-  spell(".s06-p", 8.65, 0.06);
-  tl.to(".s06-a", { opacity: 0.55, duration: 0.6 }, 8.90);
-  tl.fromTo(".s06-glow", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1.6, ease: "power2.out" }, 8.51);
-  tl.fromTo(".s06-glow", { scale: 1 }, { scale: 1.08, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, 10.21);
-  rise(".s06-i0", 9.29, { y: 26 });
-  rise(".s06-i1", 10.92, { y: 26 });
-  rise(".s06-i2", 12.44, { y: 26 });
-  rise(".s06-i3", 13.26, { y: 26 });
-  rise(".s06-i4", 14.34, { y: 26 });
-  rise(".s06-i5", 15.32, { y: 26 });
+  tl.fromTo(".s06-dots", { y: 0 }, { y: -56, duration: 17.78, ease: "none" }, 0);
+  tl.fromTo(".s06-a1", { x: 60 }, { x: -150, duration: 17.78, ease: "none" }, 0);
+  tl.fromTo(".s06-a2", { x: 30 }, { x: -100, duration: 17.78, ease: "none" }, 0);
+  tl.fromTo(".s06-a3", { x: 0 }, { x: -60, duration: 17.78, ease: "none" }, 0);
+  tl.fromTo(".s06-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 17.78, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s06-pg", { scaleX: 0.4825 }, { scaleX: 0.5437, duration: 17.78, ease: "none" }, 0);
+  rise(".s06-a", 3.73, { y: 24, d: 0.9 });
+  spell(".s06-p", 8.43, 0.06);
+  tl.to(".s06-a", { opacity: 0.55, duration: 0.6 }, 8.68);
+  tl.fromTo(".s06-glow", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1.6, ease: "power2.out" }, 8.28);
+  tl.fromTo(".s06-glow", { scale: 1 }, { scale: 1.08, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, 9.98);
+  rise(".s06-i0", 9.06, { y: 26 });
+  rise(".s06-i1", 10.69, { y: 26 });
+  rise(".s06-i2", 12.21, { y: 26 });
+  rise(".s06-i3", 13.03, { y: 26 });
+  rise(".s06-i4", 14.11, { y: 26 });
+  rise(".s06-i5", 15.09, { y: 26 });
   tl.fromTo(".s06-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s06-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 17.20);
-  tl.set(".s06-content", { opacity: 0 }, 17.86);
+  tl.fromTo(".s06-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 16.98);
+  tl.set(".s06-content", { opacity: 0 }, 17.64);
   window.__timelines["06-message"] = tl;
 })();
 </script>

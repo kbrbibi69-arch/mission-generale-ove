@@ -11,7 +11,7 @@ man = json.load(open(os.path.join(ROOT, ".media", "voice", "manifest.json")))
 VARIANTS = sys.argv[1:] or ["humour", "sobre"]
 OUT = "timeline.json" if len(VARIANTS) == 2 else f"timeline-{VARIANTS[0]}.json"
 LEAD_FIRST, LEAD, TAIL, HOLD = 2.6, 0.7, 0.85, 10.5
-if VARIANTS == ["sobre"]: HOLD = 11.0  # écran final un peu plus long : la voix plus rapide garde la durée au-dessus de 4 min 50
+if VARIANTS == ["sobre"]: HOLD = 11.6  # écran final un peu plus long : la voix plus rapide garde la durée au-dessus de 4 min 50
 SR = 24000
 
 GAPS = {"humour": (0.22, 0.45), "sobre": (0.18, 0.36)}  # silences entre répliques (virgule, point) : plus resserrés en version sobre

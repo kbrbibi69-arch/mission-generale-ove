@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="03-ecosysteme" data-width="1920" data-height="1080" data-duration="47.81">
-  <div id="s03-scene" class="clip" data-start="0" data-duration="47.81" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="03-ecosysteme" data-width="1920" data-height="1080" data-duration="47.58">
+  <div id="s03-scene" class="clip" data-start="0" data-duration="47.58" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s03-dots"></div><div class="amb"><i class="s03-a1"></i><i class="s03-a2"></i><i class="s03-a3"></i></div>
   <div class="s03-content" style="position:absolute;inset:0">
@@ -129,12 +129,12 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s03-dots", { y: 0 }, { y: -56, duration: 47.81, ease: "none" }, 0);
-  tl.fromTo(".s03-a1", { x: 60 }, { x: -150, duration: 47.81, ease: "none" }, 0);
-  tl.fromTo(".s03-a2", { x: 30 }, { x: -100, duration: 47.81, ease: "none" }, 0);
-  tl.fromTo(".s03-a3", { x: 0 }, { x: -60, duration: 47.81, ease: "none" }, 0);
-  tl.fromTo(".s03-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 47.81, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s03-pg", { scaleX: 0.1340 }, { scaleX: 0.2988, duration: 47.81, ease: "none" }, 0);
+  tl.fromTo(".s03-dots", { y: 0 }, { y: -56, duration: 47.58, ease: "none" }, 0);
+  tl.fromTo(".s03-a1", { x: 60 }, { x: -150, duration: 47.58, ease: "none" }, 0);
+  tl.fromTo(".s03-a2", { x: 30 }, { x: -100, duration: 47.58, ease: "none" }, 0);
+  tl.fromTo(".s03-a3", { x: 0 }, { x: -60, duration: 47.58, ease: "none" }, 0);
+  tl.fromTo(".s03-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 47.58, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s03-pg", { scaleX: 0.1336 }, { scaleX: 0.2975, duration: 47.58, ease: "none" }, 0);
   pop(".s03-core", 0.55, { s: 0.8, d: 0.8 });
   tl.fromTo(".s03-lgcore .g-o", { scale: 0, rotation: -120, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.5)" }, 0.80);
   tl.fromTo(".s03-lgcore .g-v", { scaleY: 0, transformOrigin: "50% 0%" }, { scaleY: 1, duration: 0.55, ease: "power3.out" }, 0.92);
@@ -158,67 +158,67 @@
   pop(".s03-sci", 7.51);
   rise(".s03-lsci", 7.61, { y: 12 });
   spell(".s03-lsci .spell", 7.56, 0.05); ring(".s03-rsci", 7.61);
-  draw(".s03-ln:nth-of-type(3)", 13.60, 0.6);
-  pop(".s03-ami", 14.00, { s: 0.9 });
-  tl.fromTo(".s03-lgami .g-fond, .s03-lgami .g-maison", { y: -46, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "bounce.out" }, 14.15);
-  tl.fromTo(".s03-lgami .g-coeur", { scale: 0, transformOrigin: "50% 60%" }, { scale: 1, duration: 0.45, ease: "back.out(3)" }, 14.70);
-  tl.fromTo(".s03-lgami .g-coeur", { scale: 1 }, { scale: 1.22, duration: 0.16, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, 15.20);
-  tl.fromTo(".s03-lgami .g-a1, .s03-lgami .g-m, .s03-lgami .g-i1, .s03-lgami .g-c, .s03-lgami .g-i2, .s03-lgami .g-a2, .s03-lgami .g-l", { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.06 }, 14.45);
-  tl.fromTo(".s03-lgami .g-texte path", { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.012 }, 15.00);
-  rise(".s03-lami", 14.20, { y: 12 }); spell(".s03-lami .spell", 14.15, 0.05); ring(".s03-rami", 14.40);
-  draw(".s03-ln:nth-of-type(4)", 16.31, 0.6);
-  pop(".s03-ple", 16.71, { s: 0.9 });
-  tl.fromTo(".s03-lgple .g-p, .s03-lgple .g-l, .s03-lgple .g-e, .s03-lgple .g-n, .s03-lgple .g-i, .s03-lgple .g-o, .s03-lgple .g-r", { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.06 }, 16.86);
-  tl.fromTo(".s03-lgple .g-point", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.4, ease: "back.out(3)" }, 17.26);
-  tl.fromTo(".s03-lgple .g-feuille", { scale: 0, rotation: -35, svgOrigin: "194.2 51.8" }, { scale: 1, rotation: 0, duration: 0.9, ease: "elastic.out(1, 0.55)" }, 17.41);
-  rise(".s03-lple", 16.91, { y: 12 }); spell(".s03-lple .spell", 16.86, 0.05); ring(".s03-rple", 17.11);
-  draw(".s03-ln:nth-of-type(5)", 19.99, 0.6);
-  pop(".s03-car", 20.39, { s: 0.9 });
-  tl.fromTo(".s03-lgcar .g-disque", { scale: 0.2, rotation: -160, x: -60, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, x: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 20.54);
-  tl.fromTo(".s03-lgcar .g-v", { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out" }, 20.79);
-  tl.fromTo(".s03-lgcar .g-e1, .s03-lgcar .g-e2, .s03-lgcar .g-e3", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, 20.94);
-  tl.fromTo(".s03-lgcar .g-caraibes path", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, stagger: -0.04 }, 21.24);
-  tl.fromTo(".s03-lgcar .g-texte1 path, .s03-lgcar .g-texte2 path", { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.025 }, 21.39);
-  rise(".s03-lcar", 20.59, { y: 12 }); spell(".s03-lcar .spell", 20.54, 0.05); ring(".s03-rcar", 20.79);
-  draw(".s03-ln:nth-of-type(6)", 21.53, 0.6);
-  pop(".s03-tra", 21.93, { s: 0.9 });
-  tl.fromTo(".s03-lgtra .g-fond", { scale: 0.86, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.45, ease: "power3.out" }, 22.08);
-  tl.fromTo(".s03-lgtra .g-o", { x: -70, rotation: -300, opacity: 0, transformOrigin: "50% 50%" }, { x: 0, rotation: 0, opacity: 1, duration: 0.85, ease: "power3.out" }, 22.20);
-  tl.fromTo(".s03-lgtra .g-v", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "bounce.out" }, 22.43);
-  tl.fromTo(".s03-lgtra .g-e1, .s03-lgtra .g-e2, .s03-lgtra .g-e3", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.45, ease: "power3.out", stagger: 0.08 }, 22.58);
-  tl.fromTo(".s03-lgtra .g-texte path", { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out", stagger: 0.04 }, 22.83);
-  rise(".s03-ltra", 22.13, { y: 12 }); spell(".s03-ltra .spell", 22.08, 0.05); ring(".s03-rtra", 22.33);
-  draw(".s03-ln:nth-of-type(7)", 22.60, 0.6);
-  pop(".s03-res", 23.00, { s: 0.9 });
-  tl.fromTo(".s03-lgres .g-r1", { x: -45.1, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.37);
-  tl.fromTo(".s03-lgres .g-e1", { x: -36.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.33);
-  tl.fromTo(".s03-lgres .g-s1", { x: -28.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.29);
-  tl.fromTo(".s03-lgres .g-s2", { x: -20.3, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.25);
-  tl.fromTo(".s03-lgres .g-u", { x: -0.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.15);
-  tl.fromTo(".s03-lgres .g-r2", { x: 8.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.19);
-  tl.fromTo(".s03-lgres .g-c", { x: 18.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.24);
-  tl.fromTo(".s03-lgres .g-i", { x: 28.1, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.29);
-  tl.fromTo(".s03-lgres .g-a", { x: 37.5, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.34);
-  tl.fromTo(".s03-lgres .g-l", { x: 45.9, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.38);
-  tl.fromTo(".s03-lgres .g-o", { scale: 0, rotation: 200, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.6)" }, 23.35);
-  tl.fromTo(".s03-lgres .g-piece", { y: -40, rotation: -90, opacity: 0, transformOrigin: "50% 50%" }, { y: 0, rotation: 0, opacity: 1, duration: 0.8, ease: "bounce.out" }, 23.75);
-  rise(".s03-lres", 23.20, { y: 12 }); spell(".s03-lres .spell", 23.15, 0.05); ring(".s03-rres", 23.40);
-  rise(".s03-p1t", 26.229);
-  slide(".s03-o0", 29.36, { x: -24 });
-  slide(".s03-o1", 29.94, { x: -24 });
-  slide(".s03-o2", 30.64, { x: -24 });
-  slide(".s03-o3", 31.57, { x: -24 });
-  rise(".s03-p2t", 35.006);
-  rise(".s03-c0", 36.34, { y: 14 }); rise(".s03-c1", 37.25, { y: 14 }); rise(".s03-c2", 37.89, { y: 14 });
-  tl.fromTo(".s03-cx", { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.25 }, 37.89);
-  tl.fromTo(".s03-cx", { strokeDashoffset: 0 }, { strokeDashoffset: -240, duration: 9.92, ease: "none", immediateRender: false }, 37.89);
-  pop(".s03-leg", 39.49, { s: 0.94 });
-  tl.to(".s03-o0, .s03-o1, .s03-o2, .s03-o3, .s03-p1t", { opacity: 0, duration: 0.4 }, 41.30);
-  pop(".s03-ok", 41.40, { s: 0.95 });
-  tl.fromTo(".s03-halo", { opacity: 0, scale: 0.75 }, { opacity: 0.8, scale: 1, duration: 1.2, ease: "power2.out" }, 46.26);
+  draw(".s03-ln:nth-of-type(3)", 13.56, 0.6);
+  pop(".s03-ami", 13.96, { s: 0.9 });
+  tl.fromTo(".s03-lgami .g-fond, .s03-lgami .g-maison", { y: -46, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "bounce.out" }, 14.11);
+  tl.fromTo(".s03-lgami .g-coeur", { scale: 0, transformOrigin: "50% 60%" }, { scale: 1, duration: 0.45, ease: "back.out(3)" }, 14.66);
+  tl.fromTo(".s03-lgami .g-coeur", { scale: 1 }, { scale: 1.22, duration: 0.16, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, 15.16);
+  tl.fromTo(".s03-lgami .g-a1, .s03-lgami .g-m, .s03-lgami .g-i1, .s03-lgami .g-c, .s03-lgami .g-i2, .s03-lgami .g-a2, .s03-lgami .g-l", { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.06 }, 14.41);
+  tl.fromTo(".s03-lgami .g-texte path", { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.012 }, 14.96);
+  rise(".s03-lami", 14.16, { y: 12 }); spell(".s03-lami .spell", 14.11, 0.05); ring(".s03-rami", 14.36);
+  draw(".s03-ln:nth-of-type(4)", 16.23, 0.6);
+  pop(".s03-ple", 16.63, { s: 0.9 });
+  tl.fromTo(".s03-lgple .g-p, .s03-lgple .g-l, .s03-lgple .g-e, .s03-lgple .g-n, .s03-lgple .g-i, .s03-lgple .g-o, .s03-lgple .g-r", { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.06 }, 16.78);
+  tl.fromTo(".s03-lgple .g-point", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.4, ease: "back.out(3)" }, 17.18);
+  tl.fromTo(".s03-lgple .g-feuille", { scale: 0, rotation: -35, svgOrigin: "194.2 51.8" }, { scale: 1, rotation: 0, duration: 0.9, ease: "elastic.out(1, 0.55)" }, 17.33);
+  rise(".s03-lple", 16.83, { y: 12 }); spell(".s03-lple .spell", 16.78, 0.05); ring(".s03-rple", 17.03);
+  draw(".s03-ln:nth-of-type(5)", 19.85, 0.6);
+  pop(".s03-car", 20.25, { s: 0.9 });
+  tl.fromTo(".s03-lgcar .g-disque", { scale: 0.2, rotation: -160, x: -60, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, x: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 20.40);
+  tl.fromTo(".s03-lgcar .g-v", { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "bounce.out" }, 20.65);
+  tl.fromTo(".s03-lgcar .g-e1, .s03-lgcar .g-e2, .s03-lgcar .g-e3", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, 20.80);
+  tl.fromTo(".s03-lgcar .g-caraibes path", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, stagger: -0.04 }, 21.10);
+  tl.fromTo(".s03-lgcar .g-texte1 path, .s03-lgcar .g-texte2 path", { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.025 }, 21.25);
+  rise(".s03-lcar", 20.45, { y: 12 }); spell(".s03-lcar .spell", 20.40, 0.05); ring(".s03-rcar", 20.65);
+  draw(".s03-ln:nth-of-type(6)", 21.37, 0.6);
+  pop(".s03-tra", 21.77, { s: 0.9 });
+  tl.fromTo(".s03-lgtra .g-fond", { scale: 0.86, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.45, ease: "power3.out" }, 21.92);
+  tl.fromTo(".s03-lgtra .g-o", { x: -70, rotation: -300, opacity: 0, transformOrigin: "50% 50%" }, { x: 0, rotation: 0, opacity: 1, duration: 0.85, ease: "power3.out" }, 22.04);
+  tl.fromTo(".s03-lgtra .g-v", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "bounce.out" }, 22.27);
+  tl.fromTo(".s03-lgtra .g-e1, .s03-lgtra .g-e2, .s03-lgtra .g-e3", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.45, ease: "power3.out", stagger: 0.08 }, 22.42);
+  tl.fromTo(".s03-lgtra .g-texte path", { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out", stagger: 0.04 }, 22.67);
+  rise(".s03-ltra", 21.97, { y: 12 }); spell(".s03-ltra .spell", 21.92, 0.05); ring(".s03-rtra", 22.17);
+  draw(".s03-ln:nth-of-type(7)", 22.42, 0.6);
+  pop(".s03-res", 22.82, { s: 0.9 });
+  tl.fromTo(".s03-lgres .g-r1", { x: -45.1, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.19);
+  tl.fromTo(".s03-lgres .g-e1", { x: -36.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.15);
+  tl.fromTo(".s03-lgres .g-s1", { x: -28.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.11);
+  tl.fromTo(".s03-lgres .g-s2", { x: -20.3, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.07);
+  tl.fromTo(".s03-lgres .g-u", { x: -0.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 22.97);
+  tl.fromTo(".s03-lgres .g-r2", { x: 8.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.01);
+  tl.fromTo(".s03-lgres .g-c", { x: 18.6, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.06);
+  tl.fromTo(".s03-lgres .g-i", { x: 28.1, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.11);
+  tl.fromTo(".s03-lgres .g-a", { x: 37.5, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.15);
+  tl.fromTo(".s03-lgres .g-l", { x: 45.9, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 23.20);
+  tl.fromTo(".s03-lgres .g-o", { scale: 0, rotation: 200, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.6)" }, 23.17);
+  tl.fromTo(".s03-lgres .g-piece", { y: -40, rotation: -90, opacity: 0, transformOrigin: "50% 50%" }, { y: 0, rotation: 0, opacity: 1, duration: 0.8, ease: "bounce.out" }, 23.57);
+  rise(".s03-lres", 23.02, { y: 12 }); spell(".s03-lres .spell", 22.97, 0.05); ring(".s03-rres", 23.22);
+  rise(".s03-p1t", 26.002);
+  slide(".s03-o0", 29.14, { x: -24 });
+  slide(".s03-o1", 29.72, { x: -24 });
+  slide(".s03-o2", 30.41, { x: -24 });
+  slide(".s03-o3", 31.34, { x: -24 });
+  rise(".s03-p2t", 34.779);
+  rise(".s03-c0", 36.11, { y: 14 }); rise(".s03-c1", 37.02, { y: 14 }); rise(".s03-c2", 37.66, { y: 14 });
+  tl.fromTo(".s03-cx", { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.25 }, 37.66);
+  tl.fromTo(".s03-cx", { strokeDashoffset: 0 }, { strokeDashoffset: -240, duration: 9.92, ease: "none", immediateRender: false }, 37.66);
+  pop(".s03-leg", 39.26, { s: 0.94 });
+  tl.to(".s03-o0, .s03-o1, .s03-o2, .s03-o3, .s03-p1t", { opacity: 0, duration: 0.4 }, 41.07);
+  pop(".s03-ok", 41.17, { s: 0.95 });
+  tl.fromTo(".s03-halo", { opacity: 0, scale: 0.75 }, { opacity: 0.8, scale: 1, duration: 1.2, ease: "power2.out" }, 46.03);
   tl.fromTo(".s03-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s03-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 47.01);
-  tl.set(".s03-content", { opacity: 0 }, 47.67);
+  tl.fromTo(".s03-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 46.78);
+  tl.set(".s03-content", { opacity: 0 }, 47.44);
   window.__timelines["03-ecosysteme"] = tl;
 })();
 </script>

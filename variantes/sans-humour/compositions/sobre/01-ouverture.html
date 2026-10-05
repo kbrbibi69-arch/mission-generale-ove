@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="01-ouverture" data-width="1920" data-height="1080" data-duration="17.27">
-  <div id="s01-scene" class="clip" data-start="0" data-duration="17.27" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="01-ouverture" data-width="1920" data-height="1080" data-duration="17.17">
+  <div id="s01-scene" class="clip" data-start="0" data-duration="17.17" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s01-dots"></div><div class="amb"><i class="s01-a1"></i><i class="s01-a2"></i><i class="s01-a3"></i></div>
   <div class="s01-content" style="position:absolute;inset:0">
@@ -100,21 +100,21 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s01-dots", { y: 0 }, { y: -56, duration: 17.27, ease: "none" }, 0);
-  tl.fromTo(".s01-a1", { x: 60 }, { x: -150, duration: 17.27, ease: "none" }, 0);
-  tl.fromTo(".s01-a2", { x: 30 }, { x: -100, duration: 17.27, ease: "none" }, 0);
-  tl.fromTo(".s01-a3", { x: 0 }, { x: -60, duration: 17.27, ease: "none" }, 0);
-  tl.fromTo(".s01-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 17.27, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s01-pg", { scaleX: 0.0000 }, { scaleX: 0.0595, duration: 17.27, ease: "none" }, 0);
+  tl.fromTo(".s01-dots", { y: 0 }, { y: -56, duration: 17.17, ease: "none" }, 0);
+  tl.fromTo(".s01-a1", { x: 60 }, { x: -150, duration: 17.17, ease: "none" }, 0);
+  tl.fromTo(".s01-a2", { x: 30 }, { x: -100, duration: 17.17, ease: "none" }, 0);
+  tl.fromTo(".s01-a3", { x: 0 }, { x: -60, duration: 17.17, ease: "none" }, 0);
+  tl.fromTo(".s01-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 17.17, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s01-pg", { scaleX: 0.0000 }, { scaleX: 0.0591, duration: 17.17, ease: "none" }, 0);
   
   pop(".s01-plate", 1.25, { s: 0.92, d: 0.9 });
-  tl.fromTo(".s01-plate svg", { scale: 1 }, { scale: 1.03, duration: 15.97, ease: "none" }, 1.3);
+  tl.fromTo(".s01-plate svg", { scale: 1 }, { scale: 1.03, duration: 15.87, ease: "none" }, 1.3);
   rise(".s01-w", 2.6, { st: 0.09, y: 34 });
   tl.fromTo(".s01-line", { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power2.out" }, 4.737);
-  rise(".s01-sub", 7.179);
-  rise(".s01-chips .chip:nth-child(1)", 13.151);
-  rise(".s01-chips .chip:nth-child(2)", 8.356);
-  rise(".s01-chips .chip:nth-child(3)", 15.33);
+  rise(".s01-sub", 7.097);
+  rise(".s01-chips .chip:nth-child(1)", 13.054);
+  rise(".s01-chips .chip:nth-child(2)", 8.259);
+  rise(".s01-chips .chip:nth-child(3)", 15.233);
 
   tl.fromTo(".s01-logo .g-o", { scale: 0, rotation: -120, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.5)" }, 1.40);
   tl.fromTo(".s01-logo .g-v", { scaleY: 0, transformOrigin: "50% 0%" }, { scaleY: 1, duration: 0.55, ease: "power3.out" }, 1.52);
@@ -124,8 +124,8 @@
   tl.fromTo(".s01-logo .g-texte path", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.035 }, 2.34);
   tl.fromTo(".s01-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.6, ease: "power3.inOut", stagger: 0.08 }, 0.1);
   tl.fromTo(".s01-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.65, ease: "power3.inOut", stagger: 0.08, immediateRender: false }, 1.05);
-  tl.fromTo(".s01-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 16.47);
-  tl.set(".s01-content", { opacity: 0 }, 17.13);
+  tl.fromTo(".s01-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 16.37);
+  tl.set(".s01-content", { opacity: 0 }, 17.03);
   window.__timelines["01-ouverture"] = tl;
 })();
 </script>
