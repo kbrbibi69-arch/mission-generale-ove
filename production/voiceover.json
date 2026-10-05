@@ -13,7 +13,7 @@
     {
      "id": "b",
      "text": "Pour la Fondation OVE, c’est d’abord une question de confiance.",
-     "say": "Pour la Fondation Oveu, c'est d'abord une question de confiance."
+     "say": "Pour la Fondation {OVE}, c'est d'abord une question de confiance."
     },
     {
      "id": "c",
@@ -28,7 +28,7 @@
     {
      "id": "a",
      "text": "La Fondation OVE est une fondation reconnue d’utilité publique.",
-     "say": "La Fondation Oveu est une fondation reconnue d'utilité publique."
+     "say": "La Fondation {OVE} est une fondation reconnue d'utilité publique."
     },
     {
      "id": "b",
@@ -72,7 +72,7 @@
      "id": "b",
      "variant": "sobre",
      "text": "S’y ajoutent cinq associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; OVE Transition ; et Ressourcial, pour des prestations au sein du réseau.",
-     "say": "S'y ajoutent cinq associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; Oveuplénior, qui mutualise ses fonctions support avec la Fondation ; Oveu Caraïbes, en outre-mer ; Oveu Transition ; et Ressourcial, pour des prestations au sein du réseau."
+     "say": "S'y ajoutent cinq associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; {OVE}plénior, qui mutualise ses fonctions support avec la Fondation ; {OVE} Caraïbes, en outre-mer ; {OVE} Transition ; et Ressourcial, pour des prestations au sein du réseau."
     },
     {
      "id": "c",
@@ -155,7 +155,7 @@
     {
      "id": "a",
      "text": "Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste pas seulement à répondre à un environnement juridique.",
-     "say": "Pour la Fondation Oveu, appliquer les principes de la loi Sapin deux, ne consiste pas seulement à répondre à un environnement juridique."
+     "say": "Pour la Fondation {OVE}, appliquer les principes de la loi Sapin deux, ne consiste pas seulement à répondre à un environnement juridique."
     },
     {
      "id": "b",
