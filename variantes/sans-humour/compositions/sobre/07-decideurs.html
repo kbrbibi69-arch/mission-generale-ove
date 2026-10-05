@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="07-decideurs" data-width="1920" data-height="1080" data-duration="30.94">
-  <div id="s07-scene" class="clip" data-start="0" data-duration="30.94" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="07-decideurs" data-width="1920" data-height="1080" data-duration="28.76">
+  <div id="s07-scene" class="clip" data-start="0" data-duration="28.76" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s07-dots"></div><div class="amb"><i class="s07-a1"></i><i class="s07-a2"></i><i class="s07-a3"></i></div>
   <div class="s07-content" style="position:absolute;inset:0">
@@ -107,29 +107,29 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s07-dots", { y: 0 }, { y: -56, duration: 30.94, ease: "none" }, 0);
-  tl.fromTo(".s07-a1", { x: 60 }, { x: -150, duration: 30.94, ease: "none" }, 0);
-  tl.fromTo(".s07-a2", { x: 30 }, { x: -100, duration: 30.94, ease: "none" }, 0);
-  tl.fromTo(".s07-a3", { x: 0 }, { x: -60, duration: 30.94, ease: "none" }, 0);
-  tl.fromTo(".s07-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 30.94, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s07-pg", { scaleX: 0.5454 }, { scaleX: 0.6462, duration: 30.94, ease: "none" }, 0);
+  tl.fromTo(".s07-dots", { y: 0 }, { y: -56, duration: 28.76, ease: "none" }, 0);
+  tl.fromTo(".s07-a1", { x: 60 }, { x: -150, duration: 28.76, ease: "none" }, 0);
+  tl.fromTo(".s07-a2", { x: 30 }, { x: -100, duration: 28.76, ease: "none" }, 0);
+  tl.fromTo(".s07-a3", { x: 0 }, { x: -60, duration: 28.76, ease: "none" }, 0);
+  tl.fromTo(".s07-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 28.76, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s07-pg", { scaleX: 0.5457 }, { scaleX: 0.6448, duration: 28.76, ease: "none" }, 0);
   title(".s07-t", 0.70);
-  pop(".s07-pp", 3.73);
-  draw(".s07-ln:nth-of-type(1)", 5.59, 0.6);
-  slide(".s07-in0", 5.89, { x: -20 });
-  draw(".s07-ln:nth-of-type(2)", 5.84, 0.6);
-  slide(".s07-in1", 6.14, { x: -20 });
-  draw(".s07-ln:nth-of-type(3)", 6.09, 0.6);
-  slide(".s07-in2", 6.39, { x: -20 });
-  rise(".s07-q1", 10.64, { y: 30 });
-  rise(".s07-q2", 14.65, { y: 30 });
-  rise(".s07-q3", 16.68, { y: 30 });
-  rise(".s07-q4", 19.02, { y: 30 });
-  rise(".s07-hl", 22.29, { y: 12 });
-  rise(".s07-c", 26.71, { y: 24 });
+  pop(".s07-pp", 3.40);
+  draw(".s07-ln:nth-of-type(1)", 5.19, 0.6);
+  slide(".s07-in0", 5.49, { x: -20 });
+  draw(".s07-ln:nth-of-type(2)", 5.44, 0.6);
+  slide(".s07-in1", 5.74, { x: -20 });
+  draw(".s07-ln:nth-of-type(3)", 5.69, 0.6);
+  slide(".s07-in2", 5.99, { x: -20 });
+  rise(".s07-q1", 9.98, { y: 30 });
+  rise(".s07-q2", 13.75, { y: 30 });
+  rise(".s07-q3", 15.65, { y: 30 });
+  rise(".s07-q4", 17.74, { y: 30 });
+  rise(".s07-hl", 20.73, { y: 12 });
+  rise(".s07-c", 24.85, { y: 24 });
   tl.fromTo(".s07-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s07-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 30.14);
-  tl.set(".s07-content", { opacity: 0 }, 30.80);
+  tl.fromTo(".s07-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 27.96);
+  tl.set(".s07-content", { opacity: 0 }, 28.62);
   window.__timelines["07-decideurs"] = tl;
 })();
 </script>

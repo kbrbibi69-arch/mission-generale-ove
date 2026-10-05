@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="08-dispositif" data-width="1920" data-height="1080" data-duration="34.36">
-  <div id="s08-scene" class="clip" data-start="0" data-duration="34.36" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="08-dispositif" data-width="1920" data-height="1080" data-duration="32.48">
+  <div id="s08-scene" class="clip" data-start="0" data-duration="32.48" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s08-dots"></div><div class="amb"><i class="s08-a1"></i><i class="s08-a2"></i><i class="s08-a3"></i></div>
   <div class="s08-content" style="position:absolute;inset:0">
@@ -114,30 +114,30 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s08-dots", { y: 0 }, { y: -56, duration: 34.36, ease: "none" }, 0);
-  tl.fromTo(".s08-a1", { x: 60 }, { x: -150, duration: 34.36, ease: "none" }, 0);
-  tl.fromTo(".s08-a2", { x: 30 }, { x: -100, duration: 34.36, ease: "none" }, 0);
-  tl.fromTo(".s08-a3", { x: 0 }, { x: -60, duration: 34.36, ease: "none" }, 0);
-  tl.fromTo(".s08-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 34.36, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s08-pg", { scaleX: 0.6462 }, { scaleX: 0.7582, duration: 34.36, ease: "none" }, 0);
-  rise(".s08-p0", 6.34, { y: 30 });
-  rise(".s08-p1", 8.13, { y: 30 });
-  rise(".s08-p2", 9.93, { y: 30 });
-  pop(".s08-t0", 12.56, { s: 0.92 });
-  pop(".s08-t1", 15.18, { s: 0.92 });
-  pop(".s08-t2", 18.52, { s: 0.92 });
-  pop(".s08-t3", 20.29, { s: 0.92 });
-  pop(".s08-t4", 22.48, { s: 0.92 });
-  pop(".s08-t5", 24.39, { s: 0.92 });
-  rise(".s08-sl", 25.97);
-  fade(".s08-track", 25.97);
-  tl.fromTo(".s08-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 27.12);
-  rise(".s08-lo", 27.12, { y: 10 }); rise(".s08-hi", 29.81, { y: 10 });
-  pop(".s08-h", 31.08, { s: 0.9 });
-  tl.fromTo(".s08-hp", { scaleY: 0, transformOrigin: "top center" }, { scaleY: 1, duration: 0.4 }, 31.28);
+  tl.fromTo(".s08-dots", { y: 0 }, { y: -56, duration: 32.48, ease: "none" }, 0);
+  tl.fromTo(".s08-a1", { x: 60 }, { x: -150, duration: 32.48, ease: "none" }, 0);
+  tl.fromTo(".s08-a2", { x: 30 }, { x: -100, duration: 32.48, ease: "none" }, 0);
+  tl.fromTo(".s08-a3", { x: 0 }, { x: -60, duration: 32.48, ease: "none" }, 0);
+  tl.fromTo(".s08-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 32.48, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s08-pg", { scaleX: 0.6448 }, { scaleX: 0.7567, duration: 32.48, ease: "none" }, 0);
+  rise(".s08-p0", 6.02, { y: 30 });
+  rise(".s08-p1", 7.72, { y: 30 });
+  rise(".s08-p2", 9.43, { y: 30 });
+  pop(".s08-t0", 11.86, { s: 0.92 });
+  pop(".s08-t1", 14.38, { s: 0.92 });
+  pop(".s08-t2", 17.58, { s: 0.92 });
+  pop(".s08-t3", 19.25, { s: 0.92 });
+  pop(".s08-t4", 21.32, { s: 0.92 });
+  pop(".s08-t5", 23.12, { s: 0.92 });
+  rise(".s08-sl", 24.56);
+  fade(".s08-track", 24.56);
+  tl.fromTo(".s08-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 25.65);
+  rise(".s08-lo", 25.65, { y: 10 }); rise(".s08-hi", 28.16, { y: 10 });
+  pop(".s08-h", 29.32, { s: 0.9 });
+  tl.fromTo(".s08-hp", { scaleY: 0, transformOrigin: "top center" }, { scaleY: 1, duration: 0.4 }, 29.52);
   tl.fromTo(".s08-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s08-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 33.56);
-  tl.set(".s08-content", { opacity: 0 }, 34.22);
+  tl.fromTo(".s08-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 31.68);
+  tl.set(".s08-content", { opacity: 0 }, 32.34);
   window.__timelines["08-dispositif"] = tl;
 })();
 </script>

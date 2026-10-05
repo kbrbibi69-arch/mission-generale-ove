@@ -71,8 +71,8 @@
     {
      "id": "b",
      "variant": "sobre",
-     "text": "S’y ajoutent quatre associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.",
-     "say": "S'y ajoutent quatre associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; Oveplénior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau."
+     "text": "S’y ajoutent cinq associations partenaires : AMICIAL, gouvernée avec la Croix-Rouge française ; OVE Plenior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; OVE Transition ; et Ressourcial, pour des prestations au sein du réseau.",
+     "say": "S'y ajoutent cinq associations partenaires : Amicial, gouvernée avec la Croix-Rouge française ; Ovéplénior, qui mutualise ses fonctions support avec la Fondation ; OVE Caraïbes, en outre-mer ; OVE Transition ; et Ressourcial, pour des prestations au sein du réseau."
     },
     {
      "id": "c",
@@ -320,5 +320,9 @@
     }
    ]
   }
- ]
+ ],
+ "speeds": {
+  "humour": 1.0,
+  "sobre": 1.1
+ }
 }

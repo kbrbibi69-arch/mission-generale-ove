@@ -1,296 +1,300 @@
 1
-00:00:02,600 --> 00:00:04,878
+00:00:02,600 --> 00:00:04,697
 Prévenir les atteintes à la probité.
 
 2
-00:00:04,918 --> 00:00:08,733
+00:00:04,737 --> 00:00:08,316
 Pour la Fondation OVE, c’est d’abord une question de confiance.
 
 3
-00:00:08,773 --> 00:00:13,065
+00:00:08,356 --> 00:00:12,430
 Cette présentation de la Direction juridique explique pourquoi une démarche
 
 4
-00:00:13,105 --> 00:00:17,764
+00:00:12,470 --> 00:00:16,920
 structurée, inspirée de la loi Sapin 2, présente un intérêt stratégique.
 
 5
-00:00:18,810 --> 00:00:23,109
+00:00:17,970 --> 00:00:21,936
 La Fondation OVE est une fondation reconnue d’utilité publique.
 
 6
-00:00:23,149 --> 00:00:29,146
+00:00:21,976 --> 00:00:27,549
 Elle mobilise un budget d’environ 180 millions d’euros et près de 2 500 salariés.
 
 7
-00:00:29,186 --> 00:00:34,122
+00:00:27,589 --> 00:00:32,112
 Elle accompagne chaque année plus de 15 000 personnes, sur l’ensemble du territoire.
 
 8
-00:00:34,162 --> 00:00:38,896
+00:00:32,152 --> 00:00:36,533
 Sa gouvernance repose sur un conseil d’administration de 15 membres, un Bureau
 
 9
-00:00:38,936 --> 00:00:41,027
+00:00:36,573 --> 00:00:38,547
 et une direction générale.
 
 10
-00:00:42,080 --> 00:00:45,354
+00:00:39,600 --> 00:00:42,689
 Autour d’elle s’est constitué un écosystème structuré :
 
 11
-00:00:45,394 --> 00:00:49,873
+00:00:42,729 --> 00:00:46,957
 le fonds de dotation IMOVE, véhicule immobilier et financier, et plus de 35
 
 12
-00:00:49,913 --> 00:00:53,757
+00:00:46,997 --> 00:00:50,560
 sociétés civiles immobilières, qui portent le patrimoine.
 
 13
-00:00:53,797 --> 00:00:56,312
-S’y ajoutent quatre associations partenaires :
+00:00:50,600 --> 00:00:52,940
+S’y ajoutent cinq associations partenaires :
 
 14
-00:00:56,352 --> 00:00:59,088
+00:00:52,980 --> 00:00:55,644
 AMICIAL, gouvernée avec la Croix-Rouge française ;
 
 15
-00:00:59,128 --> 00:01:02,865
+00:00:55,684 --> 00:00:59,321
 OVE Plenior, qui mutualise ses fonctions support avec la Fondation ;
 
 16
-00:01:02,905 --> 00:01:07,980
-OVE Caraïbes, en outre-mer ; et Ressourcial, pour des prestations au sein du réseau.
+00:00:59,361 --> 00:01:01,755
+OVE Caraïbes, en outre-mer ; OVE Transition ;
 
 17
-00:01:08,020 --> 00:01:11,243
-Cette organisation répond à des objectifs légitimes :
+00:01:01,795 --> 00:01:05,089
+et Ressourcial, pour des prestations au sein du réseau.
 
 18
-00:01:11,283 --> 00:01:15,430
-coopérer, mutualiser, se spécialiser, distinguer le médico-social du
+00:01:05,129 --> 00:01:08,209
+Cette organisation répond à des objectifs légitimes :
 
 19
-00:01:15,470 --> 00:01:17,235
-patrimoine immobilier.
+00:01:08,249 --> 00:01:12,211
+coopérer, mutualiser, se spécialiser, distinguer le médico-social du
 
 20
-00:01:17,275 --> 00:01:21,769
-Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés
+00:01:12,251 --> 00:01:13,866
+patrimoine immobilier.
 
 21
-00:01:21,809 --> 00:01:24,195
-par un nombre limité de décideurs.
+00:01:13,906 --> 00:01:18,069
+Elle multiplie aussi les conventions, les flux et les mandats croisés, exercés
 
 22
-00:01:24,235 --> 00:01:27,841
-Cette configuration ne révèle en elle-même aucune irrégularité.
+00:01:18,109 --> 00:01:20,261
+par un nombre limité de décideurs.
 
 23
-00:01:27,881 --> 00:01:30,696
-Elle appelle simplement un cadre commun.
+00:01:20,301 --> 00:01:23,659
+Cette configuration ne révèle en elle-même aucune irrégularité.
 
 24
-00:01:31,750 --> 00:01:36,092
-Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme
+00:01:23,699 --> 00:01:26,357
+Elle appelle simplement un cadre commun.
 
 25
-00:01:36,132 --> 00:01:40,564
-anticorruption à certaines entreprises dépassant des seuils précis.
+00:01:27,410 --> 00:01:31,488
+Sur le plan juridique, l’article 17 de la loi Sapin 2 impose un programme
 
 26
-00:01:40,604 --> 00:01:44,640
-Sans analyse complémentaire, on ne peut affirmer que la Fondation y est
+00:01:31,528 --> 00:01:35,628
+anticorruption à certaines entreprises dépassant des seuils précis.
 
 27
-00:01:44,680 --> 00:01:47,444
-assujettie comme une société commerciale.
+00:01:35,668 --> 00:01:39,487
+Sans analyse complémentaire, on ne peut affirmer que la Fondation y est
 
 28
-00:01:47,484 --> 00:01:51,682
-En revanche, l’article 3 habilite l’Agence française anticorruption à
+00:01:39,527 --> 00:01:42,076
+assujettie comme une société commerciale.
 
 29
-00:01:51,722 --> 00:01:57,046
-contrôler, de sa propre initiative, les fondations reconnues d’utilité publique.
+00:01:42,116 --> 00:01:46,089
+En revanche, l’article 3 habilite l’Agence française anticorruption à
 
 30
-00:01:57,086 --> 00:02:01,534
-Elle examine leurs procédures contre la corruption, le trafic d’influence, la
+00:01:46,129 --> 00:01:51,102
+contrôler, de sa propre initiative, les fondations reconnues d’utilité publique.
 
 31
-00:02:01,574 --> 00:02:06,620
-prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
+00:01:51,142 --> 00:01:55,355
+Elle examine leurs procédures contre la corruption, le trafic d’influence, la
 
 32
-00:02:07,670 --> 00:02:11,684
-Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.
+00:01:55,395 --> 00:02:00,204
+prise illégale d’intérêts, le détournement de fonds publics ou le favoritisme.
 
 33
-00:02:11,724 --> 00:02:15,955
-Les financeurs publics attendent des garanties de bonne gouvernance, et les
+00:02:01,250 --> 00:02:04,941
+Pourquoi agir maintenant ? Parce que l’environnement devient plus exigeant.
 
 34
-00:02:15,995 --> 00:02:19,367
-affaires récentes du secteur ont accru la vigilance.
+00:02:04,981 --> 00:02:08,882
+Les financeurs publics attendent des garanties de bonne gouvernance, et les
 
 35
-00:02:19,407 --> 00:02:23,832
-S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les
+00:02:08,922 --> 00:02:11,974
+affaires récentes du secteur ont accru la vigilance.
 
 36
-00:02:23,872 --> 00:02:28,003
-décideurs, les financements et la réputation de la Fondation.
+00:02:12,014 --> 00:02:16,124
+S’en tenir à des dispositifs dispersés exposerait peu à peu la mission, les
 
 37
-00:02:29,050 --> 00:02:33,405
-Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste
+00:02:16,164 --> 00:02:20,040
+décideurs, les financements et la réputation de la Fondation.
 
 38
-00:02:33,445 --> 00:02:36,978
-pas seulement à répondre à un environnement juridique.
+00:02:21,090 --> 00:02:25,224
+Pour la Fondation OVE, appliquer les principes de la loi Sapin 2 ne consiste
 
 39
-00:02:37,018 --> 00:02:40,796
-Il s’agit de protéger sa mission d’intérêt général, les personnes
+00:02:25,264 --> 00:02:28,549
+pas seulement à répondre à un environnement juridique.
 
 40
-00:02:40,836 --> 00:02:44,849
-accompagnées, ses décideurs, ses collaborateurs, ses ressources et la
+00:02:28,589 --> 00:02:32,120
+Il s’agit de protéger sa mission d’intérêt général, les personnes
 
 41
-00:02:44,889 --> 00:02:47,092
-confiance de ses partenaires.
+00:02:32,160 --> 00:02:35,911
+accompagnées, ses décideurs, ses collaborateurs, ses ressources et la
 
 42
-00:02:48,140 --> 00:02:51,135
-Ce cadre protège aussi celles et ceux qui décident.
+00:02:35,951 --> 00:02:38,044
+confiance de ses partenaires.
 
 43
-00:02:51,175 --> 00:02:55,144
-Lorsqu’une même personne siège dans plusieurs instances, selon une logique de
+00:02:39,090 --> 00:02:41,745
+Ce cadre protège aussi celles et ceux qui décident.
 
 44
-00:02:55,184 --> 00:02:58,145
-réseau, quatre questions deviennent essentielles.
+00:02:41,785 --> 00:02:45,611
+Lorsqu’une même personne siège dans plusieurs instances, selon une logique de
 
 45
-00:02:58,185 --> 00:03:02,149
-Pour le compte de quelle personne morale la décision est-elle prise ?
+00:02:45,651 --> 00:02:48,431
+réseau, quatre questions deviennent essentielles.
 
 46
-00:03:02,189 --> 00:03:04,177
-Quelle instance doit l’autoriser ?
+00:02:48,471 --> 00:02:52,199
+Pour le compte de quelle personne morale la décision est-elle prise ?
 
 47
-00:03:04,217 --> 00:03:06,525
-Quelle délégation permet de signer ?
+00:02:52,239 --> 00:02:54,104
+Quelle instance doit l’autoriser ?
 
 48
-00:03:06,565 --> 00:03:09,685
-Quelles informations remonter à chaque gouvernance ?
+00:02:54,144 --> 00:02:56,192
+Quelle délégation permet de signer ?
 
 49
-00:03:09,725 --> 00:03:14,108
-Des réponses écrites et partagées valent mieux que des usages implicites.
+00:02:56,232 --> 00:02:59,081
+Quelles informations remonter à chaque gouvernance ?
 
 50
-00:03:14,148 --> 00:03:18,030
-En cas de contrôle, pouvoir le démontrer est une protection.
+00:02:59,121 --> 00:03:03,196
+Des réponses écrites et partagées valent mieux que des usages implicites.
 
 51
-00:03:19,080 --> 00:03:23,298
-Le dispositif proposé repose sur les trois piliers recommandés par l’Agence
+00:03:03,236 --> 00:03:06,801
+En cas de contrôle, pouvoir le démontrer est une protection.
 
 52
-00:03:23,338 --> 00:03:27,727
-française anticorruption : l’engagement de la gouvernance, la cartographie des
+00:03:07,850 --> 00:03:11,839
+Le dispositif proposé repose sur les trois piliers recommandés par l’Agence
 
 53
-00:03:27,767 --> 00:03:30,051
-risques, et des mesures adaptées.
+00:03:11,879 --> 00:03:16,028
+française anticorruption : l’engagement de la gouvernance, la cartographie des
 
 54
-00:03:30,091 --> 00:03:34,141
-Concrètement : un code de conduite, une politique de gestion des conflits
+00:03:16,068 --> 00:03:18,161
+risques, et des mesures adaptées.
 
 55
-00:03:34,181 --> 00:03:38,564
-d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,
+00:03:18,201 --> 00:03:22,089
+Concrètement : un code de conduite, une politique de gestion des conflits
 
 56
-00:03:38,604 --> 00:03:42,868
-une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un
+00:03:22,129 --> 00:03:26,305
+d’intérêts et des mandats croisés, un dispositif d’alerte interne sécurisé,
 
 57
-00:03:42,908 --> 00:03:44,311
-plan de formation.
+00:03:26,345 --> 00:03:30,371
+une évaluation proportionnée des tiers, des contrôles comptables ciblés, et un
 
 58
-00:03:44,351 --> 00:03:49,420
-Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.
+00:03:30,411 --> 00:03:31,669
+plan de formation.
 
 59
-00:03:49,460 --> 00:03:52,390
-L’objectif est de sécuriser, sans alourdir.
+00:03:31,709 --> 00:03:36,430
+Proportionné signifie graduer les exigences selon les montants, l’urgence et les risques.
 
 60
-00:03:53,440 --> 00:03:56,920
-La démarche se déploierait progressivement, sur deux ans.
+00:03:36,470 --> 00:03:39,282
+L’objectif est de sécuriser, sans alourdir.
 
 61
-00:03:56,960 --> 00:03:59,808
-Année 1 : comprendre, cartographier, concevoir.
+00:03:40,330 --> 00:03:43,583
+La démarche se déploierait progressivement, sur deux ans.
 
 62
-00:03:59,848 --> 00:04:04,190
-Cadrage, diagnostic, cartographie des risques, dispositif cible.
+00:03:43,623 --> 00:03:46,348
+Année 1 : comprendre, cartographier, concevoir.
 
 63
-00:04:04,230 --> 00:04:06,511
-Année 2 : valider, déployer, ajuster.
+00:03:46,388 --> 00:03:50,474
+Cadrage, diagnostic, cartographie des risques, dispositif cible.
 
 64
-00:04:06,551 --> 00:04:10,349
-Validation, formations, pilote, généralisation, bilan.
+00:03:50,514 --> 00:03:52,698
+Année 2 : valider, déployer, ajuster.
 
 65
-00:04:10,389 --> 00:04:13,353
-Des indicateurs en mesureront l’effectivité.
+00:03:52,738 --> 00:03:56,305
+Validation, formations, pilote, généralisation, bilan.
 
 66
-00:04:13,393 --> 00:04:17,315
-Soyons lucides : aucun dispositif ne supprime totalement le risque.
+00:03:56,345 --> 00:03:59,015
+Des indicateurs en mesureront l’effectivité.
 
 67
-00:04:17,355 --> 00:04:23,000
-Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.
+00:03:59,055 --> 00:04:02,684
+Soyons lucides : aucun dispositif ne supprime totalement le risque.
 
 68
-00:04:24,050 --> 00:04:28,792
-Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,
+00:04:02,724 --> 00:04:07,989
+Il permet de le réduire, de le maîtriser, et de démontrer la diligence de la Fondation.
 
 69
-00:04:28,832 --> 00:04:33,106
-d’autoriser le diagnostic et la cartographie des risques, de désigner la
+00:04:09,040 --> 00:04:13,464
+Il est donc proposé au Bureau de reconnaître l’intérêt stratégique de la démarche,
 
 70
-00:04:33,146 --> 00:04:38,419
-Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,
+00:04:13,504 --> 00:04:17,516
+d’autoriser le diagnostic et la cartographie des risques, de désigner la
 
 71
-00:04:38,459 --> 00:04:43,716
-avec un comité de pilotage transversal et un reporting régulier au Bureau.
+00:04:17,556 --> 00:04:22,479
+Direction générale comme sponsor, et de confier le pilotage à la Direction juridique,
 
 72
-00:04:43,756 --> 00:04:48,311
-Le dispositif définitif restera soumis aux instances compétentes.
+00:04:22,519 --> 00:04:27,324
+avec un comité de pilotage transversal et un reporting régulier au Bureau.
 
 73
-00:04:48,351 --> 00:04:52,015
-Protéger la mission, les personnes, les décideurs et la confiance :
+00:04:27,364 --> 00:04:31,414
+Le dispositif définitif restera soumis aux instances compétentes.
 
 74
-00:04:52,055 --> 00:04:56,977
+00:04:31,454 --> 00:04:34,962
+Protéger la mission, les personnes, les décideurs et la confiance :
+
+75
+00:04:35,002 --> 00:04:39,738
 c’est la trajectoire, prudente mais résolue, que nous vous proposons de valider.
 

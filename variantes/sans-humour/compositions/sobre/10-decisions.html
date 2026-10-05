@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="10-decisions" data-width="1920" data-height="1080" data-duration="43.63">
-  <div id="s10-scene" class="clip" data-start="0" data-duration="43.63" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="10-decisions" data-width="1920" data-height="1080" data-duration="41.9">
+  <div id="s10-scene" class="clip" data-start="0" data-duration="41.9" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s10-dots"></div><div class="amb"><i class="s10-a1"></i><i class="s10-a2"></i><i class="s10-a3"></i></div>
   <div class="s10-content" style="position:absolute;inset:0">
@@ -110,34 +110,34 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s10-dots", { y: 0 }, { y: -56, duration: 43.63, ease: "none" }, 0);
-  tl.fromTo(".s10-a1", { x: 60 }, { x: -150, duration: 43.63, ease: "none" }, 0);
-  tl.fromTo(".s10-a2", { x: 30 }, { x: -100, duration: 43.63, ease: "none" }, 0);
-  tl.fromTo(".s10-a3", { x: 0 }, { x: -60, duration: 43.63, ease: "none" }, 0);
-  tl.fromTo(".s10-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 43.63, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s10-pg", { scaleX: 0.8579 }, { scaleX: 1.0000, duration: 43.63, ease: "none" }, 0);
+  tl.fromTo(".s10-dots", { y: 0 }, { y: -56, duration: 41.9, ease: "none" }, 0);
+  tl.fromTo(".s10-a1", { x: 60 }, { x: -150, duration: 41.9, ease: "none" }, 0);
+  tl.fromTo(".s10-a2", { x: 30 }, { x: -100, duration: 41.9, ease: "none" }, 0);
+  tl.fromTo(".s10-a3", { x: 0 }, { x: -60, duration: 41.9, ease: "none" }, 0);
+  tl.fromTo(".s10-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 41.9, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s10-pg", { scaleX: 0.8556 }, { scaleX: 1.0000, duration: 41.9, ease: "none" }, 0);
   title(".s10-t", 0.70);
-  slide(".s10-d0", 2.44, { x: -28 });
-  slide(".s10-d1", 5.38, { x: -28 });
-  slide(".s10-d2", 8.84, { x: -28 });
-  slide(".s10-d3", 11.93, { x: -28 });
-  slide(".s10-d4", 15.53, { x: -28 });
-  slide(".s10-d5", 17.96, { x: -28 });
-  rise(".s10-n", 20.41, { y: 14 });
-  tl.fromTo(".s10-end", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "power1.inOut" }, 24.70);
-  tl.to(".s10-list", { opacity: 0, duration: 0.6 }, 25.00);
-  tl.set(".s10-plate", { opacity: 1 }, 25.10);
-  rise(".s10-m", 25.00, { y: 20, d: 0.9 });
-  rise(".s10-s", 29.74, { y: 16 });
-  tl.fromTo(".s10-b i", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out", stagger: 0.12 }, 32.69);
-  fade(".s10-f", 33.43, { d: 1 });
-  tl.fromTo(".s10-plate svg", { scale: 1 }, { scale: 1.025, duration: 17.93, ease: "none", immediateRender: false }, 25.70);
-  tl.fromTo(".s10-logo .g-e1, .s10-logo .g-e2, .s10-logo .g-e3", { x: -420, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: "expo.out", stagger: 0.09 }, 25.20);
-  tl.fromTo(".s10-logo .g-o", { x: -160, rotation: -200, opacity: 0, transformOrigin: "50% 50%" }, { x: 0, rotation: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 25.35);
-  tl.fromTo(".s10-logo .g-v", { x: -160, rotation: 0, opacity: 0, transformOrigin: "50% 50%" }, { x: 0, rotation: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 25.43);
-  tl.fromTo(".s10-logo .g-soleil", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.6, ease: "back.out(2.2)" }, 25.75);
-  tl.fromTo(".s10-logo .g-rayons path", { scale: 0, opacity: 0, svgOrigin: "118.6 31.5" }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)", stagger: 0.08 }, 26.05);
-  tl.fromTo(".s10-logo .g-texte path", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.035 }, 26.15);
+  slide(".s10-d0", 2.32, { x: -28 });
+  slide(".s10-d1", 5.06, { x: -28 });
+  slide(".s10-d2", 8.31, { x: -28 });
+  slide(".s10-d3", 11.21, { x: -28 });
+  slide(".s10-d4", 14.56, { x: -28 });
+  slide(".s10-d5", 16.81, { x: -28 });
+  rise(".s10-n", 19.02, { y: 14 });
+  tl.fromTo(".s10-end", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "power1.inOut" }, 22.81);
+  tl.to(".s10-list", { opacity: 0, duration: 0.6 }, 23.11);
+  tl.set(".s10-plate", { opacity: 1 }, 23.21);
+  rise(".s10-m", 23.11, { y: 20, d: 0.9 });
+  rise(".s10-s", 27.65, { y: 16 });
+  tl.fromTo(".s10-b i", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out", stagger: 0.12 }, 30.48);
+  fade(".s10-f", 31.20, { d: 1 });
+  tl.fromTo(".s10-plate svg", { scale: 1 }, { scale: 1.025, duration: 18.09, ease: "none", immediateRender: false }, 23.81);
+  tl.fromTo(".s10-logo .g-e1, .s10-logo .g-e2, .s10-logo .g-e3", { x: -420, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: "expo.out", stagger: 0.09 }, 23.31);
+  tl.fromTo(".s10-logo .g-o", { x: -160, rotation: -200, opacity: 0, transformOrigin: "50% 50%" }, { x: 0, rotation: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 23.46);
+  tl.fromTo(".s10-logo .g-v", { x: -160, rotation: 0, opacity: 0, transformOrigin: "50% 50%" }, { x: 0, rotation: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 23.54);
+  tl.fromTo(".s10-logo .g-soleil", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.6, ease: "back.out(2.2)" }, 23.86);
+  tl.fromTo(".s10-logo .g-rayons path", { scale: 0, opacity: 0, svgOrigin: "118.6 31.5" }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)", stagger: 0.08 }, 24.16);
+  tl.fromTo(".s10-logo .g-texte path", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.035 }, 24.26);
   tl.fromTo(".s10-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
   window.__timelines["10-decisions"] = tl;
 })();

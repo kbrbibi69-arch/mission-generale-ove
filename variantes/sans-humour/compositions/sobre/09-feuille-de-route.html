@@ -48,8 +48,8 @@
 #root .prog i { position: absolute; left: 0; top: 0; width: 1920px; height: 6px; background: #B4C908; display: block; transform-origin: left center; }
 #root .ring { position: absolute; border-radius: 50%; border: 3px solid #B4C908; pointer-events: none; opacity: 0; }
 </style>
-<div id="root" data-composition-id="09-feuille-de-route" data-width="1920" data-height="1080" data-duration="30.61">
-  <div id="s09-scene" class="clip" data-start="0" data-duration="30.61" data-track-index="0" style="position:absolute;inset:0">
+<div id="root" data-composition-id="09-feuille-de-route" data-width="1920" data-height="1080" data-duration="28.71">
+  <div id="s09-scene" class="clip" data-start="0" data-duration="28.71" data-track-index="0" style="position:absolute;inset:0">
   <div class="bg"></div>
   <div class="dots s09-dots"></div><div class="amb"><i class="s09-a1"></i><i class="s09-a2"></i><i class="s09-a3"></i></div>
   <div class="s09-content" style="position:absolute;inset:0">
@@ -115,37 +115,37 @@
   const float = (s, t, end, amp = 6) => { const n = Math.max(0, Math.floor((end - t) / 2.4) - 1);
     if (n > 0) tl.fromTo(s, { y: 0 }, { y: -amp, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: n, immediateRender: false, stagger: 0.3 }, t); };
 
-  tl.fromTo(".s09-dots", { y: 0 }, { y: -56, duration: 30.61, ease: "none" }, 0);
-  tl.fromTo(".s09-a1", { x: 60 }, { x: -150, duration: 30.61, ease: "none" }, 0);
-  tl.fromTo(".s09-a2", { x: 30 }, { x: -100, duration: 30.61, ease: "none" }, 0);
-  tl.fromTo(".s09-a3", { x: 0 }, { x: -60, duration: 30.61, ease: "none" }, 0);
-  tl.fromTo(".s09-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 30.61, ease: "sine.inOut" }, 0);
-  tl.fromTo(".s09-pg", { scaleX: 0.7582 }, { scaleX: 0.8579, duration: 30.61, ease: "none" }, 0);
+  tl.fromTo(".s09-dots", { y: 0 }, { y: -56, duration: 28.71, ease: "none" }, 0);
+  tl.fromTo(".s09-a1", { x: 60 }, { x: -150, duration: 28.71, ease: "none" }, 0);
+  tl.fromTo(".s09-a2", { x: 30 }, { x: -100, duration: 28.71, ease: "none" }, 0);
+  tl.fromTo(".s09-a3", { x: 0 }, { x: -60, duration: 28.71, ease: "none" }, 0);
+  tl.fromTo(".s09-content", { scale: 1 }, { scale: 1.02, transformOrigin: "50% 45%", duration: 28.71, ease: "sine.inOut" }, 0);
+  tl.fromTo(".s09-pg", { scaleX: 0.7567 }, { scaleX: 0.8556, duration: 28.71, ease: "none" }, 0);
   title(".s09-t", 0.70);
-  tl.fromTo(".s09-axis", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.inOut" }, 2.15);
-  tl.fromTo(".s09-y1", { scaleX: 0 }, { scaleX: 1, duration: 6.82, ease: "none" }, 4.22);
-  rise(".s09-y1l", 4.22, { y: 16 });
-  tl.fromTo(".s09-y2", { scaleX: 0 }, { scaleX: 1, duration: 5.71, ease: "none" }, 11.49);
-  rise(".s09-y2l", 11.49, { y: 16 });
-  tl.fromTo(".s09-head", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 3.92);
-  tl.fromTo(".s09-head", { x: 0 }, { x: 758, duration: 6.82, ease: "none", immediateRender: false }, 4.22);
-  tl.fromTo(".s09-head", { x: 778 }, { x: 1536, duration: 5.71, ease: "none", immediateRender: false }, 11.49);
-  pop(".s09-d0", 6.99, { s: 0.4 }); rise(".s09-s0", 7.09, { y: 14 });
-  pop(".s09-d1", 7.54, { s: 0.4 }); rise(".s09-s1", 7.64, { y: 14 });
-  pop(".s09-d2", 5.41, { s: 0.4 }); rise(".s09-s2", 5.51, { y: 14 });
-  pop(".s09-d3", 9.86, { s: 0.4 }); rise(".s09-s3", 9.96, { y: 14 });
-  pop(".s09-d4", 13.70, { s: 0.4 }); rise(".s09-s4", 13.80, { y: 14 });
-  pop(".s09-d5", 15.19, { s: 0.4 }); rise(".s09-s5", 15.29, { y: 14 });
-  pop(".s09-d6", 15.68, { s: 0.4 }); rise(".s09-s6", 15.78, { y: 14 });
-  pop(".s09-d7", 16.68, { s: 0.4 }); rise(".s09-s7", 16.78, { y: 14 });
-  rise(".s09-il", 17.65, { y: 14 }); rise(".s09-ic", 18.05, { y: 14, st: 0.3 });
-  rise(".s09-z", 20.65, { y: 24 });
-  slide(".s09-w0", 25.49, { x: -18 });
-  slide(".s09-w1", 26.37, { x: -18 });
-  slide(".s09-w2", 27.37, { x: -18 });
+  tl.fromTo(".s09-axis", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power2.inOut" }, 2.09);
+  tl.fromTo(".s09-y1", { scaleX: 0 }, { scaleX: 1, duration: 6.53, ease: "none" }, 3.99);
+  rise(".s09-y1l", 3.99, { y: 16 });
+  tl.fromTo(".s09-y2", { scaleX: 0 }, { scaleX: 1, duration: 5.47, ease: "none" }, 10.88);
+  rise(".s09-y2l", 10.88, { y: 16 });
+  tl.fromTo(".s09-head", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 3.69);
+  tl.fromTo(".s09-head", { x: 0 }, { x: 758, duration: 6.53, ease: "none", immediateRender: false }, 3.99);
+  tl.fromTo(".s09-head", { x: 778 }, { x: 1536, duration: 5.47, ease: "none", immediateRender: false }, 10.88);
+  pop(".s09-d0", 6.64, { s: 0.4 }); rise(".s09-s0", 6.74, { y: 14 });
+  pop(".s09-d1", 7.17, { s: 0.4 }); rise(".s09-s1", 7.27, { y: 14 });
+  pop(".s09-d2", 5.13, { s: 0.4 }); rise(".s09-s2", 5.23, { y: 14 });
+  pop(".s09-d3", 9.38, { s: 0.4 }); rise(".s09-s3", 9.48, { y: 14 });
+  pop(".s09-d4", 12.99, { s: 0.4 }); rise(".s09-s4", 13.09, { y: 14 });
+  pop(".s09-d5", 14.42, { s: 0.4 }); rise(".s09-s5", 14.52, { y: 14 });
+  pop(".s09-d6", 14.90, { s: 0.4 }); rise(".s09-s6", 15.00, { y: 14 });
+  pop(".s09-d7", 15.85, { s: 0.4 }); rise(".s09-s7", 15.95, { y: 14 });
+  rise(".s09-il", 16.71, { y: 14 }); rise(".s09-ic", 17.11, { y: 14, st: 0.3 });
+  rise(".s09-z", 19.43, { y: 24 });
+  slide(".s09-w0", 23.90, { x: -18 });
+  slide(".s09-w1", 24.71, { x: -18 });
+  slide(".s09-w2", 25.64, { x: -18 });
   tl.fromTo(".s09-bands i", { xPercent: 0 }, { xPercent: 101, duration: 0.6, ease: "power3.inOut", stagger: 0.07 }, 0.04);
-  tl.fromTo(".s09-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 29.81);
-  tl.set(".s09-content", { opacity: 0 }, 30.47);
+  tl.fromTo(".s09-bands i", { xPercent: -101 }, { xPercent: 0, duration: 0.5, ease: "power3.inOut", stagger: 0.06, immediateRender: false }, 27.91);
+  tl.set(".s09-content", { opacity: 0 }, 28.57);
   window.__timelines["09-feuille-de-route"] = tl;
 })();
 </script>

@@ -163,7 +163,8 @@ def bands_js(p, D, first=False, last=False):
 LOGO_DIR = os.path.join(ROOT, "production", "logos")
 LOGO_FILES = {"fondation-ove": "PJ01-logo-fondation-ove.jpg", "imove": "PJ04-logo-imove-fonds-de-dotation.webp",
               "ove-caraibes": "PJ05-logo-ove-caraibes.webp", "plenior": "PJ06-logo-plenior.webp",
-              "amicial": "PJ09-logo-amicial.webp", "ressourcial": "PJ08-logo-ressourcial.webp"}
+              "amicial": "PJ09-logo-amicial.webp", "ressourcial": "PJ08-logo-ressourcial.webp",
+              "ove-transition": "PJ12-logo-ove-transition.png"}
 INS = []  # journal des insertions (variante sobre), écrit dans production/insertions-sobre.json
 def has_logo(lid): return os.path.exists(os.path.join(LOGO_DIR, lid + ".json"))
 def logo_data(lid): return json.load(open(os.path.join(LOGO_DIR, lid + ".json")))
@@ -241,6 +242,13 @@ def logo_js(lid, s, t, style="build"):
             j.append(f'tl.fromTo({G(g)}, {{ x: {((x0 + x1) / 2 - mid) * 0.5:.1f}, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }}, {t + abs((x0 + x1) / 2 - mid) / 400:.2f});')
         j.append(f'tl.fromTo({G("o")}, {{ scale: 0, rotation: 200, transformOrigin: "50% 50%" }}, {{ scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.6)" }}, {t + 0.2:.2f});')
         j.append(f'tl.fromTo({G("piece")}, {{ y: -40, rotation: -90, opacity: 0, transformOrigin: "50% 50%" }}, {{ y: 0, rotation: 0, opacity: 1, duration: 0.8, ease: "bounce.out" }}, {t + 0.6:.2f});')
+        return j, t + 1.5
+    if lid == "ove-transition":  # aplat d'origine, le disque fléché roule vers l'avant (la transition), V puis E, le mot s'écrit
+        j.append(f'tl.fromTo({G("fond")}, {{ scale: 0.86, opacity: 0, transformOrigin: "50% 50%" }}, {{ scale: 1, opacity: 1, duration: 0.45, ease: "power3.out" }}, {t:.2f});')
+        j.append(f'tl.fromTo({G("o")}, {{ x: -70, rotation: -300, opacity: 0, transformOrigin: "50% 50%" }}, {{ x: 0, rotation: 0, opacity: 1, duration: 0.85, ease: "power3.out" }}, {t + 0.12:.2f});')
+        j.append(f'tl.fromTo({G("v")}, {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.55, ease: "bounce.out" }}, {t + 0.35:.2f});')
+        j.append(f'tl.fromTo("{s} .g-e1, {s} .g-e2, {s} .g-e3", {{ scaleX: 0, transformOrigin: "0% 50%" }}, {{ scaleX: 1, duration: 0.45, ease: "power3.out", stagger: 0.08 }}, {t + 0.5:.2f});')
+        j.append(f'tl.fromTo({P("texte")}, {{ opacity: 0, y: 6 }}, {{ opacity: 1, y: 0, duration: 0.3, ease: "power2.out", stagger: 0.04 }}, {t + 0.75:.2f});')
         return j, t + 1.5
     # logo sans chorégraphie dédiée : apparition simple
     j.append(f'tl.fromTo("{s}", {{ opacity: 0, scale: 0.9 }}, {{ opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }}, {t:.2f});')
@@ -419,6 +427,20 @@ def s03(c, v, D):
              ("res", 660, 745 + dy, "Ressourcial", subs[5], c.at("b", "Ressourcial"))]
     svg = [f'<line class="{p}-ln" x1="{cx}" y1="{cy}" x2="{x}" y2="{y}" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/>' for (_, x, y, *_r) in nodes]
     cross = [((330, 300 + dy), (1000, 300 + dy), -70), ((660, 205 + dy // 2), (330, 660 + dy), 0), ((1000, 660 + dy), (660, 745 + dy), 40), ((330, 660 + dy), (1000, 660 + dy), 90)]
+    if v == "sobre":  # sept entités (OVE Transition ajoutée) : couronne régulière autour de la Fondation
+        import math
+        cx, cy = 660, 465
+        def at(a): return round(cx + 370 * math.cos(math.radians(a))), round(cy + 280 * math.sin(math.radians(a)))
+        P = {"imove": at(192.9), "sci": at(141.4), "ami": at(244.3), "ple": at(-64.3), "car": at(-12.9), "tra": at(38.6), "res": at(90)}
+        nodes = [("imove", *P["imove"], "IMOVE", subs[0], c.at("a", "IMOVE")),
+                 ("sci", *P["sci"], "35+ SCI", subs[1], c.at("a", "plus de 35")),
+                 ("ami", *P["ami"], "AMICIAL", subs[2], c.at("b", "AMICIAL")),
+                 ("ple", *P["ple"], "OVE Plenior", subs[3], c.at("b", "OVE Plenior")),
+                 ("car", *P["car"], "OVE Caraïbes", subs[4], c.at("b", "OVE Caraïbes")),
+                 ("tra", *P["tra"], "OVE Transition", "association partenaire", c.at("b", "OVE Transition")),
+                 ("res", *P["res"], "Ressourcial", subs[5], c.at("b", "Ressourcial"))]
+        svg = [f'<line class="{p}-ln" x1="{cx}" y1="{cy}" x2="{x}" y2="{y}" pathLength="1" stroke="#B4C908" stroke-width="4" stroke-dasharray="1" stroke-dashoffset="1"/>' for (_, x, y, *_r) in nodes]
+        cross = [(P["imove"], P["ple"], -70), (P["ami"], P["sci"], 0), (P["tra"], P["res"], 40), (P["sci"], P["tra"], 90)]
     for i, ((x1, y1), (x2, y2), bend) in enumerate(cross):
         mx, my = (x1 + x2) / 2, (y1 + y2) / 2 + bend
         svg.append(f'<path class="{p}-cx" d="M{x1} {y1} Q{mx} {my} {x2} {y2}" fill="none" stroke="#878787" stroke-width="2.5" stroke-dasharray="10 10" opacity="0"/>')
@@ -428,7 +450,7 @@ def s03(c, v, D):
             f"""<div class="abs {p}-core" style="left:{cx-100}px;top:{cy-100}px;width:200px;height:200px;border-radius:50%;background:#B4C908;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 14px 40px rgba(180,201,8,0.35)">
     <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:28px;line-height:1.1;color:#25282B">Fondation</div><div class="{p}-ove" style="font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;line-height:1.05;color:#25282B">OVE</div></div>"""]
     js = [f'pop(".{p}-core", 0.55, {{ s: 0.8, d: 0.8 }});']
-    LG = {"imove": "imove", "ple": "plenior", "car": "ove-caraibes", "ami": "amicial", "res": "ressourcial"}
+    LG = {"imove": "imove", "ple": "plenior", "car": "ove-caraibes", "ami": "amicial", "res": "ressourcial", "tra": "ove-transition"}
     use_logo = lambda k: DYN and k in LG and has_logo(LG[k])
     if DYN and has_logo("fondation-ove"):  # cœur du réseau : logo réel sur disque blanc cerclé de vert
         html[-1] = f"""<div class="abs {p}-core" style="left:{cx-120}px;top:{cy-120}px;width:240px;height:240px;border-radius:50%;background:#fff;border:6px solid #B4C908;box-sizing:border-box;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(180,201,8,0.30)">{logo_svg("fondation-ove", p + "-lgcore", 150)}</div>"""
@@ -444,7 +466,7 @@ def s03(c, v, D):
         js += [] if has_logo("fondation-ove") else [f'spell(".{p}-ove", 0.8, 0.12);']
         js += [
                f'tl.fromTo(".{p}-core", {{ scale: 1 }}, {{ scale: 1.04, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: {max(1, int((D - 3) / 2.2) - 1)}, immediateRender: false }}, 1.6);']
-    ENT = {"imove": "Fonds de dotation IMOVE", "ple": "OVE Plenior", "car": "OVE Caraïbes", "ami": "AMICIAL", "res": "Ressourcial"}
+    ENT = {"imove": "Fonds de dotation IMOVE", "ple": "OVE Plenior", "car": "OVE Caraïbes", "ami": "AMICIAL", "res": "Ressourcial", "tra": "OVE Transition"}
     for i, (k, x, y, name, sub, t) in enumerate(nodes):
         if use_logo(k):
             d = logo_data(LG[k]); vb = d.get("viewBox", [0, 0, d["width"], d["height"]]); ar = vb[2] / vb[3]
@@ -459,11 +481,13 @@ def s03(c, v, D):
             js.append(f'rise(".{p}-l{k}", {t + 0.1:.2f}, {{ y: 12 }}); spell(".{p}-l{k} .spell", {t + 0.05:.2f}, 0.05); ring(".{p}-r{k}", {t + 0.3:.2f});')
             log_ins("03-ecosysteme", t - 0.1, D, LOGO_FILES[LG[k]], ENT[k],
                     f"La voix nomme l’entité ({name}) : son logo apparaît à cet instant précis sur la cartographie.",
-                    "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche.",
+                    ("Version inversée fournie : formes blanches vectorisées, aplat vert d’origine conservé tel quel (couleur mesurée sur le fichier), proportions conservées ; posé sur plaque blanche." if LG[k] == "ove-transition" else
+                     "Vectorisation par couche de couleur, couleurs officielles mesurées sur le fichier, fond blanc retiré, proportions conservées ; plaque blanche."),
                     {"imove": "Lettres I-M-O-V posées une à une, barres du E, soleil et rayons, signature « Fonds de dotation ».",
                      "plenior": "Mot écrit lettre à lettre, point du i, puis la feuille de chêne pousse sur le « o » (élastique).",
                      "ove-caraibes": "Disque au colibri entrant en vol (rotation), V déposé, E glissé depuis la droite, CARAÏBES puis « Différents ensemble ».",
                      "amicial": "Le repère-maison se pose avec un rebond, le cœur apparaît puis bat deux fois, « amicial » s’écrit lettre à lettre, puis « Votre partenaire autonomie à domicile ».",
+                     "ove-transition": "L’aplat vert du logo se pose, le disque fléché roule depuis la gauche et la flèche pointe vers l’avant, le V se dépose, les barres du E glissent, puis « TRANSITION » s’écrit lettre à lettre.",
                      "ressourcial": "Les lettres convergent vers le centre, le « O » orange tourne sur lui-même, la pièce orange s’emboîte au-dessus avec un rebond."}.get(LG[k], "Apparition du logo."),
                     "Lien tracé depuis le centre, puis plaque qui se pose ; onde verte autour de la plaque.", "Volet des trois bandes.")
             continue

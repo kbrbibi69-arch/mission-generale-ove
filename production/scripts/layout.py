@@ -11,10 +11,13 @@ man = json.load(open(os.path.join(ROOT, ".media", "voice", "manifest.json")))
 VARIANTS = sys.argv[1:] or ["humour", "sobre"]
 OUT = "timeline.json" if len(VARIANTS) == 2 else f"timeline-{VARIANTS[0]}.json"
 LEAD_FIRST, LEAD, TAIL, HOLD = 2.6, 0.7, 0.85, 10.5
+if VARIANTS == ["sobre"]: HOLD = 11.0  # écran final un peu plus long : la voix plus rapide garde la durée au-dessus de 4 min 50
 SR = 24000
 
-def gap(text):
-    return 0.22 if text.rstrip().endswith(",") else 0.45
+GAPS = {"humour": (0.22, 0.45), "sobre": (0.18, 0.36)}  # silences entre répliques (virgule, point) : plus resserrés en version sobre
+def gap(text, v):
+    g = GAPS[v]
+    return g[0] if text.rstrip().endswith(",") else g[1]
 
 def key(scene, line):
     return f'{scene["id"]}-{line["id"]}' + (f'-{line["variant"]}' if "variant" in line else "")
@@ -29,11 +32,11 @@ for si, scene in enumerate(script["scenes"]):
         t = lead; cues = {}
         lines = [l for l in scene["lines"] if l.get("variant", v) == v]
         for i, l in enumerate(lines):
-            d = man[key(scene, l)]["duration"]
+            d = man[f"{v}:{key(scene, l)}"]["duration"]
             cues[l["id"]] = round(t, 3)
             timeline["variants"][v]["lines"].append({"scene": scene["id"], "id": l["id"], "text": l["text"],
-                "start": round(t0 + t, 3), "end": round(t0 + t + d, 3), "wav": man[key(scene, l)]["path"]})
-            t += d + (gap(l["text"]) if i < len(lines) - 1 else 0)
+                "start": round(t0 + t, 3), "end": round(t0 + t + d, 3), "wav": man[f"{v}:{key(scene, l)}"]["path"]})
+            t += d + (gap(l["text"], v) if i < len(lines) - 1 else 0)
         cues["end"] = round(t, 3)
         timeline["variants"][v]["cues"][scene["id"]] = cues
         lengths[v] = t

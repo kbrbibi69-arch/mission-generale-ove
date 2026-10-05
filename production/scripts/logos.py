@@ -187,12 +187,55 @@ def vectorise(lid, fname, seeds):
     vb = [round(x0 - 2, 1), round(y0 - 2, 1), round(x1 - x0 + 4, 1), round(y1 - y0 + 4, 1)]  # cadrage sur le logo (marges blanches du fichier retirées)
     return {"id": lid, "source": fname, "width": w, "height": h, "viewBox": vb, "components": comps}
 
+# Logo fourni en version inversée (formes blanches sur aplat vert) : l'aplat fait partie du logo et est conservé
+# tel quel (il tient lieu de plaque) ; seules les formes blanches sont tracées, puis posées sur l'aplat mesuré.
+INVERSE = {"ove-transition": ("PJ12-logo-ove-transition.png", 63.5)}  # (fichier, colonne séparant le O fléché du V)
+def g_tra(b):
+    x0, y0, x1, y1 = b
+    if y0 > 68: return "texte"            # TRANSITION
+    if x0 >= 125: return ["e1", "e2", "e3"][0 if y0 < 28 else (1 if y0 < 46 else 2)]
+    return "o" if x0 < 40 else "v"     # tout fragment hors du disque fléché appartient au V
+def vectorise_inverse(lid, fname, cut):
+    im = Image.open(os.path.join(PJ, fname)).convert("RGB")
+    w, h = im.size
+    k = max(6, int(np.ceil(1600 / w)))
+    small = np.asarray(im).astype(float)
+    W = np.array([255.0, 255, 255])
+    a_s = lambda px, g: np.clip(((px - g) @ (W - g)) / ((W - g) @ (W - g)), 0, 1)
+    g0 = np.array([181.0, 202, 10])
+    fond = np.median(small[a_s(small, g0) < 0.03], 0)          # aplat vert mesuré sur le fichier
+    big = np.asarray(im.resize((w * k, h * k), Image.LANCZOS)).astype(float)
+    mask = a_s(big, fond) > 0.36   # fichier de 174 px très adouci : seuil abaissé pour retrouver la graisse des lettres
+    xs = np.arange(w * k)[None, :]
+    comps = [{"color": "#%02X%02X%02X" % tuple(fond.round().astype(int)), "layer": "fond", "group": "fond",
+              "d": f"M0 0H{w}V{h}H0Z", "bbox": [0, 0, w, h]}]
+    # O fléché et V se touchent : tracés séparément, avec un léger recouvrement (aucune couture visible)
+    for part in (mask & (xs < (cut + 0.6) * k), mask & (xs >= (cut - 0.6) * k)):
+        pl = potrace.Bitmap(~part).trace(turdsize=int(k * k / 3), alphamax=1.0, opticurve=True, opttolerance=0.2)
+        outers, holes = [], []
+        for c in pl.curves:
+            (outers if c._path.sign else holes).append(c)
+        for o in outers:
+            bb = pts(o); ds = [d_of(o, k)]
+            for hc in holes:
+                hb = pts(hc)
+                if hb[0] >= bb[0] and hb[1] >= bb[1] and hb[2] <= bb[2] and hb[3] <= bb[3]:
+                    ds.append(d_of(hc, k))
+            bbox = [round(v / k, 2) for v in bb]
+            if (bbox[2] - bbox[0]) * (bbox[3] - bbox[1]) < 1: continue   # résidu de la découpe
+            comps.append({"color": "#FFFFFF", "layer": "blanc", "group": g_tra(bbox), "d": "".join(ds), "bbox": bbox})
+    for i, c in enumerate(comps): c["i"] = i
+    return {"id": lid, "source": fname, "width": w, "height": h, "viewBox": [0, 0, w, h], "components": comps}
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True); os.makedirs(SVG, exist_ok=True)
-    only = sys.argv[1:] or list(LOGOS)
+    only = sys.argv[1:] or list(LOGOS) + list(INVERSE)
     for lid in only:
-        fname, seeds = LOGOS[lid]
-        data = vectorise(lid, fname, seeds)
+        if lid in INVERSE:
+            data = vectorise_inverse(lid, *INVERSE[lid])
+        else:
+            fname, seeds = LOGOS[lid]
+            data = vectorise(lid, fname, seeds)
         json.dump(data, open(os.path.join(OUT, lid + ".json"), "w"), ensure_ascii=False, indent=1)
         paths = "".join(f'<path fill="{c["color"]}" fill-rule="evenodd" d="{c["d"]}"/>' for c in data["components"])
         open(os.path.join(SVG, lid + ".svg"), "w").write(
